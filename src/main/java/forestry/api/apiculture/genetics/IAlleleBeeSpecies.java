@@ -8,7 +8,6 @@ package forestry.api.apiculture.genetics;
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.genetics.alleles.IAlleleForestrySpecies;
 import forestry.api.genetics.products.IDynamicProductList;
-
 import genetics.api.individual.IGenome;
 
 public interface IAlleleBeeSpecies extends IAlleleForestrySpecies {

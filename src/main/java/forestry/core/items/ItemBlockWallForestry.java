@@ -1,18 +1,16 @@
 package forestry.core.items;
 
-import javax.annotation.Nullable;
-import java.util.Map;
-
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.Item;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.level.LevelReader;
 
-import net.minecraft.world.item.Item.Properties;
+import javax.annotation.Nullable;
+import java.util.Map;
 
 public class ItemBlockWallForestry<B extends Block, W extends Block> extends ItemBlockForestry<B> {
 	private final W wallBlock;

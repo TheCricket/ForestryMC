@@ -10,24 +10,7 @@
  ******************************************************************************/
 package forestry.mail.gui;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.api.mail.EnumAddressee;
 import forestry.api.mail.ITradeStationInfo;
 import forestry.core.config.SessionVars;
@@ -38,6 +21,21 @@ import forestry.core.network.packets.PacketGuiSelectRequest;
 import forestry.core.render.ColourProperties;
 import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.Translator;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Font;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.ItemStack;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GuiCatalogue extends GuiForestry<ContainerCatalogue> {
 

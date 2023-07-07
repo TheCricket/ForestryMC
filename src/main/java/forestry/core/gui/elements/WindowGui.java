@@ -1,13 +1,11 @@
 package forestry.core.gui.elements;
 
+import forestry.core.gui.IGuiSizable;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.screens.Screen;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.core.gui.IGuiSizable;
 
 
 /**

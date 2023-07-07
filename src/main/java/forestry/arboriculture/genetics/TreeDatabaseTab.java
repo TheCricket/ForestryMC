@@ -1,21 +1,7 @@
 package forestry.arboriculture.genetics;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.network.chat.Style;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.arboriculture.EnumFruitFamily;
-import forestry.api.arboriculture.genetics.EnumGermlingType;
-import forestry.api.arboriculture.genetics.IAlleleFruit;
-import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
-import forestry.api.arboriculture.genetics.ITree;
-import forestry.api.arboriculture.genetics.TreeChromosomes;
+import forestry.api.arboriculture.genetics.*;
 import forestry.api.genetics.IFruitFamily;
 import forestry.api.genetics.gatgets.DatabaseMode;
 import forestry.api.genetics.gatgets.IDatabaseTab;
@@ -25,8 +11,15 @@ import forestry.core.gui.elements.Alignment;
 import forestry.core.gui.elements.DatabaseElement;
 import forestry.core.gui.elements.GuiElementFactory;
 import forestry.core.utils.Translator;
-
 import genetics.api.alleles.IAlleleValue;
+import net.minecraft.network.chat.Style;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 @OnlyIn(Dist.CLIENT)
 public class TreeDatabaseTab implements IDatabaseTab<ITree> {

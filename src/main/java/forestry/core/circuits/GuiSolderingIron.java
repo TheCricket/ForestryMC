@@ -10,17 +10,7 @@
  ******************************************************************************/
 package forestry.core.circuits;
 
-import java.util.Locale;
-import java.util.Optional;
-
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.item.ItemStack;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.api.circuits.ChipsetManager;
 import forestry.api.circuits.CircuitSocketType;
 import forestry.api.circuits.ICircuitLayout;
@@ -33,6 +23,14 @@ import forestry.core.inventory.ItemInventorySolderingIron;
 import forestry.core.render.ColourProperties;
 import forestry.core.utils.ClientUtils;
 import forestry.core.utils.Translator;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.ItemStack;
+
+import java.util.Locale;
+import java.util.Optional;
 
 public class GuiSolderingIron extends GuiForestry<ContainerSolderingIron> {
 

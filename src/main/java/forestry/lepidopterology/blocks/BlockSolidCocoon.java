@@ -10,8 +10,10 @@
  ******************************************************************************/
 package forestry.lepidopterology.blocks;
 
-import javax.annotation.Nullable;
-
+import forestry.core.utils.ItemStackUtil;
+import forestry.lepidopterology.genetics.alleles.AlleleButterflyCocoon;
+import forestry.lepidopterology.genetics.alleles.ButterflyAlleles;
+import forestry.lepidopterology.tiles.TileCocoon;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;
@@ -27,15 +29,10 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import forestry.core.tiles.TileUtil;
-import forestry.core.utils.ItemStackUtil;
-import forestry.lepidopterology.genetics.alleles.AlleleButterflyCocoon;
-import forestry.lepidopterology.genetics.alleles.ButterflyAlleles;
-import forestry.lepidopterology.tiles.TileCocoon;
+import javax.annotation.Nullable;
 
 public class BlockSolidCocoon extends Block implements EntityBlock {
 	private static final PropertyCocoon COCOON = AlleleButterflyCocoon.COCOON;

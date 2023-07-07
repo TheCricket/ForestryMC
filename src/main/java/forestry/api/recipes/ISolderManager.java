@@ -5,14 +5,12 @@
  ******************************************************************************/
 package forestry.api.recipes;
 
-import javax.annotation.Nullable;
-
+import forestry.api.circuits.ICircuit;
+import forestry.api.circuits.ICircuitLayout;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeManager;
 
-import forestry.api.circuits.ICircuit;
-import forestry.api.circuits.ICircuitLayout;
-
+import javax.annotation.Nullable;
 import java.util.Optional;
 
 public interface ISolderManager extends ICraftingProvider<ISolderRecipe> {

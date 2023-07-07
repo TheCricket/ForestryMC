@@ -10,6 +10,7 @@
  ******************************************************************************/
 package forestry.core.items;
 
+import forestry.core.ItemGroupForestry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
@@ -20,8 +21,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
-
-import forestry.core.ItemGroupForestry;
 
 public class ItemWrench extends ItemForestry {
 

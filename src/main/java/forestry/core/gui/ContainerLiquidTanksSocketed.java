@@ -10,20 +10,18 @@
  ******************************************************************************/
 package forestry.core.gui;
 
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
+import forestry.core.circuits.ISocketable;
+import forestry.core.tiles.ILiquidTankTile;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerListener;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fluids.IFluidTank;
-
-import forestry.core.circuits.ISocketable;
-import forestry.core.tiles.ILiquidTankTile;
 
 public abstract class ContainerLiquidTanksSocketed<T extends BlockEntity & ILiquidTankTile & ISocketable> extends ContainerTile<T> implements IContainerSocketed, IContainerLiquidTanks {
 

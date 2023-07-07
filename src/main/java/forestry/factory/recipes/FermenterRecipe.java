@@ -12,19 +12,16 @@ package forestry.factory.recipes;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonObject;
-
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.Ingredient;
+import forestry.api.recipes.IFermenterRecipe;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.util.GsonHelper;
 import net.minecraft.resources.ResourceLocation;
-
+import net.minecraft.util.GsonHelper;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ForgeRegistryEntry;
-
-import forestry.api.recipes.IFermenterRecipe;
 
 public class FermenterRecipe implements IFermenterRecipe {
 

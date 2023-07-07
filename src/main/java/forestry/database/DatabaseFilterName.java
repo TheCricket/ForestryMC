@@ -1,9 +1,9 @@
 package forestry.database;
 
+import net.minecraft.world.item.ItemStack;
+
 import java.util.Locale;
 import java.util.regex.Pattern;
-
-import net.minecraft.world.item.ItemStack;
 
 public class DatabaseFilterName extends DatabaseFilter {
 	public DatabaseFilterName(Pattern pattern) {

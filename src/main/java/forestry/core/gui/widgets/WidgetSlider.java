@@ -1,8 +1,7 @@
 package forestry.core.gui.widgets;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
-
+import com.mojang.blaze3d.vertex.PoseStack;
 import forestry.core.gui.Drawable;
 
 public class WidgetSlider extends Widget {

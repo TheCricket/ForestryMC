@@ -5,18 +5,16 @@
  ******************************************************************************/
 package forestry.api.modules;
 
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
 import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.Set;
 import java.util.function.Consumer;
-
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.resources.ResourceLocation;
-
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 /**
  * Defines a Forestry module.

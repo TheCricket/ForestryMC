@@ -10,17 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.worldgen;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.WorldGenLevel;
-import net.minecraft.world.level.biome.Biome;
-
 import forestry.api.apiculture.hives.IHiveDescription;
 import forestry.api.apiculture.hives.IHiveGen;
 import forestry.api.apiculture.hives.IHiveRegistry;
@@ -29,6 +18,16 @@ import forestry.api.core.EnumTemperature;
 import forestry.apiculture.features.ApicultureBlocks;
 import forestry.apiculture.tiles.TileHive;
 import forestry.core.tiles.TileUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 public class HiveDescriptionSwarmer implements IHiveDescription {
 

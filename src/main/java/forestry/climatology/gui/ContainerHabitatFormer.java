@@ -10,16 +10,6 @@
  ******************************************************************************/
 package forestry.climatology.gui;
 
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.inventory.ContainerListener;
-import net.minecraft.network.FriendlyByteBuf;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.fluids.IFluidTank;
-
 import forestry.api.climate.IClimateState;
 import forestry.api.climate.IClimateTransformer;
 import forestry.climatology.features.ClimatologyContainers;
@@ -33,6 +23,14 @@ import forestry.core.gui.IGuiSelectable;
 import forestry.core.gui.slots.SlotLiquidIn;
 import forestry.core.network.packets.PacketGuiUpdate;
 import forestry.core.tiles.TileUtil;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ContainerListener;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.fluids.IFluidTank;
 
 public class ContainerHabitatFormer extends ContainerTile<TileHabitatFormer> implements IContainerLiquidTanks, IGuiSelectable {
 

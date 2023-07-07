@@ -5,11 +5,11 @@
  ******************************************************************************/
 package forestry.api.genetics.flowers;
 
-import java.util.Collection;
-
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.Collection;
 
 /**
  * Basic condition for flower growing, such as checking that the soil is the correct type.

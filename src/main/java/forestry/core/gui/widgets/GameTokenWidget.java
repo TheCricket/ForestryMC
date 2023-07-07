@@ -10,19 +10,8 @@
  ******************************************************************************/
 package forestry.core.gui.widgets;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.client.gui.GuiComponent;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.core.tooltips.ToolTip;
 import forestry.core.gui.GuiUtil;
 import forestry.core.network.packets.PacketGuiSelectRequest;
@@ -31,6 +20,14 @@ import forestry.core.tiles.EscritoireGame;
 import forestry.core.tiles.EscritoireGameToken;
 import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.SoundUtil;
+import net.minecraft.client.gui.GuiComponent;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
 
 public class GameTokenWidget extends Widget {
 	private final ItemStack HIDDEN_TOKEN = new ItemStack(Items.BOOK);

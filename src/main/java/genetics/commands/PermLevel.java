@@ -1,8 +1,8 @@
 package genetics.commands;
 
-import java.util.function.Predicate;
-
 import net.minecraft.commands.CommandSourceStack;
+
+import java.util.function.Predicate;
 
 public enum PermLevel implements Predicate<CommandSourceStack> {
 

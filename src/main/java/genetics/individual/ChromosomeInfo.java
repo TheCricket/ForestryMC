@@ -1,11 +1,10 @@
 package genetics.individual;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.resources.ResourceLocation;
-
 import genetics.api.individual.IChromosome;
 import genetics.api.individual.IChromosomeType;
+import net.minecraft.resources.ResourceLocation;
+
+import javax.annotation.Nullable;
 
 public class ChromosomeInfo {
 	public final IChromosomeType chromosomeType;

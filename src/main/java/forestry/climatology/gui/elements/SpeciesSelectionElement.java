@@ -10,19 +10,8 @@
  ******************************************************************************/
 package forestry.climatology.gui.elements;
 
-import java.util.Optional;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.climate.IClimateTransformer;
 import forestry.api.core.EnumHumidity;
 import forestry.api.core.EnumTemperature;
@@ -30,9 +19,16 @@ import forestry.api.genetics.alleles.IAlleleForestrySpecies;
 import forestry.core.climate.ClimateStateHelper;
 import forestry.core.config.Constants;
 import forestry.core.gui.elements.GuiElement;
-
 import genetics.api.individual.IIndividual;
 import genetics.utils.RootUtils;
+import net.minecraft.client.Minecraft;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
 public class SpeciesSelectionElement extends GuiElement {

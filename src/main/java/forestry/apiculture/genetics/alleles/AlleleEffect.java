@@ -10,16 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.genetics.alleles;
 
-import java.util.List;
-
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Vec3i;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.apiculture.IBeeModifier;
@@ -30,9 +20,16 @@ import forestry.api.genetics.IEffectData;
 import forestry.core.config.Constants;
 import forestry.core.render.ParticleRender;
 import forestry.core.utils.VectUtil;
-
 import genetics.api.alleles.AlleleCategorized;
 import genetics.api.individual.IGenome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Vec3i;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.phys.AABB;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.List;
 
 public abstract class AlleleEffect extends AlleleCategorized implements IAlleleBeeEffect {
 	protected AlleleEffect(String valueName, boolean isDominant) {

@@ -10,16 +10,6 @@
  ******************************************************************************/
 package forestry.arboriculture.items;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
 import forestry.api.arboriculture.genetics.ITree;
 import forestry.arboriculture.ModuleArboriculture;
@@ -28,6 +18,14 @@ import forestry.arboriculture.tiles.TileLeaves;
 import forestry.core.items.ItemBlockForestry;
 import forestry.core.items.definitions.IColoredItem;
 import forestry.core.utils.Translator;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ItemBlockLeaves extends ItemBlockForestry<BlockAbstractLeaves> implements IColoredItem {
 

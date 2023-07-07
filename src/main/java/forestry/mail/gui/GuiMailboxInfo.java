@@ -10,27 +10,24 @@
  ******************************************************************************/
 package forestry.mail.gui;
 
-import javax.annotation.Nullable;
-
+import com.mojang.blaze3d.platform.Window;
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.core.config.Config;
+import forestry.core.config.Constants;
+import forestry.core.render.ForestryResource;
+import forestry.core.utils.SoundUtil;
+import forestry.mail.POBoxInfo;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;
-
-import com.mojang.blaze3d.platform.Window;
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.core.config.Config;
-import forestry.core.config.Constants;
-import forestry.core.render.ForestryResource;
-import forestry.core.utils.SoundUtil;
-import forestry.mail.POBoxInfo;
+import javax.annotation.Nullable;
 
 public class GuiMailboxInfo extends GuiComponent {
 

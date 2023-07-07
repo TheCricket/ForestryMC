@@ -10,24 +10,7 @@
  ******************************************************************************/
 package forestry.core.tiles;
 
-import java.io.IOException;
-import java.util.Optional;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.WorldlyContainer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-
 import com.mojang.authlib.GameProfile;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.genetics.ForestryComponentKeys;
 import forestry.api.genetics.IResearchHandler;
 import forestry.api.genetics.alleles.IAlleleForestrySpecies;
@@ -41,10 +24,23 @@ import forestry.core.network.PacketBufferForestry;
 import forestry.core.network.packets.PacketItemStackDisplay;
 import forestry.core.utils.InventoryUtil;
 import forestry.core.utils.NetworkUtil;
-
 import genetics.api.individual.IIndividual;
 import genetics.api.root.IIndividualRoot;
 import genetics.utils.RootUtils;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.io.IOException;
+import java.util.Optional;
 
 public class TileEscritoire extends TileBase implements WorldlyContainer, ISlotPickupWatcher, IStreamableGui, IItemStackDisplay {
 

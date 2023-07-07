@@ -10,16 +10,14 @@
  ******************************************************************************/
 package forestry.core.gui;
 
-import net.minecraft.world.entity.player.Inventory;
+import forestry.core.circuits.ISocketable;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.core.circuits.ISocketable;
 
 public abstract class ContainerSocketed<T extends BlockEntity & ISocketable> extends ContainerTile<T> implements IContainerSocketed {
 

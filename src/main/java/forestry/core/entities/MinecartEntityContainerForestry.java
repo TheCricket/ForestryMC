@@ -10,8 +10,8 @@
  ******************************************************************************/
 package forestry.core.entities;
 
-import javax.annotation.Nullable;
-
+import forestry.core.inventory.IInventoryAdapter;
+import forestry.core.tiles.IFilterSlotDelegate;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -26,12 +26,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-
 import net.minecraftforge.common.util.ITeleporter;
 
-import forestry.core.inventory.IInventoryAdapter;
-import forestry.core.tiles.IFilterSlotDelegate;
-import forestry.core.utils.InventoryUtil;
+import javax.annotation.Nullable;
 
 //TODO: large type hierarchy here. If no other modules use other than apiculture then compress this.
 public abstract class MinecartEntityContainerForestry extends MinecartEntityForestry implements WorldlyContainer, IFilterSlotDelegate, MenuProvider {

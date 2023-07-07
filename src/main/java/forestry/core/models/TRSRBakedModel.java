@@ -13,12 +13,8 @@
 package forestry.core.models;
 
 import com.google.common.collect.ImmutableList;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Random;
-
+import com.mojang.blaze3d.vertex.VertexFormatElement;
+import com.mojang.math.Transformation;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
@@ -28,20 +24,17 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
-
-import com.mojang.blaze3d.vertex.VertexFormatElement;
-import com.mojang.math.Matrix3f;
-import com.mojang.math.Matrix4f;
-import com.mojang.math.Transformation;
-import com.mojang.math.Vector3f;
-import com.mojang.math.Vector4f;
-
 import net.minecraftforge.client.model.BakedModelWrapper;
 import net.minecraftforge.client.model.data.EmptyModelData;
 import net.minecraftforge.client.model.data.IModelData;
 import net.minecraftforge.client.model.pipeline.BakedQuadBuilder;
 import net.minecraftforge.client.model.pipeline.VertexTransformer;
 import net.minecraftforge.common.model.TransformationHelper;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Random;
 
 // for those wondering TRSR stands for Translation Rotation Scale Rotation
 public class TRSRBakedModel extends BakedModelWrapper<BakedModel> {

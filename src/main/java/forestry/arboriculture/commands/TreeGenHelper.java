@@ -10,22 +10,6 @@
  ******************************************************************************/
 package forestry.arboriculture.commands;
 
-import java.util.Optional;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.WorldGenLevel;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.chunk.ChunkGenerator;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-import net.minecraft.server.level.ServerChunkCache;
-import net.minecraft.server.level.ServerLevel;
-
 import forestry.api.arboriculture.TreeManager;
 import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
 import forestry.api.arboriculture.genetics.ITree;
@@ -33,11 +17,25 @@ import forestry.api.arboriculture.genetics.TreeChromosomes;
 import forestry.core.utils.BlockUtil;
 import forestry.core.utils.WorldUtils;
 import forestry.core.worldgen.FeatureBase;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.individual.IGenome;
 import genetics.commands.SpeciesNotFoundException;
 import genetics.utils.AlleleUtils;
+import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerChunkCache;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.chunk.ChunkGenerator;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+
+import java.util.Optional;
 
 public final class TreeGenHelper {
 

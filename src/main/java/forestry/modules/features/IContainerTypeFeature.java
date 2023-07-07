@@ -1,16 +1,13 @@
 package forestry.modules.features;
 
+import forestry.api.core.IContainerTypeProvider;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
-
 import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.network.IContainerFactory;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
-
-import net.minecraftforge.network.IContainerFactory;
-
-import forestry.api.core.IContainerTypeProvider;
 
 public interface IContainerTypeFeature<C extends AbstractContainerMenu> extends IContainerTypeProvider<C>, IModFeature {
 

@@ -10,14 +10,12 @@
  ******************************************************************************/
 package forestry.storage.inventory;
 
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.item.ItemStack;
-
-import net.minecraftforge.network.NetworkHooks;
-
 import forestry.core.gui.IPagedInventory;
 import forestry.storage.items.ItemBackpackNaturalist;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.network.NetworkHooks;
 
 public class ItemInventoryBackpackPaged extends ItemInventoryBackpack implements IPagedInventory {
 	private final ItemBackpackNaturalist backpackNaturalist;

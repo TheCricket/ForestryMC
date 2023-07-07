@@ -10,10 +10,9 @@
  ******************************************************************************/
 package forestry.mail.blocks;
 
+import forestry.core.blocks.BlockBase;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Material;
-
-import forestry.core.blocks.BlockBase;
 
 public class BlockMail extends BlockBase<BlockTypeMail> {
 	public BlockMail(BlockTypeMail blockType) {

@@ -1,17 +1,7 @@
 package forestry.sorting.gui;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
-
+import com.mojang.blaze3d.vertex.PoseStack;
 import forestry.api.genetics.filter.IFilterLogic;
 import forestry.core.config.Constants;
 import forestry.core.gui.Drawable;
@@ -22,6 +12,14 @@ import forestry.sorting.gui.widgets.RuleWidget;
 import forestry.sorting.gui.widgets.SelectionWidget;
 import forestry.sorting.gui.widgets.SpeciesWidget;
 import forestry.sorting.tiles.IFilterContainer;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.Slot;
+
+import javax.annotation.Nullable;
 
 public class GuiGeneticFilter extends GuiForestryTitled<ContainerGeneticFilter> {
 

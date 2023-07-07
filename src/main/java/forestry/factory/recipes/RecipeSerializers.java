@@ -12,21 +12,18 @@ package forestry.factory.recipes;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
-import java.util.function.BiConsumer;
-import java.util.function.Function;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
+import com.mojang.serialization.Dynamic;
+import com.mojang.serialization.JsonOps;
+import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.NonNullList;
-
-import com.mojang.serialization.Dynamic;
-import com.mojang.serialization.JsonOps;
-
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.fluids.FluidStack;
+
+import java.util.function.BiConsumer;
+import java.util.function.Function;
 
 public class RecipeSerializers {
 

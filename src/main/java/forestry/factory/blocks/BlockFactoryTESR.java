@@ -10,10 +10,9 @@
  ******************************************************************************/
 package forestry.factory.blocks;
 
+import forestry.core.blocks.BlockBase;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Material;
-
-import forestry.core.blocks.BlockBase;
 
 public class BlockFactoryTESR extends BlockBase<BlockTypeFactoryTesr> {
 	public BlockFactoryTESR(BlockTypeFactoryTesr type) {

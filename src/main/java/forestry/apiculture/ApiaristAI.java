@@ -11,21 +11,20 @@
 
 package forestry.apiculture;
 
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.entity.ai.goal.MoveToBlockGoal;
-import net.minecraft.world.entity.npc.Villager;
-import net.minecraft.world.SimpleContainer;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.Level;
-
 import forestry.api.apiculture.genetics.EnumBeeType;
 import forestry.apiculture.blocks.BlockApiculture;
 import forestry.apiculture.items.ItemBeeGE;
 import forestry.apiculture.tiles.TileBeeHouse;
 import forestry.core.tiles.TileUtil;
 import forestry.core.utils.InventoryUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.ai.goal.MoveToBlockGoal;
+import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
 
 public class ApiaristAI extends MoveToBlockGoal {
 	private final Villager villager;

@@ -12,30 +12,6 @@ package forestry.farming.multiblock;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.util.Collection;
-import java.util.EnumMap;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Vec3i;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.Biomes;
-
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-import net.minecraftforge.registries.ForgeRegistries;
-
 import forestry.api.circuits.ChipsetManager;
 import forestry.api.circuits.CircuitSocketType;
 import forestry.api.circuits.ICircuitBoard;
@@ -67,6 +43,22 @@ import forestry.farming.FarmTarget;
 import forestry.farming.gui.IFarmLedgerDelegate;
 import forestry.farming.tiles.TileFarmGearbox;
 import forestry.farming.tiles.TileFarmPlain;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Vec3i;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.*;
 
 public class FarmController extends RectangularMultiblockControllerBase implements IFarmControllerInternal, ILiquidTankTile {
 	private int allowedExtent = 0;

@@ -1,18 +1,17 @@
 package forestry.core.genetics;
 
+import forestry.api.genetics.products.IDynamicProductList;
+import forestry.api.genetics.products.IMutableProductList;
+import forestry.api.genetics.products.Product;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+
 import java.util.Collection;
 import java.util.Random;
 import java.util.function.Function;
 import java.util.function.Supplier;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.BlockGetter;
-
-import forestry.api.genetics.products.IDynamicProductList;
-import forestry.api.genetics.products.IMutableProductList;
-import forestry.api.genetics.products.Product;
 
 public abstract class ProductListWrapper implements IDynamicProductList, IMutableProductList {
 	private ProductListWrapper() {

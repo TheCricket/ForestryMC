@@ -10,20 +10,17 @@
  ******************************************************************************/
 package forestry.factory.recipes;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeManager;
-import net.minecraft.core.NonNullList;
-
-import net.minecraftforge.fluids.FluidStack;
-
 import forestry.api.recipes.IForestryRecipe;
 import forestry.api.recipes.ISqueezerManager;
 import forestry.api.recipes.ISqueezerRecipe;
 import forestry.core.utils.ItemStackUtil;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraftforge.fluids.FluidStack;
 
+import javax.annotation.Nullable;
 import java.util.Optional;
 
 public class SqueezerRecipeManager extends AbstractCraftingProvider<ISqueezerRecipe> implements ISqueezerManager {

@@ -5,12 +5,10 @@
  ******************************************************************************/
 package forestry.api.climate;
 
+import forestry.api.core.ILocatable;
 import net.minecraft.server.level.ServerPlayer;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.api.core.ILocatable;
 
 /**
  * A climate listener listens to the climate at a specific location. It automatically gets and caches the climate state

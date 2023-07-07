@@ -10,14 +10,13 @@
  ******************************************************************************/
 package forestry.arboriculture.worldgen;
 
-import java.util.Random;
-
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.LevelAccessor;
-
 import forestry.api.arboriculture.ITreeGenData;
 import forestry.core.worldgen.FeatureHelper;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.LevelAccessor;
+
+import java.util.Random;
 
 public class FeatureBalsa extends FeatureTree {
 

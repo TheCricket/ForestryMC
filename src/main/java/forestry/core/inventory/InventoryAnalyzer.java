@@ -10,20 +10,17 @@
  ******************************************************************************/
 package forestry.core.inventory;
 
-import java.util.Optional;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.FluidUtil;
-
 import forestry.api.arboriculture.TreeManager;
 import forestry.core.tiles.TileAnalyzer;
 import forestry.core.utils.GeneticsUtil;
 import forestry.core.utils.SlotUtil;
-
 import genetics.utils.RootUtils;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidUtil;
+
+import java.util.Optional;
 
 public class InventoryAnalyzer extends InventoryAdapterTile<TileAnalyzer> {
 	public static final short SLOT_ANALYZE = 0;

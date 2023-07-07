@@ -1,14 +1,13 @@
 package forestry.arboriculture.blocks;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.FenceBlock;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.BlockGetter;
-
 import forestry.api.arboriculture.IWoodType;
 import forestry.api.arboriculture.WoodBlockKind;
 import forestry.arboriculture.IWoodTyped;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class BlockForestryFence extends FenceBlock implements IWoodTyped {
 

@@ -10,12 +10,11 @@
  ******************************************************************************/
 package forestry.apiculture;
 
-import javax.annotation.Nullable;
-
-import genetics.api.individual.IGenome;
-
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.apiculture.IBeeModifier;
+import genetics.api.individual.IGenome;
+
+import javax.annotation.Nullable;
 
 public class BeeHousingModifier implements IBeeModifier {
 	private final IBeeHousing beeHousing;

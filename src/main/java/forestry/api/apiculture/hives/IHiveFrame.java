@@ -5,11 +5,10 @@
  ******************************************************************************/
 package forestry.api.apiculture.hives;
 
-import net.minecraft.world.item.ItemStack;
-
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.apiculture.IBeeModifier;
 import forestry.api.apiculture.genetics.IBee;
+import net.minecraft.world.item.ItemStack;
 
 public interface IHiveFrame {
 

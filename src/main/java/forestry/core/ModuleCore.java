@@ -10,22 +10,7 @@
  ******************************************************************************/
 package forestry.core;
 
-import javax.annotation.Nullable;
-import java.util.Collections;
-import java.util.Set;
-
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.resources.ResourceLocation;
-
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import net.minecraftforge.fml.InterModComms;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
 import forestry.api.circuits.ChipsetManager;
 import forestry.api.genetics.alleles.AlleleManager;
 import forestry.api.modules.ForestryModule;
@@ -55,6 +40,17 @@ import forestry.core.utils.ForestryModEnvWarningCallable;
 import forestry.modules.BlankForestryModule;
 import forestry.modules.ForestryModuleUids;
 import forestry.modules.ISidedModuleHandler;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+import javax.annotation.Nullable;
+import java.util.Collections;
+import java.util.Set;
 
 @ForestryModule(containerID = Constants.MOD_ID, moduleID = ForestryModuleUids.CORE, name = "Core", author = "SirSengir", url = Constants.URL, unlocalizedDescription = "for.module.core.description", coreModule = true)
 public class ModuleCore extends BlankForestryModule {

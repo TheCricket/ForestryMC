@@ -10,19 +10,17 @@
  ******************************************************************************/
 package forestry.apiculture.genetics.alleles;
 
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Vec3i;
-import net.minecraft.world.level.Level;
-
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.apiculture.genetics.BeeChromosomes;
 import forestry.api.core.EnumTemperature;
 import forestry.api.genetics.IEffectData;
 import forestry.core.utils.VectUtil;
-
 import genetics.api.individual.IGenome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Vec3i;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 public class AlleleEffectGlacial extends AlleleEffectThrottled {
 

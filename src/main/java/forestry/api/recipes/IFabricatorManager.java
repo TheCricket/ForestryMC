@@ -5,17 +5,14 @@
  ******************************************************************************/
 package forestry.api.recipes;
 
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.Optional;
-import java.util.stream.Stream;
-
 import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.Level;
-
 import net.minecraftforge.fluids.FluidStack;
+
+import javax.annotation.Nullable;
+import java.util.Optional;
 
 public interface IFabricatorManager extends ICraftingProvider<IFabricatorRecipe> {
 

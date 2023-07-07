@@ -1,11 +1,10 @@
 package forestry.api.genetics;
 
-import javax.annotation.Nullable;
-
+import com.mojang.authlib.GameProfile;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.Level;
 
-import com.mojang.authlib.GameProfile;
+import javax.annotation.Nullable;
 
 public interface IBreedingTrackerHandler {
 

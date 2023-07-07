@@ -10,19 +10,14 @@
  ******************************************************************************/
 package forestry.core.gui.elements;
 
-import net.minecraft.client.Minecraft;
-import com.mojang.blaze3d.platform.Lighting;
-import net.minecraft.world.item.ItemStack;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.platform.GlStateManager;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.core.tooltips.ToolTip;
 import forestry.core.gui.GuiUtil;
 import forestry.core.utils.ItemTooltipUtil;
+import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public abstract class AbstractItemElement extends GuiElement {
 

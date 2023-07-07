@@ -10,13 +10,6 @@
  ******************************************************************************/
 package forestry.core.utils;
 
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Set;
-
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import forestry.api.core.EnumHumidity;
 import forestry.api.core.EnumTemperature;
 import forestry.api.core.IErrorState;
@@ -24,6 +17,12 @@ import forestry.api.genetics.EnumTolerance;
 import forestry.api.genetics.IClimateHelper;
 import forestry.api.genetics.alleles.AlleleManager;
 import forestry.core.errors.EnumErrorCode;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+
+import java.util.ArrayList;
+import java.util.Locale;
+import java.util.Set;
 
 public class ClimateUtil implements IClimateHelper {
 

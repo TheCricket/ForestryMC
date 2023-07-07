@@ -2,22 +2,14 @@ package forestry.modules.features;
 
 import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.Multimap;
-
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.function.BiFunction;
-import java.util.function.BiPredicate;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
-import java.util.function.UnaryOperator;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
+import forestry.api.core.IBlockSubtype;
+import forestry.api.core.IItemSubtype;
+import forestry.api.modules.ForestryModule;
+import forestry.api.storage.EnumBackpackType;
+import forestry.api.storage.IBackpackDefinition;
+import forestry.core.config.Constants;
+import forestry.modules.ForestryModuleUids;
+import forestry.storage.ModuleBackpacks;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -30,7 +22,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -39,14 +30,14 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.network.IContainerFactory;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
-import forestry.api.core.IBlockSubtype;
-import forestry.api.core.IItemSubtype;
-import forestry.api.modules.ForestryModule;
-import forestry.api.storage.EnumBackpackType;
-import forestry.api.storage.IBackpackDefinition;
-import forestry.core.config.Constants;
-import forestry.modules.ForestryModuleUids;
-import forestry.storage.ModuleBackpacks;
+import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.function.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 //TODO: Sort Registries and Features
 public class ModFeatureRegistry {

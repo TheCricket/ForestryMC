@@ -1,9 +1,9 @@
 package forestry.api.core.tooltips;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+
+import javax.annotation.Nullable;
 
 /**
  * Helper class to allow simple appending of siblings to a text collection.

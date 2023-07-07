@@ -10,9 +10,8 @@
  ******************************************************************************/
 package forestry.apiculture;
 
-import genetics.api.individual.IGenome;
-
 import forestry.api.apiculture.DefaultBeeModifier;
+import genetics.api.individual.IGenome;
 
 public class AlvearyBeeModifier extends DefaultBeeModifier {
 	@Override

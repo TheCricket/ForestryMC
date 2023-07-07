@@ -10,14 +10,12 @@
  ******************************************************************************/
 package forestry.energy.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.core.config.Constants;
 import forestry.core.gui.widgets.TankWidget;
 import forestry.energy.tiles.TileEngineBiogas;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 public class GuiEngineBiogas extends GuiEngine<ContainerEngineBiogas, TileEngineBiogas> {
 	public GuiEngineBiogas(ContainerEngineBiogas container, Inventory inventory, Component title) {

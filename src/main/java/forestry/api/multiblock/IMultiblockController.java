@@ -5,10 +5,10 @@
  ******************************************************************************/
 package forestry.api.multiblock;
 
+import net.minecraft.core.BlockPos;
+
 import javax.annotation.Nullable;
 import java.util.Collection;
-
-import net.minecraft.core.BlockPos;
 
 /**
  * IMultiblockController is used to handle the assembly of Multiblocks.

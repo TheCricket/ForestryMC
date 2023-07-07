@@ -5,12 +5,12 @@
  ******************************************************************************/
 package forestry.api.mail;
 
-import java.util.Map;
-
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.NonNullList;
-import net.minecraft.world.level.Level;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+
+import java.util.Map;
 
 public interface IPostOffice {
 

@@ -1,14 +1,13 @@
 package forestry.arboriculture.blocks;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.BlockGetter;
-
 import forestry.api.arboriculture.IWoodType;
 import forestry.api.arboriculture.WoodBlockKind;
 import forestry.arboriculture.IWoodTyped;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.state.BlockState;
 
 //eg    public static final Block BIRCH_LOG = register("birch_log", new LogBlock(MaterialColor.SAND, Block.Properties.create(Material.WOOD, MaterialColor.QUARTZ).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
 //TODO stripped logs    public static final Block STRIPPED_BIRCH_LOG = register("stripped_birch_log", new LogBlock(MaterialColor.SAND, Block.Properties.create(Material.WOOD, MaterialColor.SAND).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));

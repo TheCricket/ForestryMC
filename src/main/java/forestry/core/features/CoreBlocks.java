@@ -1,5 +1,10 @@
 package forestry.core.features;
 
+import forestry.core.ModuleCore;
+import forestry.core.blocks.*;
+import forestry.core.items.ItemBlockBase;
+import forestry.core.items.ItemBlockForestry;
+import forestry.modules.features.*;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
@@ -8,21 +13,6 @@ import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-
-import forestry.core.ModuleCore;
-import forestry.core.blocks.BlockBogEarth;
-import forestry.core.blocks.BlockCore;
-import forestry.core.blocks.BlockHumus;
-import forestry.core.blocks.BlockResourceStorage;
-import forestry.core.blocks.BlockTypeCoreTesr;
-import forestry.core.blocks.EnumResourceType;
-import forestry.core.items.ItemBlockBase;
-import forestry.core.items.ItemBlockForestry;
-import forestry.modules.features.FeatureBlock;
-import forestry.modules.features.FeatureBlockGroup;
-import forestry.modules.features.FeatureProvider;
-import forestry.modules.features.IFeatureRegistry;
-import forestry.modules.features.ModFeatureRegistry;
 
 @FeatureProvider
 public class CoreBlocks {

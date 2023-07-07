@@ -5,18 +5,16 @@
  ******************************************************************************/
 package forestry.api.arboriculture;
 
-import javax.annotation.Nullable;
-import java.util.Random;
-
-import net.minecraft.core.Direction;
+import com.mojang.authlib.GameProfile;
+import genetics.api.individual.IGenome;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
-import com.mojang.authlib.GameProfile;
-
-import genetics.api.individual.IGenome;
+import javax.annotation.Nullable;
+import java.util.Random;
 
 /**
  * Implements the tree generation for a tree species.

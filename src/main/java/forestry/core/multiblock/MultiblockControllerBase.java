@@ -1,29 +1,21 @@
 package forestry.core.multiblock;
 
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.chunk.ChunkSource;
-import net.minecraft.world.level.chunk.LevelChunk;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.multiblock.IMultiblockComponent;
 import forestry.core.tiles.TileUtil;
 import forestry.core.utils.Log;
 import forestry.core.utils.Translator;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.chunk.ChunkSource;
+import net.minecraft.world.level.chunk.LevelChunk;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.util.*;
 
 /**
  * This class contains the base logic for "multiblock controllers". Conceptually, they are

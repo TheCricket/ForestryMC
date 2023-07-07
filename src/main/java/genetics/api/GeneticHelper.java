@@ -1,25 +1,9 @@
 package genetics.api;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.Optional;
-
-import net.minecraft.core.Direction;
-import net.minecraft.world.item.ItemStack;
-
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.CapabilityManager;
-import net.minecraftforge.common.capabilities.CapabilityToken;
-import net.minecraftforge.common.util.LazyOptional;
-
 import genetics.api.alleles.Allele;
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleValue;
-import genetics.api.individual.IChromosomeAllele;
-import genetics.api.individual.IChromosomeType;
-import genetics.api.individual.IChromosomeValue;
-import genetics.api.individual.IGenome;
-import genetics.api.individual.IIndividual;
+import genetics.api.individual.*;
 import genetics.api.organism.EmptyOrganismType;
 import genetics.api.organism.IOrganism;
 import genetics.api.organism.IOrganismHandler;
@@ -27,6 +11,16 @@ import genetics.api.organism.IOrganismType;
 import genetics.api.root.EmptyRootDefinition;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.IRootDefinition;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityManager;
+import net.minecraftforge.common.capabilities.CapabilityToken;
+import net.minecraftforge.common.util.LazyOptional;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.util.Optional;
 
 /**
  * A helper class that contains some help methods.

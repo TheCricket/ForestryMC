@@ -10,36 +10,27 @@
  ******************************************************************************/
 package forestry.arboriculture.proxy;
 
+import forestry.api.arboriculture.genetics.IAlleleFruit;
+import forestry.api.arboriculture.genetics.TreeChromosomes;
+import forestry.arboriculture.features.ArboricultureBlocks;
+import forestry.arboriculture.genetics.alleles.AlleleFruits;
+import forestry.arboriculture.models.*;
+import forestry.core.config.Constants;
+import forestry.core.models.ClientManager;
+import forestry.modules.IClientModuleHandler;
+import genetics.utils.AlleleUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.level.FoliageColor;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.client.model.ForgeModelBakery;
 import net.minecraftforge.client.model.ModelLoaderRegistry;
-
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-
-import forestry.api.arboriculture.genetics.IAlleleFruit;
-import forestry.api.arboriculture.genetics.TreeChromosomes;
-import forestry.arboriculture.features.ArboricultureBlocks;
-import forestry.arboriculture.genetics.alleles.AlleleFruits;
-import forestry.arboriculture.models.ModelDecorativeLeaves;
-import forestry.arboriculture.models.ModelDefaultLeaves;
-import forestry.arboriculture.models.ModelDefaultLeavesFruit;
-import forestry.arboriculture.models.ModelLeaves;
-import forestry.arboriculture.models.SaplingModelLoader;
-import forestry.arboriculture.models.TextureLeaves;
-import forestry.core.config.Constants;
-import forestry.core.models.ClientManager;
-import forestry.modules.IClientModuleHandler;
-
-import genetics.utils.AlleleUtils;
 
 @OnlyIn(Dist.CLIENT)
 public class ProxyArboricultureClient extends ProxyArboriculture implements IClientModuleHandler {

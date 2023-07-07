@@ -10,12 +10,6 @@
  ******************************************************************************/
 package forestry.core.inventory;
 
-import java.util.Optional;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-import net.minecraft.world.level.Level;
-
 import forestry.api.genetics.ForestryComponentKeys;
 import forestry.api.genetics.IResearchHandler;
 import forestry.api.genetics.alleles.IAlleleForestrySpecies;
@@ -23,9 +17,13 @@ import forestry.core.tiles.EscritoireGame;
 import forestry.core.tiles.TileEscritoire;
 import forestry.core.utils.GeneticsUtil;
 import forestry.core.utils.SlotUtil;
-
 import genetics.api.individual.IIndividual;
 import genetics.utils.RootUtils;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+
+import java.util.Optional;
 
 public class InventoryEscritoire extends InventoryAdapterTile<TileEscritoire> {
 	public static final short SLOT_ANALYZE = 0;

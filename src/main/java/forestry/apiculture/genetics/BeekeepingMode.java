@@ -10,24 +10,18 @@
  ******************************************************************************/
 package forestry.apiculture.genetics;
 
+import forestry.api.apiculture.*;
+import forestry.api.apiculture.genetics.BeeChromosomes;
+import forestry.api.apiculture.genetics.IBee;
+import genetics.api.individual.IGenome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
+
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-
-import forestry.api.apiculture.BeeManager;
-import forestry.api.apiculture.DefaultBeeModifier;
-import forestry.api.apiculture.IBeeHousing;
-import forestry.api.apiculture.IBeeModifier;
-import forestry.api.apiculture.IBeekeepingMode;
-import forestry.api.apiculture.genetics.BeeChromosomes;
-import forestry.api.apiculture.genetics.IBee;
-
-import genetics.api.individual.IGenome;
 
 public class BeekeepingMode implements IBeekeepingMode {
 

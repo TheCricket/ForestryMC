@@ -5,15 +5,14 @@
  ******************************************************************************/
 package forestry.api.mail;
 
-import javax.annotation.Nullable;
-import java.util.List;
-
-import net.minecraft.world.Container;
-import net.minecraft.world.item.ItemStack;
+import forestry.api.core.INbtWritable;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.Container;
+import net.minecraft.world.item.ItemStack;
 
-import forestry.api.core.INbtWritable;
+import javax.annotation.Nullable;
+import java.util.List;
 
 public interface ILetter extends Container, INbtWritable {
 

@@ -10,8 +10,9 @@
  ******************************************************************************/
 package forestry.mail;
 
-import java.util.LinkedHashMap;
-
+import forestry.api.mail.*;
+import forestry.mail.features.MailItems;
+import forestry.mail.items.EnumStampDefinition;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
@@ -19,17 +20,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.saveddata.SavedData;
 
-import forestry.api.mail.EnumPostage;
-import forestry.api.mail.ILetter;
-import forestry.api.mail.IMailAddress;
-import forestry.api.mail.IPostOffice;
-import forestry.api.mail.IPostalCarrier;
-import forestry.api.mail.IPostalState;
-import forestry.api.mail.IStamps;
-import forestry.api.mail.ITradeStation;
-import forestry.api.mail.PostManager;
-import forestry.mail.features.MailItems;
-import forestry.mail.items.EnumStampDefinition;
+import java.util.LinkedHashMap;
 
 public class PostOffice extends SavedData implements IPostOffice {
 

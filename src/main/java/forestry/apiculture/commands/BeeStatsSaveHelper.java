@@ -10,14 +10,7 @@
  ******************************************************************************/
 package forestry.apiculture.commands;
 
-import java.util.Collection;
-
-import net.minecraft.world.level.Level;
-
 import com.mojang.authlib.GameProfile;
-
-import genetics.utils.AlleleUtils;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.IApiaristTracker;
 import forestry.api.apiculture.genetics.BeeChromosomes;
@@ -26,6 +19,10 @@ import forestry.api.genetics.IBreedingTracker;
 import forestry.core.commands.IStatsSaveHelper;
 import forestry.core.utils.StringUtil;
 import forestry.core.utils.Translator;
+import genetics.utils.AlleleUtils;
+import net.minecraft.world.level.Level;
+
+import java.util.Collection;
 
 public class BeeStatsSaveHelper implements IStatsSaveHelper {
 

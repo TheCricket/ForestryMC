@@ -1,12 +1,17 @@
 package genetics;
 
+import com.mojang.brigadier.CommandDispatcher;
+import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import genetics.api.GeneticsAPI;
+import genetics.api.IGeneTemplate;
+import genetics.api.organism.IOrganism;
+import genetics.api.root.IRootDefinition;
+import genetics.api.root.components.DefaultStage;
+import genetics.commands.CommandListAlleles;
+import genetics.plugins.PluginManager;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-
-import com.mojang.brigadier.CommandDispatcher;
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityManager;
@@ -17,19 +22,10 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
-import genetics.api.GeneticsAPI;
-import genetics.api.IGeneTemplate;
-import genetics.api.organism.IOrganism;
-import genetics.api.root.IRootDefinition;
-import genetics.api.root.components.DefaultStage;
-import genetics.commands.CommandListAlleles;
-import genetics.plugins.PluginManager;
 
 @Mod(Genetics.MOD_ID)
 public class Genetics {

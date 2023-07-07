@@ -1,9 +1,9 @@
 package forestry.api.genetics.products;
 
-import java.util.function.Supplier;
-
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+
+import java.util.function.Supplier;
 
 /**
  * A pair that consists of a {@link ItemStack} and a float that represents the chance that the stack can be produced.

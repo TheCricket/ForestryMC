@@ -1,14 +1,13 @@
 package forestry.core.gui;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.entity.player.Inventory;
+import forestry.core.gui.slots.SlotLockable;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
-import forestry.core.gui.slots.SlotLockable;
+import javax.annotation.Nullable;
 
 public class ContainerAnalyzerProvider<T extends BlockEntity> extends ContainerTile<T> implements IContainerAnalyzerProvider {
 	private final ContainerAnalyzerProviderHelper providerHelper;

@@ -10,14 +10,7 @@
  ******************************************************************************/
 package forestry.core.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.core.config.Constants;
 import forestry.core.gui.widgets.GameTokenWidget;
 import forestry.core.gui.widgets.ProbeButton;
@@ -27,6 +20,11 @@ import forestry.core.tiles.EscritoireGame;
 import forestry.core.tiles.EscritoireTextSource;
 import forestry.core.tiles.TileEscritoire;
 import forestry.core.utils.Translator;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 public class GuiEscritoire extends GuiForestry<ContainerEscritoire> {
 	private final ItemStack LEVEL_ITEM = new ItemStack(Items.PAPER);

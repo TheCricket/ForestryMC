@@ -10,19 +10,17 @@
  ******************************************************************************/
 package forestry.apiculture;
 
-import java.util.Optional;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.IBeeHousingInventory;
 import forestry.api.apiculture.genetics.EnumBeeType;
 import forestry.core.inventory.InventoryAdapterRestricted;
 import forestry.core.utils.InventoryUtil;
 import forestry.core.utils.SlotUtil;
-
 import genetics.api.organism.IOrganismType;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.ItemStack;
+
+import java.util.Optional;
 
 public class InventoryBeeHousing extends InventoryAdapterRestricted implements IBeeHousingInventory {
 	public static final int SLOT_QUEEN = 0;

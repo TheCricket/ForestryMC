@@ -10,16 +10,14 @@
  ******************************************************************************/
 package forestry.factory.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.core.config.Constants;
 import forestry.core.gui.GuiForestryTitled;
 import forestry.core.gui.widgets.SocketWidget;
 import forestry.core.gui.widgets.TankWidget;
 import forestry.factory.tiles.TileSqueezer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 public class GuiSqueezer extends GuiForestryTitled<ContainerSqueezer> {
 	private final TileSqueezer tile;

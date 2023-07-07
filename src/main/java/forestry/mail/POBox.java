@@ -11,21 +11,19 @@
 package forestry.mail;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.Container;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.saveddata.SavedData;
-
 import forestry.api.mail.EnumAddressee;
 import forestry.api.mail.ILetter;
 import forestry.api.mail.IMailAddress;
 import forestry.api.mail.PostManager;
 import forestry.core.inventory.InventoryAdapter;
 import forestry.core.utils.InventoryUtil;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.saveddata.SavedData;
+
+import javax.annotation.Nullable;
 
 public class POBox extends SavedData implements Container {
 

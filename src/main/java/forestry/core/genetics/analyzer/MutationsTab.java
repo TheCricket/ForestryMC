@@ -1,14 +1,5 @@
 package forestry.core.genetics.analyzer;
 
-import java.awt.Insets;
-import java.util.Collection;
-import java.util.List;
-import java.util.function.Supplier;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-
 import forestry.api.genetics.IBreedingTracker;
 import forestry.api.genetics.IForestrySpeciesRoot;
 import forestry.core.gui.GuiConstants;
@@ -17,13 +8,20 @@ import forestry.core.gui.elements.DatabaseElement;
 import forestry.core.gui.elements.GuiElementFactory;
 import forestry.core.gui.elements.layouts.LayoutHelper;
 import forestry.core.utils.Translator;
-
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.individual.IGenome;
 import genetics.api.individual.IIndividual;
 import genetics.api.mutation.IMutation;
 import genetics.api.mutation.IMutationContainer;
 import genetics.api.root.components.ComponentKeys;
+import net.minecraft.client.Minecraft;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+
+import java.awt.*;
+import java.util.Collection;
+import java.util.List;
+import java.util.function.Supplier;
 
 public class MutationsTab extends DatabaseTab {
 	public MutationsTab(Supplier<ItemStack> stackSupplier) {

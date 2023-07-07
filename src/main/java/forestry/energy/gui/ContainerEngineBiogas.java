@@ -10,9 +10,6 @@
  ******************************************************************************/
 package forestry.energy.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.FriendlyByteBuf;
-
 import forestry.core.gui.ContainerLiquidTanks;
 import forestry.core.gui.slots.SlotLiquidIn;
 import forestry.core.network.packets.PacketGuiUpdate;
@@ -20,6 +17,8 @@ import forestry.core.tiles.TileUtil;
 import forestry.energy.features.EnergyContainers;
 import forestry.energy.inventory.InventoryEngineBiogas;
 import forestry.energy.tiles.TileEngineBiogas;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.entity.player.Inventory;
 
 public class ContainerEngineBiogas extends ContainerLiquidTanks<TileEngineBiogas> {
 

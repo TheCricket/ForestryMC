@@ -5,9 +5,9 @@
  ******************************************************************************/
 package forestry.api.farming;
 
+import net.minecraft.core.NonNullList;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
 
 /**
  * Helper interface that every farm inventory implements.

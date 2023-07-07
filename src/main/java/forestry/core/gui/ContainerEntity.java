@@ -11,18 +11,16 @@
 package forestry.core.gui;
 
 import com.google.common.collect.ImmutableSet;
-
-import javax.annotation.Nullable;
-
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.Container;
-import net.minecraft.world.inventory.MenuType;
-
 import forestry.api.core.IErrorLogicSource;
 import forestry.api.core.IErrorState;
 import forestry.core.network.packets.PacketErrorUpdateEntity;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.MenuType;
+
+import javax.annotation.Nullable;
 
 public class ContainerEntity<T extends Entity & Container> extends ContainerForestry {
 	protected final T entity;

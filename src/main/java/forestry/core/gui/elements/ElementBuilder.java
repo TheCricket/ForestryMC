@@ -1,15 +1,14 @@
 package forestry.core.gui.elements;
 
+import net.minecraft.network.chat.Component;
+
 import javax.annotation.Nullable;
-import java.awt.Dimension;
-import java.awt.Point;
+import java.awt.*;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Supplier;
-
-import net.minecraft.network.chat.Component;
 
 
 public abstract class ElementBuilder<B extends ElementBuilder<B, E>, E extends GuiElement> {

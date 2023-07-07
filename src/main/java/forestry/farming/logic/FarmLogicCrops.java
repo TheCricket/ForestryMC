@@ -10,17 +10,16 @@
  ******************************************************************************/
 package forestry.farming.logic;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-
 import forestry.api.farming.FarmDirection;
 import forestry.api.farming.IFarmHousing;
 import forestry.api.farming.IFarmProperties;
 import forestry.api.farming.IFarmable;
 import forestry.core.utils.BlockUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class FarmLogicCrops extends FarmLogicWatered {
 

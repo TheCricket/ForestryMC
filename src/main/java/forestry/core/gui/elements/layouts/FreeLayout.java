@@ -1,13 +1,10 @@
 package forestry.core.gui.elements.layouts;
 
-import java.awt.Dimension;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.util.List;
-
 import forestry.core.gui.elements.GuiElement;
-
 import genetics.Log;
+
+import java.awt.*;
+import java.util.List;
 
 public class FreeLayout implements Layout {
 	public static final FreeLayout INSTANCE = new FreeLayout();

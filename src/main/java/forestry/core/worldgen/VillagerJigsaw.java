@@ -1,17 +1,13 @@
 package forestry.core.worldgen;
 
 import com.mojang.datafixers.util.Pair;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.data.BuiltinRegistries;
-import java.util.List;
-
-import net.minecraft.data.worldgen.DesertVillagePools;
-import net.minecraft.data.worldgen.PlainVillagePools;
-import net.minecraft.data.worldgen.SavannaVillagePools;
-import net.minecraft.data.worldgen.SnowyVillagePools;
-import net.minecraft.data.worldgen.TaigaVillagePools;
+import net.minecraft.data.worldgen.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
+
+import java.util.List;
 
 public class VillagerJigsaw {
 	public static void init()

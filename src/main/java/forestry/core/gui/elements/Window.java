@@ -1,27 +1,18 @@
 package forestry.core.gui.elements;
 
-import javax.annotation.Nullable;
-import java.awt.Rectangle;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Deque;
-import java.util.List;
-import java.util.ListIterator;
-
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.api.core.tooltips.ToolTip;
+import forestry.core.gui.elements.layouts.ContainerElement;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.renderer.texture.TextureManager;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.api.core.tooltips.ToolTip;
-import forestry.core.gui.elements.layouts.ContainerElement;
+import javax.annotation.Nullable;
+import java.awt.*;
+import java.util.List;
+import java.util.*;
 
 /**
  * This element is the top parent.

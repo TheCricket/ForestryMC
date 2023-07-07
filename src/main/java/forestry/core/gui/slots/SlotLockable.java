@@ -10,8 +10,8 @@
  ******************************************************************************/
 package forestry.core.gui.slots;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
 public class SlotLockable extends SlotForestry {

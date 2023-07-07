@@ -1,12 +1,5 @@
 package forestry.apiculture.genetics;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.item.Rarity;
-import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import forestry.api.apiculture.genetics.BeeChromosomes;
 import forestry.api.apiculture.genetics.IAlleleBeeSpecies;
 import forestry.api.apiculture.genetics.IBee;
@@ -18,13 +11,18 @@ import forestry.api.genetics.alyzer.IAlleleDisplayHandler;
 import forestry.api.genetics.alyzer.IAlleleDisplayHelper;
 import forestry.core.genetics.GenericRatings;
 import forestry.core.utils.Translator;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleValue;
 import genetics.api.individual.IChromosomeAllele;
 import genetics.api.individual.IChromosomeType;
 import genetics.api.individual.IChromosomeValue;
 import genetics.api.individual.IGenome;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.Rarity;
+
+import javax.annotation.Nullable;
 
 public enum BeeDisplayHandler implements IAlleleDisplayHandler<IBee> {
 	GENERATIONS(-1) {

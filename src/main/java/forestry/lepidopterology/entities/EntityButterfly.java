@@ -10,9 +10,24 @@
  ******************************************************************************/
 package forestry.lepidopterology.entities;
 
-import javax.annotation.Nullable;
-import java.util.Optional;
-
+import forestry.api.arboriculture.TreeManager;
+import forestry.api.arboriculture.genetics.EnumGermlingType;
+import forestry.api.core.IToolScoop;
+import forestry.api.lepidopterology.IEntityButterfly;
+import forestry.api.lepidopterology.ILepidopteristTracker;
+import forestry.api.lepidopterology.genetics.*;
+import forestry.core.utils.ItemStackUtil;
+import forestry.lepidopterology.ModuleLepidopterology;
+import forestry.lepidopterology.genetics.Butterfly;
+import forestry.lepidopterology.genetics.ButterflyHelper;
+import genetics.api.GeneticsAPI;
+import genetics.api.alleles.IAllele;
+import genetics.api.individual.IGenome;
+import genetics.api.individual.IIndividual;
+import genetics.api.root.EmptyRootDefinition;
+import genetics.api.root.IIndividualRoot;
+import genetics.api.root.IRootDefinition;
+import genetics.utils.AlleleUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -26,55 +41,25 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.SpawnGroupData;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.BonemealableBlock;
-import net.minecraft.world.level.block.FenceBlock;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkAccess;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.IPlantable;
 
-import forestry.api.arboriculture.TreeManager;
-import forestry.api.arboriculture.genetics.EnumGermlingType;
-import forestry.api.core.IToolScoop;
-import forestry.api.lepidopterology.IEntityButterfly;
-import forestry.api.lepidopterology.ILepidopteristTracker;
-import forestry.api.lepidopterology.genetics.ButterflyChromosomes;
-import forestry.api.lepidopterology.genetics.EnumFlutterType;
-import forestry.api.lepidopterology.genetics.IAlleleButterflySpecies;
-import forestry.api.lepidopterology.genetics.IButterfly;
-import forestry.api.lepidopterology.genetics.IButterflyRoot;
-import forestry.core.utils.ItemStackUtil;
-import forestry.lepidopterology.ModuleLepidopterology;
-import forestry.lepidopterology.genetics.Butterfly;
-import forestry.lepidopterology.genetics.ButterflyHelper;
-
-import genetics.api.GeneticsAPI;
-import genetics.api.alleles.IAllele;
-import genetics.api.individual.IGenome;
-import genetics.api.individual.IIndividual;
-import genetics.api.root.EmptyRootDefinition;
-import genetics.api.root.IIndividualRoot;
-import genetics.api.root.IRootDefinition;
-import genetics.utils.AlleleUtils;
+import javax.annotation.Nullable;
+import java.util.Optional;
 
 //TODO minecraft has flying entities (bat, parrot). Can some of their logic be reused here?
 //TODO getMaxSpawnedInChunk?

@@ -1,16 +1,14 @@
 package genetics.alleles;
 
 import com.google.common.base.MoreObjects;
-
-import java.util.Objects;
-
+import genetics.api.alleles.AlleleInfo;
+import genetics.api.alleles.IAllele;
+import genetics.api.alleles.IAlleleType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 
-import genetics.api.alleles.AlleleInfo;
-import genetics.api.alleles.IAllele;
-import genetics.api.alleles.IAlleleType;
+import java.util.Objects;
 
 public class Allele implements IAllele {
 

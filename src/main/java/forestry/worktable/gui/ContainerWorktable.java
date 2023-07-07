@@ -10,16 +10,6 @@
  ******************************************************************************/
 package forestry.worktable.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.Container;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.network.FriendlyByteBuf;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.core.gui.ContainerTile;
 import forestry.core.gui.IContainerCrafting;
 import forestry.core.gui.IGuiSelectable;
@@ -39,6 +29,14 @@ import forestry.worktable.network.packets.PacketWorktableRecipeUpdate;
 import forestry.worktable.recipes.MemorizedRecipe;
 import forestry.worktable.recipes.RecipeMemory;
 import forestry.worktable.tiles.TileWorktable;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ContainerWorktable extends ContainerTile<TileWorktable> implements IContainerCrafting, IGuiSelectable {
 	private final CraftingInventoryForestry craftMatrix = new CraftingInventoryForestry(this);

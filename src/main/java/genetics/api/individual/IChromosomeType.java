@@ -1,10 +1,9 @@
 package genetics.api.individual;
 
-import net.minecraft.network.chat.Component;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.IRootDefinition;
+import net.minecraft.network.chat.Component;
 
 /**
  * Interface to be implemented by the enums representing the various chromosomes.

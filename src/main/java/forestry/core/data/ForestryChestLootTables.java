@@ -1,12 +1,11 @@
 package forestry.core.data;
 
-import java.util.function.BiConsumer;
-
-import net.minecraft.data.loot.ChestLoot;
-import net.minecraft.world.level.storage.loot.LootTable;
-import net.minecraft.resources.ResourceLocation;
-
 import forestry.core.config.Constants;
+import net.minecraft.data.loot.ChestLoot;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.storage.loot.LootTable;
+
+import java.util.function.BiConsumer;
 
 public class ForestryChestLootTables extends ChestLoot {
 

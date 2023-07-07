@@ -10,25 +10,23 @@
  ******************************************************************************/
 package forestry.core.tiles;
 
-import javax.annotation.Nullable;
-import java.util.Optional;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import forestry.api.core.INbtWritable;
 import forestry.api.genetics.IForestrySpeciesRoot;
 import forestry.api.genetics.alleles.IAlleleForestrySpecies;
 import forestry.core.network.IStreamable;
 import forestry.core.network.PacketBufferForestry;
 import forestry.core.utils.ColourUtil;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.individual.IIndividual;
 import genetics.api.root.IIndividualRoot;
 import genetics.utils.AlleleUtils;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.ItemStack;
+
+import javax.annotation.Nullable;
+import java.util.Optional;
 
 public class EscritoireGameToken implements INbtWritable, IStreamable {
 

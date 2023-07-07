@@ -10,23 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.multiblock;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.Container;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-
 import forestry.api.climate.IClimateControlled;
 import forestry.api.multiblock.IAlvearyComponent;
 import forestry.api.recipes.IHygroregulatorRecipe;
@@ -40,6 +23,21 @@ import forestry.core.fluids.FluidHelper;
 import forestry.core.fluids.TankManager;
 import forestry.core.inventory.IInventoryAdapter;
 import forestry.core.tiles.ILiquidTankTile;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+
+import javax.annotation.Nullable;
 
 public class TileAlvearyHygroregulator extends TileAlveary implements Container, ILiquidTankTile, IAlvearyComponent.Climatiser {
 	private final TankManager tankManager;
@@ -145,7 +143,7 @@ public class TileAlvearyHygroregulator extends TileAlveary implements Container,
 		if (superCap.isPresent()) {
 			return superCap;
 		}
-		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
+		if (capability == ForgeCapabilities.FLUID_HANDLER) {
 			return LazyOptional.of(() -> tankManager).cast();
 		}
 		return LazyOptional.empty();

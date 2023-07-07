@@ -10,16 +10,6 @@
  ******************************************************************************/
 package forestry.factory.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.Container;
-import net.minecraft.world.inventory.ContainerListener;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.world.inventory.SimpleContainerData;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.core.gui.ContainerLiquidTanks;
 import forestry.core.gui.IContainerCrafting;
 import forestry.core.gui.slots.SlotCraftMatrix;
@@ -30,6 +20,14 @@ import forestry.core.tiles.TileUtil;
 import forestry.factory.features.FactoryContainers;
 import forestry.factory.inventory.InventoryFabricator;
 import forestry.factory.tiles.TileFabricator;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.ContainerListener;
+import net.minecraft.world.inventory.SimpleContainerData;
+import net.minecraft.world.inventory.Slot;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ContainerFabricator extends ContainerLiquidTanks<TileFabricator> implements IContainerCrafting {
 

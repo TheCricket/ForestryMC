@@ -10,9 +10,9 @@
  ******************************************************************************/
 package forestry.core.inventory.wrappers;
 
+import net.minecraft.core.Direction;
 import net.minecraft.world.WorldlyContainer;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
 
 /**
  * Wrapper class used to bake the side variable into the object itself instead

@@ -7,6 +7,6 @@
 @MethodsReturnNonnullByDefault
 package forestry.api.core.tooltips;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.minecraft.MethodsReturnNonnullByDefault;
+
+import javax.annotation.ParametersAreNonnullByDefault;

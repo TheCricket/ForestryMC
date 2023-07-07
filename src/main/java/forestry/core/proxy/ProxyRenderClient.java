@@ -10,6 +10,16 @@
  ******************************************************************************/
 package forestry.core.proxy;
 
+import forestry.core.blocks.MachinePropertiesTesr;
+import forestry.core.config.Constants;
+import forestry.core.features.CoreBlocks;
+import forestry.core.fluids.ForestryFluids;
+import forestry.core.items.definitions.EnumContainerType;
+import forestry.core.models.ClientManager;
+import forestry.core.models.FluidContainerModel;
+import forestry.core.render.*;
+import forestry.core.tiles.*;
+import forestry.modules.IClientModuleHandler;
 import net.minecraft.client.GraphicsStatus;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -21,27 +31,7 @@ import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ForgeModelBakery;
 import net.minecraftforge.client.model.ModelLoaderRegistry;
-
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-
-import forestry.core.blocks.MachinePropertiesTesr;
-import forestry.core.config.Constants;
-import forestry.core.features.CoreBlocks;
-import forestry.core.fluids.ForestryFluids;
-import forestry.core.items.definitions.EnumContainerType;
-import forestry.core.models.ClientManager;
-import forestry.core.models.FluidContainerModel;
-import forestry.core.render.RenderAnalyzer;
-import forestry.core.render.RenderEscritoire;
-import forestry.core.render.RenderMachine;
-import forestry.core.render.RenderMill;
-import forestry.core.render.RenderNaturalistChest;
-import forestry.core.tiles.TileAnalyzer;
-import forestry.core.tiles.TileBase;
-import forestry.core.tiles.TileEscritoire;
-import forestry.core.tiles.TileMill;
-import forestry.core.tiles.TileNaturalistChest;
-import forestry.modules.IClientModuleHandler;
 
 public class ProxyRenderClient extends ProxyRender implements IClientModuleHandler {
 

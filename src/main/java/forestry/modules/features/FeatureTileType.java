@@ -1,14 +1,13 @@
 package forestry.modules.features;
 
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.function.Supplier;
-
+import forestry.core.config.Constants;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
-import forestry.core.config.Constants;
+import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.function.Supplier;
 
 public class FeatureTileType<T extends BlockEntity> implements ITileTypeFeature<T> {
 	protected final String moduleID;

@@ -10,12 +10,11 @@
  ******************************************************************************/
 package forestry.apiculture.tiles;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.apiculture.features.ApicultureTiles;
 import forestry.core.tiles.TileNaturalistChest;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class TileApiaristChest extends TileNaturalistChest {
 	public TileApiaristChest(BlockPos pos, BlockState state) {

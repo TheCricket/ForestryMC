@@ -1,10 +1,10 @@
 package forestry.api.farming;
 
-import java.util.Collection;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.Collection;
 
 public interface IFarmProperties {
 

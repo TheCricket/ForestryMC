@@ -1,8 +1,18 @@
 package forestry.arboriculture.blocks;
 
-import javax.annotation.Nullable;
-import java.util.List;
-
+import com.mojang.authlib.GameProfile;
+import forestry.api.arboriculture.IFruitProvider;
+import forestry.api.arboriculture.ILeafSpriteProvider;
+import forestry.api.arboriculture.TreeManager;
+import forestry.api.arboriculture.genetics.EnumGermlingType;
+import forestry.api.arboriculture.genetics.ITree;
+import forestry.api.arboriculture.genetics.TreeChromosomes;
+import forestry.arboriculture.features.ArboricultureBlocks;
+import forestry.arboriculture.genetics.TreeDefinition;
+import forestry.core.config.Constants;
+import forestry.core.network.packets.PacketFXSignal;
+import forestry.core.utils.NetworkUtil;
+import genetics.api.individual.IGenome;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.InteractionHand;
@@ -18,26 +28,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.phys.BlockHitResult;
-
-import com.mojang.authlib.GameProfile;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.items.ItemHandlerHelper;
 
-import forestry.api.arboriculture.IFruitProvider;
-import forestry.api.arboriculture.ILeafSpriteProvider;
-import forestry.api.arboriculture.TreeManager;
-import forestry.api.arboriculture.genetics.EnumGermlingType;
-import forestry.api.arboriculture.genetics.ITree;
-import forestry.api.arboriculture.genetics.TreeChromosomes;
-import forestry.arboriculture.features.ArboricultureBlocks;
-import forestry.arboriculture.genetics.TreeDefinition;
-import forestry.core.config.Constants;
-import forestry.core.network.packets.PacketFXSignal;
-import forestry.core.utils.NetworkUtil;
-
-import genetics.api.individual.IGenome;
+import javax.annotation.Nullable;
+import java.util.List;
 
 /**
  * Genetic leaves with no tile entity, used for worldgen trees.

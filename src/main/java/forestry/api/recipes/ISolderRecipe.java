@@ -10,14 +10,12 @@
  ******************************************************************************/
 package forestry.api.recipes;
 
+import forestry.api.circuits.ICircuit;
+import forestry.api.circuits.ICircuitLayout;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
-
 import net.minecraftforge.registries.ObjectHolder;
-
-import forestry.api.circuits.ICircuit;
-import forestry.api.circuits.ICircuitLayout;
 
 public interface ISolderRecipe extends IForestryRecipe {
 

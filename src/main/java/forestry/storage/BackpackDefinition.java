@@ -10,17 +10,15 @@
  ******************************************************************************/
 package forestry.storage;
 
-import java.awt.Color;
-import java.util.function.Predicate;
-
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import forestry.api.storage.IBackpackDefinition;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
-import forestry.api.storage.IBackpackDefinition;
+import java.awt.*;
+import java.util.function.Predicate;
 
 public class BackpackDefinition implements IBackpackDefinition {
 	private final int primaryColor;

@@ -5,10 +5,9 @@
  ******************************************************************************/
 package forestry.api.mail;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-
 import com.mojang.authlib.GameProfile;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
 
 public interface ITradeStationInfo {
 	IMailAddress getAddress();

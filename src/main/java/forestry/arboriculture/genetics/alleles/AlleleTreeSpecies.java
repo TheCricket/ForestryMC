@@ -12,25 +12,7 @@ package forestry.arboriculture.genetics.alleles;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
-
-import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Optional;
-import java.util.function.Function;
-
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.PlantType;
-
-import forestry.api.arboriculture.IGermlingModelProvider;
-import forestry.api.arboriculture.IGrowthProvider;
-import forestry.api.arboriculture.ILeafProvider;
-import forestry.api.arboriculture.ILeafSpriteProvider;
-import forestry.api.arboriculture.ITreeGenerator;
-import forestry.api.arboriculture.TreeManager;
+import forestry.api.arboriculture.*;
 import forestry.api.arboriculture.genetics.EnumGermlingType;
 import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
 import forestry.api.arboriculture.genetics.IAlleleTreeSpeciesBuilder;
@@ -38,8 +20,16 @@ import forestry.api.arboriculture.genetics.ITreeRoot;
 import forestry.api.genetics.IFruitFamily;
 import forestry.arboriculture.genetics.ClimateGrowthProvider;
 import forestry.core.genetics.alleles.AlleleForestrySpecies;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.PlantType;
 
-import forestry.core.genetics.alleles.AlleleForestrySpecies.AbstractBuilder;
+import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Function;
 
 public class AlleleTreeSpecies extends AlleleForestrySpecies implements IAlleleTreeSpecies {
 	private final ITreeGenerator generator;

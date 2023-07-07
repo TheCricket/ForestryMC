@@ -1,11 +1,9 @@
 package forestry.core.fluids;
 
-import javax.annotation.Nonnull;
-
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 
-import net.minecraftforge.fluids.capability.IFluidHandler.FluidAction;
+import javax.annotation.Nonnull;
 
 public class EmptyFluidHandler implements IFluidHandler {
 	public static final EmptyFluidHandler INSTANCE = new EmptyFluidHandler();

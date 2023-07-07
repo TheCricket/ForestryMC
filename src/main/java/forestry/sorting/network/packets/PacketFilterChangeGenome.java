@@ -1,24 +1,17 @@
 package forestry.sorting.network.packets;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-
-import net.minecraftforge.common.util.LazyOptional;
-
 import forestry.api.genetics.GeneticCapabilities;
 import forestry.api.genetics.filter.IFilterLogic;
-import forestry.core.network.ForestryPacket;
-import forestry.core.network.IForestryPacketHandlerServer;
-import forestry.core.network.IForestryPacketServer;
-import forestry.core.network.PacketBufferForestry;
-import forestry.core.network.PacketIdServer;
+import forestry.core.network.*;
 import forestry.core.tiles.TileUtil;
-
 import genetics.api.alleles.IAllele;
 import genetics.utils.AlleleUtils;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraftforge.common.util.LazyOptional;
+
+import javax.annotation.Nullable;
 
 public class PacketFilterChangeGenome extends ForestryPacket implements IForestryPacketServer {
 	private final BlockPos pos;

@@ -10,10 +10,15 @@
  ******************************************************************************/
 package forestry.climatology;
 
-import javax.annotation.Nullable;
-import java.util.HashSet;
-import java.util.Set;
-
+import com.mojang.blaze3d.platform.GlStateManager;
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.api.climate.ClimateCapabilities;
+import forestry.api.climate.IClimateTransformer;
+import forestry.climatology.features.ClimatologyItems;
+import forestry.climatology.items.ItemHabitatScreen;
+import forestry.core.tiles.TileUtil;
+import forestry.core.utils.TickHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
@@ -23,26 +28,18 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.shapes.Shapes;
-
-import com.mojang.blaze3d.platform.GlStateManager;
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.RenderLevelLastEvent;
+import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.world.WorldEvent;
+import net.minecraftforge.event.level.LevelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-import forestry.api.climate.ClimateCapabilities;
-import forestry.api.climate.IClimateTransformer;
-import forestry.climatology.features.ClimatologyItems;
-import forestry.climatology.items.ItemHabitatScreen;
-import forestry.core.tiles.TileUtil;
-import forestry.core.utils.TickHelper;
+import javax.annotation.Nullable;
+import java.util.HashSet;
+import java.util.Set;
 
 @OnlyIn(Dist.CLIENT)
 public class PreviewHandlerClient {
@@ -85,7 +82,7 @@ public class PreviewHandlerClient {
 	}
 
 	@SubscribeEvent
-	public void worldUnloaded(WorldEvent.Unload event) {
+	public void worldUnloaded(LevelEvent.Unload event) {
 		renderer.clearPreview();
 	}
 
@@ -150,7 +147,7 @@ public class PreviewHandlerClient {
 		}
 
 		@SubscribeEvent
-		public void onWorldRenderLast(RenderLevelLastEvent event) {
+		public void onWorldRenderLast(RenderLevelStageEvent event) {
 			if (previewPositions.isEmpty()) {
 				return;
 			}

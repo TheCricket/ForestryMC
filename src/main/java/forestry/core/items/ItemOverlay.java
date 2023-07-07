@@ -10,15 +10,14 @@
  ******************************************************************************/
 package forestry.core.items;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-
 import forestry.api.core.IItemSubtype;
 import forestry.core.ItemGroupForestry;
 import forestry.core.config.Config;
 import forestry.core.items.definitions.IColoredItem;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 /**
  * Base class for items with an overlay color and multiple layer models.

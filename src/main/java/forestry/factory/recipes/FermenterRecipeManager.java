@@ -10,23 +10,21 @@
  ******************************************************************************/
 package forestry.factory.recipes;
 
+import forestry.api.recipes.IFermenterManager;
+import forestry.api.recipes.IFermenterRecipe;
+import forestry.api.recipes.IForestryRecipe;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidStack;
+
 import javax.annotation.Nullable;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeManager;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.fluids.FluidAttributes;
-import net.minecraftforge.fluids.FluidStack;
-
-import forestry.api.recipes.IFermenterManager;
-import forestry.api.recipes.IFermenterRecipe;
-import forestry.api.recipes.IForestryRecipe;
 
 public class FermenterRecipeManager extends AbstractCraftingProvider<IFermenterRecipe> implements IFermenterManager {
 

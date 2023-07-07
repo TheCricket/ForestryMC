@@ -10,15 +10,15 @@
  ******************************************************************************/
 package forestry.core.tiles;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+
 import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
-
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
 
 /**
  * A helper class that caches adjacent tiles for a given tile entity.

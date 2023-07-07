@@ -3,17 +3,6 @@ package forestry.core.loot;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
-
-import java.util.Optional;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.storage.loot.functions.LootItemConditionalFunction;
-import net.minecraft.world.level.storage.loot.functions.LootItemFunctionType;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraft.util.GsonHelper;
-import net.minecraft.resources.ResourceLocation;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.individual.IIndividual;
 import genetics.api.individual.ISpeciesDefinition;
@@ -21,6 +10,15 @@ import genetics.api.organism.IOrganismType;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.IRootDefinition;
 import genetics.utils.RootUtils;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.GsonHelper;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.functions.LootItemConditionalFunction;
+import net.minecraft.world.level.storage.loot.functions.LootItemFunctionType;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+
+import java.util.Optional;
 
 /**
  * Loot function to add genetic information, an organism, to the item stack.

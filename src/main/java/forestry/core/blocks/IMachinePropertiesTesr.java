@@ -10,12 +10,12 @@
  ******************************************************************************/
 package forestry.core.blocks;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.resources.ResourceLocation;
 import forestry.core.render.IForestryRendererProvider;
 import forestry.core.tiles.TileForestry;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.resources.ResourceLocation;
+
+import javax.annotation.Nullable;
 
 public interface IMachinePropertiesTesr<T extends TileForestry> extends IMachineProperties<T> {
 	ResourceLocation getParticleTexture();

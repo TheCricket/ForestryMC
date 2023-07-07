@@ -1,12 +1,10 @@
 package forestry.sorting.gui;
 
-import java.util.Collection;
-
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.core.gui.GuiForestry;
 import net.minecraft.network.chat.Component;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-
-import forestry.core.gui.GuiForestry;
+import java.util.Collection;
 
 public interface ISelectableProvider<S> {
 	Collection<S> getEntries();

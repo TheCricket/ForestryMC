@@ -10,23 +10,6 @@
  ******************************************************************************/
 package forestry.energy.tiles;
 
-import java.io.IOException;
-import java.util.Collection;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.Container;
-import net.minecraft.world.WorldlyContainer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.wrapper.InvWrapper;
-
 import forestry.api.fuels.FuelManager;
 import forestry.core.blocks.BlockBase;
 import forestry.core.config.Constants;
@@ -41,6 +24,21 @@ import forestry.core.utils.InventoryUtil;
 import forestry.energy.features.EnergyTiles;
 import forestry.energy.gui.ContainerEnginePeat;
 import forestry.energy.inventory.InventoryEnginePeat;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.Container;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.wrapper.InvWrapper;
+
+import java.io.IOException;
+import java.util.Collection;
 
 public class TileEnginePeat extends TileEngine implements WorldlyContainer {
 	private ItemStack fuel = ItemStack.EMPTY;

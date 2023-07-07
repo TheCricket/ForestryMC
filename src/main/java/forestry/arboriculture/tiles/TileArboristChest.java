@@ -10,12 +10,11 @@
  ******************************************************************************/
 package forestry.arboriculture.tiles;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-
 import forestry.api.arboriculture.TreeManager;
 import forestry.arboriculture.features.ArboricultureTiles;
 import forestry.core.tiles.TileNaturalistChest;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class TileArboristChest extends TileNaturalistChest {
 	public TileArboristChest(BlockPos pos, BlockState state) {

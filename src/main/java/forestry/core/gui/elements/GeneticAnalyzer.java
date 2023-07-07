@@ -1,20 +1,5 @@
 package forestry.core.gui.elements;
 
-import java.util.List;
-import java.util.Optional;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Font;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.util.FormattedCharSequence;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TranslatableComponent;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import org.lwjgl.glfw.GLFW;
-
 import forestry.api.genetics.IForestrySpeciesRoot;
 import forestry.api.genetics.gatgets.IDatabasePlugin;
 import forestry.api.genetics.gatgets.IDatabaseTab;
@@ -27,10 +12,21 @@ import forestry.core.gui.elements.layouts.ContainerElement;
 import forestry.core.gui.widgets.IScrollable;
 import forestry.core.network.packets.PacketGuiSelectRequest;
 import forestry.core.utils.NetworkUtil;
-
 import genetics.api.individual.IIndividual;
 import genetics.api.root.IRootDefinition;
 import genetics.utils.RootUtils;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Font;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.FormattedCharSequence;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import org.lwjgl.glfw.GLFW;
+
+import java.util.List;
+import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
 public class GeneticAnalyzer extends ContainerElement implements IGeneticAnalyzer, IScrollable {

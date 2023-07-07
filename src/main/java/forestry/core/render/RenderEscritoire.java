@@ -10,10 +10,7 @@
  ******************************************************************************/
 package forestry.core.render;
 
-import javax.annotation.Nullable;
-
 import com.mojang.math.Vector3f;
-
 import forestry.core.blocks.BlockBase;
 import forestry.core.config.Constants;
 import forestry.core.tiles.TileEscritoire;
@@ -29,6 +26,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+
+import javax.annotation.Nullable;
 
 public class RenderEscritoire implements IForestryRenderer<TileEscritoire> {
 	public static final ModelLayerLocation MODEL_LAYER = IForestryRenderer.register("escritoire");

@@ -10,15 +10,14 @@
  ******************************************************************************/
 package forestry.apiculture.genetics;
 
-import java.util.Collections;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.BlockGetter;
-
 import forestry.api.apiculture.genetics.IBee;
 import forestry.api.apiculture.hives.IHiveDrop;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+
+import java.util.Collections;
 
 public class HiveDrop implements IHiveDrop {
 

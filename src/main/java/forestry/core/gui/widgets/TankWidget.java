@@ -10,8 +10,15 @@
  ******************************************************************************/
 package forestry.core.gui.widgets;
 
-import javax.annotation.Nullable;
-
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.*;
+import com.mojang.math.Matrix4f;
+import forestry.api.core.IToolPipette;
+import forestry.api.core.tooltips.ToolTip;
+import forestry.core.fluids.StandardTank;
+import forestry.core.gui.IContainerLiquidTanks;
+import forestry.core.utils.ResourceUtil;
+import forestry.farming.gui.ContainerFarm;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -22,26 +29,12 @@ import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.Fluid;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.BufferBuilder;
-import com.mojang.blaze3d.vertex.DefaultVertexFormat;
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.Tesselator;
-import com.mojang.blaze3d.vertex.VertexFormat;
-import com.mojang.math.Matrix4f;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.IFluidTank;
 
-import forestry.api.core.IToolPipette;
-import forestry.api.core.tooltips.ToolTip;
-import forestry.core.fluids.StandardTank;
-import forestry.core.gui.IContainerLiquidTanks;
-import forestry.core.utils.ResourceUtil;
-import forestry.farming.gui.ContainerFarm;
+import javax.annotation.Nullable;
 
 /**
  * Slot for liquid tanks

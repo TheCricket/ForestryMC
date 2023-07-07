@@ -10,8 +10,14 @@
  ******************************************************************************/
 package forestry.core.multiblock;
 
-import javax.annotation.Nullable;
-
+import com.mojang.authlib.GameProfile;
+import forestry.api.core.ILocatable;
+import forestry.api.multiblock.IMultiblockLogic;
+import forestry.api.multiblock.MultiblockTileEntityBase;
+import forestry.core.config.Constants;
+import forestry.core.inventory.FakeInventoryAdapter;
+import forestry.core.inventory.IInventoryAdapter;
+import forestry.core.tiles.IFilterSlotDelegate;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -24,18 +30,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-
-import com.mojang.authlib.GameProfile;
-
 import net.minecraftforge.network.NetworkHooks;
 
-import forestry.api.core.ILocatable;
-import forestry.api.multiblock.IMultiblockLogic;
-import forestry.api.multiblock.MultiblockTileEntityBase;
-import forestry.core.config.Constants;
-import forestry.core.inventory.FakeInventoryAdapter;
-import forestry.core.inventory.IInventoryAdapter;
-import forestry.core.tiles.IFilterSlotDelegate;
+import javax.annotation.Nullable;
 
 public abstract class MultiblockTileEntityForestry<T extends IMultiblockLogic> extends MultiblockTileEntityBase<T> implements WorldlyContainer, IFilterSlotDelegate, ILocatable, MenuProvider {
 	@Nullable

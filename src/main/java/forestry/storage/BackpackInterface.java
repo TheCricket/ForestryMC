@@ -11,10 +11,6 @@
 
 package forestry.storage;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Predicate;
-
 import com.google.common.base.Preconditions;
 import forestry.api.storage.EnumBackpackType;
 import forestry.api.storage.IBackpackDefinition;
@@ -22,10 +18,11 @@ import forestry.api.storage.IBackpackInterface;
 import forestry.core.proxy.Proxies;
 import forestry.storage.items.ItemBackpack;
 import forestry.storage.items.ItemBackpackNaturalist;
-
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+
+import java.util.function.Predicate;
 
 public class BackpackInterface implements IBackpackInterface {
 

@@ -10,38 +10,7 @@
  ******************************************************************************/
 package forestry.apiculture;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-import java.util.Stack;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.api.apiculture.BeeManager;
-import forestry.api.apiculture.IApiaristTracker;
-import forestry.api.apiculture.IBeeHousing;
-import forestry.api.apiculture.IBeeHousingInventory;
-import forestry.api.apiculture.IBeeListener;
-import forestry.api.apiculture.IBeeModifier;
-import forestry.api.apiculture.IBeekeepingLogic;
+import forestry.api.apiculture.*;
 import forestry.api.apiculture.genetics.EnumBeeType;
 import forestry.api.apiculture.genetics.IBee;
 import forestry.api.apiculture.genetics.IBeeRoot;
@@ -55,12 +24,28 @@ import forestry.core.config.Constants;
 import forestry.core.errors.EnumErrorCode;
 import forestry.core.utils.Log;
 import forestry.core.utils.NetworkUtil;
-
 import genetics.api.GeneticHelper;
 import genetics.api.individual.IGenome;
 import genetics.api.individual.IIndividual;
 import genetics.api.organism.IOrganismType;
 import genetics.organism.OrganismHandler;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.*;
 
 public class BeekeepingLogic implements IBeekeepingLogic {
 

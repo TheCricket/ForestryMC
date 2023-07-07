@@ -10,13 +10,11 @@
  ******************************************************************************/
 package forestry.core.gui;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.core.render.ColourProperties;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.network.chat.Component;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
-import forestry.core.render.ColourProperties;
 
 public abstract class GuiForestryTitled<C extends AbstractContainerMenu> extends GuiForestry<C> {
 

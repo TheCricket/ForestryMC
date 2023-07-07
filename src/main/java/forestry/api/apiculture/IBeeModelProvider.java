@@ -5,9 +5,8 @@
  ******************************************************************************/
 package forestry.api.apiculture;
 
-import net.minecraft.client.resources.model.ModelResourceLocation;
-
 import forestry.api.apiculture.genetics.EnumBeeType;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 
 public interface IBeeModelProvider {
 

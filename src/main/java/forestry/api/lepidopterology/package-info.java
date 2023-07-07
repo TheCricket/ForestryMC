@@ -7,6 +7,6 @@
 @MethodsReturnNonnullByDefault
 package forestry.api.lepidopterology;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.minecraft.MethodsReturnNonnullByDefault;
+
+import javax.annotation.ParametersAreNonnullByDefault;

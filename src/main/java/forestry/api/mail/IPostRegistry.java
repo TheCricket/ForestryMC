@@ -5,14 +5,13 @@
  ******************************************************************************/
 package forestry.api.mail;
 
-import javax.annotation.Nullable;
-import java.util.Map;
-
+import com.mojang.authlib.GameProfile;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.server.level.ServerLevel;
 
-import com.mojang.authlib.GameProfile;
+import javax.annotation.Nullable;
+import java.util.Map;
 
 public interface IPostRegistry {
 

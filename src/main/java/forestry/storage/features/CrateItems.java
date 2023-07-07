@@ -1,25 +1,20 @@
 package forestry.storage.features;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.ItemLike;
-
 import forestry.apiculture.features.ApicultureItems;
 import forestry.apiculture.items.EnumHoneyComb;
 import forestry.apiculture.items.EnumPollenCluster;
 import forestry.apiculture.items.EnumPropolis;
 import forestry.core.features.CoreBlocks;
 import forestry.core.features.CoreItems;
-import forestry.modules.features.FeatureItem;
-import forestry.modules.features.FeatureItemGroup;
-import forestry.modules.features.FeatureProvider;
-import forestry.modules.features.IFeatureRegistry;
-import forestry.modules.features.ModFeatureRegistry;
+import forestry.modules.features.*;
 import forestry.storage.ModuleCrates;
 import forestry.storage.items.ItemCrated;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @FeatureProvider
 public class CrateItems {

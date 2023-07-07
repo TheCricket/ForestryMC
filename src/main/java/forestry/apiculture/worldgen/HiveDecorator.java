@@ -10,25 +10,24 @@
  ******************************************************************************/
 package forestry.apiculture.worldgen;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.WorldGenLevel;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-
 import forestry.api.core.EnumHumidity;
 import forestry.api.core.EnumTemperature;
 import forestry.apiculture.ModuleApiculture;
 import forestry.core.config.Config;
 import forestry.core.config.Constants;
 import forestry.core.utils.Log;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 public class HiveDecorator extends Feature<NoneFeatureConfiguration> {
 	public HiveDecorator() {

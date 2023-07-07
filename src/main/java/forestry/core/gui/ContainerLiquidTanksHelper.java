@@ -10,12 +10,16 @@
  ******************************************************************************/
 package forestry.core.gui;
 
-import net.minecraft.world.entity.player.Player;
+import forestry.api.core.IToolPipette;
+import forestry.core.fluids.StandardTank;
+import forestry.core.network.packets.PacketPipetteClick;
+import forestry.core.tiles.ILiquidTankTile;
+import forestry.core.utils.NetworkUtil;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.util.LazyOptional;
@@ -26,12 +30,6 @@ import net.minecraftforge.fluids.IFluidTank;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import net.minecraftforge.fluids.capability.templates.FluidTank;
-
-import forestry.api.core.IToolPipette;
-import forestry.core.fluids.StandardTank;
-import forestry.core.network.packets.PacketPipetteClick;
-import forestry.core.tiles.ILiquidTankTile;
-import forestry.core.utils.NetworkUtil;
 
 public class ContainerLiquidTanksHelper<T extends BlockEntity & ILiquidTankTile> implements IContainerLiquidTanks {
 

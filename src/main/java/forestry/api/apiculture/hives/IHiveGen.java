@@ -5,11 +5,11 @@
  ******************************************************************************/
 package forestry.api.apiculture.hives;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.state.BlockState;
+
+import javax.annotation.Nullable;
 
 public interface IHiveGen {
 

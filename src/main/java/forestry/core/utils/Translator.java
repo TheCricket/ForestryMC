@@ -1,10 +1,10 @@
 package forestry.core.utils;
 
-import java.util.function.Supplier;
-
-import net.minecraft.network.chat.Component;
 import net.minecraft.locale.Language;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+
+import java.util.function.Supplier;
 
 public class Translator {
 	private Translator() {}

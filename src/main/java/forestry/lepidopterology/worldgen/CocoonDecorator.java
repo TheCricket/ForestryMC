@@ -10,22 +10,6 @@
  ******************************************************************************/
 package forestry.lepidopterology.worldgen;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
-import java.util.Set;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.WorldGenLevel;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-import net.minecraft.world.level.material.Material;
-
 import forestry.api.lepidopterology.ButterflyManager;
 import forestry.api.lepidopterology.genetics.ButterflyChromosomes;
 import forestry.api.lepidopterology.genetics.IButterfly;
@@ -37,6 +21,21 @@ import forestry.core.utils.Log;
 import forestry.lepidopterology.ModuleLepidopterology;
 import forestry.lepidopterology.features.LepidopterologyBlocks;
 import forestry.lepidopterology.tiles.TileCocoon;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+import net.minecraft.world.level.material.Material;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+import java.util.Set;
 
 public class CocoonDecorator extends Feature<NoneFeatureConfiguration> {
 	public CocoonDecorator() {

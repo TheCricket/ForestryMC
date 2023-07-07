@@ -10,18 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.commands;
 
-import java.util.Collection;
-import java.util.concurrent.CompletableFuture;
-import java.util.stream.Collectors;
-
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.Commands;
-import net.minecraft.commands.SharedSuggestionProvider;
-import net.minecraft.commands.arguments.EntityArgument;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-
 import com.mojang.brigadier.LiteralMessage;
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.arguments.ArgumentType;
@@ -31,19 +19,27 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
-
-import net.minecraftforge.server.command.EnumArgument;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.genetics.BeeChromosomes;
 import forestry.api.apiculture.genetics.EnumBeeType;
 import forestry.api.apiculture.genetics.IBee;
 import forestry.apiculture.genetics.BeeDefinition;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.individual.IIndividual;
 import genetics.commands.CommandHelpers;
 import genetics.commands.PermLevel;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.commands.SharedSuggestionProvider;
+import net.minecraft.commands.arguments.EntityArgument;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.server.command.EnumArgument;
+
+import java.util.Collection;
+import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 public class CommandBeeGive {
 	public static LiteralArgumentBuilder<CommandSourceStack> register() {

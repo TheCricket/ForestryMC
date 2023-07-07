@@ -10,18 +10,17 @@
  ******************************************************************************/
 package forestry.core.inventory;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-
 import forestry.core.config.Constants;
 import forestry.core.network.IStreamable;
 import forestry.core.network.PacketBufferForestry;
 import forestry.core.utils.InventoryUtil;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
 
 /**
  * With permission from Krapht.

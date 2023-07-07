@@ -1,23 +1,21 @@
 package genetics.commands;
 
 
-import java.util.Optional;
-
+import com.mojang.brigadier.builder.ArgumentBuilder;
+import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import genetics.api.GeneticsAPI;
+import genetics.api.individual.IChromosome;
+import genetics.api.individual.IChromosomeType;
+import genetics.api.individual.IGenome;
+import genetics.api.individual.IIndividual;
 import net.minecraft.commands.CommandRuntimeException;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
-import com.mojang.brigadier.builder.ArgumentBuilder;
-import com.mojang.brigadier.context.CommandContext;
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
-
-import genetics.api.GeneticsAPI;
-import genetics.api.individual.IChromosome;
-import genetics.api.individual.IChromosomeType;
-import genetics.api.individual.IGenome;
-import genetics.api.individual.IIndividual;
+import java.util.Optional;
 
 public class CommandListAlleles {
 

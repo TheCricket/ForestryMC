@@ -10,28 +10,8 @@
  ******************************************************************************/
 package forestry.core.gui;
 
-import javax.annotation.Nullable;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Stack;
-
-import org.apache.commons.lang3.StringUtils;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
-
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
-
+import com.mojang.blaze3d.vertex.PoseStack;
 import forestry.api.apiculture.genetics.BeeChromosomes;
 import forestry.api.genetics.EnumTolerance;
 import forestry.api.genetics.IAlyzerPlugin;
@@ -45,7 +25,6 @@ import forestry.core.gui.widgets.WidgetManager;
 import forestry.core.inventory.ItemInventoryAlyzer;
 import forestry.core.render.ColourProperties;
 import forestry.core.utils.Translator;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.alleles.IAlleleValue;
@@ -60,6 +39,18 @@ import genetics.api.root.IRootDefinition;
 import genetics.api.root.components.ComponentKeys;
 import genetics.utils.AlleleUtils;
 import genetics.utils.RootUtils;
+import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import org.apache.commons.lang3.StringUtils;
+
+import javax.annotation.Nullable;
+import java.util.*;
 
 public class GuiAlyzer extends GuiForestry<ContainerAlyzer> {
 

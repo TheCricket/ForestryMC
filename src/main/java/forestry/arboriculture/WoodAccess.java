@@ -11,25 +11,19 @@
 package forestry.arboriculture;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.EnumMap;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-
 import forestry.api.arboriculture.EnumVanillaWoodType;
 import forestry.api.arboriculture.IWoodAccess;
 import forestry.api.arboriculture.IWoodType;
 import forestry.api.arboriculture.WoodBlockKind;
 import forestry.modules.features.FeatureBlockGroup;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+
+import javax.annotation.Nullable;
+import java.util.*;
 
 public class WoodAccess implements IWoodAccess {
 	@Nullable

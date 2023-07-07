@@ -12,17 +12,14 @@ package forestry.core.recipes;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonObject;
-
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.util.GsonHelper;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.registries.ForgeRegistryEntry;
-
 import forestry.api.recipes.IHygroregulatorRecipe;
 import forestry.factory.recipes.RecipeSerializers;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.GsonHelper;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.registries.ForgeRegistryEntry;
 
 public class HygroregulatorRecipe implements IHygroregulatorRecipe {
 

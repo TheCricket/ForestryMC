@@ -10,26 +10,7 @@
  ******************************************************************************/
 package forestry.core.utils;
 
-import javax.annotation.Nullable;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-
 import com.mojang.authlib.GameProfile;
-
-import net.minecraftforge.common.util.LazyOptional;
-
 import forestry.api.apiculture.genetics.IAlleleBeeSpecies;
 import forestry.api.arboriculture.ArboricultureCapabilities;
 import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
@@ -45,7 +26,6 @@ import forestry.api.lepidopterology.genetics.IButterfly;
 import forestry.arboriculture.capabilities.ArmorNaturalist;
 import forestry.core.genetics.ItemGE;
 import forestry.core.tiles.TileUtil;
-
 import genetics.api.GeneticHelper;
 import genetics.api.GeneticsAPI;
 import genetics.api.alleles.IAllele;
@@ -60,6 +40,22 @@ import genetics.api.root.IRootDefinition;
 import genetics.api.root.components.ComponentKeys;
 import genetics.utils.AlleleUtils;
 import genetics.utils.RootUtils;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.util.LazyOptional;
+
+import javax.annotation.Nullable;
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
 
 public class GeneticsUtil {
 

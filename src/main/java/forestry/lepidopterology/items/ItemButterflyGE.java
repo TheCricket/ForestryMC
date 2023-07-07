@@ -10,26 +10,6 @@
  ******************************************************************************/
 package forestry.lepidopterology.items;
 
-import javax.annotation.Nullable;
-import java.util.Random;
-
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.ICapabilityProvider;
-
 import forestry.api.core.ISpriteRegister;
 import forestry.api.core.ISpriteRegistry;
 import forestry.api.core.ItemGroups;
@@ -49,14 +29,29 @@ import forestry.core.utils.NetworkUtil;
 import forestry.lepidopterology.entities.EntityButterfly;
 import forestry.lepidopterology.features.LepidopterologyEntities;
 import forestry.lepidopterology.genetics.ButterflyHelper;
-
 import genetics.api.GeneticHelper;
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.individual.IIndividual;
 import genetics.api.organism.IOrganismType;
 import genetics.utils.AlleleUtils;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.ICapabilityProvider;
 
-import net.minecraft.world.item.Item.Properties;
+import javax.annotation.Nullable;
+import java.util.Random;
 
 public class ItemButterflyGE extends ItemGE implements ISpriteRegister, IColoredItem {
 

@@ -10,32 +10,6 @@
  ******************************************************************************/
 package forestry.factory.tiles;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.util.Optional;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.Container;
-import net.minecraft.world.WorldlyContainer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerListener;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.fluids.FluidAttributes;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-
 import forestry.api.core.IErrorLogic;
 import forestry.api.recipes.IFabricatorRecipe;
 import forestry.api.recipes.IFabricatorSmeltingRecipe;
@@ -57,6 +31,30 @@ import forestry.core.utils.InventoryUtil;
 import forestry.factory.features.FactoryTiles;
 import forestry.factory.gui.ContainerFabricator;
 import forestry.factory.inventory.InventoryFabricator;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.Container;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerListener;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidType;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.Optional;
 
 public class TileFabricator extends TilePowered implements ISlotPickupWatcher, ILiquidTankTile, WorldlyContainer {
 	private static final int MAX_HEAT = 5000;
@@ -73,7 +71,7 @@ public class TileFabricator extends TilePowered implements ISlotPickupWatcher, I
 		craftingInventory = new InventoryGhostCrafting<>(this, InventoryGhostCrafting.SLOT_CRAFTING_COUNT);
 		setInternalInventory(new InventoryFabricator(this));
 
-		moltenTank = new FilteredTank(8 * FluidAttributes.BUCKET_VOLUME, false, true).setFilters(() -> RecipeManagers.fabricatorSmeltingManager.getRecipeFluids(getLevel().getRecipeManager()));
+		moltenTank = new FilteredTank(8 * FluidType.BUCKET_VOLUME, false, true).setFilters(() -> RecipeManagers.fabricatorSmeltingManager.getRecipeFluids(getLevel().getRecipeManager()));
 
 		tankManager = new TankManager(this, moltenTank);
 	}
@@ -312,7 +310,7 @@ public class TileFabricator extends TilePowered implements ISlotPickupWatcher, I
 
 	@Override
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
-		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
+		if (capability == ForgeCapabilities.FLUID_HANDLER) {
 			return LazyOptional.of(() -> tankManager).cast();
 		}
 		return super.getCapability(capability, facing);

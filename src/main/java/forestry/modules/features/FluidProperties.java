@@ -1,20 +1,17 @@
 package forestry.modules.features;
 
-import javax.annotation.Nullable;
-import java.awt.Color;
-import java.util.function.Supplier;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.Item;
-import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraftforge.fml.loading.FMLEnvironment;
-
 import forestry.core.items.definitions.DrinkProperties;
 import forestry.core.render.ForestryResource;
+import net.minecraft.client.Minecraft;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.loading.FMLEnvironment;
+
+import javax.annotation.Nullable;
+import java.awt.*;
+import java.util.function.Supplier;
 
 public class FluidProperties {
 	public final int density;

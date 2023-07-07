@@ -5,17 +5,15 @@
  ******************************************************************************/
 package forestry.api.apiculture;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.phys.Vec3;
-
 import com.mojang.authlib.GameProfile;
-
 import forestry.api.apiculture.genetics.IBeeRoot;
 import forestry.api.climate.IClimateProvider;
 import forestry.api.core.IErrorLogicSource;
 import forestry.api.core.ILocatable;
 import forestry.api.genetics.IHousing;
+import net.minecraft.world.phys.Vec3;
+
+import javax.annotation.Nullable;
 
 public interface IBeeHousing extends IHousing, IErrorLogicSource, IClimateProvider, ILocatable {
 

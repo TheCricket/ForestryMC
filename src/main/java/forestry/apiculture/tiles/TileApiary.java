@@ -10,22 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.tiles;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.util.Tuple;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-
-import net.minecraftforge.network.NetworkHooks;
-
 import forestry.api.apiculture.IBeeHousingInventory;
 import forestry.api.apiculture.IBeeListener;
 import forestry.api.apiculture.IBeeModifier;
@@ -39,6 +23,20 @@ import forestry.apiculture.gui.GuiBeeHousing;
 import forestry.apiculture.inventory.IApiaryInventory;
 import forestry.apiculture.inventory.InventoryApiary;
 import forestry.core.network.PacketBufferForestry;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.Tuple;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.network.NetworkHooks;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class TileApiary extends TileBeeHousingBase implements IApiary {
 	private final IBeeModifier beeModifier = new ApiaryBeeModifier();

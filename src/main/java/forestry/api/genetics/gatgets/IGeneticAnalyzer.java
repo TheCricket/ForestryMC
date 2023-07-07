@@ -1,9 +1,8 @@
 package forestry.api.genetics.gatgets;
 
+import forestry.core.gui.elements.GuiElement;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.core.gui.elements.GuiElement;
 
 @OnlyIn(Dist.CLIENT)
 public interface IGeneticAnalyzer {

@@ -1,22 +1,20 @@
 package forestry.core.blocks;
 
 import com.google.common.base.Preconditions;
+import forestry.core.tiles.TileForestry;
+import forestry.modules.features.FeatureTileType;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 import java.util.function.Supplier;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.level.BlockGetter;
-
-import forestry.core.tiles.TileForestry;
-import forestry.modules.features.FeatureTileType;
 
 public class MachineProperties<T extends TileForestry> implements IMachineProperties<T> {
 	private static final ISimpleShapeProvider FULL_CUBE = Shapes::block;

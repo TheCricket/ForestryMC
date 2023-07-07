@@ -11,20 +11,17 @@
 package forestry.core.data.builder;
 
 import com.google.gson.JsonObject;
-
-import java.util.function.Consumer;
-
+import forestry.api.recipes.IFabricatorRecipe;
+import forestry.factory.recipes.RecipeSerializers;
 import net.minecraft.advancements.critereon.ImpossibleTrigger;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.resources.ResourceLocation;
-
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.fluids.FluidStack;
 
-import forestry.api.recipes.IFabricatorRecipe;
-import forestry.factory.recipes.RecipeSerializers;
+import java.util.function.Consumer;
 
 public class FabricatorRecipeBuilder {
 

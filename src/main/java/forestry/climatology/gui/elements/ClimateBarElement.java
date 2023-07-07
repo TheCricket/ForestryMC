@@ -10,22 +10,19 @@
  ******************************************************************************/
 package forestry.climatology.gui.elements;
 
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.util.Mth;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.climate.ClimateType;
 import forestry.api.climate.IClimateState;
 import forestry.api.climate.IClimateTransformer;
 import forestry.climatology.gui.GuiHabitatFormer;
 import forestry.core.gui.elements.GuiElement;
 import forestry.core.utils.StringUtil;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.util.Mth;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public class ClimateBarElement extends GuiElement {

@@ -5,15 +5,13 @@
  ******************************************************************************/
 package forestry.api.genetics.flowers;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.level.Level;
-
-import genetics.api.individual.IIndividual;
-
 import forestry.api.genetics.ICheckPollinatable;
+import genetics.api.individual.IIndividual;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 
 public interface IFlowerProvider {
 

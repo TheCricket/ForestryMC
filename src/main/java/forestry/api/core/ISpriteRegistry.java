@@ -6,7 +6,6 @@
 package forestry.api.core;
 
 import net.minecraft.resources.ResourceLocation;
-
 import net.minecraftforge.client.event.TextureStitchEvent;
 
 /**
@@ -28,7 +27,7 @@ public interface ISpriteRegistry {
 	 * @param event Event that is used by forge to register textures to a atlas.
 	 * @return The created registry.
 	 */
-	static ISpriteRegistry fromEvent(TextureStitchEvent.Pre event) {
+	static ISpriteRegistry fromEvent(TextureStitchEvent event) {
 		return event::addSprite;
 	}
 }

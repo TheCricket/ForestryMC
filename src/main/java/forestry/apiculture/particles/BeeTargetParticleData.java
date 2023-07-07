@@ -10,20 +10,17 @@
  ******************************************************************************/
 package forestry.apiculture.particles;
 
-import javax.annotation.Nonnull;
-import java.util.Locale;
-
-import net.minecraft.world.entity.Entity;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.particles.ParticleOptions;
-import net.minecraft.core.particles.ParticleType;
-
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.entity.Entity;
 
-import net.minecraft.core.particles.ParticleOptions.Deserializer;
+import javax.annotation.Nonnull;
+import java.util.Locale;
 
 public class BeeTargetParticleData implements ParticleOptions {
 

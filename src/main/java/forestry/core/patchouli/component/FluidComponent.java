@@ -1,9 +1,7 @@
 package forestry.core.patchouli.component;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.UnaryOperator;
-
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -12,17 +10,16 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.level.material.Fluid;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.ForgeRegistries;
-
 import vazkii.patchouli.api.IComponentRenderContext;
 import vazkii.patchouli.api.ICustomComponent;
 import vazkii.patchouli.api.IVariable;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.UnaryOperator;
 
 public class FluidComponent implements ICustomComponent {
 	public IVariable fluid;

@@ -1,14 +1,5 @@
 package forestry.apiculture;
 
-import java.util.Locale;
-
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.genetics.EnumBeeType;
 import forestry.api.genetics.alleles.AlleleManager;
@@ -16,6 +7,13 @@ import forestry.api.genetics.filter.IFilterData;
 import forestry.api.genetics.filter.IFilterRule;
 import forestry.api.genetics.filter.IFilterRuleType;
 import forestry.core.render.TextureManagerForestry;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.Locale;
 
 public enum ApicultureFilterRuleType implements IFilterRuleType {
 	BEE {

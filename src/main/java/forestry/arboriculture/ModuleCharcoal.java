@@ -1,8 +1,5 @@
 package forestry.arboriculture;
 
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.level.block.Blocks;
-
 import forestry.api.arboriculture.ICharcoalManager;
 import forestry.api.arboriculture.TreeManager;
 import forestry.api.core.ItemGroups;
@@ -11,6 +8,8 @@ import forestry.arboriculture.charcoal.CharcoalManager;
 import forestry.core.config.Constants;
 import forestry.modules.BlankForestryModule;
 import forestry.modules.ForestryModuleUids;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.level.block.Blocks;
 
 @ForestryModule(containerID = Constants.MOD_ID, moduleID = ForestryModuleUids.CHARCOAL, name = "Charcoal", author = "Nedelosk", url = Constants.URL, unlocalizedDescription = "for.module.charcoal.description")
 public class ModuleCharcoal extends BlankForestryModule {

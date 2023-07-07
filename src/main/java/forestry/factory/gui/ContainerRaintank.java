@@ -10,14 +10,6 @@
  ******************************************************************************/
 package forestry.factory.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.ContainerListener;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.world.inventory.SimpleContainerData;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.core.gui.ContainerLiquidTanks;
 import forestry.core.gui.slots.SlotEmptyLiquidContainerIn;
 import forestry.core.gui.slots.SlotOutput;
@@ -25,6 +17,12 @@ import forestry.core.tiles.TileUtil;
 import forestry.factory.features.FactoryContainers;
 import forestry.factory.inventory.InventoryRaintank;
 import forestry.factory.tiles.TileRaintank;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.ContainerListener;
+import net.minecraft.world.inventory.SimpleContainerData;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ContainerRaintank extends ContainerLiquidTanks<TileRaintank> {
 

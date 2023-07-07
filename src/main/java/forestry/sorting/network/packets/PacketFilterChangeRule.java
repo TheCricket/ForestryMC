@@ -1,21 +1,15 @@
 package forestry.sorting.network.packets;
 
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-
-import net.minecraftforge.common.util.LazyOptional;
-
 import forestry.api.genetics.GeneticCapabilities;
 import forestry.api.genetics.alleles.AlleleManager;
 import forestry.api.genetics.filter.IFilterLogic;
 import forestry.api.genetics.filter.IFilterRuleType;
-import forestry.core.network.ForestryPacket;
-import forestry.core.network.IForestryPacketHandlerServer;
-import forestry.core.network.IForestryPacketServer;
-import forestry.core.network.PacketBufferForestry;
-import forestry.core.network.PacketIdServer;
+import forestry.core.network.*;
 import forestry.core.tiles.TileUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraftforge.common.util.LazyOptional;
 
 public class PacketFilterChangeRule extends ForestryPacket implements IForestryPacketServer {
 	private final BlockPos pos;

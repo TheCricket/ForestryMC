@@ -10,18 +10,17 @@
  ******************************************************************************/
 package forestry.arboriculture.worldgen;
 
-import javax.annotation.Nullable;
-import java.util.Collections;
-import java.util.Random;
-import java.util.Set;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.LevelAccessor;
-
 import forestry.api.arboriculture.ITreeGenData;
 import forestry.api.arboriculture.ITreeModifier;
 import forestry.api.arboriculture.TreeManager;
 import forestry.core.worldgen.FeatureHelper;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.LevelAccessor;
+
+import javax.annotation.Nullable;
+import java.util.Collections;
+import java.util.Random;
+import java.util.Set;
 
 public abstract class FeatureTree extends FeatureArboriculture {
 	private static final int minHeight = 4;

@@ -11,25 +11,6 @@
 package forestry.lepidopterology.tiles;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.NonNullList;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.Connection;
-import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.lepidopterology.ButterflyManager;
 import forestry.api.lepidopterology.IButterflyCocoon;
 import forestry.api.lepidopterology.genetics.ButterflyChromosomes;
@@ -47,9 +28,24 @@ import forestry.core.utils.NetworkUtil;
 import forestry.lepidopterology.features.LepidopterologyTiles;
 import forestry.lepidopterology.genetics.Butterfly;
 import forestry.lepidopterology.genetics.ButterflyDefinition;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.individual.IGenome;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
 
 public class TileCocoon extends BlockEntity implements IStreamable, IOwnedTile, IButterflyCocoon {
 	private final OwnerHandler ownerHandler = new OwnerHandler();

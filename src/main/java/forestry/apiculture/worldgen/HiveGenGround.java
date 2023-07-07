@@ -10,16 +10,16 @@
  ******************************************************************************/
 package forestry.apiculture.worldgen;
 
-import java.util.HashSet;
-import java.util.Set;
-
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.material.Material;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class HiveGenGround extends HiveGen {
 

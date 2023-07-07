@@ -10,16 +10,11 @@
  ******************************************************************************/
 package forestry.farming.circuits;
 
-import javax.annotation.Nullable;
-
+import forestry.api.farming.*;
+import forestry.core.circuits.Circuit;
 import net.minecraft.network.chat.Component;
 
-import forestry.api.farming.FarmDirection;
-import forestry.api.farming.IFarmCircuit;
-import forestry.api.farming.IFarmHousing;
-import forestry.api.farming.IFarmLogic;
-import forestry.api.farming.IFarmProperties;
-import forestry.core.circuits.Circuit;
+import javax.annotation.Nullable;
 
 public class CircuitFarmLogic extends Circuit implements IFarmCircuit {
 

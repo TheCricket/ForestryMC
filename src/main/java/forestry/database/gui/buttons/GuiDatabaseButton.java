@@ -3,8 +3,6 @@ package forestry.database.gui.buttons;
 import forestry.core.gui.buttons.GuiBetterButton;
 import forestry.database.gui.GuiDatabase;
 
-import net.minecraft.client.gui.components.Button.OnPress;
-
 public class GuiDatabaseButton<V> extends GuiBetterButton {
 
 	public final DatabaseButton type;

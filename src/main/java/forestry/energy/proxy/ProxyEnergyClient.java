@@ -11,13 +11,13 @@
 package forestry.energy.proxy;
 
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.EntityRenderersEvent;
 import forestry.core.blocks.MachinePropertiesTesr;
 import forestry.energy.render.RenderEngine;
 import forestry.energy.tiles.TileEngine;
 import forestry.modules.IClientModuleHandler;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 
 @SuppressWarnings("unused")
 @OnlyIn(Dist.CLIENT)

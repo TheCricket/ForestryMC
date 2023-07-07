@@ -1,13 +1,12 @@
 package forestry.cultivation.tiles;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.world.level.block.state.BlockState;
-
 import forestry.cultivation.features.CultivationTiles;
 import forestry.farming.logic.ForestryFarmIdentifier;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class TileFarmMushroom extends TilePlanter {
 	public TileFarmMushroom(BlockPos pos, BlockState state) {

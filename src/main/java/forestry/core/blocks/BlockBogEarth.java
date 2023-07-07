@@ -10,8 +10,8 @@
  ******************************************************************************/
 package forestry.core.blocks;
 
-import java.util.Random;
-
+import forestry.core.config.Constants;
+import forestry.core.features.CoreBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -24,11 +24,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.Material;
-
 import net.minecraftforge.common.IPlantable;
 
-import forestry.core.config.Constants;
-import forestry.core.features.CoreBlocks;
+import java.util.Random;
 
 /**
  * bog earth, which becomes peat

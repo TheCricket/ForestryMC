@@ -1,11 +1,10 @@
 package forestry.api.genetics.alyzer;
 
-import java.util.function.Predicate;
-
 import forestry.apiculture.genetics.IGeneticTooltipProvider;
-
 import genetics.api.individual.IIndividual;
 import genetics.api.organism.IOrganismType;
+
+import java.util.function.Predicate;
 
 public interface IAlleleDisplayHelper {
 	void addTooltip(IGeneticTooltipProvider<? extends IIndividual> provider, String rootUID, int orderingInfo);

@@ -10,12 +10,11 @@
  ******************************************************************************/
 package forestry.mail.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
 import forestry.core.config.Constants;
 import forestry.core.gui.GuiForestry;
 import forestry.mail.tiles.TileMailbox;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 public class GuiMailbox extends GuiForestry<ContainerMailbox> {
 	private final TileMailbox tile;

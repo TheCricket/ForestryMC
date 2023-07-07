@@ -10,11 +10,10 @@
  ******************************************************************************/
 package forestry.storage.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
 import forestry.core.config.Constants;
 import forestry.core.gui.GuiForestry;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 public class GuiBackpack extends GuiForestry<ContainerBackpack> {
 

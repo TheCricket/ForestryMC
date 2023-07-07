@@ -5,12 +5,11 @@
  ******************************************************************************/
 package forestry.api.apiculture.hives;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.BlockGetter;
-
 import forestry.api.apiculture.genetics.IBee;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 
 /**
  * Bees can be seeded either as hive drops or as mutation results.

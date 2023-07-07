@@ -10,15 +10,6 @@
  ******************************************************************************/
 package forestry.core.commands;
 
-import java.util.Objects;
-import java.util.concurrent.CompletableFuture;
-
-import net.minecraft.commands.CommandRuntimeException;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.Commands;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.arguments.ArgumentType;
 import com.mojang.brigadier.builder.ArgumentBuilder;
@@ -28,13 +19,19 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
-
 import forestry.api.modules.ForestryModule;
 import forestry.api.modules.IForestryModule;
 import forestry.core.utils.Translator;
 import forestry.modules.ModuleManager;
-
 import genetics.commands.CommandHelpers;
+import net.minecraft.ChatFormatting;
+import net.minecraft.commands.CommandRuntimeException;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.network.chat.TranslatableComponent;
+
+import java.util.Objects;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @author CovertJaguar <http://www.railcraft.info/>

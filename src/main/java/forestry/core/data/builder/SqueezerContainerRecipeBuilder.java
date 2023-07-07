@@ -1,17 +1,15 @@
 package forestry.core.data.builder;
 
 import com.google.gson.JsonObject;
+import forestry.api.recipes.ISqueezerContainerRecipe;
+import forestry.factory.recipes.RecipeSerializers;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 
 import javax.annotation.Nullable;
 import java.util.function.Consumer;
-
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.resources.ResourceLocation;
-
-import forestry.api.recipes.ISqueezerContainerRecipe;
-import forestry.factory.recipes.RecipeSerializers;
 
 public class SqueezerContainerRecipeBuilder {
 

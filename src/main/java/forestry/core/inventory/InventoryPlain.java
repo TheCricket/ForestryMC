@@ -10,15 +10,14 @@
  ******************************************************************************/
 package forestry.core.inventory;
 
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.Container;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.NonNullList;
-
 import forestry.api.core.INbtReadable;
 import forestry.api.core.INbtWritable;
 import forestry.core.utils.InventoryUtil;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 
 public class InventoryPlain implements Container, INbtWritable, INbtReadable {
 

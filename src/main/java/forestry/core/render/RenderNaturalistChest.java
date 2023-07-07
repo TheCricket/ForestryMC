@@ -12,7 +12,6 @@ package forestry.core.render;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.math.Vector3f;
-
 import forestry.core.blocks.BlockBase;
 import forestry.core.config.Constants;
 import forestry.core.tiles.TileNaturalistChest;

@@ -10,28 +10,25 @@
  ******************************************************************************/
 package forestry.apiculture.genetics.alleles;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.Enemy;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.item.alchemy.PotionUtils;
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.genetics.IEffectData;
 import forestry.core.render.ParticleRender;
-
 import genetics.api.individual.IGenome;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.Enemy;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class AlleleEffectPotion extends AlleleEffectThrottled {
 

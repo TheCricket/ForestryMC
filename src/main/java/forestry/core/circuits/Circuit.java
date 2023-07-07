@@ -10,16 +10,15 @@
  ******************************************************************************/
 package forestry.core.circuits;
 
-import java.util.List;
-
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import forestry.api.circuits.ChipsetManager;
 import forestry.api.circuits.ICircuit;
 import forestry.core.utils.Translator;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
+
+import java.util.List;
 
 public abstract class Circuit implements ICircuit {
 	private final String uid;

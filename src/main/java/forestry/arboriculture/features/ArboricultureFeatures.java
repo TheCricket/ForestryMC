@@ -1,11 +1,13 @@
 package forestry.arboriculture.features;
 
+import forestry.arboriculture.worldgen.TreeDecorator;
+import forestry.core.config.Constants;
 import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -14,9 +16,6 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.registries.IForgeRegistry;
-
-import forestry.arboriculture.worldgen.TreeDecorator;
-import forestry.core.config.Constants;
 
 public class ArboricultureFeatures {
 	public static final ResourceLocation TREE_DECORATOR_ID = new ResourceLocation(Constants.MOD_ID, "tree_decorator");

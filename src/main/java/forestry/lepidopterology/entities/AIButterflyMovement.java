@@ -10,9 +10,9 @@
  ******************************************************************************/
 package forestry.lepidopterology.entities;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.world.phys.Vec3;
+
+import javax.annotation.Nullable;
 
 /**
  * @author CovertJaguar <http://www.railcraft.info/>

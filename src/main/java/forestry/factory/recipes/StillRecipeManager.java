@@ -10,19 +10,17 @@
  ******************************************************************************/
 package forestry.factory.recipes;
 
+import forestry.api.recipes.IForestryRecipe;
+import forestry.api.recipes.IStillManager;
+import forestry.api.recipes.IStillRecipe;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraftforge.fluids.FluidStack;
+
 import javax.annotation.Nullable;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import net.minecraft.world.item.crafting.RecipeManager;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.fluids.FluidStack;
-
-import forestry.api.recipes.IForestryRecipe;
-import forestry.api.recipes.IStillManager;
-import forestry.api.recipes.IStillRecipe;
 
 public class StillRecipeManager extends AbstractCraftingProvider<IStillRecipe> implements IStillManager {
 

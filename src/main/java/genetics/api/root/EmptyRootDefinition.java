@@ -5,8 +5,6 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-import genetics.api.individual.IIndividual;
-
 /**
  * A empty instance of an {@link IRootDefinition}.
  */

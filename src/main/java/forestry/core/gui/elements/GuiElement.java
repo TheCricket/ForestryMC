@@ -1,29 +1,22 @@
 package forestry.core.gui.elements;
 
 import com.google.common.base.MoreObjects;
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.api.core.tooltips.ToolTip;
+import forestry.core.gui.elements.layouts.ContainerElement;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiComponent;
+import net.minecraft.network.chat.Component;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import org.lwjgl.opengl.GL11;
 
 import javax.annotation.Nullable;
-import java.awt.Dimension;
-import java.awt.Point;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.function.Supplier;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiComponent;
-import net.minecraft.network.chat.Component;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import org.lwjgl.opengl.GL11;
-
-import forestry.api.core.tooltips.ToolTip;
-import forestry.core.gui.elements.layouts.ContainerElement;
 
 @OnlyIn(Dist.CLIENT)
 public abstract class GuiElement extends GuiComponent {

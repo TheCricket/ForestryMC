@@ -10,12 +10,11 @@
  ******************************************************************************/
 package forestry.arboriculture.models;
 
-import java.awt.Color;
-
-import net.minecraft.resources.ResourceLocation;
-
 import forestry.api.arboriculture.EnumLeafType;
 import forestry.api.arboriculture.ILeafSpriteProvider;
+import net.minecraft.resources.ResourceLocation;
+
+import java.awt.*;
 
 public class SpriteProviderLeaves implements ILeafSpriteProvider {
 

@@ -10,17 +10,15 @@
  ******************************************************************************/
 package forestry.apiculture.genetics.alleles;
 
-import java.util.List;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.damagesource.DamageSource;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.genetics.IEffectData;
 import forestry.core.utils.DamageSourceForestry;
-
 import genetics.api.individual.IGenome;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.player.Player;
+
+import java.util.List;
 
 public class AlleleEffectMisanthrope extends AlleleEffectThrottled {
 

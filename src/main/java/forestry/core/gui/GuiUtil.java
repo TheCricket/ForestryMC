@@ -10,22 +10,19 @@
  ******************************************************************************/
 package forestry.core.gui;
 
-import javax.annotation.Nullable;
-import java.util.Collection;
-
+import com.mojang.blaze3d.platform.Window;
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.api.core.tooltips.IToolTipProvider;
+import forestry.api.core.tooltips.ToolTip;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.world.item.ItemStack;
-
-import com.mojang.blaze3d.platform.Window;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.api.core.tooltips.IToolTipProvider;
-import forestry.api.core.tooltips.ToolTip;
+import javax.annotation.Nullable;
+import java.util.Collection;
 
 @OnlyIn(Dist.CLIENT)
 public class GuiUtil {

@@ -1,33 +1,15 @@
 package forestry.core.features;
 
-import net.minecraft.world.item.Item;
-
 import forestry.core.ItemGroupForestry;
 import forestry.core.ModuleCore;
 import forestry.core.circuits.EnumCircuitBoardType;
 import forestry.core.circuits.ItemCircuitBoard;
 import forestry.core.genetics.ItemResearchNote;
-import forestry.core.items.ForestersManualItem;
-import forestry.core.items.ItemAlyzer;
-import forestry.core.items.ItemArmorNaturalist;
-import forestry.core.items.ItemAssemblyKit;
-import forestry.core.items.ItemCraftingMaterial;
-import forestry.core.items.ItemElectronTube;
-import forestry.core.items.ItemFertilizer;
-import forestry.core.items.ItemForestry;
-import forestry.core.items.ItemForestryTool;
-import forestry.core.items.ItemFruit;
-import forestry.core.items.ItemPipette;
-import forestry.core.items.ItemProperties;
-import forestry.core.items.ItemSolderingIron;
-import forestry.core.items.ItemWrench;
+import forestry.core.items.*;
 import forestry.core.items.definitions.EnumCraftingMaterial;
 import forestry.core.items.definitions.EnumElectronTube;
-import forestry.modules.features.FeatureItem;
-import forestry.modules.features.FeatureItemGroup;
-import forestry.modules.features.FeatureProvider;
-import forestry.modules.features.IFeatureRegistry;
-import forestry.modules.features.ModFeatureRegistry;
+import forestry.modules.features.*;
+import net.minecraft.world.item.Item;
 
 @FeatureProvider
 public class CoreItems {

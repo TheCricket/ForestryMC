@@ -10,35 +10,31 @@
  ******************************************************************************/
 package forestry.core;
 
-import java.util.Collection;
-
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.npc.Villager;
-import net.minecraft.world.entity.npc.VillagerProfession;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.LevelAccessor;
-
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
-import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.world.WorldEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import net.minecraftforge.fml.common.Mod;
-
 import forestry.api.genetics.IBreedingTracker;
 import forestry.api.genetics.IForestrySpeciesRoot;
 import forestry.apiculture.ApiaristAI;
 import forestry.apiculture.villagers.RegisterVillager;
 import forestry.core.config.Constants;
 import forestry.modules.ModuleManager;
-
 import genetics.api.GeneticsAPI;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.IRootDefinition;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.world.WorldEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.Collection;
 
 @Mod.EventBusSubscriber(modid = Constants.MOD_ID)
 public class EventHandlerCore {

@@ -5,9 +5,8 @@
  ******************************************************************************/
 package forestry.api.storage;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.Container;
-
+import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.eventbus.api.Cancelable;
 
 /**

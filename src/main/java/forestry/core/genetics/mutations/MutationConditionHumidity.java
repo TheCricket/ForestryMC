@@ -10,20 +10,18 @@
  ******************************************************************************/
 package forestry.core.genetics.mutations;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.level.Level;
-
-import genetics.api.alleles.IAllele;
-import genetics.api.individual.IGenome;
-
 import forestry.api.climate.IClimateProvider;
 import forestry.api.core.EnumHumidity;
 import forestry.api.genetics.IMutationCondition;
 import forestry.api.genetics.alleles.AlleleManager;
 import forestry.core.utils.Translator;
+import genetics.api.alleles.IAllele;
+import genetics.api.individual.IGenome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.Level;
 
 public class MutationConditionHumidity implements IMutationCondition {
 	private final EnumHumidity minHumidity;

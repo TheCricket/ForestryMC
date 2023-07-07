@@ -10,15 +10,19 @@
  ******************************************************************************/
 package forestry.arboriculture.worldgen;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.Set;
-
+import forestry.api.arboriculture.IGrowthProvider;
+import forestry.api.arboriculture.TreeManager;
+import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
+import forestry.api.arboriculture.genetics.ITree;
+import forestry.api.arboriculture.genetics.TreeChromosomes;
+import forestry.arboriculture.TreeConfig;
+import forestry.arboriculture.commands.TreeGenHelper;
+import forestry.core.config.Config;
+import forestry.core.utils.BlockUtil;
+import forestry.core.utils.Log;
+import genetics.api.GeneticsAPI;
+import genetics.api.alleles.IAllele;
+import genetics.api.individual.IGenome;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
@@ -31,24 +35,11 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import forestry.api.arboriculture.IGrowthProvider;
-import forestry.api.arboriculture.TreeManager;
-import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
-import forestry.api.arboriculture.genetics.ITree;
-import forestry.api.arboriculture.genetics.TreeChromosomes;
-import forestry.arboriculture.TreeConfig;
-import forestry.arboriculture.commands.TreeGenHelper;
-import forestry.core.config.Config;
-import forestry.core.utils.BlockUtil;
-import forestry.core.utils.Log;
-
-import genetics.api.GeneticsAPI;
-import genetics.api.alleles.IAllele;
-import genetics.api.individual.IGenome;
+import javax.annotation.Nullable;
+import java.util.*;
 
 public class TreeDecorator extends Feature<NoneFeatureConfiguration> {
 	private static final List<IAlleleTreeSpecies> SPECIES = new ArrayList<>();

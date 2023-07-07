@@ -10,16 +10,7 @@
  ******************************************************************************/
 package forestry.mail.gui;
 
-import org.apache.commons.lang3.StringUtils;
-
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
-import org.lwjgl.glfw.GLFW;
-
 import forestry.core.config.Constants;
 import forestry.core.gui.GuiForestry;
 import forestry.core.render.ColourProperties;
@@ -27,6 +18,11 @@ import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.Translator;
 import forestry.mail.network.packets.PacketTraderAddressRequest;
 import forestry.mail.tiles.TileTrader;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import org.apache.commons.lang3.StringUtils;
+import org.lwjgl.glfw.GLFW;
 
 public class GuiTradeName extends GuiForestry<ContainerTradeName> {
 	private final TileTrader tile;

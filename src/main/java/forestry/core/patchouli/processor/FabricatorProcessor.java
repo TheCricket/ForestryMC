@@ -1,22 +1,18 @@
 package forestry.core.patchouli.processor;
 
-import java.util.Arrays;
-
 import com.google.common.base.Preconditions;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.registries.ForgeRegistries;
-
 import forestry.api.recipes.IFabricatorRecipe;
 import forestry.api.recipes.RecipeManagers;
-
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.registries.ForgeRegistries;
 import vazkii.patchouli.api.IComponentProcessor;
 import vazkii.patchouli.api.IVariable;
 import vazkii.patchouli.api.IVariableProvider;
 
 import javax.annotation.Nullable;
+import java.util.Arrays;
 
 @SuppressWarnings("unused")
 public class FabricatorProcessor implements IComponentProcessor {

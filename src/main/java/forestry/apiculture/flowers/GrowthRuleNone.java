@@ -10,14 +10,13 @@
  ******************************************************************************/
 package forestry.apiculture.flowers;
 
-import java.util.Collection;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
-
 import forestry.api.genetics.flowers.IFlowerGrowthHelper;
 import forestry.api.genetics.flowers.IFlowerGrowthRule;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.Collection;
 
 public class GrowthRuleNone implements IFlowerGrowthRule {
 

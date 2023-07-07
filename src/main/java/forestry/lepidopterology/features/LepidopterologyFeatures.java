@@ -1,5 +1,7 @@
 package forestry.lepidopterology.features;
 
+import forestry.core.config.Constants;
+import forestry.lepidopterology.worldgen.CocoonDecorator;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
@@ -10,14 +12,10 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.registries.IForgeRegistry;
-
-import forestry.core.config.Constants;
-import forestry.lepidopterology.worldgen.CocoonDecorator;
 
 public class LepidopterologyFeatures {
 	private static final ResourceLocation ID = new ResourceLocation(Constants.MOD_ID, "cocoon_decorator");

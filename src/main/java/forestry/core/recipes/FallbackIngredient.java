@@ -14,23 +14,20 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSyntaxException;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.tags.TagKey;
+import net.minecraft.util.GsonHelper;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.crafting.CraftingHelper;
+import net.minecraftforge.common.crafting.IIngredientSerializer;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
-
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.tags.Tag;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.util.GsonHelper;
-
-import net.minecraftforge.common.crafting.CraftingHelper;
-import net.minecraftforge.common.crafting.IIngredientSerializer;
 
 public class FallbackIngredient extends Ingredient {
 	private final Ingredient primary;

@@ -1,15 +1,13 @@
 package forestry.core.gui.elements;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.util.Mth;
-
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
-
+import com.mojang.blaze3d.vertex.PoseStack;
 import forestry.core.gui.Drawable;
 import forestry.core.gui.elements.layouts.ContainerElement;
 import forestry.core.gui.widgets.IScrollable;
+import net.minecraft.util.Mth;
+
+import javax.annotation.Nullable;
 
 public class ScrollBarElement extends ContainerElement {
 	/* Attributes - Final */

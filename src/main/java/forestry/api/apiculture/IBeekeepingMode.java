@@ -5,12 +5,11 @@
  ******************************************************************************/
 package forestry.api.apiculture;
 
-import java.util.List;
-
+import forestry.api.apiculture.genetics.IBee;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 
-import forestry.api.apiculture.genetics.IBee;
+import java.util.List;
 
 public interface IBeekeepingMode {
 

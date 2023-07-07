@@ -1,8 +1,8 @@
 package forestry.core.items.definitions;
 
-import java.util.Locale;
-
 import forestry.api.core.IItemSubtype;
+
+import java.util.Locale;
 
 public enum EnumCraftingMaterial implements IItemSubtype {
 	PULSATING_DUST,

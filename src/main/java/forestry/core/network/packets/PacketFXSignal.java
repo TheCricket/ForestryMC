@@ -10,27 +10,21 @@
  ******************************************************************************/
 package forestry.core.network.packets;
 
-import java.io.IOException;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.SoundType;
+import forestry.core.network.*;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtUtils;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.core.network.ForestryPacket;
-import forestry.core.network.IForestryPacketClient;
-import forestry.core.network.IForestryPacketHandlerClient;
-import forestry.core.network.PacketBufferForestry;
-import forestry.core.network.PacketIdClient;
+import java.io.IOException;
 
 public class PacketFXSignal extends ForestryPacket implements IForestryPacketClient {
 

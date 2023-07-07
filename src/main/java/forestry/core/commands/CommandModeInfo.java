@@ -10,19 +10,17 @@
  ******************************************************************************/
 package forestry.core.commands;
 
-import java.util.stream.Stream;
-
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.Commands;
-import net.minecraft.network.chat.Style;
-import net.minecraft.ChatFormatting;
-
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.ArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
-
 import genetics.commands.CommandHelpers;
+import net.minecraft.ChatFormatting;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.network.chat.Style;
+
+import java.util.stream.Stream;
 
 public class CommandModeInfo implements Command<CommandSourceStack> {
 	private final ICommandModeHelper modeHelper;

@@ -10,13 +10,11 @@
  ******************************************************************************/
 package forestry.lepidopterology.entities;
 
-import javax.annotation.Nullable;
-import java.util.EnumSet;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.phys.Vec3;
 
-import net.minecraft.world.entity.ai.goal.Goal.Flag;
+import javax.annotation.Nullable;
+import java.util.EnumSet;
 
 public abstract class AIButterflyInteract extends AIButterflyBase {
 	@Nullable

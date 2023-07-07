@@ -10,13 +10,13 @@
  ******************************************************************************/
 package forestry.core.worldgen;
 
-import java.util.Random;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+
+import java.util.Random;
 
 public abstract class FeatureBase extends Feature<NoneFeatureConfiguration> {
 

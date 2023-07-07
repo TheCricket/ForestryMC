@@ -5,18 +5,6 @@
  ******************************************************************************/
 package forestry.api.arboriculture.genetics;
 
-import javax.annotation.Nonnull;
-import java.util.Collection;
-import java.util.Optional;
-
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.PlantType;
-
 import forestry.api.arboriculture.IGrowthProvider;
 import forestry.api.arboriculture.ILeafProvider;
 import forestry.api.arboriculture.ILeafSpriteProvider;
@@ -24,6 +12,16 @@ import forestry.api.arboriculture.ITreeGenerator;
 import forestry.api.genetics.IFruitFamily;
 import forestry.api.genetics.alleles.IAlleleForestrySpecies;
 import forestry.api.genetics.alleles.IAlleleProperty;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.PlantType;
+
+import javax.annotation.Nonnull;
+import java.util.Collection;
+import java.util.Optional;
 
 public interface IAlleleTreeSpecies extends IAlleleForestrySpecies, IAlleleProperty<IAlleleTreeSpecies> {
 

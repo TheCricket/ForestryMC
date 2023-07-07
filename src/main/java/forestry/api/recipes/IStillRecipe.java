@@ -7,7 +7,6 @@ package forestry.api.recipes;
 
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
-
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.ObjectHolder;
 

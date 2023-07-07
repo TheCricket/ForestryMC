@@ -11,20 +11,6 @@
 package forestry.farming;
 
 
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.BeetrootBlock;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.CropBlock;
-import net.minecraft.world.level.block.NetherWartBlock;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraftforge.fml.DistExecutor;
-
 import forestry.api.circuits.ChipsetManager;
 import forestry.api.circuits.CircuitSocketType;
 import forestry.api.circuits.ICircuitLayout;
@@ -37,17 +23,23 @@ import forestry.core.features.CoreItems;
 import forestry.farming.features.FarmingContainers;
 import forestry.farming.gui.GuiFarm;
 import forestry.farming.logic.ForestryFarmIdentifier;
-import forestry.farming.logic.farmables.FarmableAgingCrop;
-import forestry.farming.logic.farmables.FarmableChorus;
-import forestry.farming.logic.farmables.FarmableGE;
-import forestry.farming.logic.farmables.FarmableGourd;
-import forestry.farming.logic.farmables.FarmableSapling;
-import forestry.farming.logic.farmables.FarmableStacked;
+import forestry.farming.logic.farmables.*;
 import forestry.farming.proxy.ProxyFarming;
 import forestry.farming.proxy.ProxyFarmingClient;
 import forestry.modules.BlankForestryModule;
 import forestry.modules.ForestryModuleUids;
 import forestry.modules.ISidedModuleHandler;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.BeetrootBlock;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.NetherWartBlock;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.DistExecutor;
 
 @ForestryModule(containerID = Constants.MOD_ID, moduleID = ForestryModuleUids.FARMING, name = "Farming", author = "SirSengir", url = Constants.URL, unlocalizedDescription = "for.module.farming.description")
 public class ModuleFarming extends BlankForestryModule {

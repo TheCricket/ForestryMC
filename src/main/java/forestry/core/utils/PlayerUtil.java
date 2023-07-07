@@ -10,19 +10,17 @@
  ******************************************************************************/
 package forestry.core.utils;
 
+import com.mojang.authlib.GameProfile;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.common.util.FakePlayerFactory;
+
 import javax.annotation.Nullable;
 import java.util.UUID;
 import java.util.function.Consumer;
-
-import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.level.Level;
-import net.minecraft.server.level.ServerLevel;
-
-import com.mojang.authlib.GameProfile;
-
-import net.minecraftforge.common.util.FakePlayerFactory;
 
 public abstract class PlayerUtil {
 

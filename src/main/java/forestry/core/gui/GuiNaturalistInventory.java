@@ -11,20 +11,7 @@
 package forestry.core.gui;
 
 import com.google.common.collect.ImmutableList;
-
-import javax.annotation.Nullable;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.network.chat.Component;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.api.apiculture.IApiaristTracker;
 import forestry.api.genetics.IBreedingTracker;
 import forestry.api.genetics.IForestrySpeciesRoot;
@@ -36,7 +23,6 @@ import forestry.core.network.packets.PacketGuiSelectRequest;
 import forestry.core.render.ColourProperties;
 import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.Translator;
-
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.individual.IChromosomeType;
 import genetics.api.individual.IGenome;
@@ -44,6 +30,16 @@ import genetics.api.individual.IIndividual;
 import genetics.api.mutation.IMutation;
 import genetics.api.mutation.IMutationContainer;
 import genetics.api.root.components.ComponentKeys;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ItemStack;
+
+import javax.annotation.Nullable;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 public class GuiNaturalistInventory extends GuiForestry<ContainerNaturalistInventory> {
 	private final IForestrySpeciesRoot<IIndividual> speciesRoot;

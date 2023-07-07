@@ -10,24 +10,7 @@
  ******************************************************************************/
 package forestry.apiculture.tiles;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.Vec3;
-
 import com.mojang.authlib.GameProfile;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.apiculture.IBeekeepingLogic;
@@ -44,6 +27,20 @@ import forestry.core.owner.IOwnerHandler;
 import forestry.core.owner.OwnerHandler;
 import forestry.core.render.ParticleRender;
 import forestry.core.tiles.TileBase;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.util.LazyOptional;
+
+import javax.annotation.Nullable;
 
 public abstract class TileBeeHousingBase extends TileBase implements IBeeHousing, IOwnedTile, IClimatised, IGuiBeeHousingDelegate, IStreamableGui {
 	private final String hintKey;

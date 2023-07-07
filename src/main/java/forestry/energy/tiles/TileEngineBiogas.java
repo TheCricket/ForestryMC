@@ -10,29 +10,6 @@
  ******************************************************************************/
 package forestry.energy.tiles;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.WorldlyContainer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.fluids.FluidAttributes;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-
 import forestry.api.core.IErrorLogic;
 import forestry.api.fuels.EngineBronzeFuel;
 import forestry.api.fuels.FuelManager;
@@ -47,6 +24,27 @@ import forestry.core.tiles.ILiquidTankTile;
 import forestry.energy.features.EnergyTiles;
 import forestry.energy.gui.ContainerEngineBiogas;
 import forestry.energy.inventory.InventoryEngineBiogas;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
 
 public class TileEngineBiogas extends TileEngine implements WorldlyContainer, ILiquidTankTile {
 	private final FilteredTank fuelTank;

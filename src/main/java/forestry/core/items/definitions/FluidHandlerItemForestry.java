@@ -1,13 +1,11 @@
 package forestry.core.items.definitions;
 
-import net.minecraft.world.level.material.Fluid;
+import forestry.core.config.Config;
 import net.minecraft.world.item.ItemStack;
-
+import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.capability.templates.FluidHandlerItemStackSimple;
-
-import forestry.core.config.Config;
 
 /**
  * Fluid handler that consumes the container item after it was used.

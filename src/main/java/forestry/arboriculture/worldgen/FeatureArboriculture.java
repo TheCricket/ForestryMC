@@ -12,13 +12,13 @@ package forestry.arboriculture.worldgen;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-
+import com.mojang.authlib.GameProfile;
+import forestry.api.arboriculture.ITreeGenData;
+import forestry.arboriculture.blocks.BlockSapling;
+import forestry.arboriculture.tiles.TileTreeContainer;
+import forestry.core.tiles.TileUtil;
+import forestry.core.utils.VectUtil;
+import forestry.core.worldgen.FeatureBase;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.LevelAccessor;
@@ -30,14 +30,11 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 import net.minecraft.world.phys.shapes.BitSetDiscreteVoxelShape;
 import net.minecraft.world.phys.shapes.DiscreteVoxelShape;
 
-import com.mojang.authlib.GameProfile;
-
-import forestry.api.arboriculture.ITreeGenData;
-import forestry.arboriculture.blocks.BlockSapling;
-import forestry.arboriculture.tiles.TileTreeContainer;
-import forestry.core.tiles.TileUtil;
-import forestry.core.utils.VectUtil;
-import forestry.core.worldgen.FeatureBase;
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 public abstract class FeatureArboriculture extends FeatureBase {
 

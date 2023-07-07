@@ -11,7 +11,6 @@
 package forestry.core.config;
 
 import com.google.common.collect.LinkedListMultimap;
-
 import forestry.mail.gui.GuiMailboxInfo;
 
 public class Config {

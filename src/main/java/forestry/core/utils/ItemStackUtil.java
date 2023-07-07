@@ -11,24 +11,22 @@
 
 package forestry.core.utils;
 
-import java.util.Random;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
 import net.minecraft.world.Container;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+
+import javax.annotation.Nullable;
+import java.util.Random;
+import java.util.function.Function;
 
 public abstract class ItemStackUtil {
 

@@ -11,22 +11,19 @@
 package forestry.core.genetics.alleles;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import forestry.api.core.EnumHumidity;
 import forestry.api.core.EnumTemperature;
 import forestry.api.genetics.alleles.IAlleleForestrySpecies;
 import forestry.api.genetics.alleles.IAlleleSpeciesBuilder;
 import forestry.core.utils.GeneticsUtil;
-
 import genetics.api.alleles.Allele;
 import genetics.api.classification.IClassification;
 import genetics.api.organism.IOrganismType;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
+
+import javax.annotation.Nullable;
 
 public abstract class AlleleForestrySpecies extends Allele implements IAlleleForestrySpecies {
 	private final String binomial;

@@ -10,10 +10,6 @@
  ******************************************************************************/
 package forestry.energy;
 
-import net.minecraft.client.gui.screens.MenuScreens;
-
-import net.minecraftforge.fml.DistExecutor;
-
 import forestry.api.modules.ForestryModule;
 import forestry.core.config.Constants;
 import forestry.core.utils.ForgeUtils;
@@ -25,6 +21,8 @@ import forestry.energy.proxy.ProxyEnergyClient;
 import forestry.modules.BlankForestryModule;
 import forestry.modules.ForestryModuleUids;
 import forestry.modules.ISidedModuleHandler;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraftforge.fml.DistExecutor;
 
 @ForestryModule(containerID = Constants.MOD_ID, moduleID = ForestryModuleUids.ENERGY, name = "Energy", author = "SirSengir", url = Constants.URL, unlocalizedDescription = "for.module.energy.description")
 public class ModuleEnergy extends BlankForestryModule {

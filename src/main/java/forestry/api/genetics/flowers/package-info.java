@@ -7,6 +7,6 @@
 @MethodsReturnNonnullByDefault
 package forestry.api.genetics.flowers;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
 import net.minecraft.MethodsReturnNonnullByDefault;
+
+import javax.annotation.ParametersAreNonnullByDefault;

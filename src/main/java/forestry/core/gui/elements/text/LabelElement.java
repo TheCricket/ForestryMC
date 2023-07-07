@@ -1,19 +1,17 @@
 package forestry.core.gui.elements.text;
 
 import com.google.common.base.Preconditions;
+import forestry.api.core.tooltips.ITextInstance;
+import forestry.core.gui.elements.GuiElement;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.util.FormattedCharSequence;
 
 import javax.annotation.Nullable;
 import java.util.function.Consumer;
 import java.util.function.Function;
-
-import net.minecraft.util.FormattedCharSequence;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.Style;
-
-import forestry.api.core.tooltips.ITextInstance;
-import forestry.core.gui.elements.GuiElement;
 
 public abstract class LabelElement extends GuiElement {
 	public LabelElement(int xPos, int yPos, int width, int height) {

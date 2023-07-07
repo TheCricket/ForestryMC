@@ -5,30 +5,26 @@
  ******************************************************************************/
 package forestry.api.arboriculture.genetics;
 
-import javax.annotation.Nullable;
-import java.util.List;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.WorldGenLevel;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-
 import com.mojang.authlib.GameProfile;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.arboriculture.ITreeGenData;
 import forestry.api.genetics.IEffectData;
 import forestry.api.genetics.products.IProductList;
-
 import genetics.api.individual.IChromosomeType;
 import genetics.api.individual.IIndividual;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public interface ITree extends IIndividual, ITreeGenData {
 

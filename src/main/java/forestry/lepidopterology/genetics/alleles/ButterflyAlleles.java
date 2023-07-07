@@ -1,18 +1,16 @@
 package forestry.lepidopterology.genetics.alleles;
 
-import java.util.Arrays;
-import java.util.List;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-
 import forestry.api.lepidopterology.genetics.ButterflyChromosomes;
 import forestry.api.lepidopterology.genetics.IAlleleButterflyCocoon;
 import forestry.api.lepidopterology.genetics.IAlleleButterflyEffect;
 import forestry.core.features.CoreItems;
 import forestry.core.items.definitions.EnumCraftingMaterial;
-
 import genetics.api.alleles.IAlleleRegistry;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class ButterflyAlleles {
 	public static final IAlleleButterflyCocoon cocoonDefault;

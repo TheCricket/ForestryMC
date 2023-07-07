@@ -10,19 +10,7 @@
  ******************************************************************************/
 package forestry.climatology.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
-import net.minecraft.util.Mth;
-import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.climate.ClimateType;
 import forestry.api.climate.IClimateState;
 import forestry.api.climate.IClimateTransformer;
@@ -44,6 +32,15 @@ import forestry.core.gui.widgets.TankWidget;
 import forestry.core.network.packets.PacketGuiSelectRequest;
 import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.Translator;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public class GuiHabitatFormer extends GuiForestryTitled<ContainerHabitatFormer> implements IScrollable {

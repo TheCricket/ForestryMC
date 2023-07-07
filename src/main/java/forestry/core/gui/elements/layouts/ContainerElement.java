@@ -1,38 +1,25 @@
 package forestry.core.gui.elements.layouts;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.core.gui.Drawable;
+import forestry.core.gui.GuiConstants;
+import forestry.core.gui.elements.*;
+import forestry.core.gui.elements.text.LabelElement;
+import forestry.core.utils.Log;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.Style;
+import net.minecraft.util.FormattedCharSequence;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
 import javax.annotation.Nullable;
-import java.awt.Dimension;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.function.Consumer;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.util.FormattedCharSequence;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.TranslatableComponent;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.core.gui.Drawable;
-import forestry.core.gui.GuiConstants;
-import forestry.core.gui.elements.ActionConfig;
-import forestry.core.gui.elements.ActionOrigin;
-import forestry.core.gui.elements.ActionType;
-import forestry.core.gui.elements.Alignment;
-import forestry.core.gui.elements.DrawableElement;
-import forestry.core.gui.elements.GuiElement;
-import forestry.core.gui.elements.GuiElementFactory;
-import forestry.core.gui.elements.ItemElement;
-import forestry.core.gui.elements.text.LabelElement;
-import forestry.core.utils.Log;
 
 @OnlyIn(Dist.CLIENT)
 public class ContainerElement extends GuiElement {

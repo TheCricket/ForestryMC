@@ -1,15 +1,6 @@
 package forestry.core.data;
 
 import com.google.common.collect.Table;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.core.Direction;
-
 import forestry.core.config.Constants;
 import forestry.core.features.CoreBlocks;
 import forestry.core.fluids.ForestryFluids;
@@ -22,6 +13,13 @@ import forestry.lepidopterology.features.LepidopterologyBlocks;
 import forestry.lepidopterology.genetics.alleles.AlleleButterflyCocoon;
 import forestry.lepidopterology.genetics.alleles.ButterflyAlleles;
 import forestry.modules.features.FeatureBlock;
+import net.minecraft.core.Direction;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class ForestryBlockStateProvider extends BlockStateProvider {
 

@@ -5,9 +5,9 @@
  ******************************************************************************/
 package forestry.api.apiculture;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
 
 /**
  * Helper class for checking whether an entity is wearing Apiarist Armor

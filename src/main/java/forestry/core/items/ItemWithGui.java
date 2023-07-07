@@ -10,24 +10,22 @@
  ******************************************************************************/
 package forestry.core.items;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.network.NetworkHooks;
-
 import forestry.core.gui.ContainerItemInventory;
 import forestry.core.network.PacketBufferForestry;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.network.NetworkHooks;
+
+import javax.annotation.Nullable;
 
 public abstract class ItemWithGui extends ItemForestry {
 

@@ -1,13 +1,12 @@
 package forestry.storage;
 
-import java.util.function.Predicate;
-
-import net.minecraft.world.item.ItemStack;
-
 import genetics.api.GeneticsAPI;
 import genetics.api.individual.IIndividual;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.IRootDefinition;
+import net.minecraft.world.item.ItemStack;
+
+import java.util.function.Predicate;
 
 public class BackpackFilterNaturalist implements Predicate<ItemStack> {
 	private final String speciesRootUid;

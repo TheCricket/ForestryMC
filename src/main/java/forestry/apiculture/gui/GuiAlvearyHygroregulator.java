@@ -10,13 +10,12 @@
  ******************************************************************************/
 package forestry.apiculture.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
 import forestry.apiculture.multiblock.TileAlvearyHygroregulator;
 import forestry.core.config.Constants;
 import forestry.core.gui.GuiForestryTitled;
 import forestry.core.gui.widgets.TankWidget;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 public class GuiAlvearyHygroregulator extends GuiForestryTitled<ContainerAlvearyHygroregulator> {
 	private final TileAlvearyHygroregulator tile;

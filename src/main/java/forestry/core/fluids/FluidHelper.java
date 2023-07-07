@@ -10,19 +10,16 @@
  ******************************************************************************/
 package forestry.core.fluids;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.Container;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.sounds.SoundEvent;
+import forestry.core.utils.ItemStackUtil;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-
+import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.fluids.FluidActionResult;
 import net.minecraftforge.fluids.FluidAttributes;
@@ -32,7 +29,8 @@ import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import net.minecraftforge.items.ItemHandlerHelper;
 
-import forestry.core.utils.ItemStackUtil;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 //TODO: Fix isFillable's
 public final class FluidHelper {

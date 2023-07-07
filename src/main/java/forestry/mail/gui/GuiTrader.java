@@ -10,16 +10,14 @@
  ******************************************************************************/
 package forestry.mail.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.core.config.Constants;
 import forestry.core.gui.GuiForestry;
 import forestry.core.render.ColourProperties;
 import forestry.core.utils.Translator;
 import forestry.mail.tiles.TileTrader;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 public class GuiTrader extends GuiForestry<ContainerTrader> {
 	private final TileTrader tile;

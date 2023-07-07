@@ -11,18 +11,15 @@
 package forestry.core.data.builder;
 
 import com.google.gson.JsonObject;
-
-import java.util.function.Consumer;
-
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.fluids.FluidStack;
-
 import forestry.api.recipes.IFabricatorSmeltingRecipe;
 import forestry.factory.recipes.RecipeSerializers;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraftforge.fluids.FluidStack;
+
+import java.util.function.Consumer;
 
 public class FabricatorSmeltingRecipeBuilder {
 

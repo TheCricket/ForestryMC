@@ -10,26 +10,6 @@
  ******************************************************************************/
 package forestry.factory.tiles;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.util.Collection;
-import java.util.Stack;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.ResultContainer;
-import net.minecraft.world.Container;
-import net.minecraft.world.WorldlyContainer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.circuits.ChipsetManager;
 import forestry.api.circuits.CircuitSocketType;
 import forestry.api.circuits.ICircuitBoard;
@@ -49,6 +29,24 @@ import forestry.core.utils.InventoryUtil;
 import forestry.factory.features.FactoryTiles;
 import forestry.factory.gui.ContainerCentrifuge;
 import forestry.factory.inventory.InventoryCentrifuge;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.world.Container;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ResultContainer;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.Collection;
+import java.util.Stack;
 
 public class TileCentrifuge extends TilePowered implements ISocketable, WorldlyContainer, IItemStackDisplay {
 	private static final int TICKS_PER_RECIPE_TIME = 1;

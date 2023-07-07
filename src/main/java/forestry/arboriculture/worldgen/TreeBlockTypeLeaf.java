@@ -10,16 +10,14 @@
  ******************************************************************************/
 package forestry.arboriculture.worldgen;
 
-import javax.annotation.Nullable;
-import java.util.Random;
-
-import net.minecraft.core.Direction;
+import com.mojang.authlib.GameProfile;
+import forestry.api.arboriculture.ITreeGenData;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.LevelAccessor;
 
-import com.mojang.authlib.GameProfile;
-
-import forestry.api.arboriculture.ITreeGenData;
+import javax.annotation.Nullable;
+import java.util.Random;
 
 public class TreeBlockTypeLeaf implements ITreeBlockType {
 	private final ITreeGenData tree;

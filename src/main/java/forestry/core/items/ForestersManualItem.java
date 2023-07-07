@@ -1,18 +1,16 @@
 package forestry.core.items;
 
-import net.minecraft.world.entity.player.Player;
+import forestry.core.ItemGroupForestry;
+import net.minecraft.core.Registry;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.core.Registry;
 import net.minecraft.world.level.Level;
-
-import forestry.core.ItemGroupForestry;
-
 import vazkii.patchouli.api.PatchouliAPI;
 
 public class ForestersManualItem extends Item {

@@ -1,15 +1,12 @@
 package forestry.api.genetics.gatgets;
 
-import net.minecraft.world.item.ItemStack;
+import forestry.core.gui.elements.DatabaseElement;
+import genetics.api.individual.IIndividual;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
-
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.core.gui.elements.DatabaseElement;
-
-import genetics.api.individual.IIndividual;
 
 /**
  * A tab of the database screen that shows some information about a {@link IIndividual}.

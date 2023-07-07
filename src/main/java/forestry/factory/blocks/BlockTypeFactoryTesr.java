@@ -10,13 +10,6 @@
  ******************************************************************************/
 package forestry.factory.blocks;
 
-import java.util.function.Supplier;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.core.Direction;
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
-
 import forestry.core.blocks.BlockBase;
 import forestry.core.blocks.IBlockTypeTesr;
 import forestry.core.blocks.IMachinePropertiesTesr;
@@ -27,6 +20,12 @@ import forestry.core.tiles.TileBase;
 import forestry.core.tiles.TileMill;
 import forestry.factory.features.FactoryTiles;
 import forestry.modules.features.FeatureTileType;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+import java.util.function.Supplier;
 
 public enum BlockTypeFactoryTesr implements IBlockTypeTesr {
 	BOTTLER(() -> FactoryTiles.BOTTLER, "bottler"),

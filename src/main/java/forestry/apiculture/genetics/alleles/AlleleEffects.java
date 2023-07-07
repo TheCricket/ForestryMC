@@ -1,14 +1,12 @@
 package forestry.apiculture.genetics.alleles;
 
-import java.util.Arrays;
-import java.util.List;
-
-import net.minecraft.world.effect.MobEffects;
-
 import forestry.api.apiculture.genetics.BeeChromosomes;
 import forestry.api.apiculture.genetics.IAlleleBeeEffect;
-
 import genetics.api.alleles.IAlleleRegistry;
+import net.minecraft.world.effect.MobEffects;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class AlleleEffects {
 	public static final IAlleleBeeEffect effectNone;

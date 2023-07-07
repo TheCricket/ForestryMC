@@ -1,13 +1,12 @@
 package genetics.api.alleles;
 
-import java.util.Optional;
-
-import net.minecraft.resources.ResourceLocation;
-
 import genetics.api.GeneticsAPI;
 import genetics.api.IGeneticFactory;
 import genetics.api.individual.IChromosomeType;
 import genetics.api.individual.IKaryotype;
+import net.minecraft.resources.ResourceLocation;
+
+import java.util.Optional;
 
 /**
  * Can be used to create allele templates.

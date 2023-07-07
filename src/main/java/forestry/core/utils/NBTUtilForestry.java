@@ -11,32 +11,16 @@
 package forestry.core.utils;
 
 import com.google.common.collect.ForwardingList;
+import forestry.core.network.IStreamable;
+import forestry.core.network.PacketBufferForestry;
+import io.netty.buffer.Unpooled;
+import net.minecraft.nbt.*;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import net.minecraft.nbt.ByteArrayTag;
-import net.minecraft.nbt.ByteTag;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.DoubleTag;
-import net.minecraft.nbt.EndTag;
-import net.minecraft.nbt.FloatTag;
-import net.minecraft.nbt.Tag;
-import net.minecraft.nbt.IntArrayTag;
-import net.minecraft.nbt.IntTag;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.nbt.LongTag;
-import net.minecraft.nbt.ShortTag;
-import net.minecraft.nbt.StringTag;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.core.network.IStreamable;
-import forestry.core.network.PacketBufferForestry;
-
-import io.netty.buffer.Unpooled;
 
 /**
  * @author CovertJaguar <http://www.railcraft.info/>

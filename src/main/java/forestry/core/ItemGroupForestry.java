@@ -10,13 +10,6 @@
  ******************************************************************************/
 package forestry.core;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.registries.ForgeRegistries;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.genetics.EnumBeeType;
 import forestry.api.arboriculture.TreeManager;
@@ -33,6 +26,11 @@ import forestry.core.features.CoreItems;
 import forestry.lepidopterology.genetics.Butterfly;
 import forestry.lepidopterology.genetics.ButterflyDefinition;
 import forestry.modules.features.FeatureProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.registries.ForgeRegistries;
 
 //Provides no features but needs to be loaded
 @FeatureProvider

@@ -1,8 +1,8 @@
 package forestry.api.apiculture.genetics;
 
-import java.util.function.BiConsumer;
-
 import net.minecraft.world.item.ItemStack;
+
+import java.util.function.BiConsumer;
 
 public interface IBeeProductProvider {
 	default void addProducts(BiConsumer<ItemStack, Float> registry) {

@@ -10,15 +10,14 @@
  ******************************************************************************/
 package forestry.core.gui;
 
-import net.minecraft.world.entity.player.Player;
+import forestry.core.gui.slots.SlotLocked;
+import forestry.core.inventory.ItemInventory;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
-
-import forestry.core.gui.slots.SlotLocked;
-import forestry.core.inventory.ItemInventory;
 
 public abstract class ContainerItemInventory<I extends ItemInventory> extends ContainerForestry {
 

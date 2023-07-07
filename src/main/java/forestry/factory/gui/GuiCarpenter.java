@@ -10,15 +10,13 @@
  ******************************************************************************/
 package forestry.factory.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.core.config.Constants;
 import forestry.core.gui.GuiForestryTitled;
 import forestry.core.gui.widgets.TankWidget;
 import forestry.factory.tiles.TileCarpenter;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 public class GuiCarpenter extends GuiForestryTitled<ContainerCarpenter> {
 	private final TileCarpenter tile;

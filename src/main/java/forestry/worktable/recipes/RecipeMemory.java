@@ -10,23 +10,21 @@
  ******************************************************************************/
 package forestry.worktable.recipes;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.util.LinkedList;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.CraftingRecipe;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.core.INbtWritable;
 import forestry.core.network.IStreamable;
 import forestry.core.network.PacketBufferForestry;
 import forestry.core.utils.WorldUtils;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CraftingRecipe;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.LinkedList;
 
 public class RecipeMemory implements INbtWritable, IStreamable {
 

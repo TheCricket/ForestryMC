@@ -1,7 +1,10 @@
 package forestry.core.gui.elements;
 
-import javax.annotation.Nullable;
-
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.*;
+import forestry.api.core.tooltips.ToolTip;
+import forestry.core.gui.Drawable;
+import forestry.core.utils.ResourceUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -9,20 +12,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.material.Fluid;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.BufferBuilder;
-import com.mojang.blaze3d.vertex.DefaultVertexFormat;
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.Tesselator;
-import com.mojang.blaze3d.vertex.VertexFormat;
-
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.FluidStack;
 
-import forestry.api.core.tooltips.ToolTip;
-import forestry.core.gui.Drawable;
-import forestry.core.utils.ResourceUtil;
+import javax.annotation.Nullable;
 
 public class TankElement extends GuiElement {
 	/* Attributes - Final */

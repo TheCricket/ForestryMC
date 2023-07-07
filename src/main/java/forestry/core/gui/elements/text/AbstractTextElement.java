@@ -1,13 +1,12 @@
 package forestry.core.gui.elements.text;
 
-import java.awt.Dimension;
-
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 
-import com.mojang.blaze3d.vertex.PoseStack;
+import java.awt.*;
 
 public abstract class AbstractTextElement<T, E extends AbstractTextElement<T, E>> extends LabelElement {
 	/* Constants */

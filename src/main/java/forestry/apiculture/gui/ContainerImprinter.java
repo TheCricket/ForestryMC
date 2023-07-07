@@ -10,12 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.gui;
 
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.world.InteractionHand;
-
 import forestry.apiculture.features.ApicultureContainers;
 import forestry.apiculture.inventory.ItemInventoryImprinter;
 import forestry.apiculture.network.packets.PacketImprintSelectionResponse;
@@ -24,6 +18,11 @@ import forestry.core.gui.IGuiSelectable;
 import forestry.core.gui.slots.SlotFiltered;
 import forestry.core.gui.slots.SlotOutput;
 import forestry.core.utils.NetworkUtil;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
 
 public class ContainerImprinter extends ContainerItemInventory<ItemInventoryImprinter> implements IGuiSelectable {
 

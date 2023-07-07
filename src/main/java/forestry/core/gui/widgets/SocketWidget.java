@@ -10,24 +10,21 @@
  ******************************************************************************/
 package forestry.core.gui.widgets;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.core.tooltips.ToolTip;
 import forestry.core.circuits.ISocketable;
 import forestry.core.circuits.ISolderingIron;
 import forestry.core.circuits.ItemCircuitBoard;
 import forestry.core.gui.IContainerSocketed;
 import forestry.core.utils.ItemTooltipUtil;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class SocketWidget extends Widget {
 

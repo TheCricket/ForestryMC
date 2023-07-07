@@ -10,15 +10,6 @@
  ******************************************************************************/
 package forestry.climatology;
 
-import java.util.function.Consumer;
-
-import net.minecraft.client.gui.screens.MenuScreens;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import net.minecraftforge.fml.DistExecutor;
-
 import forestry.api.climate.IClimateListener;
 import forestry.api.climate.IClimateTransformer;
 import forestry.api.modules.ForestryModule;
@@ -32,6 +23,12 @@ import forestry.core.network.IPacketRegistry;
 import forestry.modules.BlankForestryModule;
 import forestry.modules.ForestryModuleUids;
 import forestry.modules.ISidedModuleHandler;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.fml.DistExecutor;
+
+import java.util.function.Consumer;
 
 @ForestryModule(containerID = Constants.MOD_ID, moduleID = ForestryModuleUids.CLIMATOLOGY, name = "Climatology", author = "Nedelosk", url = Constants.URL, unlocalizedDescription = "for.module.greenhouse.description")
 public class ModuleClimatology extends BlankForestryModule {

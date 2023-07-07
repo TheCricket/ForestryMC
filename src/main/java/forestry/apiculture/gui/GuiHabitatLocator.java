@@ -11,30 +11,20 @@
 package forestry.apiculture.gui;
 
 import com.google.common.collect.LinkedListMultimap;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-import java.util.Set;
-
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.level.biome.Biome;
-
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
-
-import net.minecraftforge.registries.ForgeRegistries;
-
+import com.mojang.blaze3d.vertex.PoseStack;
 import forestry.apiculture.inventory.ItemInventoryHabitatLocator;
 import forestry.core.config.Constants;
 import forestry.core.gui.GuiForestry;
 import forestry.core.render.ColourProperties;
 import forestry.core.utils.Translator;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.*;
 
 public class GuiHabitatLocator extends GuiForestry<ContainerHabitatLocator> {
 	private static final LinkedListMultimap<String, Biome.BiomeCategory> habitats = LinkedListMultimap.create();

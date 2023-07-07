@@ -1,10 +1,10 @@
 package forestry.modules;
 
-import java.util.Collection;
-
 import forestry.api.modules.IForestryModule;
 import forestry.api.modules.IModuleContainer;
 import forestry.core.config.Constants;
+
+import java.util.Collection;
 
 public class ForestryModules implements IModuleContainer {
 

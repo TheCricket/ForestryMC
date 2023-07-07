@@ -1,13 +1,5 @@
 package genetics.individual;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.nbt.Tag;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
-
 import genetics.ApiInstance;
 import genetics.Log;
 import genetics.api.GeneticHelper;
@@ -15,15 +7,18 @@ import genetics.api.IGeneticSaveHandler;
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleRegistry;
 import genetics.api.alleles.IAlleleTemplate;
-import genetics.api.individual.IChromosome;
-import genetics.api.individual.IChromosomeType;
-import genetics.api.individual.IGenome;
-import genetics.api.individual.IIndividual;
-import genetics.api.individual.IKaryotype;
+import genetics.api.individual.*;
 import genetics.api.organism.IOrganismHandler;
 import genetics.api.organism.IOrganismType;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.ITemplateContainer;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.Tag;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+
+import javax.annotation.Nullable;
 
 public enum GeneticSaveHandler implements IGeneticSaveHandler {
 	INSTANCE;

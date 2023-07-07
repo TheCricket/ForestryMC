@@ -10,13 +10,11 @@
  ******************************************************************************/
 package forestry.apiculture.genetics;
 
-import net.minecraft.world.item.ItemStack;
-
-import genetics.api.individual.ISpeciesDefinition;
-
 import forestry.api.apiculture.genetics.EnumBeeType;
 import forestry.api.apiculture.genetics.IAlleleBeeSpecies;
 import forestry.api.apiculture.genetics.IBee;
+import genetics.api.individual.ISpeciesDefinition;
+import net.minecraft.world.item.ItemStack;
 
 public interface IBeeDefinition extends ISpeciesDefinition<IBee> {
 

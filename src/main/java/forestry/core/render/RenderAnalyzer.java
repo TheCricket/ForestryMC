@@ -10,8 +10,10 @@
  ******************************************************************************/
 package forestry.core.render;
 
-import javax.annotation.Nullable;
-
+import com.mojang.math.Vector3f;
+import forestry.core.blocks.BlockBase;
+import forestry.core.config.Constants;
+import forestry.core.tiles.TileAnalyzer;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -19,18 +21,13 @@ import net.minecraft.client.model.geom.builders.CubeListBuilder;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
-import com.mojang.math.Vector3f;
-
-import forestry.core.blocks.BlockBase;
-import forestry.core.config.Constants;
-import forestry.core.tiles.TileAnalyzer;
+import javax.annotation.Nullable;
 
 public class RenderAnalyzer implements IForestryRenderer<TileAnalyzer> {
 	public static final ModelLayerLocation MODEL_LAYER = IForestryRenderer.register("analyzer");

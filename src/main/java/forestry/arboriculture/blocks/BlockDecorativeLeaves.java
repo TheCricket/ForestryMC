@@ -1,25 +1,5 @@
 package forestry.arboriculture.blocks;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.IForgeShearable;
-
 import forestry.api.arboriculture.IFruitProvider;
 import forestry.api.arboriculture.ILeafSpriteProvider;
 import forestry.api.arboriculture.genetics.TreeChromosomes;
@@ -27,10 +7,25 @@ import forestry.arboriculture.genetics.TreeDefinition;
 import forestry.core.blocks.IColoredBlock;
 import forestry.core.proxy.Proxies;
 import forestry.core.utils.BlockUtil;
-
 import genetics.api.individual.IGenome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.IForgeShearable;
 
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import javax.annotation.Nullable;
 
 public class BlockDecorativeLeaves extends Block implements IColoredBlock, IForgeShearable {
 	private TreeDefinition definition;

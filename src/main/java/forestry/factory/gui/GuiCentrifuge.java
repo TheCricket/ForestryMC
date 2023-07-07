@@ -10,15 +10,13 @@
  ******************************************************************************/
 package forestry.factory.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.core.config.Constants;
 import forestry.core.gui.GuiForestryTitled;
 import forestry.core.gui.widgets.SocketWidget;
 import forestry.factory.tiles.TileCentrifuge;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 public class GuiCentrifuge extends GuiForestryTitled<ContainerCentrifuge> {
 	private final TileCentrifuge tile;

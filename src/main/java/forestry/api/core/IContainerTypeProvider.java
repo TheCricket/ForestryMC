@@ -1,9 +1,9 @@
 package forestry.api.core;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
+
+import javax.annotation.Nullable;
 
 public interface IContainerTypeProvider<C extends AbstractContainerMenu> {
 	boolean hasContainerType();

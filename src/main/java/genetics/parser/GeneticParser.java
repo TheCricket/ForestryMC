@@ -7,18 +7,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
-
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.Comparator;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.io.IOUtils;
-
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import genetics.api.alleles.AlleleInfo;
+import genetics.api.alleles.IAllele;
+import genetics.api.alleles.IAlleleType;
+import genetics.utils.NBTUtils;
+import io.netty.util.internal.StringUtil;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.TagParser;
 import net.minecraft.resources.ResourceLocation;
@@ -26,15 +20,11 @@ import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
 import net.minecraft.util.GsonHelper;
+import org.apache.commons.io.IOUtils;
 
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
-
-import genetics.api.GeneticsResourceType;
-import genetics.api.alleles.AlleleInfo;
-import genetics.api.alleles.IAllele;
-import genetics.api.alleles.IAlleleType;
-import genetics.utils.NBTUtils;
-import io.netty.util.internal.StringUtil;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 public class GeneticParser implements ResourceManagerReloadListener {
 	public final Map<ResourceLocation, IAlleleType> types = new HashMap<>();

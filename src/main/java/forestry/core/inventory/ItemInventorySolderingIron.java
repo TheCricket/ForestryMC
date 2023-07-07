@@ -11,11 +11,6 @@
 package forestry.core.inventory;
 
 import com.google.common.collect.ImmutableSet;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-
 import forestry.api.circuits.ChipsetManager;
 import forestry.api.circuits.ICircuit;
 import forestry.api.circuits.ICircuitLayout;
@@ -27,6 +22,9 @@ import forestry.core.circuits.EnumCircuitBoardType;
 import forestry.core.circuits.ItemCircuitBoard;
 import forestry.core.errors.EnumErrorCode;
 import forestry.core.utils.datastructures.RevolvingList;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 import java.util.Optional;
 

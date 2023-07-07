@@ -1,15 +1,13 @@
 package forestry.storage.compat;
 
-import net.minecraft.resources.ResourceLocation;
-
 import forestry.core.config.Constants;
 import forestry.core.utils.JeiUtil;
 import forestry.modules.ForestryModuleUids;
 import forestry.storage.features.BackpackItems;
-
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IRecipeRegistration;
+import net.minecraft.resources.ResourceLocation;
 
 
 @JeiPlugin

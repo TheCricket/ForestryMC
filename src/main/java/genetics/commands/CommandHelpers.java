@@ -11,8 +11,8 @@
 package genetics.commands;
 
 import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 
 /**

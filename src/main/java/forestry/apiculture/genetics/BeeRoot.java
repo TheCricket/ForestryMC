@@ -11,34 +11,9 @@
 package forestry.apiculture.genetics;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Optional;
-
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
-
 import com.mojang.authlib.GameProfile;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.api.apiculture.IApiaristTracker;
-import forestry.api.apiculture.IBeeHousing;
-import forestry.api.apiculture.IBeeListener;
-import forestry.api.apiculture.IBeeModifier;
-import forestry.api.apiculture.IBeekeepingLogic;
-import forestry.api.apiculture.IBeekeepingMode;
-import forestry.api.apiculture.genetics.BeeChromosomes;
-import forestry.api.apiculture.genetics.EnumBeeType;
-import forestry.api.apiculture.genetics.IAlleleBeeSpecies;
-import forestry.api.apiculture.genetics.IBee;
-import forestry.api.apiculture.genetics.IBeeRoot;
+import forestry.api.apiculture.*;
+import forestry.api.apiculture.genetics.*;
 import forestry.api.genetics.IAlyzerPlugin;
 import forestry.api.genetics.IBreedingTracker;
 import forestry.api.genetics.IBreedingTrackerHandler;
@@ -48,7 +23,6 @@ import forestry.apiculture.BeeHousingModifier;
 import forestry.apiculture.BeekeepingLogic;
 import forestry.core.genetics.root.BreedingTrackerManager;
 import forestry.core.utils.Log;
-
 import genetics.api.individual.IGenome;
 import genetics.api.individual.IGenomeWrapper;
 import genetics.api.individual.IIndividual;
@@ -56,6 +30,18 @@ import genetics.api.organism.IOrganismType;
 import genetics.api.root.IRootContext;
 import genetics.api.root.IndividualRoot;
 import genetics.utils.AlleleUtils;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Optional;
 
 public class BeeRoot extends IndividualRoot<IBee> implements IBeeRoot, IBreedingTrackerHandler {
 

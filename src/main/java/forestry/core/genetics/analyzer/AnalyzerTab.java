@@ -1,16 +1,14 @@
 package forestry.core.genetics.analyzer;
 
-import java.util.Locale;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import forestry.api.genetics.gatgets.IDatabaseTab;
 import forestry.core.features.CoreItems;
 import forestry.core.gui.elements.DatabaseElement;
-
 import genetics.api.individual.IIndividual;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.ItemStack;
+
+import java.util.Locale;
 
 public enum AnalyzerTab implements IDatabaseTab<IIndividual> {
 	ANALYZE {

@@ -10,9 +10,6 @@
  ******************************************************************************/
 package forestry.mail.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.FriendlyByteBuf;
-
 import forestry.api.mail.IMailAddress;
 import forestry.core.gui.ContainerTile;
 import forestry.core.gui.slots.SlotFiltered;
@@ -22,6 +19,8 @@ import forestry.core.tiles.TileUtil;
 import forestry.mail.TradeStation;
 import forestry.mail.features.MailContainers;
 import forestry.mail.tiles.TileTrader;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.entity.player.Inventory;
 
 public class ContainerTrader extends ContainerTile<TileTrader> {
 

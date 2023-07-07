@@ -1,26 +1,20 @@
 package forestry.modules.features;
 
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-
-import net.minecraftforge.registries.IForgeRegistryEntry;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
 
 public enum FeatureType {
-	MACHINE(Block.class),
-	FLUID(Fluid.class),
-	BLOCK(Block.class),
-	ENTITY(EntityType.class),
-	ITEM(Item.class),
-	TILE(BlockEntityType.class),
-	CONTAINER(MenuType.class);
+	MACHINE(ForgeRegistries.BLOCKS),
+	FLUID(ForgeRegistries.FLUIDS),
+	BLOCK(ForgeRegistries.BLOCKS),
+	ENTITY(ForgeRegistries.ENTITY_TYPES),
+	ITEM(ForgeRegistries.ITEMS),
+	TILE(ForgeRegistries.BLOCK_ENTITY_TYPES),
+	CONTAINER(ForgeRegistries.MENU_TYPES);
 
-	public final Class<? extends IForgeRegistryEntry> superType;
+	public final IForgeRegistry superType;
 
-	FeatureType(Class<? extends IForgeRegistryEntry> superType) {
+	FeatureType(IForgeRegistry superType) {
 		this.superType = superType;
 	}
 }

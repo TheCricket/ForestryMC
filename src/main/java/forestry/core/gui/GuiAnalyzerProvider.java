@@ -1,17 +1,6 @@
 package forestry.core.gui;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.Container;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.systems.RenderSystem;
-
 import forestry.api.genetics.gatgets.IGeneticAnalyzer;
 import forestry.api.genetics.gatgets.IGeneticAnalyzerProvider;
 import forestry.core.gui.buttons.GuiToggleButton;
@@ -22,6 +11,14 @@ import forestry.core.gui.slots.SlotAnalyzer;
 import forestry.core.inventory.ItemInventoryAlyzer;
 import forestry.core.inventory.watchers.ISlotChangeWatcher;
 import forestry.core.tiles.ITitled;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.Slot;
+
+import javax.annotation.Nullable;
 
 public abstract class GuiAnalyzerProvider<C extends AbstractContainerMenu> extends GuiForestryTitled<C> implements IGeneticAnalyzerProvider, ISlotChangeWatcher {
 	/* Attributes - Constants */

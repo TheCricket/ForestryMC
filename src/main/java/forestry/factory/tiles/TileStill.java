@@ -11,29 +11,6 @@
 package forestry.factory.tiles;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.util.Objects;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.WorldlyContainer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-
 import forestry.api.core.IErrorLogic;
 import forestry.api.recipes.IStillRecipe;
 import forestry.api.recipes.RecipeManagers;
@@ -49,6 +26,26 @@ import forestry.core.tiles.TilePowered;
 import forestry.factory.features.FactoryTiles;
 import forestry.factory.gui.ContainerStill;
 import forestry.factory.inventory.InventoryStill;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.Objects;
 
 public class TileStill extends TilePowered implements WorldlyContainer, ILiquidTankTile {
 	private static final int ENERGY_PER_RECIPE_TIME = 200;
@@ -204,7 +201,7 @@ public class TileStill extends TilePowered implements WorldlyContainer, ILiquidT
 
 	@Override
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
-		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
+		if (capability == ForgeCapabilities.FLUID_HANDLER) {
 			return LazyOptional.of(() -> tankManager).cast();
 		}
 		return super.getCapability(capability, facing);

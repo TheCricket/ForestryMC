@@ -1,14 +1,5 @@
 package genetics.root;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-
 import genetics.api.individual.IIndividual;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.components.ComponentKey;
@@ -16,6 +7,14 @@ import genetics.api.root.components.ComponentKeys;
 import genetics.api.root.translator.IBlockTranslator;
 import genetics.api.root.translator.IIndividualTranslator;
 import genetics.api.root.translator.IItemTranslator;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 public class IndividualTranslator<I extends IIndividual> implements IIndividualTranslator<I> {
 	private final IIndividualRoot<I> root;

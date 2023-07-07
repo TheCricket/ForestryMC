@@ -10,6 +10,9 @@
  ******************************************************************************/
 package forestry.core.items;
 
+import forestry.core.features.CoreItems;
+import forestry.core.items.definitions.ToolTier;
+import forestry.core.utils.ItemStackUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -28,12 +31,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
-
 import net.minecraftforge.common.ToolActions;
-
-import forestry.core.features.CoreItems;
-import forestry.core.items.definitions.ToolTier;
-import forestry.core.utils.ItemStackUtil;
 
 public class ItemForestryTool extends DiggerItem {
 

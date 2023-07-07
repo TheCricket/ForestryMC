@@ -10,8 +10,14 @@
  ******************************************************************************/
 package forestry.lepidopterology.blocks;
 
-import java.util.Random;
-
+import forestry.api.lepidopterology.ButterflyManager;
+import forestry.api.lepidopterology.genetics.EnumFlutterType;
+import forestry.api.lepidopterology.genetics.IButterfly;
+import forestry.core.tiles.TileUtil;
+import forestry.lepidopterology.genetics.alleles.AlleleButterflyCocoon;
+import forestry.lepidopterology.genetics.alleles.ButterflyAlleles;
+import forestry.lepidopterology.items.ItemButterflyGE;
+import forestry.lepidopterology.tiles.TileCocoon;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -30,14 +36,7 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import forestry.api.lepidopterology.ButterflyManager;
-import forestry.api.lepidopterology.genetics.EnumFlutterType;
-import forestry.api.lepidopterology.genetics.IButterfly;
-import forestry.core.tiles.TileUtil;
-import forestry.lepidopterology.genetics.alleles.AlleleButterflyCocoon;
-import forestry.lepidopterology.genetics.alleles.ButterflyAlleles;
-import forestry.lepidopterology.items.ItemButterflyGE;
-import forestry.lepidopterology.tiles.TileCocoon;
+import java.util.Random;
 
 public class BlockCocoon extends Block implements EntityBlock {
 	public static final VoxelShape BOUNDING_BOX = Block.box(0.3125F, 0.3125F, 0.3125F, 0.6875F, 1F, 0.6875F);

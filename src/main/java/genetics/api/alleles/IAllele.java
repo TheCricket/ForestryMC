@@ -1,11 +1,10 @@
 package genetics.api.alleles;
 
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-
 import genetics.api.individual.IChromosome;
 import genetics.api.individual.IGenome;
 import genetics.api.individual.IIndividual;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 
 /**
  * An {@link IIndividual}'s {@link IGenome} is composed of {@link IChromosome}s consisting each of a active and inactive {@link IAllele}.

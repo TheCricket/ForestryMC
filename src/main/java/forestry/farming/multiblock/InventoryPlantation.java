@@ -1,23 +1,10 @@
 package forestry.farming.multiblock;
 
-import java.util.Optional;
-import java.util.Stack;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.Container;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-
-import forestry.core.config.Preference;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.FluidUtil;
-
 import forestry.api.core.ForestryAPI;
 import forestry.api.farming.IFarmHousing;
 import forestry.api.farming.IFarmLogic;
 import forestry.api.farming.IFarmable;
+import forestry.core.config.Preference;
 import forestry.core.fluids.FluidHelper;
 import forestry.core.fluids.TankManager;
 import forestry.core.inventory.InventoryAdapterRestricted;
@@ -25,6 +12,17 @@ import forestry.core.inventory.wrappers.InventoryMapper;
 import forestry.core.tiles.ILiquidTankTile;
 import forestry.core.utils.InventoryUtil;
 import forestry.core.utils.SlotUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidUtil;
+
+import java.util.Optional;
+import java.util.Stack;
 
 /**
  * The basic class for the two plantation inventories. (Multiblock Farm / Cultivators)

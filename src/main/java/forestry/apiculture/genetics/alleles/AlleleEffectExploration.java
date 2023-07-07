@@ -10,14 +10,12 @@
  ******************************************************************************/
 package forestry.apiculture.genetics.alleles;
 
-import java.util.List;
-
-import net.minecraft.world.entity.player.Player;
-
-import genetics.api.individual.IGenome;
-
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.genetics.IEffectData;
+import genetics.api.individual.IGenome;
+import net.minecraft.world.entity.player.Player;
+
+import java.util.List;
 
 public class AlleleEffectExploration extends AlleleEffectThrottled {
 

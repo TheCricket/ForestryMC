@@ -5,17 +5,15 @@
  ******************************************************************************/
 package forestry.api.genetics;
 
-import java.util.List;
-import java.util.Map;
-
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.List;
+import java.util.Map;
 
 public interface IAlyzerPlugin {
 

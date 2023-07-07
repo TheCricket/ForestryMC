@@ -2,11 +2,9 @@ package forestry.core.utils;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSyntaxException;
-
+import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.util.GsonHelper;
-
 import net.minecraftforge.common.util.JsonUtils;
 
 public class JsonUtil {

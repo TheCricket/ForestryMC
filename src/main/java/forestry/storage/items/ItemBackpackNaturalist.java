@@ -10,24 +10,23 @@
  ******************************************************************************/
 package forestry.storage.items;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-
 import forestry.api.storage.EnumBackpackType;
 import forestry.api.storage.IBackpackDefinition;
 import forestry.core.ItemGroupForestry;
 import forestry.core.config.Constants;
 import forestry.storage.gui.ContainerNaturalistBackpack;
 import forestry.storage.inventory.ItemInventoryBackpackPaged;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+
+import javax.annotation.Nullable;
 
 public class ItemBackpackNaturalist extends ItemBackpack {
 	private final String rootUid;

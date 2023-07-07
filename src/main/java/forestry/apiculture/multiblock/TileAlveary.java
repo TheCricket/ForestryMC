@@ -10,34 +10,7 @@
  ******************************************************************************/
 package forestry.apiculture.multiblock;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.level.biome.Biome;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.wrapper.InvWrapper;
-import net.minecraftforge.items.wrapper.SidedInvWrapper;
-
-import forestry.api.apiculture.IBeeHousing;
-import forestry.api.apiculture.IBeeHousingInventory;
-import forestry.api.apiculture.IBeeListener;
-import forestry.api.apiculture.IBeeModifier;
-import forestry.api.apiculture.IBeekeepingLogic;
+import forestry.api.apiculture.*;
 import forestry.api.climate.ClimateCapabilities;
 import forestry.api.climate.IClimateListener;
 import forestry.api.climate.IClimatised;
@@ -58,6 +31,26 @@ import forestry.core.owner.IOwnedTile;
 import forestry.core.owner.IOwnerHandler;
 import forestry.core.tiles.ITitled;
 import forestry.core.utils.RenderUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.items.wrapper.InvWrapper;
+import net.minecraftforge.items.wrapper.SidedInvWrapper;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
 
 public class TileAlveary extends MultiblockTileEntityForestry<MultiblockLogicAlveary> implements IBeeHousing, IAlvearyComponent, IOwnedTile, IStreamableGui, ITitled, IClimatised {
 	private final String unlocalizedTitle;
@@ -103,7 +96,7 @@ public class TileAlveary extends MultiblockTileEntityForestry<MultiblockLogicAlv
 			return superCap;
 		}
 
-		if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+		if (capability == ForgeCapabilities.ITEM_HANDLER) {
 			if (facing != null) {
 				SidedInvWrapper sidedInvWrapper = new SidedInvWrapper(getInternalInventory(), facing);
 				return LazyOptional.of(() -> sidedInvWrapper).cast();    //TODO - still not sure if I am doing this right
@@ -227,6 +220,6 @@ public class TileAlveary extends MultiblockTileEntityForestry<MultiblockLogicAlv
 
 	@Override
 	public Component getDisplayName() {
-		return new TranslatableComponent(this.getUnlocalizedTitle());
+		return Component.translatable(this.getUnlocalizedTitle());
 	}
 }

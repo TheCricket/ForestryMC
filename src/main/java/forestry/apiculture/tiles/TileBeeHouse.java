@@ -10,17 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.tiles;
 
-import java.util.Collections;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-
-import net.minecraftforge.network.NetworkHooks;
-
 import forestry.api.apiculture.DefaultBeeListener;
 import forestry.api.apiculture.IBeeHousingInventory;
 import forestry.api.apiculture.IBeeListener;
@@ -31,6 +20,15 @@ import forestry.apiculture.features.ApicultureTiles;
 import forestry.apiculture.gui.ContainerBeeHousing;
 import forestry.apiculture.gui.GuiBeeHousing;
 import forestry.core.network.PacketBufferForestry;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.network.NetworkHooks;
+
+import java.util.Collections;
 
 public class TileBeeHouse extends TileBeeHousingBase {
 	private static final IBeeModifier beeModifier = new BeehouseBeeModifier();

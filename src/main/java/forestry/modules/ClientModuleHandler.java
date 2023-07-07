@@ -1,7 +1,7 @@
 package forestry.modules;
 
-import java.util.function.Consumer;
-
+import forestry.core.network.IPacketRegistry;
+import forestry.core.utils.ForgeUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -9,11 +9,9 @@ import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
-import forestry.core.network.IPacketRegistry;
-import forestry.core.utils.ForgeUtils;
+import java.util.function.Consumer;
 
 @OnlyIn(Dist.CLIENT)
 public class ClientModuleHandler extends CommonModuleHandler {

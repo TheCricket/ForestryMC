@@ -1,17 +1,15 @@
 package forestry.core.models;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-
-import net.minecraftforge.client.model.data.IModelData;
-
 import forestry.core.models.baker.ModelBaker;
 import forestry.core.utils.ResourceUtil;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.client.model.data.IModelData;
+
+import javax.annotation.Nullable;
 
 public class ModelBlockLayer<K> extends ModelBlockCached<Block, K> {
 

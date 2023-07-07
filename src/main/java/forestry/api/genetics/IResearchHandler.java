@@ -1,19 +1,16 @@
 package forestry.api.genetics;
 
-import java.util.Map;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.world.level.Level;
-
 import com.mojang.authlib.GameProfile;
-
+import forestry.core.genetics.root.IResearchPlugin;
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.individual.IIndividual;
 import genetics.api.root.components.ComponentKey;
 import genetics.api.root.components.IRootComponent;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 
-import forestry.core.genetics.root.IResearchPlugin;
+import java.util.Map;
 
 public interface IResearchHandler<I extends IIndividual> extends IRootComponent<I> {
 

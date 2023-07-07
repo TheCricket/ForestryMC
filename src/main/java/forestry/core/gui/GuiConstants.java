@@ -1,7 +1,7 @@
 package forestry.core.gui;
 
-import net.minecraft.network.chat.TextColor;
 import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextColor;
 
 public class GuiConstants {
 	public static final Style DEFAULT_STYLE = Style.EMPTY;

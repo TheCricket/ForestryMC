@@ -2,21 +2,18 @@ package forestry.core.data.builder;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import forestry.api.recipes.ISqueezerRecipe;
+import forestry.factory.recipes.RecipeSerializers;
+import net.minecraft.core.NonNullList;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraftforge.fluids.FluidStack;
 
 import javax.annotation.Nullable;
 import java.util.function.Consumer;
-
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.core.NonNullList;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.fluids.FluidStack;
-
-import forestry.api.recipes.ISqueezerRecipe;
-import forestry.factory.recipes.RecipeSerializers;
 
 public class SqueezerRecipeBuilder {
 

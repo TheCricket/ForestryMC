@@ -12,20 +12,17 @@ package forestry.core.circuits;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonObject;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.ShapedRecipe;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.util.GsonHelper;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.registries.ForgeRegistryEntry;
-
 import forestry.api.circuits.ChipsetManager;
 import forestry.api.circuits.ICircuit;
 import forestry.api.circuits.ICircuitLayout;
 import forestry.api.recipes.ISolderRecipe;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.GsonHelper;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.ShapedRecipe;
+import net.minecraftforge.registries.ForgeRegistryEntry;
 
 public class CircuitRecipe implements ISolderRecipe {
 

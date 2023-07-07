@@ -10,12 +10,10 @@
  ******************************************************************************/
 package forestry.apiculture.genetics.alleles;
 
-import net.minecraft.network.chat.Component;
-
-import genetics.api.alleles.AlleleCategorizedValue;
-
 import forestry.api.genetics.alleles.IAlleleFlowers;
 import forestry.api.genetics.flowers.IFlowerProvider;
+import genetics.api.alleles.AlleleCategorizedValue;
+import net.minecraft.network.chat.Component;
 
 public class AlleleFlowers<P extends IFlowerProvider> extends AlleleCategorizedValue<P> implements IAlleleFlowers {
 

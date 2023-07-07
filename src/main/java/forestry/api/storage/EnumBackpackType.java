@@ -5,13 +5,12 @@
  ******************************************************************************/
 package forestry.api.storage;
 
-import java.util.Locale;
-
+import forestry.core.config.Constants;
+import forestry.storage.BackpackMode;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.util.StringRepresentable;
 
-import forestry.core.config.Constants;
-import forestry.storage.BackpackMode;
+import java.util.Locale;
 
 public enum EnumBackpackType implements StringRepresentable {
 	NORMAL, WOVEN, NATURALIST;

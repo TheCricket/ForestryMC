@@ -5,21 +5,18 @@
  ******************************************************************************/
 package forestry.api.genetics.flowers;
 
-import java.util.Collection;
-import java.util.Iterator;
-
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.tags.Tag;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-
-import genetics.api.individual.IIndividual;
-
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.apiculture.genetics.IBee;
 import forestry.api.core.IBlockPosPredicate;
+import genetics.api.individual.IIndividual;
+import net.minecraft.core.BlockPos;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.Collection;
+import java.util.Iterator;
 
 // See {@link forestry.api.apiculture.FlowerManager}.FlowerType___ for basic Forestry flower types.
 // Each IFlowerProvider has one flower type, and multiple IFlowerProviders may share one type.

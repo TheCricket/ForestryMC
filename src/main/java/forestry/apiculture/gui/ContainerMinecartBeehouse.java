@@ -10,14 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.gui;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.network.FriendlyByteBuf;
-
 import forestry.apiculture.entities.MinecartEntityBeeHousingBase;
 import forestry.apiculture.features.ApicultureContainers;
 import forestry.core.gui.ContainerAnalyzerProviderHelper;
@@ -26,6 +18,13 @@ import forestry.core.gui.slots.SlotLockable;
 import forestry.core.network.IForestryPacketClient;
 import forestry.core.network.PacketBufferForestry;
 import forestry.core.network.packets.PacketGuiUpdateEntity;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.Slot;
+
+import javax.annotation.Nullable;
 
 public class ContainerMinecartBeehouse extends ContainerEntity<MinecartEntityBeeHousingBase> implements IContainerBeeHousing {
 	/* Attributes - Final*/

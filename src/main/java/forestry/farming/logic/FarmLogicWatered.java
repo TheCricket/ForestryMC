@@ -10,24 +10,21 @@
  ******************************************************************************/
 package forestry.farming.logic;
 
-import org.apache.commons.lang3.tuple.Pair;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.fluids.FluidAttributes;
-import net.minecraftforge.fluids.FluidStack;
-
 import forestry.api.farming.FarmDirection;
 import forestry.api.farming.IFarmHousing;
 import forestry.api.farming.IFarmProperties;
 import forestry.api.farming.Soil;
 import forestry.core.utils.BlockUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidStack;
+import org.apache.commons.lang3.tuple.Pair;
 
 public abstract class FarmLogicWatered extends FarmLogicSoil {
 	private static final FluidStack STACK_WATER = new FluidStack(Fluids.WATER, FluidAttributes.BUCKET_VOLUME);

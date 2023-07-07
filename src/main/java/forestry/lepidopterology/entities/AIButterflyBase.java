@@ -10,13 +10,13 @@
  ******************************************************************************/
 package forestry.lepidopterology.entities;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.util.DefaultRandomPos;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+
+import javax.annotation.Nullable;
 
 public abstract class AIButterflyBase extends Goal {
 

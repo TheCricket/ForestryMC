@@ -2,14 +2,7 @@ package forestry.factory.recipes.jei;
 
 import forestry.api.fuels.FuelManager;
 import forestry.api.fuels.RainSubstrate;
-import forestry.api.recipes.ICarpenterRecipe;
-import forestry.api.recipes.ICentrifugeRecipe;
-import forestry.api.recipes.IFabricatorRecipe;
-import forestry.api.recipes.IFermenterRecipe;
-import forestry.api.recipes.IMoistenerRecipe;
-import forestry.api.recipes.ISqueezerRecipe;
-import forestry.api.recipes.IStillRecipe;
-import forestry.api.recipes.RecipeManagers;
+import forestry.api.recipes.*;
 import forestry.core.config.Constants;
 import forestry.core.features.FluidsItems;
 import forestry.core.gui.GuiForestry;
@@ -21,14 +14,7 @@ import forestry.factory.blocks.BlockFactoryPlain;
 import forestry.factory.blocks.BlockTypeFactoryPlain;
 import forestry.factory.blocks.BlockTypeFactoryTesr;
 import forestry.factory.features.FactoryBlocks;
-import forestry.factory.gui.GuiBottler;
-import forestry.factory.gui.GuiCarpenter;
-import forestry.factory.gui.GuiCentrifuge;
-import forestry.factory.gui.GuiFabricator;
-import forestry.factory.gui.GuiFermenter;
-import forestry.factory.gui.GuiMoistener;
-import forestry.factory.gui.GuiSqueezer;
-import forestry.factory.gui.GuiStill;
+import forestry.factory.gui.*;
 import forestry.factory.recipes.jei.bottler.BottlerRecipe;
 import forestry.factory.recipes.jei.bottler.BottlerRecipeCategory;
 import forestry.factory.recipes.jei.bottler.BottlerRecipeMaker;
@@ -51,12 +37,7 @@ import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.helpers.IJeiHelpers;
 import mezz.jei.api.ingredients.subtypes.IIngredientSubtypeInterpreter;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import mezz.jei.api.registration.IGuiHandlerRegistration;
-import mezz.jei.api.registration.IRecipeCatalystRegistration;
-import mezz.jei.api.registration.IRecipeCategoryRegistration;
-import mezz.jei.api.registration.IRecipeRegistration;
-import mezz.jei.api.registration.IRecipeTransferRegistration;
-import mezz.jei.api.registration.ISubtypeRegistration;
+import mezz.jei.api.registration.*;
 import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -64,9 +45,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandlerItem;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -277,9 +259,9 @@ public class FactoryJeiPlugin implements IModPlugin {
 	@Override
 	public void registerItemSubtypes(ISubtypeRegistration subtypeRegistry) {
 		IIngredientSubtypeInterpreter<ItemStack> subtypeInterpreter = (itemStack, context) -> {
-			LazyOptional<IFluidHandlerItem> fluidHandler = itemStack.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY);
+			LazyOptional<IFluidHandlerItem> fluidHandler = itemStack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM);
 			return fluidHandler.map(handler -> handler.getFluidInTank(0))
-					.map(fluid -> fluid.getFluid().getRegistryName())
+					.map(fluid -> ForgeRegistries.FLUIDS.getKey(fluid.getFluid()))
 					.map(ResourceLocation::toString)
 					.orElse(IIngredientSubtypeInterpreter.NONE);
 		};

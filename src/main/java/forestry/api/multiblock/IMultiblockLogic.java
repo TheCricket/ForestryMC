@@ -5,10 +5,9 @@
  ******************************************************************************/
 package forestry.api.multiblock;
 
+import forestry.api.core.INbtWritable;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.Level;
-
-import forestry.api.core.INbtWritable;
 
 /**
  * Multiblock Logic implements the basic logic for IMultiblockComponent tile entities.

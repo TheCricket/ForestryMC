@@ -1,18 +1,16 @@
 package forestry.apiculture.blocks;
 
-import javax.annotation.Nullable;
-
+import forestry.apiculture.items.EnumHoneyComb;
+import forestry.core.blocks.IColoredBlock;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.BlockGetter;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.apiculture.items.EnumHoneyComb;
-import forestry.core.blocks.IColoredBlock;
+import javax.annotation.Nullable;
 
 public class BlockHoneyComb extends Block implements IColoredBlock {
 	public final EnumHoneyComb type;

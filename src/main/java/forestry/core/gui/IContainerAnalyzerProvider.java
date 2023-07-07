@@ -1,8 +1,8 @@
 package forestry.core.gui;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.world.inventory.Slot;
+
+import javax.annotation.Nullable;
 
 public interface IContainerAnalyzerProvider extends IGuiSelectable {
 	@Nullable

@@ -10,22 +10,8 @@
  ******************************************************************************/
 package forestry.apiculture.genetics;
 
-import javax.annotation.Nullable;
-import java.awt.Color;
-import java.util.EnumSet;
-import java.util.Locale;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.biome.Biome;
-
 import forestry.api.apiculture.BeeManager;
-import forestry.api.apiculture.genetics.BeeChromosomes;
-import forestry.api.apiculture.genetics.EnumBeeType;
-import forestry.api.apiculture.genetics.IAlleleBeeSpecies;
-import forestry.api.apiculture.genetics.IAlleleBeeSpeciesBuilder;
-import forestry.api.apiculture.genetics.IBee;
-import forestry.api.apiculture.genetics.IBeeMutationBuilder;
+import forestry.api.apiculture.genetics.*;
 import forestry.api.core.EnumHumidity;
 import forestry.api.core.EnumTemperature;
 import forestry.api.genetics.products.IMutableProductList;
@@ -37,7 +23,6 @@ import forestry.core.config.Constants;
 import forestry.core.features.CoreItems;
 import forestry.core.genetics.alleles.EnumAllele;
 import forestry.core.items.definitions.EnumCraftingMaterial;
-
 import genetics.api.alleles.IAlleleRegistry;
 import genetics.api.alleles.IAlleleTemplate;
 import genetics.api.alleles.IAlleleTemplateBuilder;
@@ -46,6 +31,15 @@ import genetics.api.root.ITemplateContainer;
 import genetics.api.root.components.ComponentKey;
 import genetics.api.root.components.ComponentKeys;
 import genetics.api.root.components.IRootComponent;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.biome.Biome;
+
+import javax.annotation.Nullable;
+import java.awt.*;
+import java.util.EnumSet;
+import java.util.Locale;
+
 import static forestry.apiculture.features.ApicultureItems.BEE_COMBS;
 
 public enum BeeDefinition implements IBeeDefinition {

@@ -2,9 +2,16 @@ package forestry.core.data;
 
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
-
-import javax.annotation.Nullable;
-
+import forestry.api.apiculture.genetics.EnumBeeType;
+import forestry.api.arboriculture.genetics.EnumGermlingType;
+import forestry.apiculture.features.ApicultureItems;
+import forestry.apiculture.genetics.BeeDefinition;
+import forestry.arboriculture.features.ArboricultureItems;
+import forestry.arboriculture.genetics.TreeDefinition;
+import forestry.core.config.Constants;
+import forestry.core.features.CoreItems;
+import forestry.core.loot.OrganismFunction;
+import forestry.storage.features.BackpackItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
@@ -18,16 +25,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
-import forestry.api.apiculture.genetics.EnumBeeType;
-import forestry.api.arboriculture.genetics.EnumGermlingType;
-import forestry.apiculture.features.ApicultureItems;
-import forestry.apiculture.genetics.BeeDefinition;
-import forestry.arboriculture.features.ArboricultureItems;
-import forestry.arboriculture.genetics.TreeDefinition;
-import forestry.core.config.Constants;
-import forestry.core.features.CoreItems;
-import forestry.core.loot.OrganismFunction;
-import forestry.storage.features.BackpackItems;
+import javax.annotation.Nullable;
 
 /**
  * Helper class to handle chest loot.

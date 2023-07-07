@@ -1,22 +1,14 @@
 package forestry.core.gui;
 
 import com.google.common.base.Preconditions;
-
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.core.gui.elements.WindowGui;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ItemStack;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.systems.RenderSystem;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
 import org.lwjgl.glfw.GLFW;
-
-import forestry.core.gui.elements.WindowGui;
 
 /**
  * GuiScreen implementation of a gui that contains {@link forestry.core.gui.elements.GuiElement}s.

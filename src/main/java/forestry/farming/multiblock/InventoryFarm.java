@@ -10,11 +10,10 @@
  ******************************************************************************/
 package forestry.farming.multiblock;
 
+import forestry.api.farming.IFarmable;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.BlockPos;
-
-import forestry.api.farming.IFarmable;
 
 /**
  * Inventory of the farm multiblock.

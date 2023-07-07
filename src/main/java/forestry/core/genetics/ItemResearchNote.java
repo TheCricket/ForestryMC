@@ -10,31 +10,7 @@
  ******************************************************************************/
 package forestry.core.genetics;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.NbtUtils;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.Util;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.level.Level;
-
 import com.mojang.authlib.GameProfile;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.genetics.IBreedingTracker;
 import forestry.api.genetics.IForestrySpeciesRoot;
 import forestry.api.genetics.alleles.IAlleleForestrySpecies;
@@ -42,7 +18,6 @@ import forestry.core.genetics.mutations.EnumMutateChance;
 import forestry.core.items.ItemForestry;
 import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.Translator;
-
 import genetics.api.GeneticsAPI;
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleSpecies;
@@ -53,6 +28,27 @@ import genetics.api.root.IIndividualRoot;
 import genetics.api.root.IRootDefinition;
 import genetics.api.root.components.ComponentKeys;
 import genetics.utils.AlleleUtils;
+import net.minecraft.ChatFormatting;
+import net.minecraft.Util;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtUtils;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public class ItemResearchNote extends ItemForestry {
 

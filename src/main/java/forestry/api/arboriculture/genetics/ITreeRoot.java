@@ -5,25 +5,22 @@
  ******************************************************************************/
 package forestry.api.arboriculture.genetics;
 
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.List;
-
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-
 import com.mojang.authlib.GameProfile;
-
 import forestry.api.arboriculture.IArboristTracker;
 import forestry.api.arboriculture.IFruitProvider;
 import forestry.api.arboriculture.ILeafTickHandler;
 import forestry.api.arboriculture.ITreekeepingMode;
 import forestry.api.genetics.IFruitFamily;
 import forestry.api.genetics.ISpeciesRootPollinatable;
-
 import genetics.api.individual.IGenome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.entity.BlockEntity;
+
+import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.List;
 
 public interface ITreeRoot extends ISpeciesRootPollinatable<ITree> {
 

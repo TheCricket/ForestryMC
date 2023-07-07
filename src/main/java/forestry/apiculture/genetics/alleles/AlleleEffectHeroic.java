@@ -10,16 +10,14 @@
  ******************************************************************************/
 package forestry.apiculture.genetics.alleles;
 
-import java.util.List;
-
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.damagesource.DamageSource;
-
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.genetics.IEffectData;
 import forestry.core.utils.DamageSourceForestry;
-
 import genetics.api.individual.IGenome;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.monster.Monster;
+
+import java.util.List;
 
 public class AlleleEffectHeroic extends AlleleEffectThrottled {
 	private static final DamageSource damageSourceBeeHeroic = new DamageSourceForestry("bee.heroic");

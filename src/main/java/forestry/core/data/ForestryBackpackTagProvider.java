@@ -1,19 +1,17 @@
 package forestry.core.data;
 
-import javax.annotation.Nullable;
-
+import forestry.core.config.Constants;
+import forestry.core.features.CoreItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
-
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import forestry.core.config.Constants;
-import forestry.core.features.CoreItems;
+import javax.annotation.Nullable;
 
 public class ForestryBackpackTagProvider extends ItemTagsProvider {
 

@@ -11,22 +11,6 @@
 package forestry.arboriculture.tiles;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.util.Random;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.Connection;
-import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.arboriculture.TreeManager;
 import forestry.api.arboriculture.genetics.ITree;
 import forestry.arboriculture.genetics.Tree;
@@ -37,8 +21,20 @@ import forestry.core.owner.IOwnerHandler;
 import forestry.core.owner.OwnerHandler;
 import forestry.core.utils.NBTUtilForestry;
 import forestry.core.utils.RenderUtil;
-
 import genetics.api.alleles.IAllele;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.util.Random;
 
 /**
  * This is the base TE class for any block that needs to contain tree genome information.

@@ -1,14 +1,6 @@
 package forestry.modules;
 
 import com.google.common.collect.ImmutableSet;
-
-import javax.annotation.Nullable;
-import java.util.Set;
-
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.fml.InterModComms;
-
 import forestry.api.modules.ForestryModule;
 import forestry.api.modules.IForestryModule;
 import forestry.core.IPickupHandler;
@@ -16,6 +8,11 @@ import forestry.core.IResupplyHandler;
 import forestry.core.ISaveEventHandler;
 import forestry.core.config.Constants;
 import forestry.core.network.IPacketRegistry;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.fml.InterModComms;
+
+import javax.annotation.Nullable;
+import java.util.Set;
 
 public class BlankForestryModule implements IForestryModule {
 

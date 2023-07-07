@@ -10,18 +10,17 @@
  ******************************************************************************/
 package forestry.core.utils;
 
-import javax.annotation.Nullable;
-
+import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
-import net.minecraft.util.Mth;
-import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.level.Level;
-
 import net.minecraftforge.registries.ForgeRegistries;
+
+import javax.annotation.Nullable;
 
 public abstract class EntityUtil {
 	@Nullable

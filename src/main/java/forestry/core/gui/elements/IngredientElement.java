@@ -10,9 +10,9 @@
  ******************************************************************************/
 package forestry.core.gui.elements;
 
+import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.core.NonNullList;
 
 public class IngredientElement extends AbstractItemElement {
 	/* Attributes - Final */

@@ -10,18 +10,15 @@
  ******************************************************************************/
 package forestry.lepidopterology.render;
 
-import java.util.List;
-
-import net.minecraft.client.model.ListModel;
-import net.minecraft.client.model.geom.ModelPart;
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-
+import forestry.lepidopterology.entities.EntityButterfly;
+import net.minecraft.client.model.ListModel;
+import net.minecraft.client.model.geom.ModelPart;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.lepidopterology.entities.EntityButterfly;
+import java.util.List;
 
 @OnlyIn(Dist.CLIENT)
 public class ButterflyModel extends ListModel<EntityButterfly> {

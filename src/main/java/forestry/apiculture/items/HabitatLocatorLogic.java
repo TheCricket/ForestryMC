@@ -10,25 +10,23 @@
  ******************************************************************************/
 package forestry.apiculture.items;
 
+import forestry.api.apiculture.genetics.IBee;
+import forestry.apiculture.network.packets.PacketHabitatBiomePointer;
+import forestry.core.utils.NetworkUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
 import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
-
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.biome.Biome;
-
-import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import forestry.api.apiculture.genetics.IBee;
-import forestry.apiculture.network.packets.PacketHabitatBiomePointer;
-import forestry.core.utils.NetworkUtil;
 
 public class HabitatLocatorLogic {
 	private static final int maxChecksPerTick = 100;

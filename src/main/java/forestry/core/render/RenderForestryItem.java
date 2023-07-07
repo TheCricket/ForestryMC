@@ -1,7 +1,6 @@
 package forestry.core.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;

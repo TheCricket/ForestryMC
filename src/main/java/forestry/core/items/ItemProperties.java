@@ -1,9 +1,8 @@
 package forestry.core.items;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
-
 import forestry.core.ItemGroupForestry;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 
 public class ItemProperties extends Item.Properties {
 	public int burnTime = -1;

@@ -1,18 +1,5 @@
 package forestry.core.gui.elements;
 
-import javax.annotation.Nullable;
-import java.awt.Insets;
-import java.util.Map;
-
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.TextColor;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
-import net.minecraft.world.item.ItemStack;
-
 import forestry.api.genetics.EnumTolerance;
 import forestry.api.genetics.IAlyzerPlugin;
 import forestry.api.genetics.IBreedingTracker;
@@ -28,10 +15,20 @@ import forestry.core.gui.GuiConstants;
 import forestry.core.gui.elements.layouts.ContainerElement;
 import forestry.core.gui.elements.layouts.FlexLayout;
 import forestry.core.render.ColourProperties;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleValue;
 import genetics.api.mutation.IMutation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextColor;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
+import net.minecraft.world.item.ItemStack;
+
+import javax.annotation.Nullable;
+import java.awt.*;
+import java.util.Map;
 
 public class GuiElementFactory implements ResourceManagerReloadListener {
 

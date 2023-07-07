@@ -10,18 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture;
 
-import java.util.List;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.apiculture.IBeekeepingLogic;
 import forestry.api.apiculture.genetics.BeeChromosomes;
 import forestry.api.apiculture.genetics.IBee;
@@ -30,6 +18,16 @@ import forestry.apiculture.network.packets.PacketBeeLogicActive;
 import forestry.apiculture.tiles.TileHive;
 import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.TickHelper;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.List;
 
 public class WorldgenBeekeepingLogic implements IBeekeepingLogic {
 	private final TileHive housing;

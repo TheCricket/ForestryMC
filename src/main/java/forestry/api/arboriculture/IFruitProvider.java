@@ -5,33 +5,29 @@
  ******************************************************************************/
 package forestry.api.arboriculture;
 
-import javax.annotation.Nullable;
-import java.util.Random;
-
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.Tag;
-import net.minecraft.core.NonNullList;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.BaseComponent;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.TextureStitchEvent;
-
 import forestry.api.arboriculture.genetics.ITreeRoot;
 import forestry.api.arboriculture.genetics.TreeChromosomes;
 import forestry.api.core.ISetupListener;
 import forestry.api.genetics.IFruitFamily;
 import forestry.api.genetics.products.IProductList;
-
 import genetics.api.individual.IGenome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.network.chat.BaseComponent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.TextureStitchEvent;
+
+import javax.annotation.Nullable;
+import java.util.Random;
 
 /**
  * Provides all information that is needed to spawn a fruit leaves / pod block in the world.

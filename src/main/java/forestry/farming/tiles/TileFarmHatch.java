@@ -10,14 +10,16 @@
  ******************************************************************************/
 package forestry.farming.tiles;
 
-import javax.annotation.Nullable;
-
+import forestry.api.multiblock.IFarmComponent;
+import forestry.core.inventory.AdjacentInventoryCache;
+import forestry.core.tiles.AdjacentTileCache;
+import forestry.core.utils.InventoryUtil;
+import forestry.farming.features.FarmingTiles;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.Container;
 import net.minecraft.world.WorldlyContainer;
-import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
-
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -25,11 +27,7 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 
-import forestry.api.multiblock.IFarmComponent;
-import forestry.core.inventory.AdjacentInventoryCache;
-import forestry.core.tiles.AdjacentTileCache;
-import forestry.core.utils.InventoryUtil;
-import forestry.farming.features.FarmingTiles;
+import javax.annotation.Nullable;
 
 public class TileFarmHatch extends TileFarm implements WorldlyContainer, IFarmComponent.Active {
 

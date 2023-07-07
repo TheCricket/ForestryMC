@@ -10,18 +10,16 @@
  ******************************************************************************/
 package forestry.factory.recipes;
 
-import javax.annotation.Nullable;
-import java.util.Optional;
-
+import forestry.api.recipes.IFabricatorManager;
+import forestry.api.recipes.IFabricatorRecipe;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.Level;
-
 import net.minecraftforge.fluids.FluidStack;
 
-import forestry.api.recipes.IFabricatorManager;
-import forestry.api.recipes.IFabricatorRecipe;
+import javax.annotation.Nullable;
+import java.util.Optional;
 
 public class FabricatorRecipeManager extends AbstractCraftingProvider<IFabricatorRecipe> implements IFabricatorManager {
 

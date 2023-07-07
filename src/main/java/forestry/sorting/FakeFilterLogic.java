@@ -1,21 +1,17 @@
 package forestry.sorting;
 
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.Collections;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.Direction;
-
 import forestry.api.genetics.filter.IFilterData;
 import forestry.api.genetics.filter.IFilterLogic;
 import forestry.api.genetics.filter.IFilterRuleType;
-
 import genetics.api.alleles.IAllele;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.item.ItemStack;
 
-import forestry.api.genetics.filter.IFilterLogic.INetworkHandler;
+import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.Collections;
 
 public final class FakeFilterLogic implements IFilterLogic {
 	public static final FakeFilterLogic INSTANCE = new FakeFilterLogic();

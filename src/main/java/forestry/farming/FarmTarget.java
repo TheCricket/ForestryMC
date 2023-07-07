@@ -10,13 +10,12 @@
  ******************************************************************************/
 package forestry.farming;
 
-import javax.annotation.Nullable;
-
+import forestry.api.farming.FarmDirection;
+import forestry.api.farming.IFarmHousing;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 
-import forestry.api.farming.FarmDirection;
-import forestry.api.farming.IFarmHousing;
+import javax.annotation.Nullable;
 
 public class FarmTarget {
 

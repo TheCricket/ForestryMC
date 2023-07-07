@@ -1,12 +1,11 @@
 package forestry.core.gui.slots;
 
-import javax.annotation.Nullable;
-import java.util.function.Supplier;
-
+import forestry.core.inventory.ItemInventoryAlyzer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.core.inventory.ItemInventoryAlyzer;
+import javax.annotation.Nullable;
+import java.util.function.Supplier;
 
 public class SlotAnalyzer extends SlotFiltered {
 	@Nullable

@@ -10,25 +10,23 @@
  ******************************************************************************/
 package forestry.mail;
 
-import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Random;
-
-import org.apache.commons.lang3.StringUtils;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.NonNullList;
-import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import forestry.api.mail.ILetter;
 import forestry.api.mail.IMailAddress;
 import forestry.api.mail.IStamps;
 import forestry.core.inventory.InventoryAdapter;
 import forestry.core.utils.InventoryUtil;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import org.apache.commons.lang3.StringUtils;
+
+import javax.annotation.Nullable;
+import java.util.List;
+import java.util.Random;
 
 public class Letter implements ILetter {
 	private static final Random rand = new Random();

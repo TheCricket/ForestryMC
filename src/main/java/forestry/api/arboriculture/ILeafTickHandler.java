@@ -5,12 +5,11 @@
  ******************************************************************************/
 package forestry.api.arboriculture;
 
-import java.util.Random;
-
+import forestry.api.arboriculture.genetics.ITree;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 
-import forestry.api.arboriculture.genetics.ITree;
+import java.util.Random;
 
 public interface ILeafTickHandler {
 	boolean onRandomLeafTick(ITree tree, Level world, Random rand, BlockPos pos, boolean isDestroyed);

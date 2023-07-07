@@ -1,16 +1,5 @@
 package forestry.arboriculture;
 
-import java.util.Collection;
-import java.util.Map;
-import java.util.function.Function;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-
 import forestry.api.arboriculture.IFruitProvider;
 import forestry.api.arboriculture.TreeManager;
 import forestry.api.arboriculture.genetics.EnumGermlingType;
@@ -26,24 +15,14 @@ import forestry.arboriculture.blocks.BlockDefaultLeaves;
 import forestry.arboriculture.blocks.BlockDefaultLeavesFruit;
 import forestry.arboriculture.features.ArboricultureBlocks;
 import forestry.arboriculture.features.ArboricultureItems;
-import forestry.arboriculture.genetics.TreeBranchDefinition;
-import forestry.arboriculture.genetics.TreeDefinition;
-import forestry.arboriculture.genetics.TreeDisplayHandler;
-import forestry.arboriculture.genetics.TreeHelper;
-import forestry.arboriculture.genetics.TreeRoot;
-import forestry.arboriculture.genetics.TreekeepingMode;
+import forestry.arboriculture.genetics.*;
 import forestry.arboriculture.genetics.alleles.AlleleFruits;
 import forestry.arboriculture.genetics.alleles.AlleleLeafEffects;
 import forestry.core.config.Constants;
 import forestry.core.genetics.alleles.EnumAllele;
 import forestry.core.genetics.root.ResearchHandler;
 import forestry.modules.features.FeatureBlock;
-
-import genetics.api.GeneticPlugin;
-import genetics.api.GeneticsAPI;
-import genetics.api.IGeneticApiInstance;
-import genetics.api.IGeneticFactory;
-import genetics.api.IGeneticPlugin;
+import genetics.api.*;
 import genetics.api.alleles.IAlleleRegistry;
 import genetics.api.classification.IClassificationRegistry;
 import genetics.api.organism.IOrganismTypes;
@@ -55,6 +34,16 @@ import genetics.api.root.components.ComponentKeys;
 import genetics.api.root.translator.IBlockTranslator;
 import genetics.api.root.translator.IIndividualTranslator;
 import genetics.api.root.translator.IItemTranslator;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.Collection;
+import java.util.Map;
+import java.util.function.Function;
 
 @GeneticPlugin(modId = Constants.MOD_ID)
 public class TreePlugin implements IGeneticPlugin {

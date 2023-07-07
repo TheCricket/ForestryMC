@@ -1,12 +1,6 @@
 package forestry.cultivation.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.network.chat.Component;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.core.config.Constants;
 import forestry.core.features.CoreItems;
 import forestry.core.gui.GuiForestryTitled;
@@ -15,6 +9,10 @@ import forestry.cultivation.gui.widgets.GhostItemStackWidget;
 import forestry.cultivation.inventory.InventoryPlanter;
 import forestry.cultivation.tiles.TilePlanter;
 import forestry.farming.gui.FarmLedger;
+import net.minecraft.core.NonNullList;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.ItemStack;
 
 public class GuiPlanter extends GuiForestryTitled<ContainerPlanter> {
 	private final TilePlanter tile;

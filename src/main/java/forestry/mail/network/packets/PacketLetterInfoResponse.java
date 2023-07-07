@@ -11,33 +11,21 @@
 package forestry.mail.network.packets;
 
 import com.google.common.base.Preconditions;
+import com.mojang.authlib.GameProfile;
+import forestry.api.mail.*;
+import forestry.core.network.*;
+import forestry.mail.TradeStationInfo;
+import forestry.mail.gui.ILetterInfoReceiver;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 import java.io.IOException;
 import java.util.UUID;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-
-import com.mojang.authlib.GameProfile;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.api.mail.EnumAddressee;
-import forestry.api.mail.EnumTradeStationState;
-import forestry.api.mail.IMailAddress;
-import forestry.api.mail.ITradeStationInfo;
-import forestry.api.mail.PostManager;
-import forestry.core.network.ForestryPacket;
-import forestry.core.network.IForestryPacketClient;
-import forestry.core.network.IForestryPacketHandlerClient;
-import forestry.core.network.PacketBufferForestry;
-import forestry.core.network.PacketIdClient;
-import forestry.mail.TradeStationInfo;
-import forestry.mail.gui.ILetterInfoReceiver;
 
 // TODO: split this into two different packets
 public class PacketLetterInfoResponse extends ForestryPacket implements IForestryPacketClient {

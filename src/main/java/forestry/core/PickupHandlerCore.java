@@ -10,18 +10,16 @@
  ******************************************************************************/
 package forestry.core;
 
-import java.util.Optional;
-
+import forestry.api.genetics.IBreedingTracker;
+import forestry.api.genetics.IForestrySpeciesRoot;
+import genetics.api.individual.IIndividual;
+import genetics.api.root.IRootDefinition;
+import genetics.utils.RootUtils;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
-import forestry.api.genetics.IBreedingTracker;
-import forestry.api.genetics.IForestrySpeciesRoot;
-
-import genetics.api.individual.IIndividual;
-import genetics.api.root.IRootDefinition;
-import genetics.utils.RootUtils;
+import java.util.Optional;
 
 public class PickupHandlerCore implements IPickupHandler {
 

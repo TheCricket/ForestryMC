@@ -1,30 +1,27 @@
 package forestry.core.gui.elements;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.util.function.BiFunction;
-import java.util.function.Function;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Font;
-import net.minecraft.util.FormattedCharSequence;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.Style;
-
 import forestry.api.genetics.EnumTolerance;
 import forestry.api.genetics.IBreedingTracker;
 import forestry.api.genetics.gatgets.DatabaseMode;
 import forestry.core.gui.elements.layouts.ContainerElement;
 import forestry.core.gui.elements.layouts.FlexLayout;
 import forestry.core.utils.Translator;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleValue;
 import genetics.api.individual.IChromosomeType;
 import genetics.api.individual.IGenome;
 import genetics.api.individual.IIndividual;
 import genetics.api.mutation.IMutation;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Font;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.util.FormattedCharSequence;
+
+import javax.annotation.Nullable;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
 public class DatabaseElement extends ContainerElement {
 	private DatabaseMode mode = DatabaseMode.ACTIVE;

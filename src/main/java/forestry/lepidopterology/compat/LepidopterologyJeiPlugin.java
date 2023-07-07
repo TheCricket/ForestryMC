@@ -1,16 +1,7 @@
 package forestry.lepidopterology.compat;
 
-import java.util.Optional;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.core.config.Constants;
 import forestry.lepidopterology.features.LepidopterologyItems;
-
 import genetics.api.GeneticHelper;
 import genetics.api.individual.IIndividual;
 import mezz.jei.api.IModPlugin;
@@ -18,6 +9,12 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.ingredients.subtypes.IIngredientSubtypeInterpreter;
 import mezz.jei.api.registration.ISubtypeRegistration;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.Optional;
 
 @JeiPlugin
 @OnlyIn(Dist.CLIENT)

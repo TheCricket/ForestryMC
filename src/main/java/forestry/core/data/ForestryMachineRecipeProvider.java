@@ -10,32 +10,7 @@
  ******************************************************************************/
 package forestry.core.data;
 
-import java.util.function.Consumer;
-
-import net.minecraft.Util;
-import net.minecraft.core.NonNullList;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.Fluids;
-
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.fluids.FluidAttributes;
-import net.minecraftforge.fluids.FluidStack;
-
-import forestry.api.arboriculture.EnumForestryWoodType;
-import forestry.api.arboriculture.EnumVanillaWoodType;
-import forestry.api.arboriculture.IWoodType;
-import forestry.api.arboriculture.TreeManager;
-import forestry.api.arboriculture.WoodBlockKind;
+import forestry.api.arboriculture.*;
 import forestry.api.circuits.ICircuit;
 import forestry.apiculture.features.ApicultureItems;
 import forestry.apiculture.items.EnumHoneyComb;
@@ -48,16 +23,7 @@ import forestry.core.circuits.EnumCircuitBoardType;
 import forestry.core.circuits.ItemCircuitBoard;
 import forestry.core.config.Constants;
 import forestry.core.config.Preference;
-import forestry.core.data.builder.CarpenterRecipeBuilder;
-import forestry.core.data.builder.CentrifugeRecipeBuilder;
-import forestry.core.data.builder.FabricatorRecipeBuilder;
-import forestry.core.data.builder.FabricatorSmeltingRecipeBuilder;
-import forestry.core.data.builder.FermenterRecipeBuilder;
-import forestry.core.data.builder.HygroregulatorRecipeBuilder;
-import forestry.core.data.builder.MoistenerRecipeBuilder;
-import forestry.core.data.builder.SqueezerContainerRecipeBuilder;
-import forestry.core.data.builder.SqueezerRecipeBuilder;
-import forestry.core.data.builder.StillRecipeBuilder;
+import forestry.core.data.builder.*;
 import forestry.core.features.CoreBlocks;
 import forestry.core.features.CoreItems;
 import forestry.core.features.FluidsItems;
@@ -72,6 +38,25 @@ import forestry.modules.features.FeatureItem;
 import forestry.storage.features.BackpackItems;
 import forestry.storage.features.CrateItems;
 import forestry.storage.items.ItemCrated;
+import net.minecraft.Util;
+import net.minecraft.core.NonNullList;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraftforge.common.Tags;
+import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidStack;
+
+import java.util.function.Consumer;
 
 public class ForestryMachineRecipeProvider extends RecipeProvider {
 

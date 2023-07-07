@@ -1,9 +1,8 @@
 package genetics.api.alleles;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-
 import forestry.core.utils.Translator;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 
 public class AlleleCategorized extends Allele {
 

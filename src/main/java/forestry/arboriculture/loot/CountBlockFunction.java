@@ -4,11 +4,9 @@ import com.google.common.collect.ImmutableSet;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
-
-import java.util.Set;
-
-import net.minecraft.world.level.block.state.BlockState;
+import forestry.arboriculture.blocks.BlockAsh;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.functions.LootItemConditionalFunction;
 import net.minecraft.world.level.storage.loot.functions.LootItemFunctionType;
@@ -16,7 +14,7 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParam;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 
-import forestry.arboriculture.blocks.BlockAsh;
+import java.util.Set;
 
 public class CountBlockFunction extends LootItemConditionalFunction {
 	public static LootItemFunctionType type;

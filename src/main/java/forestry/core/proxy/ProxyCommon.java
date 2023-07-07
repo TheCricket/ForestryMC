@@ -10,10 +10,10 @@
  ******************************************************************************/
 package forestry.core.proxy;
 
-import java.io.File;
-
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+
+import java.io.File;
 
 public class ProxyCommon {
 	public void registerItem(Item item) {

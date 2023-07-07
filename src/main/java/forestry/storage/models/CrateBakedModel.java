@@ -1,27 +1,23 @@
 package forestry.storage.models;
 
 import com.google.common.collect.ImmutableList;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Transformation;
+import com.mojang.math.Vector3f;
+import forestry.core.models.AbstractBakedModel;
+import forestry.core.models.TRSRBakedModel;
+import forestry.core.utils.ResourceUtil;
+import net.minecraft.client.renderer.block.model.BakedQuad;
+import net.minecraft.client.renderer.block.model.ItemTransforms;
+import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.model.TransformationHelper;
 
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.client.renderer.block.model.BakedQuad;
-import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.client.renderer.block.model.ItemTransforms;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-import com.mojang.math.Transformation;
-import com.mojang.math.Vector3f;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.common.model.TransformationHelper;
-
-import forestry.core.models.AbstractBakedModel;
-import forestry.core.models.TRSRBakedModel;
-import forestry.core.utils.ResourceUtil;
 
 public class CrateBakedModel extends AbstractBakedModel {
 	private static final float CONTENT_RENDER_OFFSET_X = 1f / 16f; // how far to offset content model from the left edge of the crate model

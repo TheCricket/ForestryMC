@@ -1,9 +1,8 @@
 package forestry.core.gui.elements.text;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.Font;
 import net.minecraft.util.FormattedCharSequence;
-
-import com.mojang.blaze3d.vertex.PoseStack;
 
 class ProcessorText extends AbstractTextElement<FormattedCharSequence, ProcessorText> {
 

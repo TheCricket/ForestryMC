@@ -1,7 +1,5 @@
 package forestry.apiculture.features;
 
-import net.minecraft.world.entity.MobCategory;
-
 import forestry.apiculture.ModuleApiculture;
 import forestry.apiculture.entities.MinecartEntityApiary;
 import forestry.apiculture.entities.MinecartEntityBeehouse;
@@ -9,6 +7,7 @@ import forestry.modules.features.FeatureEntityType;
 import forestry.modules.features.FeatureProvider;
 import forestry.modules.features.IFeatureRegistry;
 import forestry.modules.features.ModFeatureRegistry;
+import net.minecraft.world.entity.MobCategory;
 
 @FeatureProvider
 public class ApicultureEntities {

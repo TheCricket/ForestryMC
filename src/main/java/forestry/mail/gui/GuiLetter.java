@@ -10,24 +10,7 @@
  ******************************************************************************/
 package forestry.mail.gui;
 
-import java.util.ArrayList;
-
-import org.apache.commons.lang3.StringUtils;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import org.lwjgl.glfw.GLFW;
-
 import forestry.api.mail.EnumAddressee;
 import forestry.api.mail.IMailAddress;
 import forestry.core.config.Constants;
@@ -41,6 +24,18 @@ import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.Translator;
 import forestry.mail.inventory.ItemInventoryLetter;
 import forestry.mail.network.packets.PacketLetterInfoRequest;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import org.apache.commons.lang3.StringUtils;
+import org.lwjgl.glfw.GLFW;
+
+import java.util.ArrayList;
 
 public class GuiLetter extends GuiForestry<ContainerLetter> {
 	private final ItemInventoryLetter itemInventory;

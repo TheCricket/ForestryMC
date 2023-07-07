@@ -1,11 +1,10 @@
 package genetics.api.root;
 
-import net.minecraft.world.item.ItemStack;
-
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.individual.IChromosomeType;
 import genetics.api.individual.IIndividual;
 import genetics.api.organism.IOrganismType;
+import net.minecraft.world.item.ItemStack;
 
 public interface IDisplayHelper<I extends IIndividual> {
 

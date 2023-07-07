@@ -2,9 +2,8 @@ package forestry.factory.recipes;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
-import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.client.server.IntegratedServer;
-
+import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 

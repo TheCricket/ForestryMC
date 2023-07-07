@@ -6,13 +6,12 @@
 
 package forestry.api.storage;
 
-import java.util.function.Predicate;
-
+import forestry.api.genetics.IForestrySpeciesRoot;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-import forestry.api.genetics.IForestrySpeciesRoot;
+import java.util.function.Predicate;
 
 /**
  * The Backpack Interface allows you to add items to Forestry backpacks or create your own backpacks.

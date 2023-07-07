@@ -10,11 +10,9 @@
  ******************************************************************************/
 package forestry.core.network;
 
-import org.apache.commons.lang3.tuple.Pair;
-
-import net.minecraft.network.FriendlyByteBuf;
-
 import io.netty.buffer.Unpooled;
+import net.minecraft.network.FriendlyByteBuf;
+import org.apache.commons.lang3.tuple.Pair;
 
 public abstract class ForestryPacket implements IForestryPacket {
 	@Override

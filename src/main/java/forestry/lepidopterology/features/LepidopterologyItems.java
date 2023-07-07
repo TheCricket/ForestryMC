@@ -1,9 +1,5 @@
 package forestry.lepidopterology.features;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.SpawnEggItem;
-
 import forestry.api.lepidopterology.genetics.EnumFlutterType;
 import forestry.lepidopterology.ModuleLepidopterology;
 import forestry.lepidopterology.items.ItemButterflyGE;
@@ -11,6 +7,9 @@ import forestry.modules.features.FeatureItem;
 import forestry.modules.features.FeatureProvider;
 import forestry.modules.features.IFeatureRegistry;
 import forestry.modules.features.ModFeatureRegistry;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SpawnEggItem;
 
 @FeatureProvider
 public class LepidopterologyItems {

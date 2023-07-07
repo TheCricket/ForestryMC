@@ -10,21 +10,18 @@
  ******************************************************************************/
 package forestry.lepidopterology.genetics;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
+import forestry.api.genetics.IAlyzerPlugin;
+import forestry.core.config.Config;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.api.genetics.IAlyzerPlugin;
-import forestry.core.config.Config;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 //TODO: Port plugin
 public class FlutterlyzerPlugin implements IAlyzerPlugin {

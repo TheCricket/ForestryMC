@@ -11,30 +11,27 @@
 package forestry.core.fluids;
 
 import com.google.common.base.Suppliers;
-
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.function.Supplier;
-
+import forestry.api.core.tooltips.ToolTip;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.TranslatableComponent;
-
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import forestry.api.core.tooltips.ToolTip;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.function.Supplier;
 
 /**
  * @author CovertJaguar <http://www.railcraft.info>

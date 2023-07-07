@@ -10,16 +10,14 @@
  ******************************************************************************/
 package forestry.core.gui.widgets;
 
-import net.minecraft.network.chat.TranslatableComponent;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.api.core.tooltips.ToolTip;
 import forestry.core.gui.GuiEscritoire;
 import forestry.core.network.packets.PacketGuiSelectRequest;
 import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.SoundUtil;
+import net.minecraft.network.chat.TranslatableComponent;
 
 public class ProbeButton extends Widget {
 

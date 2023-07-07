@@ -1,12 +1,12 @@
 package forestry.core.items;
 
-import java.util.function.Consumer;
-
 import forestry.core.ItemGroupForestry;
 import forestry.core.blocks.IBlockTypeTesr;
 import forestry.core.render.RenderForestryItemProperties;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.IItemRenderProperties;
+
+import java.util.function.Consumer;
 
 public class ItemBlockBase<B extends Block> extends ItemBlockForestry<B> {
 	public final IBlockTypeTesr blockTypeTesr;

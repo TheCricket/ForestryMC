@@ -11,32 +11,24 @@
 package forestry.core;
 
 import com.google.common.collect.LinkedListMultimap;
-
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.chunk.ChunkAccess;
-import net.minecraft.server.level.ServerChunkCache;
-import net.minecraft.server.level.ServerLevel;
-
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.world.ChunkDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraftforge.fml.common.Mod;
-
 import forestry.core.config.Config;
 import forestry.core.config.Constants;
 import forestry.core.utils.WorldUtils;
 import forestry.modules.ModuleManager;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerChunkCache;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.chunk.ChunkAccess;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.world.ChunkDataEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+
+import java.util.*;
 
 @Mod.EventBusSubscriber(modid = Constants.MOD_ID)
 public class TickHandlerCoreServer {

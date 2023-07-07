@@ -10,38 +10,9 @@
  ******************************************************************************/
 package forestry.climatology.tiles;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.util.Objects;
-
-import forestry.api.recipes.IHygroregulatorManager;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-import net.minecraft.util.Mth;
-import net.minecraft.world.level.biome.Biome;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-
-import forestry.api.climate.ClimateCapabilities;
-import forestry.api.climate.ClimateType;
-import forestry.api.climate.IClimateHousing;
-import forestry.api.climate.IClimateManipulator;
-import forestry.api.climate.IClimateState;
-import forestry.api.climate.IClimateTransformer;
-import forestry.api.climate.IClimatised;
+import forestry.api.climate.*;
 import forestry.api.core.IErrorLogic;
+import forestry.api.recipes.IHygroregulatorManager;
 import forestry.api.recipes.IHygroregulatorRecipe;
 import forestry.api.recipes.RecipeManagers;
 import forestry.climatology.features.ClimatologyTiles;
@@ -58,6 +29,27 @@ import forestry.core.network.PacketBufferForestry;
 import forestry.core.tiles.ILiquidTankTile;
 import forestry.core.tiles.TilePowered;
 import forestry.energy.EnergyManager;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.util.Mth;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.Objects;
 
 public class TileHabitatFormer extends TilePowered implements IClimateHousing, IClimatised, ILiquidTankTile {
 	private static final String TRANSFORMER_KEY = "Transformer";
@@ -298,7 +290,7 @@ public class TileHabitatFormer extends TilePowered implements IClimateHousing, I
 
 	@Override
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
-		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
+		if (capability == ForgeCapabilities.FLUID_HANDLER) {
 			return LazyOptional.of(() -> tankManager).cast();
 		}
 		if (capability == ClimateCapabilities.CLIMATE_TRANSFORMER) {

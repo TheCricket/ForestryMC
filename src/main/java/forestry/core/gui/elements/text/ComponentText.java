@@ -1,10 +1,9 @@
 package forestry.core.gui.elements.text;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.Font;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
-
-import com.mojang.blaze3d.vertex.PoseStack;
 
 class ComponentText extends AbstractTextElement<Component, ComponentText> {
 

@@ -10,14 +10,12 @@
  ******************************************************************************/
 package forestry.lepidopterology.render;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.lepidopterology.entities.EntityButterfly;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
-import forestry.lepidopterology.entities.EntityButterfly;
 
 public class ButterflyEntityRenderer extends MobRenderer<EntityButterfly, ButterflyModel> {
 

@@ -10,10 +10,10 @@
  ******************************************************************************/
 package forestry.core.items.definitions;
 
-import java.awt.Color;
-import java.util.Locale;
-
 import forestry.core.items.ItemOverlay;
+
+import java.awt.*;
+import java.util.Locale;
 
 public enum EnumElectronTube implements ItemOverlay.IOverlayInfo {
 	COPPER(new Color(0xe3b78e)),

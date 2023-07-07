@@ -10,20 +10,17 @@
  ******************************************************************************/
 package forestry.apiculture.flowers;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.common.PlantType;
-
-import genetics.api.individual.IIndividual;
-
 import forestry.api.apiculture.FlowerManager;
 import forestry.api.genetics.ICheckPollinatable;
 import forestry.api.genetics.flowers.IFlowerProvider;
+import genetics.api.individual.IIndividual;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.common.PlantType;
 
 public class FlowerProvider implements IFlowerProvider {
 

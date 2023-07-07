@@ -10,19 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.entities;
 
-import java.util.Collections;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.network.NetworkHooks;
-
 import forestry.api.apiculture.DefaultBeeListener;
 import forestry.api.apiculture.IBeeHousingInventory;
 import forestry.api.apiculture.IBeeListener;
@@ -38,6 +25,17 @@ import forestry.apiculture.gui.GuiBeeHousing;
 import forestry.apiculture.items.ItemMinecartBeehousing;
 import forestry.core.inventory.IInventoryAdapter;
 import forestry.core.network.PacketBufferForestry;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.network.NetworkHooks;
+
+import java.util.Collections;
 
 public class MinecartEntityBeehouse extends MinecartEntityBeeHousingBase {
 	private static final IBeeModifier beeModifier = new BeehouseBeeModifier();

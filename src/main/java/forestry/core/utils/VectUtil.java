@@ -11,17 +11,16 @@
 package forestry.core.utils;
 
 import com.google.common.collect.AbstractIterator;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Vec3i;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.levelgen.Heightmap;
 
 import javax.annotation.Nullable;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Random;
-
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Vec3i;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.levelgen.Heightmap;
 
 public final class VectUtil {
 	public static final Comparator<BlockPos> TOP_DOWN_COMPARATOR = (BlockPos a, BlockPos b) -> Integer.compare(b.getY(), a.getY());

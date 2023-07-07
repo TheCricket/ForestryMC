@@ -1,20 +1,6 @@
 package forestry.apiculture.genetics;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.resources.ResourceLocation;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.genetics.BeeChromosomes;
 import forestry.api.apiculture.genetics.EnumBeeType;
@@ -31,12 +17,22 @@ import forestry.core.gui.widgets.ItemStackWidget;
 import forestry.core.gui.widgets.WidgetManager;
 import forestry.core.utils.StringUtil;
 import forestry.core.utils.Translator;
-
 import genetics.api.GeneticHelper;
 import genetics.api.alleles.IAlleleValue;
 import genetics.api.individual.IGenome;
 import genetics.api.organism.IOrganism;
 import genetics.api.organism.IOrganismType;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.NonNullList;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 public class BeeAlyzerPlugin implements IAlyzerPlugin {
 	public static final BeeAlyzerPlugin INSTANCE = new BeeAlyzerPlugin();

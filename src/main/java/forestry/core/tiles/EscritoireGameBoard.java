@@ -10,30 +10,23 @@
  ******************************************************************************/
 package forestry.core.tiles;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
-import java.util.Random;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-
+import forestry.api.core.INbtWritable;
+import forestry.api.genetics.alleles.IAlleleForestrySpecies;
+import forestry.core.network.IStreamable;
+import forestry.core.network.PacketBufferForestry;
 import genetics.api.alleles.IAllele;
 import genetics.api.individual.IGenome;
 import genetics.api.individual.IIndividual;
 import genetics.api.individual.IKaryotype;
 import genetics.api.root.IIndividualRoot;
-
 import genetics.utils.RootUtils;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.world.item.ItemStack;
 
-import forestry.api.core.INbtWritable;
-import forestry.api.genetics.alleles.IAlleleForestrySpecies;
-import forestry.core.network.IStreamable;
-import forestry.core.network.PacketBufferForestry;
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.*;
 
 public class EscritoireGameBoard implements INbtWritable, IStreamable {
 	private static final Random rand = new Random();

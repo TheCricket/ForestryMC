@@ -1,21 +1,20 @@
 package forestry.farming.logic.farmables;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.ChorusFlowerBlock;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-
 import forestry.api.farming.ICrop;
 import forestry.api.farming.IFarmable;
 import forestry.api.farming.IFarmableInfo;
 import forestry.core.utils.BlockUtil;
 import forestry.farming.logic.crops.CropChorusFlower;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ChorusFlowerBlock;
+import net.minecraft.world.level.block.state.BlockState;
+
+import javax.annotation.Nullable;
 
 public class FarmableChorus implements IFarmable {
 	public static final IFarmable INSTANCE = new FarmableChorus();

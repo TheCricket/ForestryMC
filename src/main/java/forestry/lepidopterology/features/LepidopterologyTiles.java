@@ -1,8 +1,5 @@
 package forestry.lepidopterology.features;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-
 import forestry.lepidopterology.ModuleLepidopterology;
 import forestry.lepidopterology.tiles.TileCocoon;
 import forestry.lepidopterology.tiles.TileLepidopteristChest;

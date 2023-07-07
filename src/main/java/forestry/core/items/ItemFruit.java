@@ -11,11 +11,10 @@
 
 package forestry.core.items;
 
-import java.util.Locale;
-
 import forestry.api.core.IItemSubtype;
-
 import net.minecraft.world.item.Item;
+
+import java.util.Locale;
 
 public class ItemFruit extends ItemForestryFood {
 

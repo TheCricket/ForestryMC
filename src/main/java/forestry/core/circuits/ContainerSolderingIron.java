@@ -10,15 +10,6 @@
  ******************************************************************************/
 package forestry.core.circuits;
 
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.world.InteractionHand;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.circuits.ICircuitLayout;
 import forestry.core.features.CoreContainers;
 import forestry.core.gui.ContainerItemInventory;
@@ -31,6 +22,13 @@ import forestry.core.network.IForestryPacketServer;
 import forestry.core.network.packets.PacketGuiLayoutSelect;
 import forestry.core.network.packets.PacketGuiSelectRequest;
 import forestry.core.utils.NetworkUtil;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ContainerSolderingIron extends ContainerItemInventory<ItemInventorySolderingIron> implements IGuiSelectable {
 

@@ -10,10 +10,9 @@
  ******************************************************************************/
 package forestry.core.network.packets;
 
-import net.minecraft.server.level.ServerPlayer;
-
 import forestry.core.network.IForestryPacketHandlerServer;
 import forestry.core.network.PacketBufferForestry;
+import net.minecraft.server.level.ServerPlayer;
 
 public class PacketHandlerDummyServer extends PacketHandlerDummy implements IForestryPacketHandlerServer {
 	public static final PacketHandlerDummyServer instance = new PacketHandlerDummyServer();

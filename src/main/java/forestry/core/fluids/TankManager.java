@@ -12,24 +12,6 @@ package forestry.core.fluids;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerListener;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.IFluidTank;
-
 import forestry.api.core.INbtReadable;
 import forestry.api.core.INbtWritable;
 import forestry.core.network.IForestryPacketClient;
@@ -42,8 +24,17 @@ import forestry.core.tiles.IRenderableTile;
 import forestry.core.utils.NBTUtilForestry;
 import forestry.core.utils.NBTUtilForestry.NBTList;
 import forestry.core.utils.NetworkUtil;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerListener;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.IFluidTank;
 
-import net.minecraftforge.fluids.capability.IFluidHandler.FluidAction;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.util.*;
 
 /**
  * @author CovertJaguar <http://www.railcraft.info>

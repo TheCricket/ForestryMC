@@ -11,7 +11,6 @@
 package forestry.core.render;
 
 import com.mojang.math.Vector3f;
-
 import forestry.core.tiles.TileMill;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;

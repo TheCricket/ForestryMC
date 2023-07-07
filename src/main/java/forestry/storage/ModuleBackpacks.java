@@ -11,8 +11,6 @@
 
 package forestry.storage;
 
-import java.awt.Color;
-
 import forestry.api.modules.ForestryModule;
 import forestry.api.storage.IBackpackInterface;
 import forestry.core.IPickupHandler;
@@ -23,11 +21,12 @@ import forestry.modules.BlankForestryModule;
 import forestry.modules.ForestryModuleUids;
 import forestry.storage.features.BackpackContainers;
 import forestry.storage.gui.GuiBackpack;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.client.gui.screens.MenuScreens;
+import java.awt.*;
 
 @ForestryModule(moduleID = ForestryModuleUids.BACKPACKS, containerID = Constants.MOD_ID, name = "Backpack", author = "SirSengir", url = Constants.URL, unlocalizedDescription = "for.module.backpacks.description", lootTable = "storage")
 public class ModuleBackpacks extends BlankForestryModule {

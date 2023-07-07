@@ -1,21 +1,16 @@
 package forestry.core;
 
-import javax.annotation.Nullable;
-import java.awt.Color;
-
+import forestry.core.config.Constants;
+import forestry.core.fluids.ForestryFluids;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-
 import net.minecraftforge.fml.common.Mod;
 
-import forestry.core.config.Constants;
-import forestry.core.fluids.ForestryFluids;
+import javax.annotation.Nullable;
 
 @OnlyIn(Dist.CLIENT)
 @Mod.EventBusSubscriber(modid = Constants.MOD_ID, value = Dist.CLIENT)

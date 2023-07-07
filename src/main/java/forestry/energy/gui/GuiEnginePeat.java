@@ -10,13 +10,11 @@
  ******************************************************************************/
 package forestry.energy.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.core.config.Constants;
 import forestry.energy.tiles.TileEnginePeat;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 public class GuiEnginePeat extends GuiEngine<ContainerEnginePeat, TileEnginePeat> {
 

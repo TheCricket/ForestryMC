@@ -12,12 +12,6 @@ package forestry.mail.inventory;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableSet;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-
 import forestry.api.core.IErrorSource;
 import forestry.api.core.IErrorState;
 import forestry.api.mail.ILetter;
@@ -28,6 +22,10 @@ import forestry.core.utils.SlotUtil;
 import forestry.mail.Letter;
 import forestry.mail.LetterProperties;
 import forestry.mail.items.ItemStamp;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 public class ItemInventoryLetter extends ItemInventory implements IErrorSource {
 	private final ILetter letter;

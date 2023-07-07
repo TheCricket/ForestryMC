@@ -10,9 +10,8 @@
  ******************************************************************************/
 package forestry.mail;
 
-import net.minecraft.world.level.LevelAccessor;
-
 import forestry.core.ISaveEventHandler;
+import net.minecraft.world.level.LevelAccessor;
 
 public class SaveEventHandlerMail implements ISaveEventHandler {
 

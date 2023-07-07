@@ -14,7 +14,6 @@ import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
 import forestry.api.arboriculture.genetics.ITree;
 import forestry.api.arboriculture.genetics.ITreeMutationBuilder;
 import forestry.api.arboriculture.genetics.ITreeMutationFactory;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.mutation.IMutation;
 import genetics.api.mutation.IMutationContainer;

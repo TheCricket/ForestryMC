@@ -1,26 +1,24 @@
 package forestry.core.data;
 
-import javax.annotation.Nullable;
-import java.nio.file.Path;
-import java.util.HashSet;
-import java.util.Set;
-
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.data.ExistingFileHelper;
-
 import forestry.apiculture.features.ApicultureItems;
 import forestry.arboriculture.features.ArboricultureItems;
 import forestry.core.config.Constants;
 import forestry.core.features.CoreItems;
 import forestry.mail.features.MailItems;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.ExistingFileHelper;
+
+import javax.annotation.Nullable;
+import java.nio.file.Path;
+import java.util.HashSet;
+import java.util.Set;
 
 public final class ForestryItemTagsProvider extends ItemTagsProvider {
 	@Nullable

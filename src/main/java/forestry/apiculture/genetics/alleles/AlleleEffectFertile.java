@@ -10,21 +10,18 @@
  ******************************************************************************/
 package forestry.apiculture.genetics.alleles;
 
-import java.util.Random;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.BonemealableBlock;
+import forestry.api.apiculture.IBeeHousing;
+import forestry.api.genetics.IEffectData;
+import genetics.api.individual.IGenome;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 import net.minecraft.world.level.Level;
-
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.IPlantable;
 
-import forestry.api.apiculture.IBeeHousing;
-import forestry.api.genetics.IEffectData;
-
-import genetics.api.individual.IGenome;
+import java.util.Random;
 
 public class AlleleEffectFertile extends AlleleEffectThrottled {
 

@@ -1,18 +1,5 @@
 package forestry.sorting;
 
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.Direction;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.core.ILocatable;
 import forestry.api.genetics.alleles.AlleleManager;
 import forestry.api.genetics.filter.IFilterData;
@@ -21,7 +8,6 @@ import forestry.api.genetics.filter.IFilterRuleType;
 import forestry.core.utils.NetworkUtil;
 import forestry.sorting.network.packets.PacketFilterChangeGenome;
 import forestry.sorting.network.packets.PacketFilterChangeRule;
-
 import genetics.api.GeneticsAPI;
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleRegistry;
@@ -32,8 +18,17 @@ import genetics.api.root.IIndividualRoot;
 import genetics.api.root.IRootDefinition;
 import genetics.utils.AlleleUtils;
 import genetics.utils.RootUtils;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.api.genetics.filter.IFilterLogic.INetworkHandler;
+import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 
 public class FilterLogic implements IFilterLogic {
 	private final ILocatable locatable;

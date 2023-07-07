@@ -10,25 +10,23 @@
  ******************************************************************************/
 package forestry.core.models.baker;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.client.renderer.block.model.BakedQuad;
-import net.minecraft.client.renderer.block.model.BlockFaceUV;
-import net.minecraft.client.renderer.block.model.BlockElementFace;
-import net.minecraft.client.renderer.block.model.FaceBakery;
-import net.minecraft.client.resources.model.BlockModelRotation;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
 import com.mojang.math.Vector3f;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.core.config.Constants;
 import forestry.core.models.ClientManager;
 import forestry.core.utils.ResourceUtil;
+import net.minecraft.client.renderer.block.model.BakedQuad;
+import net.minecraft.client.renderer.block.model.BlockElementFace;
+import net.minecraft.client.renderer.block.model.BlockFaceUV;
+import net.minecraft.client.renderer.block.model.FaceBakery;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.resources.model.BlockModelRotation;
+import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**

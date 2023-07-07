@@ -10,26 +10,23 @@
  ******************************************************************************/
 package forestry.core.render;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-
 import com.mojang.blaze3d.systems.RenderSystem;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.core.ForestryAPI;
 import forestry.api.core.ISpriteRegister;
 import forestry.api.core.ISpriteRegistry;
 import forestry.api.core.ITextureManager;
 import forestry.core.config.Constants;
 import forestry.core.errors.ErrorStateRegistry;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
 
 @OnlyIn(Dist.CLIENT)
 public class TextureManagerForestry implements ITextureManager {

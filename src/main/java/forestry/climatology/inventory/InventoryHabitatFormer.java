@@ -10,15 +10,13 @@
  ******************************************************************************/
 package forestry.climatology.inventory;
 
-import java.util.Optional;
-
+import forestry.climatology.tiles.TileHabitatFormer;
+import forestry.core.inventory.InventoryAdapterTile;
 import net.minecraft.world.item.ItemStack;
-
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidUtil;
 
-import forestry.climatology.tiles.TileHabitatFormer;
-import forestry.core.inventory.InventoryAdapterTile;
+import java.util.Optional;
 
 public class InventoryHabitatFormer extends InventoryAdapterTile<TileHabitatFormer> {
 	public static final short SLOT_INPUT = 0;

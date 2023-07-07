@@ -10,16 +10,14 @@
  ******************************************************************************/
 package forestry.core.gui.ledgers;
 
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.api.climate.IClimatised;
 import forestry.api.core.EnumTemperature;
 import forestry.api.genetics.alleles.AlleleManager;
 import forestry.core.utils.StringUtil;
 import forestry.core.utils.Translator;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 
 /**
  * A ledger containing climate information.

@@ -10,32 +10,6 @@
  ******************************************************************************/
 package forestry.factory.tiles;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.util.EnumMap;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.WorldlyContainer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.fluids.FluidAttributes;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.FluidUtil;
-import net.minecraftforge.fluids.IFluidTank;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-
 import forestry.api.core.IErrorLogic;
 import forestry.core.config.Constants;
 import forestry.core.errors.EnumErrorCode;
@@ -53,6 +27,30 @@ import forestry.factory.features.FactoryTiles;
 import forestry.factory.gui.ContainerBottler;
 import forestry.factory.inventory.InventoryBottler;
 import forestry.factory.recipes.BottlerRecipe;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidType;
+import net.minecraftforge.fluids.FluidUtil;
+import net.minecraftforge.fluids.IFluidTank;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.EnumMap;
 
 public class TileBottler extends TilePowered implements WorldlyContainer, ILiquidTankTile, ISlotPickupWatcher {
 	private static final int TICKS_PER_RECIPE_TIME = 5;
@@ -165,7 +163,7 @@ public class TileBottler extends TilePowered implements WorldlyContainer, ILiqui
 					LazyOptional<IFluidHandler> fluidDestination = FluidUtil.getFluidHandler(level, worldPosition.relative(facing), facing.getOpposite());
 
 					if (fluidDestination.isPresent()) {
-						fluidDestination.ifPresent(f -> FluidUtil.tryFluidTransfer(f, tankManager, FluidAttributes.BUCKET_VOLUME / 20, true));
+						fluidDestination.ifPresent(f -> FluidUtil.tryFluidTransfer(f, tankManager, FluidType.BUCKET_VOLUME / 20, true));
 						return true;
 					}
 				}
@@ -212,11 +210,11 @@ public class TileBottler extends TilePowered implements WorldlyContainer, ILiqui
 			if (currentRecipe == null || !currentRecipe.matchEmpty(emptyCan, resource)) {
 				currentRecipe = BottlerRecipe.createFillingRecipe(resource.getFluid(), emptyCan);
 				if (currentRecipe != null) {
-					float viscosityMultiplier = resource.getFluid().getAttributes().getViscosity(resource) / 1000.0f;
+					float viscosityMultiplier = resource.getFluid().getFluidType().getViscosity(resource) / 1000.0f;
 					viscosityMultiplier = (viscosityMultiplier - 1f) / 20f + 1f; // scale down the effect
 
 					int fillAmount = Math.min(currentRecipe.fluid.getAmount(), resource.getAmount());
-					float fillTime = fillAmount / (float) FluidAttributes.BUCKET_VOLUME;
+					float fillTime = fillAmount / (float) FluidType.BUCKET_VOLUME;
 					fillTime *= viscosityMultiplier;
 
 					setTicksPerWorkCycle(Math.round(fillTime * TICKS_PER_RECIPE_TIME));
@@ -234,11 +232,11 @@ public class TileBottler extends TilePowered implements WorldlyContainer, ILiqui
 				currentRecipe = BottlerRecipe.createEmptyingRecipe(filledCan);
 				if (currentRecipe != null) {
 					FluidStack resource = currentRecipe.fluid;
-					float viscosityMultiplier = resource.getFluid().getAttributes().getViscosity(resource) / 1000.0f;
+					float viscosityMultiplier = resource.getFluid().getFluidType().getViscosity(resource) / 1000.0f;
 					viscosityMultiplier = (viscosityMultiplier - 1f) / 20f + 1f; // scale down the effect
 
 					int fillAmount = Math.min(currentRecipe.fluid.getAmount(), resource.getAmount());
-					float fillTime = fillAmount / (float) FluidAttributes.BUCKET_VOLUME;
+					float fillTime = fillAmount / (float) FluidType.BUCKET_VOLUME;
 					fillTime *= viscosityMultiplier;
 
 					setTicksPerWorkCycle(Math.round(fillTime * TICKS_PER_RECIPE_TIME));
@@ -350,7 +348,7 @@ public class TileBottler extends TilePowered implements WorldlyContainer, ILiqui
 	//TODO - is this efficient? or even correct?
 	@Override
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
-		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
+		if (capability == ForgeCapabilities.FLUID_HANDLER) {
 			return LazyOptional.of(() -> tankManager).cast();
 		}
 		return super.getCapability(capability, facing);

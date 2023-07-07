@@ -1,42 +1,20 @@
 package forestry.core.data;
 
-import java.util.Map;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.FenceGateBlock;
-import net.minecraft.world.level.block.CrossCollisionBlock;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DoorHingeSide;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.minecraft.world.level.block.state.properties.Half;
-import net.minecraft.world.level.block.state.properties.SlabType;
-import net.minecraft.world.level.block.state.properties.StairsShape;
-import net.minecraft.core.Direction;
-
 import forestry.api.arboriculture.EnumForestryWoodType;
 import forestry.api.arboriculture.EnumVanillaWoodType;
 import forestry.api.arboriculture.IWoodType;
 import forestry.api.arboriculture.WoodBlockKind;
-import forestry.arboriculture.blocks.BlockDecorativeLeaves;
-import forestry.arboriculture.blocks.BlockDefaultLeaves;
-import forestry.arboriculture.blocks.BlockDefaultLeavesFruit;
-import forestry.arboriculture.blocks.BlockForestryDoor;
-import forestry.arboriculture.blocks.BlockForestryFence;
-import forestry.arboriculture.blocks.BlockForestryFenceGate;
-import forestry.arboriculture.blocks.BlockForestryLog;
-import forestry.arboriculture.blocks.BlockForestryPlank;
-import forestry.arboriculture.blocks.BlockForestrySlab;
-import forestry.arboriculture.blocks.BlockForestryStairs;
+import forestry.arboriculture.blocks.*;
 import forestry.arboriculture.features.ArboricultureBlocks;
 import forestry.modules.features.FeatureBlock;
+import net.minecraft.core.Direction;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.*;
+
+import java.util.Map;
 
 public class WoodBlockStateProvider extends BlockStateProvider {
 

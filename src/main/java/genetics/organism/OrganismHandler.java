@@ -1,15 +1,14 @@
 package genetics.organism;
 
-import java.util.Optional;
-import java.util.function.Supplier;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-
 import genetics.api.individual.IIndividual;
 import genetics.api.organism.IOrganismHandler;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.IRootDefinition;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.ItemStack;
+
+import java.util.Optional;
+import java.util.function.Supplier;
 
 public class OrganismHandler<I extends IIndividual> implements IOrganismHandler<I> {
 	public static final String INDIVIDUAL_KEY = "Individual";

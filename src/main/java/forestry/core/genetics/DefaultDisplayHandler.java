@@ -1,18 +1,16 @@
 package forestry.core.genetics;
 
-import net.minecraft.ChatFormatting;
-
 import forestry.api.core.tooltips.ToolTip;
 import forestry.api.genetics.alyzer.IAlleleDisplayHelper;
 import forestry.apiculture.genetics.BeeRoot;
 import forestry.apiculture.genetics.IGeneticTooltipProvider;
 import forestry.arboriculture.genetics.TreeRoot;
 import forestry.lepidopterology.genetics.ButterflyRoot;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.individual.IChromosomeType;
 import genetics.api.individual.IGenome;
 import genetics.api.individual.IIndividual;
+import net.minecraft.ChatFormatting;
 
 public enum DefaultDisplayHandler implements IGeneticTooltipProvider<IIndividual> {
 	UNKNOWN(-3) {

@@ -2,20 +2,18 @@ package forestry.core.models;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
+import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.model.data.IModelData;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.model.data.IModelData;
 
 @OnlyIn(Dist.CLIENT)
 public abstract class ModelBlockCached<B extends Block, K> extends ModelBlockDefault<B, K> {

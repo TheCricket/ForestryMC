@@ -11,12 +11,6 @@
 package forestry.apiculture.genetics.alleles;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.util.function.Supplier;
-
-import net.minecraft.world.item.ItemStack;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.apiculture.IBeeSpriteColourProvider;
@@ -30,10 +24,11 @@ import forestry.apiculture.genetics.DefaultBeeSpriteColourProvider;
 import forestry.apiculture.genetics.JubilanceDefault;
 import forestry.core.genetics.ProductListWrapper;
 import forestry.core.genetics.alleles.AlleleForestrySpecies;
-
 import genetics.api.individual.IGenome;
+import net.minecraft.world.item.ItemStack;
 
-import forestry.core.genetics.alleles.AlleleForestrySpecies.AbstractBuilder;
+import javax.annotation.Nullable;
+import java.util.function.Supplier;
 
 public class AlleleBeeSpecies extends AlleleForestrySpecies implements IAlleleBeeSpecies, ISetupListener {
 	private final IBeeSpriteColourProvider beeSpriteColourProvider;

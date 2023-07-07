@@ -10,6 +10,11 @@
  ******************************************************************************/
 package forestry.apiculture.items;
 
+import forestry.api.core.ItemGroups;
+import forestry.apiculture.features.ApicultureItems;
+import forestry.core.config.Constants;
+import forestry.core.features.CoreItems;
+import forestry.core.items.definitions.EnumCraftingMaterial;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.Entity;
@@ -19,12 +24,6 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
-
-import forestry.api.core.ItemGroups;
-import forestry.apiculture.features.ApicultureItems;
-import forestry.core.config.Constants;
-import forestry.core.features.CoreItems;
-import forestry.core.items.definitions.EnumCraftingMaterial;
 
 public class ItemArmorApiarist extends ArmorItem {
 

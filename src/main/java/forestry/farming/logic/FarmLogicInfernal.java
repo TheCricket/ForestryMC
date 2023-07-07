@@ -10,19 +10,14 @@
  ******************************************************************************/
 package forestry.farming.logic;
 
-import java.util.Collection;
-import java.util.Stack;
-
-import net.minecraft.world.level.block.state.BlockState;
+import forestry.api.farming.*;
+import forestry.core.utils.BlockUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 
-import forestry.api.farming.FarmDirection;
-import forestry.api.farming.ICrop;
-import forestry.api.farming.IFarmHousing;
-import forestry.api.farming.IFarmProperties;
-import forestry.api.farming.IFarmable;
-import forestry.core.utils.BlockUtil;
+import java.util.Collection;
+import java.util.Stack;
 
 public class FarmLogicInfernal extends FarmLogicHomogeneous {
 

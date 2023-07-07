@@ -10,31 +10,28 @@
  ******************************************************************************/
 package forestry.core.tiles;
 
-import java.io.IOException;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.shapes.VoxelShape;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import net.minecraftforge.network.NetworkHooks;
-
 import forestry.api.genetics.IForestrySpeciesRoot;
 import forestry.core.gui.ContainerNaturalistInventory;
 import forestry.core.gui.IPagedInventory;
 import forestry.core.inventory.InventoryNaturalistChest;
 import forestry.core.network.PacketBufferForestry;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.network.NetworkHooks;
+
+import java.io.IOException;
 
 public abstract class TileNaturalistChest extends TileBase implements IPagedInventory {
 	private static final float lidAngleVariationPerTick = 0.1F;

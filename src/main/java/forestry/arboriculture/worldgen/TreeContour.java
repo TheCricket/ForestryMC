@@ -1,14 +1,10 @@
 package forestry.arboriculture.worldgen;
 
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
+
+import javax.annotation.Nullable;
+import java.util.*;
 
 /**
  * Helper class for storing data that is relevant to generating trees

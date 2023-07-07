@@ -11,19 +11,16 @@
 package forestry.core.circuits;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeManager;
-
 import forestry.api.circuits.ICircuit;
 import forestry.api.circuits.ICircuitLayout;
 import forestry.api.recipes.IForestryRecipe;
 import forestry.api.recipes.ISolderManager;
 import forestry.api.recipes.ISolderRecipe;
 import forestry.factory.recipes.AbstractCraftingProvider;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeManager;
 
+import javax.annotation.Nullable;
 import java.util.Optional;
 
 public class SolderManager extends AbstractCraftingProvider<ISolderRecipe> implements ISolderManager {

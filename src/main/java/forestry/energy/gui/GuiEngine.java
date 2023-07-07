@@ -10,19 +10,17 @@
  ******************************************************************************/
 package forestry.energy.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.core.config.Config;
 import forestry.core.gui.GuiForestryTitled;
 import forestry.core.gui.ledgers.Ledger;
 import forestry.core.render.TextureManagerForestry;
 import forestry.core.utils.Translator;
 import forestry.energy.tiles.TileEngine;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 
 public abstract class GuiEngine<C extends AbstractContainerMenu, I extends TileEngine> extends GuiForestryTitled<C> {
 	protected final I tile;

@@ -1,22 +1,20 @@
 package forestry.modules.features;
 
+import forestry.api.core.IBlockProvider;
+import forestry.core.proxy.Proxies;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.IForgeRegistryEntry;
+
 import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.function.Function;
 import java.util.function.Supplier;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.block.state.properties.Property;
-
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.IForgeRegistryEntry;
-
-import forestry.api.core.IBlockProvider;
-import forestry.core.proxy.Proxies;
 
 public interface IBlockFeature<B extends Block, I extends BlockItem> extends IItemFeature<I>, IBlockProvider<B, I> {
 

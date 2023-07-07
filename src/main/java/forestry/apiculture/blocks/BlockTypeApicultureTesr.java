@@ -10,10 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.blocks;
 
-import java.util.function.Supplier;
-
-import net.minecraft.world.phys.shapes.VoxelShape;
-
 import forestry.apiculture.features.ApicultureTiles;
 import forestry.apiculture.tiles.TileApiaristChest;
 import forestry.core.blocks.IBlockTypeTesr;
@@ -22,6 +18,9 @@ import forestry.core.blocks.MachinePropertiesTesr;
 import forestry.core.proxy.Proxies;
 import forestry.core.tiles.TileNaturalistChest;
 import forestry.modules.features.FeatureTileType;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+import java.util.function.Supplier;
 
 public enum BlockTypeApicultureTesr implements IBlockTypeTesr {
 	APIARIST_CHEST(() -> ApicultureTiles.APIARIST_CHEST, "api_chest", "apiaristchest", TileNaturalistChest.CHEST_SHAPE);

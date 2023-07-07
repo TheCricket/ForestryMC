@@ -10,43 +10,22 @@
  ******************************************************************************/
 package forestry.factory;
 
+import forestry.api.recipes.*;
+import net.minecraft.core.NonNullList;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Container;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.fluids.FluidStack;
+
 import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Stream;
-
-import net.minecraft.world.Container;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeManager;
-import net.minecraft.core.NonNullList;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.fluids.FluidStack;
-
-import forestry.api.recipes.ICarpenterManager;
-import forestry.api.recipes.ICarpenterRecipe;
-import forestry.api.recipes.ICentrifugeManager;
-import forestry.api.recipes.ICentrifugeRecipe;
-import forestry.api.recipes.ICraftingProvider;
-import forestry.api.recipes.IFabricatorManager;
-import forestry.api.recipes.IFabricatorRecipe;
-import forestry.api.recipes.IFabricatorSmeltingManager;
-import forestry.api.recipes.IFabricatorSmeltingRecipe;
-import forestry.api.recipes.IFermenterManager;
-import forestry.api.recipes.IFermenterRecipe;
-import forestry.api.recipes.IForestryRecipe;
-import forestry.api.recipes.IMoistenerManager;
-import forestry.api.recipes.IMoistenerRecipe;
-import forestry.api.recipes.ISqueezerContainerManager;
-import forestry.api.recipes.ISqueezerContainerRecipe;
-import forestry.api.recipes.ISqueezerManager;
-import forestry.api.recipes.ISqueezerRecipe;
-import forestry.api.recipes.IStillManager;
-import forestry.api.recipes.IStillRecipe;
 
 public class DummyManagers {
 

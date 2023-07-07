@@ -10,16 +10,15 @@
  ******************************************************************************/
 package forestry.arboriculture.worldgen;
 
+import forestry.api.arboriculture.ITreeGenData;
+import forestry.core.worldgen.FeatureHelper;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.LevelAccessor;
+
 import java.util.Collections;
 import java.util.Random;
 import java.util.Set;
-
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.LevelAccessor;
-
-import forestry.api.arboriculture.ITreeGenData;
-import forestry.core.worldgen.FeatureHelper;
 
 public class FeaturePadauk extends FeatureTree {
 

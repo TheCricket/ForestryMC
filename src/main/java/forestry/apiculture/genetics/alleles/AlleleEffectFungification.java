@@ -1,27 +1,24 @@
 package forestry.apiculture.genetics.alleles;
 
-import java.util.List;
-
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.MushroomBlock;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.animal.Cow;
-import net.minecraft.world.entity.animal.MushroomCow;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Vec3i;
-import net.minecraft.world.level.Level;
-import net.minecraft.server.level.ServerLevel;
-
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.genetics.IEffectData;
 import forestry.core.genetics.EffectData;
 import forestry.core.utils.VectUtil;
-
 import genetics.api.individual.IGenome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Vec3i;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.animal.Cow;
+import net.minecraft.world.entity.animal.MushroomCow;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.MushroomBlock;
+import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.List;
 
 public class AlleleEffectFungification extends AlleleEffectThrottled {
 

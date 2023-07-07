@@ -11,8 +11,8 @@
 package genetics.commands;
 
 import net.minecraft.commands.CommandRuntimeException;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
 
 public class SpeciesNotFoundException extends CommandRuntimeException {
 

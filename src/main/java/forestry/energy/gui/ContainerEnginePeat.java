@@ -10,9 +10,6 @@
  ******************************************************************************/
 package forestry.energy.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.FriendlyByteBuf;
-
 import forestry.core.gui.ContainerTile;
 import forestry.core.gui.slots.SlotFiltered;
 import forestry.core.gui.slots.SlotOutput;
@@ -20,6 +17,8 @@ import forestry.core.network.packets.PacketGuiUpdate;
 import forestry.core.tiles.TileUtil;
 import forestry.energy.features.EnergyContainers;
 import forestry.energy.tiles.TileEnginePeat;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.entity.player.Inventory;
 
 public class ContainerEnginePeat extends ContainerTile<TileEnginePeat> {
 

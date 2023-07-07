@@ -10,16 +10,11 @@
  ******************************************************************************/
 package forestry.core.gui;
 
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
+import forestry.core.render.ColourProperties;
+import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.core.render.ColourProperties;
 
 @OnlyIn(Dist.CLIENT)
 public class TextLayoutHelper {
@@ -86,7 +81,7 @@ public class TextLayoutHelper {
 	}
 
 	public void drawTranslatedLine(PoseStack transform, String key, int x) {
-		drawLine(transform, new TranslatableComponent(key), x, defaultFontColor);
+		drawLine(transform, Component.translatable(key), x, defaultFontColor);
 	}
 
 	public void drawSplitLine(String text, int x, int maxWidth) {
@@ -122,7 +117,7 @@ public class TextLayoutHelper {
 	}
 
 	public void drawSplitLine(String text, int x, int maxWidth, int color) {
-		drawSplitLine(new TextComponent(text), x, maxWidth, color);
+		drawSplitLine(Component.literal(text), x, maxWidth, color);
 	}
 
 	public void drawSplitLine(Component component, int x, int maxWidth, int color) {

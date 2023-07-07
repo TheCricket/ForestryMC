@@ -1,12 +1,5 @@
 package forestry.arboriculture.items;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.network.chat.Component;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.arboriculture.IFruitProvider;
 import forestry.api.arboriculture.genetics.TreeChromosomes;
 import forestry.api.core.ItemGroups;
@@ -15,8 +8,12 @@ import forestry.arboriculture.blocks.BlockDecorativeLeaves;
 import forestry.arboriculture.genetics.TreeDefinition;
 import forestry.core.items.ItemBlockForestry;
 import forestry.core.items.definitions.IColoredItem;
-
 import genetics.api.individual.IGenome;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ItemBlockDecorativeLeaves extends ItemBlockForestry<BlockDecorativeLeaves> implements IColoredItem {
 	public ItemBlockDecorativeLeaves(BlockDecorativeLeaves block) {

@@ -1,11 +1,10 @@
 package forestry.core.gui.elements;
 
 import com.google.common.collect.Lists;
-
-import javax.annotation.Nullable;
-
 import forestry.core.gui.elements.layouts.ContainerElement;
 import forestry.core.gui.widgets.IScrollable;
+
+import javax.annotation.Nullable;
 
 public class ScrollableElement extends ContainerElement implements IScrollable {
 	@Nullable

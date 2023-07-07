@@ -2,49 +2,30 @@ package forestry.storage.models;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
-
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-import java.util.function.Function;
-
-import net.minecraft.client.renderer.block.model.BakedQuad;
-import net.minecraft.client.renderer.block.model.ItemOverrides;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.client.resources.model.Material;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.client.resources.model.ModelState;
-import net.minecraft.client.resources.model.UnbakedModel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.util.GsonHelper;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-
 import com.mojang.datafixers.util.Pair;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.model.ForgeModelBakery;
-import net.minecraftforge.client.model.IModelConfiguration;
-import net.minecraftforge.client.model.IModelLoader;
-import net.minecraftforge.client.model.ModelLoaderRegistry;
-import net.minecraftforge.client.model.PerspectiveMapWrapper;
-import net.minecraftforge.client.model.data.EmptyModelData;
-import net.minecraftforge.client.model.geometry.IModelGeometry;
-import net.minecraftforge.registries.ForgeRegistries;
-
 import forestry.core.config.Constants;
 import forestry.core.models.ClientManager;
 import forestry.core.utils.ResourceUtil;
 import forestry.storage.features.CrateItems;
 import forestry.storage.items.ItemCrated;
+import net.minecraft.client.renderer.block.model.BakedQuad;
+import net.minecraft.client.renderer.block.model.ItemOverrides;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.resources.model.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.util.GsonHelper;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.model.data.EmptyModelData;
+import net.minecraftforge.client.model.geometry.IModelGeometry;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
 
 @OnlyIn(Dist.CLIENT)
 public class CrateModel implements IModelGeometry<CrateModel> {

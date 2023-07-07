@@ -1,12 +1,6 @@
 package forestry.lepidopterology;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.core.NonNullList;
-import net.minecraft.world.level.Level;
-
 import com.mojang.authlib.GameProfile;
-
 import forestry.api.genetics.ForestryComponentKeys;
 import forestry.api.genetics.IResearchHandler;
 import forestry.api.lepidopterology.ButterflyManager;
@@ -18,29 +12,20 @@ import forestry.core.config.Constants;
 import forestry.core.genetics.root.IResearchPlugin;
 import forestry.core.genetics.root.ResearchHandler;
 import forestry.lepidopterology.features.LepidopterologyItems;
-import forestry.lepidopterology.genetics.ButterflyBranchDefinition;
-import forestry.lepidopterology.genetics.ButterflyDefinition;
-import forestry.lepidopterology.genetics.ButterflyHelper;
-import forestry.lepidopterology.genetics.ButterflyRoot;
-import forestry.lepidopterology.genetics.MothDefinition;
+import forestry.lepidopterology.genetics.*;
 import forestry.lepidopterology.genetics.alleles.ButterflyAlleles;
-
-import genetics.api.GeneticPlugin;
-import genetics.api.GeneticsAPI;
-import genetics.api.IGeneticApiInstance;
-import genetics.api.IGeneticFactory;
-import genetics.api.IGeneticPlugin;
+import genetics.api.*;
 import genetics.api.alleles.IAlleleRegistry;
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.classification.IClassificationRegistry;
 import genetics.api.individual.IIndividual;
 import genetics.api.organism.IOrganismTypes;
-import genetics.api.root.IGeneticListenerRegistry;
-import genetics.api.root.IIndividualRoot;
-import genetics.api.root.IIndividualRootBuilder;
-import genetics.api.root.IRootDefinition;
-import genetics.api.root.IRootManager;
+import genetics.api.root.*;
 import genetics.api.root.components.ComponentKeys;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 
 @GeneticPlugin(modId = Constants.MOD_ID)
 public class ButterflyPlugin implements IGeneticPlugin {

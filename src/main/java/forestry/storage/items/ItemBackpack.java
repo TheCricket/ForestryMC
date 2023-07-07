@@ -11,10 +11,22 @@
 package forestry.storage.items;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.util.List;
-
+import forestry.api.core.ItemGroups;
+import forestry.api.storage.BackpackStowEvent;
+import forestry.api.storage.EnumBackpackType;
+import forestry.api.storage.IBackpackDefinition;
+import forestry.core.config.Config;
+import forestry.core.config.Constants;
+import forestry.core.inventory.ItemHandlerInventoryManipulator;
+import forestry.core.inventory.ItemInventory;
+import forestry.core.inventory.StandardStackFilters;
+import forestry.core.items.ItemWithGui;
+import forestry.core.items.definitions.IColoredItem;
+import forestry.core.network.PacketBufferForestry;
+import forestry.core.tiles.TileUtil;
+import forestry.storage.BackpackMode;
+import forestry.storage.gui.ContainerBackpack;
+import forestry.storage.inventory.ItemInventoryBackpack;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -33,28 +45,13 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.items.IItemHandler;
 
-import forestry.api.core.ItemGroups;
-import forestry.api.storage.BackpackStowEvent;
-import forestry.api.storage.EnumBackpackType;
-import forestry.api.storage.IBackpackDefinition;
-import forestry.core.config.Config;
-import forestry.core.config.Constants;
-import forestry.core.inventory.ItemHandlerInventoryManipulator;
-import forestry.core.inventory.ItemInventory;
-import forestry.core.inventory.StandardStackFilters;
-import forestry.core.items.ItemWithGui;
-import forestry.core.items.definitions.IColoredItem;
-import forestry.core.network.PacketBufferForestry;
-import forestry.core.tiles.TileUtil;
-import forestry.storage.BackpackMode;
-import forestry.storage.gui.ContainerBackpack;
-import forestry.storage.inventory.ItemInventoryBackpack;
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class ItemBackpack extends ItemWithGui implements IColoredItem {
 	private final IBackpackDefinition definition;

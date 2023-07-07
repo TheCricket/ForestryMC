@@ -10,21 +10,6 @@
  ******************************************************************************/
 package forestry.energy.tiles;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.core.Direction;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-
 import forestry.api.core.IErrorLogic;
 import forestry.core.blocks.BlockBase;
 import forestry.core.config.Constants;
@@ -39,6 +24,19 @@ import forestry.core.utils.NetworkUtil;
 import forestry.energy.EnergyHelper;
 import forestry.energy.EnergyManager;
 import forestry.energy.EnergyTransferMode;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.util.LazyOptional;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
 
 public abstract class TileEngine extends TileBase implements IActivatable, IStreamableGui {
 	private static final int CANT_SEND_ENERGY_TIME = 20;

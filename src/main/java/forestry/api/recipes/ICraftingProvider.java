@@ -5,10 +5,10 @@
  ******************************************************************************/
 package forestry.api.recipes;
 
+import net.minecraft.world.item.crafting.RecipeManager;
+
 import javax.annotation.Nullable;
 import java.util.stream.Stream;
-
-import net.minecraft.world.item.crafting.RecipeManager;
 
 public interface ICraftingProvider<T extends IForestryRecipe> {
 

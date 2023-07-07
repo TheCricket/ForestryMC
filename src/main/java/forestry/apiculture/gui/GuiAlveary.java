@@ -10,16 +10,14 @@
  ******************************************************************************/
 package forestry.apiculture.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.apiculture.multiblock.IAlvearyControllerInternal;
 import forestry.apiculture.multiblock.TileAlveary;
 import forestry.core.config.Constants;
 import forestry.core.gui.GuiForestryTitled;
 import forestry.core.render.EnumTankLevel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 public class GuiAlveary extends GuiForestryTitled<ContainerAlveary> {
 	private final TileAlveary tile;

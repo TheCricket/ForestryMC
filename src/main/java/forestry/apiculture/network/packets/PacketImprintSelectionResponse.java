@@ -10,18 +10,12 @@
  ******************************************************************************/
 package forestry.apiculture.network.packets;
 
+import forestry.apiculture.gui.ContainerImprinter;
+import forestry.core.network.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.apiculture.gui.ContainerImprinter;
-import forestry.core.network.ForestryPacket;
-import forestry.core.network.IForestryPacketClient;
-import forestry.core.network.IForestryPacketHandlerClient;
-import forestry.core.network.PacketBufferForestry;
-import forestry.core.network.PacketIdClient;
 
 public class PacketImprintSelectionResponse extends ForestryPacket implements IForestryPacketClient {
 	private final int primary;

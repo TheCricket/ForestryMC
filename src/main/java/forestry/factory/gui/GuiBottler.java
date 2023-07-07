@@ -10,18 +10,16 @@
  ******************************************************************************/
 package forestry.factory.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.chat.Component;
-
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
-
+import com.mojang.blaze3d.vertex.PoseStack;
 import forestry.core.config.Constants;
 import forestry.core.gui.GuiForestryTitled;
 import forestry.core.gui.widgets.TankWidget;
 import forestry.core.render.ColourProperties;
 import forestry.core.utils.Translator;
 import forestry.factory.tiles.TileBottler;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
 
 public class GuiBottler extends GuiForestryTitled<ContainerBottler> {
 	private final TileBottler tile;

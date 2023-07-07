@@ -11,32 +11,24 @@
 package forestry.farming.logic;
 
 import com.google.common.base.Predicate;
+import forestry.api.farming.*;
+import forestry.core.utils.VectUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.Vec3i;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.AABB;
 
 import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.List;
 import java.util.Stack;
-
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Vec3i;
-import net.minecraft.world.level.Level;
-
-import forestry.api.farming.FarmDirection;
-import forestry.api.farming.ICrop;
-import forestry.api.farming.IFarmHousing;
-import forestry.api.farming.IFarmLogic;
-import forestry.api.farming.IFarmProperties;
-import forestry.api.farming.IFarmable;
-import forestry.api.farming.Soil;
-import forestry.core.utils.VectUtil;
 
 public abstract class FarmLogic implements IFarmLogic {
 	private final EntitySelectorFarm entitySelectorFarm;

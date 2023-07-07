@@ -10,8 +10,16 @@
  ******************************************************************************/
 package forestry.core.blocks;
 
-import javax.annotation.Nullable;
-
+import com.mojang.authlib.GameProfile;
+import forestry.api.core.ISpriteRegister;
+import forestry.api.core.ISpriteRegistry;
+import forestry.core.circuits.ISocketable;
+import forestry.core.owner.IOwnedTile;
+import forestry.core.owner.IOwnerHandler;
+import forestry.core.tiles.TileBase;
+import forestry.core.tiles.TileForestry;
+import forestry.core.tiles.TileUtil;
+import forestry.core.utils.InventoryUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
@@ -39,23 +47,12 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
-import com.mojang.authlib.GameProfile;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.fluids.FluidUtil;
 
-import forestry.api.core.ISpriteRegister;
-import forestry.api.core.ISpriteRegistry;
-import forestry.core.circuits.ISocketable;
-import forestry.core.owner.IOwnedTile;
-import forestry.core.owner.IOwnerHandler;
-import forestry.core.tiles.TileBase;
-import forestry.core.tiles.TileForestry;
-import forestry.core.tiles.TileUtil;
-import forestry.core.utils.InventoryUtil;
+import javax.annotation.Nullable;
 
 public class BlockBase<P extends Enum<P> & IBlockType> extends BlockForestry implements ISpriteRegister, EntityBlock {
 	/**

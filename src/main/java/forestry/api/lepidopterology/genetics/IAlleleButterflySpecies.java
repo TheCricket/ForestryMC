@@ -5,14 +5,13 @@
  ******************************************************************************/
 package forestry.api.lepidopterology.genetics;
 
-import java.util.Set;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.biome.Biome;
-
 import forestry.api.core.ISpriteRegister;
 import forestry.api.genetics.alleles.IAlleleForestrySpecies;
 import forestry.api.genetics.products.IDynamicProductList;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.biome.Biome;
+
+import java.util.Set;
 
 public interface IAlleleButterflySpecies extends IAlleleForestrySpecies, ISpriteRegister {
 

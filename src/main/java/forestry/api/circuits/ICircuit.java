@@ -5,10 +5,10 @@
  ******************************************************************************/
 package forestry.api.circuits;
 
-import java.util.List;
-
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+
+import java.util.List;
 
 public interface ICircuit {
 	String getUID();

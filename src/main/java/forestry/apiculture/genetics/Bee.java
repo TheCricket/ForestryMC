@@ -10,46 +10,9 @@
  ******************************************************************************/
 package forestry.apiculture.genetics;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Random;
-import java.util.Set;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.NonNullList;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Vec3i;
-import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.biome.Biome;
-
 import com.mojang.authlib.GameProfile;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import forestry.api.apiculture.BeeManager;
-import forestry.api.apiculture.FlowerManager;
-import forestry.api.apiculture.IApiaristTracker;
-import forestry.api.apiculture.IBeeHousing;
-import forestry.api.apiculture.IBeeModifier;
-import forestry.api.apiculture.IBeekeepingMode;
-import forestry.api.apiculture.genetics.BeeChromosomes;
-import forestry.api.apiculture.genetics.IAlleleBeeEffect;
-import forestry.api.apiculture.genetics.IAlleleBeeSpecies;
-import forestry.api.apiculture.genetics.IBee;
-import forestry.api.apiculture.genetics.IBeeMutation;
+import forestry.api.apiculture.*;
+import forestry.api.apiculture.genetics.*;
 import forestry.api.core.EnumHumidity;
 import forestry.api.core.EnumTemperature;
 import forestry.api.core.IErrorState;
@@ -69,7 +32,6 @@ import forestry.core.tiles.TileUtil;
 import forestry.core.utils.GeneticsUtil;
 import forestry.core.utils.Translator;
 import forestry.core.utils.VectUtil;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleValue;
 import genetics.api.individual.IChromosome;
@@ -80,6 +42,25 @@ import genetics.api.mutation.IMutationContainer;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.components.ComponentKeys;
 import genetics.individual.Genome;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.Vec3i;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import javax.annotation.Nullable;
+import java.util.*;
 
 public class Bee extends IndividualLiving implements IBee {
 	private static final String NBT_NATURAL = "NA";

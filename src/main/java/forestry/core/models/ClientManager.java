@@ -10,36 +10,6 @@
  ******************************************************************************/
 package forestry.core.models;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.BlockModelShaper;
-import net.minecraft.client.color.block.BlockColors;
-import net.minecraft.client.color.block.BlockColor;
-import net.minecraft.client.color.item.ItemColor;
-import net.minecraft.client.color.item.ItemColors;
-import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.client.resources.model.ModelState;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.BlockAndTintGetter;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.ModelBakeEvent;
-
 import forestry.core.blocks.IColoredBlock;
 import forestry.core.items.definitions.IColoredItem;
 import forestry.core.utils.ResourceUtil;
@@ -47,6 +17,29 @@ import forestry.modules.features.FeatureBlock;
 import forestry.modules.features.FeatureGroup;
 import forestry.modules.features.FeatureItem;
 import forestry.modules.features.FeatureTable;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.color.block.BlockColor;
+import net.minecraft.client.color.block.BlockColors;
+import net.minecraft.client.color.item.ItemColor;
+import net.minecraft.client.color.item.ItemColors;
+import net.minecraft.client.renderer.block.BlockModelShaper;
+import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.resources.model.ModelState;
+import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockAndTintGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.ModelBakeEvent;
+
+import javax.annotation.Nullable;
+import java.util.*;
 
 @OnlyIn(Dist.CLIENT)
 public class ClientManager {

@@ -1,22 +1,20 @@
 package forestry.core.utils;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Container;
+import net.minecraft.world.inventory.CraftingContainer;
+import net.minecraft.world.item.crafting.CraftingRecipe;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.DistExecutor;
+
 import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import net.minecraft.world.inventory.CraftingContainer;
-import net.minecraft.world.Container;
-import net.minecraft.world.item.crafting.CraftingRecipe;
-import net.minecraft.world.item.crafting.Recipe;
-import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.item.crafting.RecipeManager;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.Level;
-
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraftforge.fml.DistExecutor;
 
 public final class RecipeUtils {
     private RecipeUtils() {

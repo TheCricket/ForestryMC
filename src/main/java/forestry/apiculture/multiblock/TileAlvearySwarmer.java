@@ -10,21 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.multiblock;
 
-import javax.annotation.Nullable;
-import java.util.Map.Entry;
-import java.util.Optional;
-import java.util.Stack;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.WorldlyContainer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.genetics.EnumBeeType;
 import forestry.api.apiculture.genetics.IBee;
@@ -41,6 +26,20 @@ import forestry.core.tiles.IActivatable;
 import forestry.core.utils.ItemStackUtil;
 import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.WorldUtils;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
+
+import javax.annotation.Nullable;
+import java.util.Map.Entry;
+import java.util.Optional;
+import java.util.Stack;
 
 public class TileAlvearySwarmer extends TileAlveary implements WorldlyContainer, IActivatable, IAlvearyComponent.Active {
 

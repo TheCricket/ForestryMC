@@ -10,15 +10,14 @@
  ******************************************************************************/
 package forestry.apiculture.commands;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-import net.minecraft.world.level.Level;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.IBeekeepingMode;
 import forestry.core.commands.ICommandModeHelper;
+import net.minecraft.world.level.Level;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class BeeModeHelper implements ICommandModeHelper {
 	@Override

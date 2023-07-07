@@ -10,25 +10,23 @@
  ******************************************************************************/
 package forestry.climatology.blocks;
 
-import javax.annotation.Nullable;
-import java.util.Random;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.core.EnumTemperature;
 import forestry.climatology.tiles.TileHabitatFormer;
 import forestry.core.blocks.BlockBase;
 import forestry.core.blocks.IColoredBlock;
 import forestry.core.render.ParticleRender;
 import forestry.core.tiles.TileUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.util.Random;
 
 public class BlockHabitatFormer extends BlockBase<BlockTypeClimatology> implements IColoredBlock {
 	public BlockHabitatFormer() {

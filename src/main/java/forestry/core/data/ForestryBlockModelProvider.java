@@ -1,11 +1,10 @@
 package forestry.core.data;
 
+import forestry.core.config.Constants;
+import forestry.core.fluids.ForestryFluids;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-
-import forestry.core.config.Constants;
-import forestry.core.fluids.ForestryFluids;
 
 public class ForestryBlockModelProvider extends ModelProvider {
 	public ForestryBlockModelProvider(DataGenerator generator) {

@@ -10,19 +10,17 @@
  ******************************************************************************/
 package forestry.worktable.gui.widgets;
 
-import net.minecraft.client.gui.GuiComponent;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.world.item.ItemStack;
-
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
-
+import com.mojang.blaze3d.vertex.PoseStack;
 import forestry.core.gui.widgets.ItemStackWidgetBase;
 import forestry.core.gui.widgets.WidgetManager;
 import forestry.core.render.TextureManagerForestry;
 import forestry.core.utils.SoundUtil;
 import forestry.worktable.gui.ContainerWorktable;
 import forestry.worktable.recipes.RecipeMemory;
+import net.minecraft.client.gui.GuiComponent;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.world.item.ItemStack;
 
 public class MemorizedRecipeSlot extends ItemStackWidgetBase {
 	private static final TextureAtlasSprite lockIcon = TextureManagerForestry.getInstance().getDefault("slots/locked");

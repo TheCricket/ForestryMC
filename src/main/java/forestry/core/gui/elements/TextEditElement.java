@@ -1,14 +1,12 @@
 package forestry.core.gui.elements;
 
-import javax.annotation.Nullable;
-import java.awt.Rectangle;
-import java.util.function.Predicate;
-
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.network.chat.TextComponent;
 
-import com.mojang.blaze3d.vertex.PoseStack;
+import javax.annotation.Nullable;
+import java.awt.*;
+import java.util.function.Predicate;
 
 public class TextEditElement extends GuiElement implements IValueElement<String> {
 

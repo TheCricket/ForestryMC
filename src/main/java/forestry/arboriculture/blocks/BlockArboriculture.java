@@ -10,9 +10,8 @@
  ******************************************************************************/
 package forestry.arboriculture.blocks;
 
-import net.minecraft.world.level.material.Material;
-
 import forestry.core.blocks.BlockBase;
+import net.minecraft.world.level.material.Material;
 
 public class BlockArboriculture extends BlockBase<BlockTypeArboricultureTesr> {
 	public BlockArboriculture(BlockTypeArboricultureTesr type) {

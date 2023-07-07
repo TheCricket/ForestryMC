@@ -1,11 +1,5 @@
 package forestry.core.genetics.analyzer;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.function.Supplier;
-
-import net.minecraft.world.item.ItemStack;
-
 import forestry.api.apiculture.genetics.IBee;
 import forestry.api.arboriculture.genetics.ITree;
 import forestry.core.gui.elements.Alignment;
@@ -14,8 +8,12 @@ import forestry.core.gui.elements.GuiElementFactory;
 import forestry.core.gui.elements.ItemElement;
 import forestry.core.gui.elements.layouts.FlexLayout;
 import forestry.core.gui.elements.layouts.LayoutHelper;
-
 import genetics.api.individual.IIndividual;
+import net.minecraft.world.item.ItemStack;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.function.Supplier;
 
 public class ProductsTab extends DatabaseTab {
 	public ProductsTab(Supplier<ItemStack> stackSupplier) {

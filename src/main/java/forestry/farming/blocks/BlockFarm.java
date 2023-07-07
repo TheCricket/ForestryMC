@@ -10,9 +10,8 @@
  ******************************************************************************/
 package forestry.farming.blocks;
 
-import javax.annotation.Nullable;
-import java.util.Locale;
-
+import forestry.core.blocks.BlockStructure;
+import forestry.farming.tiles.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;
@@ -28,12 +27,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.Material;
 
-import forestry.core.blocks.BlockStructure;
-import forestry.farming.tiles.TileFarmControl;
-import forestry.farming.tiles.TileFarmGearbox;
-import forestry.farming.tiles.TileFarmHatch;
-import forestry.farming.tiles.TileFarmPlain;
-import forestry.farming.tiles.TileFarmValve;
+import javax.annotation.Nullable;
+import java.util.Locale;
 
 public class BlockFarm extends BlockStructure implements EntityBlock {
 

@@ -10,10 +10,10 @@
  ******************************************************************************/
 package forestry.climatology.blocks;
 
-import java.util.Locale;
-
-import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+
+import java.util.Locale;
 
 public enum State implements StringRepresentable {
 	ON, OFF;

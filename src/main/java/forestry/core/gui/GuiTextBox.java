@@ -10,15 +10,14 @@
  ******************************************************************************/
 package forestry.core.gui;
 
-import java.util.List;
-
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
+import net.minecraft.util.FormattedCharSequence;
 
-import com.mojang.blaze3d.vertex.PoseStack;
+import java.util.List;
 
 public class GuiTextBox extends EditBox {
 	private static final int enabledColor = 14737632;

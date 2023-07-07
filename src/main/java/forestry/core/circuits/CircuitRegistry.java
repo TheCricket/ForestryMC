@@ -10,19 +10,14 @@
  ******************************************************************************/
 package forestry.core.circuits;
 
-import javax.annotation.Nullable;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
+import forestry.api.circuits.*;
+import forestry.core.features.CoreItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 
-import forestry.api.circuits.CircuitSocketType;
-import forestry.api.circuits.ICircuit;
-import forestry.api.circuits.ICircuitBoard;
-import forestry.api.circuits.ICircuitLayout;
-import forestry.api.circuits.ICircuitRegistry;
-import forestry.core.features.CoreItems;
+import javax.annotation.Nullable;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class CircuitRegistry implements ICircuitRegistry {
 

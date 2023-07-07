@@ -10,8 +10,10 @@
  ******************************************************************************/
 package forestry.core.utils;
 
-import javax.annotation.Nullable;
-
+import forestry.core.circuits.ISocketable;
+import forestry.core.inventory.ItemHandlerInventoryManipulator;
+import forestry.core.inventory.StandardStackFilters;
+import forestry.core.tiles.AdjacentTileCache;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;
@@ -23,14 +25,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
-
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.items.IItemHandler;
 
-import forestry.core.circuits.ISocketable;
-import forestry.core.inventory.ItemHandlerInventoryManipulator;
-import forestry.core.inventory.StandardStackFilters;
-import forestry.core.tiles.AdjacentTileCache;
+import javax.annotation.Nullable;
 
 //import net.minecraftforge.fml.common.Optional;
 //import forestry.plugins.ForestryCompatPlugins;

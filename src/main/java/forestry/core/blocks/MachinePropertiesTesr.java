@@ -1,23 +1,20 @@
 package forestry.core.blocks;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.util.function.Supplier;
-
-import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.state.BlockState;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-
 import forestry.core.config.Constants;
 import forestry.core.render.IForestryRendererProvider;
 import forestry.core.render.RenderForestryTile;
 import forestry.core.tiles.TileForestry;
 import forestry.modules.features.FeatureTileType;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.EntityRenderersEvent;
+
+import javax.annotation.Nullable;
+import java.util.function.Supplier;
 
 public class MachinePropertiesTesr<T extends TileForestry> extends MachineProperties<T> implements IMachinePropertiesTesr<T> {
 

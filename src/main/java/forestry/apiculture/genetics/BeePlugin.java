@@ -1,18 +1,5 @@
 package forestry.apiculture.genetics;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import genetics.api.GeneticHelper;
-import genetics.api.organism.IOrganism;
-
 import forestry.api.apiculture.genetics.BeeChromosomes;
 import forestry.api.apiculture.genetics.IAlleleBeeSpecies;
 import forestry.api.apiculture.genetics.IBee;
@@ -23,6 +10,16 @@ import forestry.core.config.Config;
 import forestry.core.genetics.analyzer.DatabasePlugin;
 import forestry.core.genetics.analyzer.MutationsTab;
 import forestry.core.genetics.analyzer.ProductsTab;
+import genetics.api.GeneticHelper;
+import genetics.api.organism.IOrganism;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @OnlyIn(Dist.CLIENT)
 public class BeePlugin extends DatabasePlugin<IBee> {

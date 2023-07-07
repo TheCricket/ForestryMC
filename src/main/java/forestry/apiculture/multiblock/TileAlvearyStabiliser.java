@@ -10,15 +10,13 @@
  ******************************************************************************/
 package forestry.apiculture.multiblock;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-
-import genetics.api.individual.IGenome;
-
 import forestry.api.apiculture.DefaultBeeModifier;
 import forestry.api.apiculture.IBeeModifier;
 import forestry.api.multiblock.IAlvearyComponent;
 import forestry.apiculture.blocks.BlockAlvearyType;
+import genetics.api.individual.IGenome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class TileAlvearyStabiliser extends TileAlveary implements IAlvearyComponent.BeeModifier {
 

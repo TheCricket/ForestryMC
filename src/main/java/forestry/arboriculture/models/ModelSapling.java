@@ -1,49 +1,35 @@
 package forestry.arboriculture.models;
 
 import com.google.common.collect.ImmutableMap;
-
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.Set;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.renderer.block.model.BakedQuad;
-import net.minecraft.client.renderer.block.model.ItemOverrides;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.client.resources.model.BlockModelRotation;
-import net.minecraft.client.resources.model.Material;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelState;
-import net.minecraft.client.resources.model.UnbakedModel;
-import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.state.BlockState;
-
 import com.mojang.datafixers.util.Pair;
-
-import net.minecraftforge.client.model.IModelConfiguration;
-import net.minecraftforge.client.model.data.EmptyModelData;
-import net.minecraftforge.client.model.data.IModelData;
-import net.minecraftforge.client.model.geometry.IModelGeometry;
-
 import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
 import forestry.api.arboriculture.genetics.ITree;
 import forestry.api.arboriculture.genetics.TreeChromosomes;
 import forestry.arboriculture.genetics.TreeDefinition;
 import forestry.arboriculture.tiles.TileSapling;
-
 import genetics.api.GeneticHelper;
 import genetics.api.organism.IOrganism;
 import genetics.utils.AlleleUtils;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.renderer.block.model.BakedQuad;
+import net.minecraft.client.renderer.block.model.ItemOverrides;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.resources.model.*;
+import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.client.model.IModelConfiguration;
+import net.minecraftforge.client.model.data.EmptyModelData;
+import net.minecraftforge.client.model.data.IModelData;
+import net.minecraftforge.client.model.geometry.IModelGeometry;
+
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ModelSapling implements IModelGeometry<ModelSapling> {
 

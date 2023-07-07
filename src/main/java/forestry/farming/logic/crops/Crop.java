@@ -10,14 +10,13 @@
  ******************************************************************************/
 package forestry.farming.logic.crops;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
+import forestry.api.farming.ICrop;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-import forestry.api.farming.ICrop;
+import javax.annotation.Nullable;
 
 public abstract class Crop implements ICrop {
 	private final Level world;

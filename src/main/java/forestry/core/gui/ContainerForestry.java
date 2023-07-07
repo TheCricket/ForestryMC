@@ -10,20 +10,15 @@
  ******************************************************************************/
 package forestry.core.gui;
 
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.ClickType;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.inventory.ContainerListener;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.item.ItemStack;
-
 import forestry.core.gui.slots.SlotForestry;
 import forestry.core.gui.slots.SlotLocked;
 import forestry.core.network.IForestryPacketClient;
 import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.SlotUtil;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.*;
+import net.minecraft.world.item.ItemStack;
 
 //import invtweaks.api.container.ContainerSection;
 //import invtweaks.api.container.ContainerSectionCallback;

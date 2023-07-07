@@ -10,12 +10,11 @@
  ******************************************************************************/
 package forestry.lepidopterology.tiles;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.state.BlockState;
-
 import forestry.api.lepidopterology.ButterflyManager;
 import forestry.core.tiles.TileNaturalistChest;
 import forestry.lepidopterology.features.LepidopterologyTiles;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class TileLepidopteristChest extends TileNaturalistChest {
 	public TileLepidopteristChest(BlockPos pos, BlockState state) {

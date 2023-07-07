@@ -1,14 +1,6 @@
 package forestry.core.gui.elements;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.client.Minecraft;
-import com.mojang.blaze3d.platform.Lighting;
-import net.minecraft.world.item.ItemStack;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.platform.GlStateManager;
-
 import forestry.api.genetics.gatgets.IDatabasePlugin;
 import forestry.api.genetics.gatgets.IDatabaseTab;
 import forestry.core.genetics.analyzer.AnalyzerTab;
@@ -17,6 +9,10 @@ import forestry.core.gui.GuiUtil;
 import forestry.core.gui.elements.layouts.ContainerElement;
 import forestry.core.gui.elements.layouts.FlexLayout;
 import forestry.core.utils.SoundUtil;
+import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.ItemStack;
+
+import javax.annotation.Nullable;
 
 public class GeneticAnalyzerTabs extends ContainerElement {
 	private static final Drawable SELECTED_BACKGROUND = new Drawable(GeneticAnalyzer.TEXTURE, 0, 166, 35, 26);

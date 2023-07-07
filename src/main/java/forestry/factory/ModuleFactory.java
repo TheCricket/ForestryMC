@@ -10,26 +10,10 @@
  ******************************************************************************/
 package forestry.factory;
 
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.Fluids;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.fluids.FluidAttributes;
-import net.minecraftforge.fluids.FluidStack;
-
 import forestry.api.circuits.ChipsetManager;
 import forestry.api.circuits.CircuitSocketType;
 import forestry.api.circuits.ICircuitLayout;
-import forestry.api.fuels.EngineBronzeFuel;
-import forestry.api.fuels.EngineCopperFuel;
-import forestry.api.fuels.FermenterFuel;
-import forestry.api.fuels.FuelManager;
-import forestry.api.fuels.MoistenerFuel;
-import forestry.api.fuels.RainSubstrate;
+import forestry.api.fuels.*;
 import forestry.api.modules.ForestryModule;
 import forestry.api.recipes.RecipeManagers;
 import forestry.core.circuits.CircuitLayout;
@@ -47,27 +31,20 @@ import forestry.core.utils.datastructures.FluidMap;
 import forestry.core.utils.datastructures.ItemStackMap;
 import forestry.factory.circuits.CircuitSpeedUpgrade;
 import forestry.factory.features.FactoryContainers;
-import forestry.factory.gui.GuiBottler;
-import forestry.factory.gui.GuiCarpenter;
-import forestry.factory.gui.GuiCentrifuge;
-import forestry.factory.gui.GuiFabricator;
-import forestry.factory.gui.GuiFermenter;
-import forestry.factory.gui.GuiMoistener;
-import forestry.factory.gui.GuiRaintank;
-import forestry.factory.gui.GuiSqueezer;
-import forestry.factory.gui.GuiStill;
+import forestry.factory.gui.*;
 import forestry.factory.network.PacketRegistryFactory;
-import forestry.factory.recipes.CarpenterRecipeManager;
-import forestry.factory.recipes.CentrifugeRecipeManager;
-import forestry.factory.recipes.FabricatorRecipeManager;
-import forestry.factory.recipes.FabricatorSmeltingRecipeManager;
-import forestry.factory.recipes.FermenterRecipeManager;
-import forestry.factory.recipes.MoistenerRecipeManager;
-import forestry.factory.recipes.SqueezerContainerRecipeManager;
-import forestry.factory.recipes.SqueezerRecipeManager;
-import forestry.factory.recipes.StillRecipeManager;
+import forestry.factory.recipes.*;
 import forestry.modules.BlankForestryModule;
 import forestry.modules.ForestryModuleUids;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidStack;
 
 @ForestryModule(containerID = Constants.MOD_ID, moduleID = ForestryModuleUids.FACTORY, name = "Factory", author = "SirSengir", url = Constants.URL, unlocalizedDescription = "for.module.factory.description", lootTable = "factory")
 public class ModuleFactory extends BlankForestryModule {

@@ -1,20 +1,15 @@
 package forestry.apiculture;
 
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
-
 import forestry.api.genetics.alyzer.IAlleleDisplayHelper;
 import forestry.api.genetics.alyzer.IAlyzerDisplayProvider;
 import forestry.apiculture.genetics.IGeneticTooltipProvider;
-
 import genetics.api.individual.IIndividual;
 import genetics.api.organism.IOrganismType;
+
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class DisplayHelper implements IAlleleDisplayHelper {
 	private final Map<String, PriorityQueue<OrderedPair<IGeneticTooltipProvider<?>>>> tooltips = new HashMap<>();

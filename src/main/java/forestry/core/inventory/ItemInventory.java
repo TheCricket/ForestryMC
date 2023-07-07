@@ -11,19 +11,15 @@
 package forestry.core.inventory;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.util.Random;
-
-import net.minecraft.world.entity.player.Player;
+import forestry.core.tiles.IFilterSlotDelegate;
+import net.minecraft.core.Direction;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.core.NonNullList;
-
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
@@ -31,7 +27,8 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-import forestry.core.tiles.IFilterSlotDelegate;
+import javax.annotation.Nullable;
+import java.util.Random;
 
 public abstract class ItemInventory implements Container, IFilterSlotDelegate, ICapabilityProvider {
 	private static final String KEY_SLOTS = "Slots";

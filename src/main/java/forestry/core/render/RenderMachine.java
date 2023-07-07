@@ -10,6 +10,13 @@
  ******************************************************************************/
 package forestry.core.render;
 
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.math.Vector3f;
+import forestry.core.blocks.BlockBase;
+import forestry.core.config.Constants;
+import forestry.core.fluids.ForestryFluids;
+import forestry.core.tiles.IRenderableTile;
+import forestry.core.tiles.TileBase;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -24,18 +31,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.fluids.FluidAttributes;
 
-import java.awt.Color;
+import java.awt.*;
 import java.util.EnumMap;
 import java.util.Locale;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.math.Vector3f;
-
-import forestry.core.blocks.BlockBase;
-import forestry.core.config.Constants;
-import forestry.core.fluids.ForestryFluids;
-import forestry.core.tiles.IRenderableTile;
-import forestry.core.tiles.TileBase;
 
 public class RenderMachine implements IForestryRenderer<TileBase> {
 	public static final ModelLayerLocation MODEL_LAYER = IForestryRenderer.register("machine");

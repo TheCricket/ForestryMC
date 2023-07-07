@@ -10,28 +10,21 @@
  ******************************************************************************/
 package forestry.core.network.packets;
 
-import java.io.IOException;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.nbt.CompoundTag;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.MinecraftForge;
-
 import forestry.api.core.ForestryEvent;
 import forestry.api.genetics.IBreedingTracker;
 import forestry.api.genetics.IForestrySpeciesRoot;
 import forestry.core.genetics.BreedingTracker;
-import forestry.core.network.ForestryPacket;
-import forestry.core.network.IForestryPacketClient;
-import forestry.core.network.IForestryPacketHandlerClient;
-import forestry.core.network.PacketBufferForestry;
-import forestry.core.network.PacketIdClient;
-
+import forestry.core.network.*;
 import genetics.api.GeneticsAPI;
 import genetics.api.individual.IIndividual;
 import genetics.api.root.IRootDefinition;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.MinecraftForge;
+
+import java.io.IOException;
 
 public class PacketGenomeTrackerSync extends ForestryPacket implements IForestryPacketClient {
 	private final CompoundTag nbt;

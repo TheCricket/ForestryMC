@@ -5,9 +5,9 @@
  ******************************************************************************/
 package forestry.api.arboriculture;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
 
 public interface ICharcoalPileWall {
 

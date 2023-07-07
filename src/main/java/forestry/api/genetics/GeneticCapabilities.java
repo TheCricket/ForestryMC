@@ -5,11 +5,10 @@
  ******************************************************************************/
 package forestry.api.genetics;
 
+import forestry.api.genetics.filter.IFilterLogic;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.CapabilityToken;
-
-import forestry.api.genetics.filter.IFilterLogic;
 
 public class GeneticCapabilities {
 	/**

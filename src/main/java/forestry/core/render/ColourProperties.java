@@ -10,17 +10,15 @@
  ******************************************************************************/
 package forestry.core.render;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
-
+import forestry.core.utils.Log;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.core.utils.Log;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 @OnlyIn(Dist.CLIENT)
 public class ColourProperties implements ResourceManagerReloadListener {

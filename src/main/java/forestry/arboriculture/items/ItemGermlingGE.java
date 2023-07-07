@@ -10,9 +10,24 @@
  ******************************************************************************/
 package forestry.arboriculture.items;
 
-import javax.annotation.Nullable;
-import java.util.Optional;
-
+import forestry.api.arboriculture.TreeManager;
+import forestry.api.arboriculture.genetics.EnumGermlingType;
+import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
+import forestry.api.arboriculture.genetics.ITree;
+import forestry.api.arboriculture.genetics.TreeChromosomes;
+import forestry.api.core.ItemGroups;
+import forestry.api.genetics.ICheckPollinatable;
+import forestry.api.genetics.IPollinatable;
+import forestry.api.recipes.IVariableFermentable;
+import forestry.arboriculture.genetics.TreeHelper;
+import forestry.core.config.Config;
+import forestry.core.genetics.ItemGE;
+import forestry.core.items.definitions.IColoredItem;
+import forestry.core.network.packets.PacketFXSignal;
+import forestry.core.utils.GeneticsUtil;
+import forestry.core.utils.NetworkUtil;
+import genetics.api.GeneticHelper;
+import genetics.api.organism.IOrganismType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
@@ -31,30 +46,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 
-import forestry.api.arboriculture.TreeManager;
-import forestry.api.arboriculture.genetics.EnumGermlingType;
-import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
-import forestry.api.arboriculture.genetics.ITree;
-import forestry.api.arboriculture.genetics.TreeChromosomes;
-import forestry.api.core.ItemGroups;
-import forestry.api.genetics.ICheckPollinatable;
-import forestry.api.genetics.IPollinatable;
-import forestry.api.recipes.IVariableFermentable;
-import forestry.arboriculture.genetics.TreeHelper;
-import forestry.core.config.Config;
-import forestry.core.genetics.ItemGE;
-import forestry.core.items.definitions.IColoredItem;
-import forestry.core.network.packets.PacketFXSignal;
-import forestry.core.utils.GeneticsUtil;
-import forestry.core.utils.NetworkUtil;
-
-import genetics.api.GeneticHelper;
-import genetics.api.organism.IOrganismType;
+import javax.annotation.Nullable;
+import java.util.Optional;
 
 public class ItemGermlingGE extends ItemGE implements IVariableFermentable, IColoredItem {
 

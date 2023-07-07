@@ -5,13 +5,11 @@
  ******************************************************************************/
 package forestry.api.genetics.alleles;
 
-import net.minecraft.network.chat.Component;
-
 import forestry.api.core.EnumHumidity;
 import forestry.api.core.EnumTemperature;
-
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.organism.IOrganismType;
+import net.minecraft.network.chat.Component;
 
 /**
  * Basic species allele.

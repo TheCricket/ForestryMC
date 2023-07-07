@@ -1,27 +1,5 @@
 package forestry.arboriculture.villagers;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Random;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.ai.village.poi.PoiType;
-import net.minecraft.world.entity.npc.VillagerProfession;
-import net.minecraft.world.entity.npc.VillagerTrades;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.trading.MerchantOffer;
-
-import net.minecraftforge.event.village.VillagerTradesEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import net.minecraftforge.fml.common.Mod;
-
 import forestry.api.arboriculture.EnumForestryWoodType;
 import forestry.api.arboriculture.TreeManager;
 import forestry.api.arboriculture.WoodBlockKind;
@@ -32,13 +10,31 @@ import forestry.arboriculture.features.ArboricultureItems;
 import forestry.core.config.Constants;
 import forestry.core.genetics.alleles.AlleleForestrySpecies;
 import forestry.core.registration.VillagerTrade;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.individual.IChromosomeType;
 import genetics.api.organism.IOrganismType;
 import genetics.utils.AlleleUtils;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.ai.village.poi.PoiType;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraftforge.event.village.VillagerTradesEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Random;
 
 public class RegisterVillager {
 	public static final ResourceLocation ARBORIST = new ResourceLocation(Constants.MOD_ID, "arborist");

@@ -5,11 +5,10 @@
  ******************************************************************************/
 package forestry.api.recipes;
 
-import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.item.crafting.Ingredient;
-
+import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.ObjectHolder;
 

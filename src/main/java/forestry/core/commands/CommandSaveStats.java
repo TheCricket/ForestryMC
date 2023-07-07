@@ -10,40 +10,32 @@
  ******************************************************************************/
 package forestry.core.commands;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.nio.charset.StandardCharsets;
-import java.text.DateFormat;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.Commands;
-import net.minecraft.commands.arguments.EntityArgument;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.level.Level;
-
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.builder.ArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
-
-import net.minecraftforge.fml.ModList;
-
 import forestry.api.genetics.IBreedingTracker;
 import forestry.core.config.Constants;
 import forestry.core.proxy.Proxies;
 import forestry.core.utils.Log;
 import forestry.core.utils.StringUtil;
 import forestry.core.utils.Translator;
-
 import genetics.api.GeneticsAPI;
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.commands.CommandHelpers;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.commands.arguments.EntityArgument;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.fml.ModList;
+
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.text.DateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
 
 public final class CommandSaveStats implements Command<CommandSourceStack> {
 

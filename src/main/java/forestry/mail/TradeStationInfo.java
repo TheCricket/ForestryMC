@@ -10,15 +10,13 @@
  ******************************************************************************/
 package forestry.mail;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-
 import com.mojang.authlib.GameProfile;
-
 import forestry.api.mail.EnumAddressee;
 import forestry.api.mail.EnumTradeStationState;
 import forestry.api.mail.IMailAddress;
 import forestry.api.mail.ITradeStationInfo;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
 
 public class TradeStationInfo implements ITradeStationInfo {
 	private final IMailAddress address;

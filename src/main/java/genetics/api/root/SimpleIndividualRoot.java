@@ -1,13 +1,12 @@
 package genetics.api.root;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-
-import net.minecraft.nbt.CompoundTag;
-
 import genetics.api.individual.IGenome;
 import genetics.api.individual.IGenomeWrapper;
 import genetics.api.individual.IIndividual;
+import net.minecraft.nbt.CompoundTag;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 
 public class SimpleIndividualRoot<I extends IIndividual> extends IndividualRoot<I> {
 	protected final Class<? extends I> individualClass;

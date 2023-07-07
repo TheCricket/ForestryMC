@@ -10,11 +10,10 @@
  ******************************************************************************/
 package forestry.core.inventory;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-
 import forestry.api.genetics.IForestrySpeciesRoot;
 import forestry.core.tiles.TileNaturalistChest;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.ItemStack;
 
 public class InventoryNaturalistChest extends InventoryAdapterTile<TileNaturalistChest> {
 	private final IForestrySpeciesRoot speciesRoot;

@@ -11,19 +11,6 @@
 package forestry.lepidopterology.proxy;
 
 import com.google.common.collect.ImmutableList;
-
-import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.resources.ResourceLocation;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ForgeModelBakery;
-import net.minecraftforge.client.model.ModelLoaderRegistry;
-
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-
 import forestry.api.lepidopterology.genetics.ButterflyChromosomes;
 import forestry.core.config.Constants;
 import forestry.lepidopterology.features.LepidopterologyEntities;
@@ -32,8 +19,16 @@ import forestry.lepidopterology.render.ButterflyEntityRenderer;
 import forestry.lepidopterology.render.ButterflyItemModel;
 import forestry.lepidopterology.render.CocoonItemModel;
 import forestry.modules.IClientModuleHandler;
-
 import genetics.utils.AlleleUtils;
+import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ForgeModelBakery;
+import net.minecraftforge.client.model.ModelLoaderRegistry;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @SuppressWarnings("unused")
 @OnlyIn(Dist.CLIENT)

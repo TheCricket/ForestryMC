@@ -10,21 +10,7 @@
  ******************************************************************************/
 package forestry.energy.render;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.geom.PartPose;
-import net.minecraft.client.model.geom.builders.CubeListBuilder;
-import net.minecraft.client.model.geom.builders.LayerDefinition;
-import net.minecraft.client.model.geom.builders.MeshDefinition;
-import net.minecraft.client.model.geom.builders.PartDefinition;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
 import com.mojang.math.Vector3f;
-import net.minecraft.world.level.Level;
-
 import forestry.core.blocks.BlockBase;
 import forestry.core.config.Constants;
 import forestry.core.render.ForestryResource;
@@ -32,6 +18,18 @@ import forestry.core.render.IForestryRenderer;
 import forestry.core.render.RenderHelper;
 import forestry.core.tiles.TemperatureState;
 import forestry.energy.tiles.TileEngine;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.builders.CubeListBuilder;
+import net.minecraft.client.model.geom.builders.LayerDefinition;
+import net.minecraft.client.model.geom.builders.MeshDefinition;
+import net.minecraft.client.model.geom.builders.PartDefinition;
+import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class RenderEngine implements IForestryRenderer<TileEngine> {
 	public static final ModelLayerLocation MODEL_LAYER = IForestryRenderer.register("engine");

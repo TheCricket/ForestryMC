@@ -10,21 +10,6 @@
  ******************************************************************************/
 package forestry.lepidopterology.genetics;
 
-import javax.annotation.Nullable;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-
-import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.biome.Biome;
-
 import forestry.api.core.EnumHumidity;
 import forestry.api.core.EnumTemperature;
 import forestry.api.core.IErrorState;
@@ -36,16 +21,11 @@ import forestry.api.lepidopterology.ButterflyManager;
 import forestry.api.lepidopterology.IButterflyCocoon;
 import forestry.api.lepidopterology.IButterflyNursery;
 import forestry.api.lepidopterology.IEntityButterfly;
-import forestry.api.lepidopterology.genetics.ButterflyChromosomes;
-import forestry.api.lepidopterology.genetics.EnumFlutterType;
-import forestry.api.lepidopterology.genetics.IAlleleButterflySpecies;
-import forestry.api.lepidopterology.genetics.IButterfly;
-import forestry.api.lepidopterology.genetics.IButterflyMutation;
+import forestry.api.lepidopterology.genetics.*;
 import forestry.core.errors.EnumErrorCode;
 import forestry.core.genetics.IndividualLiving;
 import forestry.core.utils.ClimateUtil;
 import forestry.lepidopterology.ModuleLepidopterology;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.individual.IChromosome;
 import genetics.api.individual.IGenome;
@@ -53,6 +33,20 @@ import genetics.api.mutation.IMutationContainer;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.components.ComponentKeys;
 import genetics.individual.Genome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+
+import javax.annotation.Nullable;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 public class Butterfly extends IndividualLiving implements IButterfly {
 	private static final Random rand = new Random();

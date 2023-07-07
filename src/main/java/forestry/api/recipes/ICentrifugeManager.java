@@ -5,12 +5,12 @@
  ******************************************************************************/
 package forestry.api.recipes;
 
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeManager;
+
 import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Optional;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeManager;
 
 /**
  * Provides an interface to the recipe manager of the centrifuge.

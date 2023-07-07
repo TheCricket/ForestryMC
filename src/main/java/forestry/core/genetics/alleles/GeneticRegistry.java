@@ -10,17 +10,7 @@
  ******************************************************************************/
 package forestry.core.genetics.alleles;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Set;
-
-import net.minecraft.world.item.ItemStack;
-
 import com.mojang.authlib.GameProfile;
-
 import forestry.api.apiculture.genetics.BeeChromosomes;
 import forestry.api.arboriculture.genetics.TreeChromosomes;
 import forestry.api.genetics.IFruitFamily;
@@ -31,7 +21,6 @@ import forestry.api.lepidopterology.genetics.ButterflyChromosomes;
 import forestry.core.config.Constants;
 import forestry.core.features.CoreItems;
 import forestry.core.genetics.ItemResearchNote.EnumNoteType;
-
 import genetics.api.alleles.AlleleCategorizedValue;
 import genetics.api.alleles.IAlleleRegistry;
 import genetics.api.alleles.IAlleleValue;
@@ -39,6 +28,9 @@ import genetics.api.classification.IClassification;
 import genetics.api.classification.IClassification.EnumClassLevel;
 import genetics.api.classification.IClassificationRegistry;
 import genetics.api.mutation.IMutation;
+import net.minecraft.world.item.ItemStack;
+
+import java.util.*;
 
 public class GeneticRegistry implements IGeneticRegistry {
 

@@ -1,13 +1,5 @@
 package forestry.apiculture.genetics;
 
-import java.util.Optional;
-import java.util.function.Function;
-
-import net.minecraft.world.item.ItemStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.genetics.BeeChromosomes;
 import forestry.api.apiculture.genetics.EnumBeeType;
@@ -23,8 +15,13 @@ import forestry.core.gui.elements.DatabaseElement;
 import forestry.core.gui.elements.GuiElementFactory;
 import forestry.core.utils.StringUtil;
 import forestry.core.utils.Translator;
-
 import genetics.api.organism.IOrganismType;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.Optional;
+import java.util.function.Function;
 
 @OnlyIn(Dist.CLIENT)
 public class BeeDatabaseTab implements IDatabaseTab<IBee> {

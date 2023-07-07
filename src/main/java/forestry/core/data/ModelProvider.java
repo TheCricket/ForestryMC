@@ -1,37 +1,26 @@
 package forestry.core.data;
 
 import com.google.common.collect.Maps;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
+import com.google.gson.*;
+import forestry.modules.features.FeatureItem;
+import net.minecraft.client.renderer.block.model.BlockFaceUV;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Vec3i;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.DataProvider;
+import net.minecraft.data.HashCache;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.annotation.Nullable;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.client.renderer.block.model.BlockFaceUV;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.HashCache;
-import net.minecraft.data.DataProvider;
-import net.minecraft.world.item.Item;
-import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.Vec3i;
-
-import forestry.modules.features.FeatureItem;
+import java.util.*;
 
 //TODO: Migrate to forge system
 public abstract class ModelProvider implements DataProvider {

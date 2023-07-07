@@ -1,15 +1,12 @@
 package forestry.core.multiblock;
 
+import forestry.core.config.Constants;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.chunk.ChunkAccess;
-
 import net.minecraftforge.event.world.ChunkEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-
 import net.minecraftforge.fml.common.Mod;
-
-import forestry.core.config.Constants;
 
 /**
  * In your mod, subscribe this on both the client and server sides side to handle chunk

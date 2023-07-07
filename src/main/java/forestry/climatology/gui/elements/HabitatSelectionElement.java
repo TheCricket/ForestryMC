@@ -10,22 +10,8 @@
  ******************************************************************************/
 package forestry.climatology.gui.elements;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
-
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.biome.Biome;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.climate.IClimateState;
 import forestry.api.climate.IClimateTransformer;
 import forestry.api.core.ForestryAPI;
@@ -36,6 +22,17 @@ import forestry.core.gui.elements.GuiElement;
 import forestry.core.gui.elements.layouts.ContainerElement;
 import forestry.core.render.TextureManagerForestry;
 import forestry.core.utils.StringUtil;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
 public class HabitatSelectionElement extends ContainerElement {

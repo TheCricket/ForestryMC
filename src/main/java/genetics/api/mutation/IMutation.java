@@ -1,13 +1,12 @@
 package genetics.api.mutation;
 
-import java.util.Collection;
-
-import net.minecraft.network.chat.Component;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.components.ComponentKey;
+import net.minecraft.network.chat.Component;
+
+import java.util.Collection;
 
 /**
  * A mutation provides a type of progression to the genetic system under the right conditions an offspring of the

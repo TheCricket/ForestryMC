@@ -10,34 +10,21 @@
  ******************************************************************************/
 package forestry.mail.gui;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.EnumSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerListener;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.server.level.ServerLevel;
-
-import forestry.api.mail.EnumAddressee;
-import forestry.api.mail.EnumTradeStationState;
-import forestry.api.mail.IMailAddress;
-import forestry.api.mail.IPostOffice;
-import forestry.api.mail.IPostalState;
-import forestry.api.mail.ITradeStation;
-import forestry.api.mail.ITradeStationInfo;
-import forestry.api.mail.PostManager;
+import forestry.api.mail.*;
 import forestry.core.gui.IGuiSelectable;
 import forestry.core.utils.NetworkUtil;
 import forestry.mail.features.MailContainers;
 import forestry.mail.network.packets.PacketLetterInfoResponse;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerListener;
+
+import javax.annotation.Nullable;
+import java.util.*;
 
 public class ContainerCatalogue extends AbstractContainerMenu implements IGuiSelectable, ILetterInfoReceiver {
 

@@ -5,11 +5,11 @@
  ******************************************************************************/
 package forestry.api.climate;
 
-import java.util.function.Function;
-import java.util.function.UnaryOperator;
-
 import forestry.api.core.EnumHumidity;
 import forestry.api.core.EnumTemperature;
+
+import java.util.function.Function;
+import java.util.function.UnaryOperator;
 
 /**
  * A {@link IClimateState} is used to store and handle temperature and humidity.

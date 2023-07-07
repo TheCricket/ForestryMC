@@ -1,14 +1,13 @@
 package forestry.core.owner;
 
-import java.util.Optional;
-import java.util.UUID;
-
+import com.mojang.authlib.GameProfile;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataSerializer;
+import net.minecraft.network.syncher.EntityDataSerializers;
 
-import com.mojang.authlib.GameProfile;
+import java.util.Optional;
+import java.util.UUID;
 
 public class GameProfileDataSerializer implements EntityDataSerializer<Optional<GameProfile>> {
 	public static final GameProfileDataSerializer INSTANCE = new GameProfileDataSerializer();

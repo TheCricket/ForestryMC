@@ -1,14 +1,12 @@
 package forestry.sorting.inventory;
 
-import javax.annotation.Nonnull;
-
-import net.minecraft.world.item.ItemStack;
+import forestry.sorting.tiles.TileGeneticFilter;
 import net.minecraft.core.Direction;
-
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-import forestry.sorting.tiles.TileGeneticFilter;
+import javax.annotation.Nonnull;
 
 public class ItemHandlerFilter implements IItemHandler {
 	private final TileGeneticFilter filter;

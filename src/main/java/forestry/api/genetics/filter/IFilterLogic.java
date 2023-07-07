@@ -1,21 +1,18 @@
 package forestry.api.genetics.filter;
 
-import javax.annotation.Nullable;
-import java.util.Collection;
-
+import forestry.api.core.INbtReadable;
+import forestry.api.core.INbtWritable;
+import genetics.api.alleles.IAllele;
+import net.minecraft.core.Direction;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import genetics.api.alleles.IAllele;
-
-import forestry.api.core.INbtReadable;
-import forestry.api.core.INbtWritable;
+import javax.annotation.Nullable;
+import java.util.Collection;
 
 public interface IFilterLogic extends INbtWritable, INbtReadable {
 	void writeGuiData(FriendlyByteBuf data);

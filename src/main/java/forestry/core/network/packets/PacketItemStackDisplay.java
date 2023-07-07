@@ -10,23 +10,17 @@
  ******************************************************************************/
 package forestry.core.network.packets;
 
-import java.io.IOException;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.BlockPos;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import forestry.core.network.ForestryPacket;
-import forestry.core.network.IForestryPacketClient;
-import forestry.core.network.IForestryPacketHandlerClient;
-import forestry.core.network.PacketBufferForestry;
-import forestry.core.network.PacketIdClient;
+import forestry.core.network.*;
 import forestry.core.tiles.IItemStackDisplay;
 import forestry.core.tiles.TileForestry;
 import forestry.core.tiles.TileUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.io.IOException;
 
 public class PacketItemStackDisplay extends ForestryPacket implements IForestryPacketClient {
 	private final BlockPos pos;

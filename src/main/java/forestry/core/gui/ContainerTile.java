@@ -11,17 +11,6 @@
 package forestry.core.gui;
 
 import com.google.common.collect.ImmutableSet;
-
-import javax.annotation.Nullable;
-
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.level.block.entity.BlockEntity;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.core.IErrorLogicSource;
 import forestry.api.core.IErrorState;
 import forestry.core.network.packets.PacketErrorUpdate;
@@ -31,6 +20,14 @@ import forestry.core.tiles.IPowerHandler;
 import forestry.core.tiles.TilePowered;
 import forestry.core.tiles.TileUtil;
 import forestry.energy.EnergyManager;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
 
 //TODO: Add needsGuiUpdate() method, so we only send one gui update packet.
 public abstract class ContainerTile<T extends BlockEntity> extends ContainerForestry {

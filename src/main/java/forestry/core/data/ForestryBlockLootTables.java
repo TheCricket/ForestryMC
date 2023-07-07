@@ -1,12 +1,24 @@
 package forestry.core.data;
 
 import com.google.common.collect.Sets;
-
-import java.util.Map;
-import java.util.Set;
-import java.util.function.BiConsumer;
-import java.util.function.Function;
-
+import forestry.arboriculture.blocks.BlockDecorativeLeaves;
+import forestry.arboriculture.blocks.BlockDefaultLeaves;
+import forestry.arboriculture.blocks.BlockDefaultLeavesFruit;
+import forestry.arboriculture.features.ArboricultureBlocks;
+import forestry.arboriculture.features.ArboricultureItems;
+import forestry.arboriculture.features.CharcoalBlocks;
+import forestry.arboriculture.genetics.TreeDefinition;
+import forestry.arboriculture.loot.CountBlockFunction;
+import forestry.core.features.CoreBlocks;
+import forestry.core.features.CoreItems;
+import forestry.core.loot.OrganismFunction;
+import forestry.core.utils.Log;
+import forestry.lepidopterology.features.LepidopterologyBlocks;
+import forestry.modules.ModuleManager;
+import forestry.modules.features.FeatureBlock;
+import forestry.modules.features.FeatureBlockGroup;
+import forestry.modules.features.FeatureType;
+import forestry.modules.features.IModFeature;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -27,24 +39,10 @@ import net.minecraft.world.level.storage.loot.providers.number.BinomialDistribut
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
-import forestry.arboriculture.blocks.BlockDecorativeLeaves;
-import forestry.arboriculture.blocks.BlockDefaultLeaves;
-import forestry.arboriculture.blocks.BlockDefaultLeavesFruit;
-import forestry.arboriculture.features.ArboricultureBlocks;
-import forestry.arboriculture.features.ArboricultureItems;
-import forestry.arboriculture.features.CharcoalBlocks;
-import forestry.arboriculture.genetics.TreeDefinition;
-import forestry.arboriculture.loot.CountBlockFunction;
-import forestry.core.features.CoreBlocks;
-import forestry.core.features.CoreItems;
-import forestry.core.loot.OrganismFunction;
-import forestry.core.utils.Log;
-import forestry.lepidopterology.features.LepidopterologyBlocks;
-import forestry.modules.ModuleManager;
-import forestry.modules.features.FeatureBlock;
-import forestry.modules.features.FeatureBlockGroup;
-import forestry.modules.features.FeatureType;
-import forestry.modules.features.IModFeature;
+import java.util.Map;
+import java.util.Set;
+import java.util.function.BiConsumer;
+import java.util.function.Function;
 
 /**
  * Data generator class that generates the block drop loot tables for forestry blocks.

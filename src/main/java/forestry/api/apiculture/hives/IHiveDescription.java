@@ -5,15 +5,14 @@
  ******************************************************************************/
 package forestry.api.apiculture.hives;
 
-import java.util.Random;
-
-import net.minecraft.world.level.block.state.BlockState;
+import forestry.api.core.EnumHumidity;
+import forestry.api.core.EnumTemperature;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.state.BlockState;
 
-import forestry.api.core.EnumHumidity;
-import forestry.api.core.EnumTemperature;
+import java.util.Random;
 
 public interface IHiveDescription {
 

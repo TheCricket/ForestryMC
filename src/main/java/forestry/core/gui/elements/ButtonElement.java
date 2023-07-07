@@ -1,16 +1,13 @@
 package forestry.core.gui.elements;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.util.function.Consumer;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.systems.RenderSystem;
-
 import forestry.core.gui.Drawable;
 import forestry.core.gui.buttons.StandardButtonTextureSets;
 import forestry.core.utils.SoundUtil;
+
+import javax.annotation.Nullable;
+import java.util.function.Consumer;
 
 public class ButtonElement extends GuiElement {
 	/* Attributes - Final */

@@ -5,13 +5,11 @@
  ******************************************************************************/
 package forestry.api.lepidopterology.genetics;
 
-import net.minecraft.world.level.Level;
-
+import forestry.api.lepidopterology.IButterflyNursery;
 import genetics.api.alleles.IAllele;
 import genetics.api.individual.IGenome;
 import genetics.api.mutation.IMutation;
-
-import forestry.api.lepidopterology.IButterflyNursery;
+import net.minecraft.world.level.Level;
 
 public interface IButterflyMutation extends IMutation {
 	float getChance(Level world, IButterflyNursery housing, IAllele allele0, IAllele allele1, IGenome genome0, IGenome genome1);

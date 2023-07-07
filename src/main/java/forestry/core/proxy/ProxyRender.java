@@ -11,11 +11,7 @@
 package forestry.core.proxy;
 
 import forestry.core.blocks.MachinePropertiesTesr;
-import forestry.core.tiles.TileAnalyzer;
-import forestry.core.tiles.TileBase;
-import forestry.core.tiles.TileEscritoire;
-import forestry.core.tiles.TileMill;
-import forestry.core.tiles.TileNaturalistChest;
+import forestry.core.tiles.*;
 import forestry.modules.ISidedModuleHandler;
 
 public class ProxyRender implements ISidedModuleHandler {

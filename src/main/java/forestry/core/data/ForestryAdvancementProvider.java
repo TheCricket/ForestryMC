@@ -3,15 +3,10 @@ package forestry.core.data;
 import com.google.common.collect.Sets;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import java.io.IOException;
-import java.nio.file.Path;
-import java.util.Set;
-import java.util.function.Consumer;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import forestry.apiculture.features.ApicultureItems;
+import forestry.apiculture.genetics.BeeDefinition;
+import forestry.core.config.Constants;
+import genetics.api.GeneticHelper;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.FrameType;
@@ -19,17 +14,18 @@ import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.advancements.critereon.TickTrigger;
 import net.minecraft.commands.CommandFunction;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.HashCache;
 import net.minecraft.data.DataProvider;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.data.HashCache;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import forestry.apiculture.features.ApicultureItems;
-import forestry.apiculture.genetics.BeeDefinition;
-import forestry.core.config.Constants;
-
-import genetics.api.GeneticHelper;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.Set;
+import java.util.function.Consumer;
 
 public class ForestryAdvancementProvider implements DataProvider {
 

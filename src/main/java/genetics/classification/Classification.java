@@ -1,16 +1,13 @@
 package genetics.classification;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Locale;
-
-import net.minecraft.client.resources.language.I18n;
-
 import genetics.ApiInstance;
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.classification.IClassification;
+import net.minecraft.client.resources.language.I18n;
 
-import genetics.api.classification.IClassification.EnumClassLevel;
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class Classification implements IClassification {
 

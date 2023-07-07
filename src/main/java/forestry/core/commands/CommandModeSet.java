@@ -10,19 +10,17 @@
  ******************************************************************************/
 package forestry.core.commands;
 
-import java.util.stream.Stream;
-
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.Commands;
-import net.minecraft.world.level.Level;
-
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.ArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
-
 import genetics.commands.CommandHelpers;
 import genetics.commands.PermLevel;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.world.level.Level;
+
+import java.util.stream.Stream;
 
 public final class CommandModeSet implements Command<CommandSourceStack> {
 	private final ICommandModeHelper modeSetter;

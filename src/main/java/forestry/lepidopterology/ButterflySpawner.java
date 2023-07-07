@@ -10,18 +10,17 @@
  ******************************************************************************/
 package forestry.lepidopterology;
 
-import java.util.Random;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.GameRules;
-import net.minecraft.world.level.Level;
-
 import forestry.api.arboriculture.ILeafTickHandler;
 import forestry.api.arboriculture.genetics.ITree;
 import forestry.api.arboriculture.genetics.TreeChromosomes;
 import forestry.api.lepidopterology.ButterflyManager;
 import forestry.api.lepidopterology.genetics.ButterflyChromosomes;
 import forestry.api.lepidopterology.genetics.IButterfly;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.GameRules;
+import net.minecraft.world.level.Level;
+
+import java.util.Random;
 
 public class ButterflySpawner implements ILeafTickHandler {
 

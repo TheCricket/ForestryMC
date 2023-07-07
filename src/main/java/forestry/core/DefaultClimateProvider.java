@@ -10,13 +10,12 @@
  ******************************************************************************/
 package forestry.core;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.biome.Biome;
-
 import forestry.api.climate.IClimateProvider;
 import forestry.api.core.EnumHumidity;
 import forestry.api.core.EnumTemperature;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
 
 public class DefaultClimateProvider implements IClimateProvider {
 	private final Level world;

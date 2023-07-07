@@ -5,11 +5,10 @@
  ******************************************************************************/
 package forestry.api.circuits;
 
+import net.minecraft.world.item.ItemStack;
+
 import javax.annotation.Nullable;
 import java.util.Map;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.server.level.ServerLevel;
 
 public interface ICircuitRegistry {
 

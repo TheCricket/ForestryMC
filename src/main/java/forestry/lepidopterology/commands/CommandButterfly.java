@@ -11,19 +11,16 @@
 package forestry.lepidopterology.commands;
 
 
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.Commands;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntitySelector;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import com.mojang.brigadier.builder.ArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
-
 import forestry.lepidopterology.features.LepidopterologyEntities;
-
 import genetics.commands.PermLevel;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntitySelector;
 
 /**
  * @author CovertJaguar <http://www.railcraft.info/>

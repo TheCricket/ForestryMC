@@ -1,16 +1,15 @@
 package forestry.core.render;
 
+import forestry.api.core.ISpriteRegistry;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.renderer.texture.TextureManager;
+import net.minecraft.client.resources.TextureAtlasHolder;
+import net.minecraft.resources.ResourceLocation;
+
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Stream;
-
-import net.minecraft.client.resources.TextureAtlasHolder;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.renderer.texture.TextureManager;
-import net.minecraft.resources.ResourceLocation;
-
-import forestry.api.core.ISpriteRegistry;
 
 /**
  * Uploads the forestry gui icon texture sprites to the forestry gui atlas texture.

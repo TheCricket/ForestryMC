@@ -13,22 +13,17 @@ package forestry.factory.recipes;
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
-import java.util.Random;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.util.GsonHelper;
+import forestry.api.recipes.ICentrifugeRecipe;
 import net.minecraft.core.NonNullList;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
-
+import net.minecraft.util.GsonHelper;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.registries.ForgeRegistryEntry;
 
-import forestry.api.recipes.ICentrifugeRecipe;
-
-import forestry.api.recipes.ICentrifugeRecipe.Product;
+import java.util.Random;
 
 public class CentrifugeRecipe implements ICentrifugeRecipe {
 

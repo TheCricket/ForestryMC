@@ -10,18 +10,16 @@
  ******************************************************************************/
 package forestry.core.gui.ledgers;
 
-import java.util.List;
-import java.util.Random;
-
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.core.render.TextureManagerForestry;
+import forestry.core.utils.Translator;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-
-import forestry.core.render.TextureManagerForestry;
-import forestry.core.utils.Translator;
+import java.util.List;
+import java.util.Random;
 
 public class HintLedger extends Ledger {
 

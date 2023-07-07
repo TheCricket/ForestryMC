@@ -10,15 +10,13 @@
  ******************************************************************************/
 package forestry.core.gui.ledgers;
 
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import forestry.core.config.Config;
 import forestry.core.render.TextureManagerForestry;
 import forestry.core.utils.Translator;
 import forestry.energy.EnergyManager;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 
 public class PowerLedger extends Ledger {
 	private final EnergyManager energyManager;

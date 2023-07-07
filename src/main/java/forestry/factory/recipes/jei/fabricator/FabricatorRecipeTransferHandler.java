@@ -1,24 +1,21 @@
 package forestry.factory.recipes.jei.fabricator;
 
-import javax.annotation.Nullable;
-
+import forestry.api.recipes.IFabricatorRecipe;
 import forestry.core.utils.JeiUtil;
+import forestry.core.utils.NetworkUtil;
+import forestry.factory.gui.ContainerFabricator;
+import forestry.factory.network.packets.PacketRecipeTransferRequest;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
+import mezz.jei.api.recipe.transfer.IRecipeTransferError;
+import mezz.jei.api.recipe.transfer.IRecipeTransferHandler;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.api.recipes.IFabricatorRecipe;
-import forestry.core.utils.NetworkUtil;
-import forestry.factory.gui.ContainerFabricator;
-import forestry.factory.network.packets.PacketRecipeTransferRequest;
-
-import mezz.jei.api.recipe.transfer.IRecipeTransferError;
-import mezz.jei.api.recipe.transfer.IRecipeTransferHandler;
+import javax.annotation.Nullable;
 
 @OnlyIn(Dist.CLIENT)
 public class FabricatorRecipeTransferHandler implements IRecipeTransferHandler<ContainerFabricator, IFabricatorRecipe> {

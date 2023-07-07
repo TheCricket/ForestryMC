@@ -1,7 +1,8 @@
 package forestry.core.blocks;
 
-import java.util.Random;
-
+import forestry.core.config.Config;
+import forestry.core.config.Constants;
+import forestry.core.utils.RenderUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -16,13 +17,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.Material;
-
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.PlantType;
 
-import forestry.core.config.Config;
-import forestry.core.config.Constants;
-import forestry.core.utils.RenderUtil;
+import java.util.Random;
 
 public class BlockHumus extends Block {
 	private static final int degradeDelimiter = Config.humusDegradeDelimiter;

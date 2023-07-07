@@ -1,23 +1,7 @@
 package forestry.database.gui;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.Container;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
-
-import org.lwjgl.glfw.GLFW;
-
+import com.mojang.blaze3d.vertex.PoseStack;
 import forestry.core.config.Constants;
 import forestry.core.gui.ContainerForestry;
 import forestry.core.gui.Drawable;
@@ -31,6 +15,19 @@ import forestry.database.gui.buttons.DatabaseButton;
 import forestry.database.gui.buttons.GuiDatabaseButton;
 import forestry.database.gui.widgets.WidgetDatabaseSlot;
 import forestry.database.tiles.TileDatabase;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ItemStack;
+import org.lwjgl.glfw.GLFW;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class GuiDatabase extends GuiAnalyzerProvider<ContainerDatabase> implements IScrollable {
 	/* Attributes - Constants */

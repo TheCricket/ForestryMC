@@ -11,37 +11,6 @@
 package forestry.apiculture;
 
 import com.google.common.base.Preconditions;
-
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.function.Consumer;
-
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.alchemy.PotionUtils;
-import net.minecraft.world.item.alchemy.Potions;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.feature.Feature;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.IEventBus;
-
-import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.InterModComms;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.FlowerManager;
 import forestry.api.apiculture.IArmorApiarist;
@@ -54,20 +23,8 @@ import forestry.apiculture.features.ApicultureContainers;
 import forestry.apiculture.features.ApicultureFeatures;
 import forestry.apiculture.features.ApicultureItems;
 import forestry.apiculture.flowers.FlowerRegistry;
-import forestry.apiculture.genetics.BeeDefinition;
-import forestry.apiculture.genetics.BeeFactory;
-import forestry.apiculture.genetics.BeeMutationFactory;
-import forestry.apiculture.genetics.HiveDrop;
-import forestry.apiculture.genetics.JubilanceFactory;
-import forestry.apiculture.gui.ContainerBeeHousing;
-import forestry.apiculture.gui.ContainerMinecartBeehouse;
-import forestry.apiculture.gui.GuiAlveary;
-import forestry.apiculture.gui.GuiAlvearyHygroregulator;
-import forestry.apiculture.gui.GuiAlvearySieve;
-import forestry.apiculture.gui.GuiAlvearySwarmer;
-import forestry.apiculture.gui.GuiBeeHousing;
-import forestry.apiculture.gui.GuiHabitatLocator;
-import forestry.apiculture.gui.GuiImprinter;
+import forestry.apiculture.genetics.*;
+import forestry.apiculture.gui.*;
 import forestry.apiculture.items.EnumHoneyComb;
 import forestry.apiculture.items.EnumPollenCluster;
 import forestry.apiculture.items.HabitatLocatorLogic;
@@ -90,8 +47,34 @@ import forestry.core.utils.Log;
 import forestry.modules.BlankForestryModule;
 import forestry.modules.ForestryModuleUids;
 import forestry.modules.ISidedModuleHandler;
-
 import genetics.api.GeneticsAPI;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.function.Consumer;
 
 @ForestryModule(containerID = Constants.MOD_ID, moduleID = ForestryModuleUids.APICULTURE, name = "Apiculture", author = "SirSengir", url = Constants.URL, unlocalizedDescription = "for.module.apiculture.description", lootTable = "apiculture")
 public class ModuleApiculture extends BlankForestryModule {

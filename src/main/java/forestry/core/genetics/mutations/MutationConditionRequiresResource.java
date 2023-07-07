@@ -11,23 +11,22 @@
 
 package forestry.core.genetics.mutations;
 
-import java.util.Arrays;
-import java.util.List;
-
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.climate.IClimateProvider;
 import forestry.api.genetics.IMutationCondition;
 import forestry.core.tiles.TileUtil;
 import genetics.api.alleles.IAllele;
 import genetics.api.individual.IGenome;
-
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.client.gui.chat.NarratorChatListener;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MutationConditionRequiresResource implements IMutationCondition {
 

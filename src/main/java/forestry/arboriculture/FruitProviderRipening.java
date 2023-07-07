@@ -10,22 +10,20 @@
  ******************************************************************************/
 package forestry.arboriculture;
 
-import java.awt.Color;
-import java.util.function.Supplier;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-
 import forestry.api.genetics.IFruitFamily;
 import forestry.api.genetics.products.IProductList;
 import forestry.api.genetics.products.Product;
 import forestry.core.genetics.ProductListWrapper;
-
 import genetics.api.individual.IGenome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+
+import java.awt.*;
+import java.util.function.Supplier;
 
 public class FruitProviderRipening extends FruitProviderNone {
 	private int colourCallow = 0xffffff;

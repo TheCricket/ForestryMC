@@ -10,15 +10,14 @@
  ******************************************************************************/
 package forestry.storage.gui;
 
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.network.FriendlyByteBuf;
-
 import forestry.core.gui.ContainerItemInventory;
 import forestry.core.gui.slots.SlotFilteredInventory;
 import forestry.storage.features.BackpackContainers;
 import forestry.storage.inventory.ItemInventoryBackpack;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 
 //TODO it may be simpler to split this up into two containerTypes. One for normal size and one for t2
 public class ContainerBackpack extends ContainerItemInventory<ItemInventoryBackpack> {

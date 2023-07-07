@@ -1,20 +1,18 @@
 package forestry.modules.features;
 
-import javax.annotation.Nullable;
-import java.util.function.Function;
-import java.util.function.Supplier;
-
+import forestry.core.blocks.BlockBase;
+import forestry.core.config.Constants;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.state.properties.Property;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 
-import forestry.core.blocks.BlockBase;
-import forestry.core.config.Constants;
+import javax.annotation.Nullable;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class FeatureBlock<B extends Block, I extends BlockItem> implements IBlockFeature<B, I> {
 	protected final String moduleID;

@@ -10,21 +10,16 @@
  ******************************************************************************/
 package forestry.arboriculture.blocks;
 
-import java.util.Random;
-
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
-
 import forestry.arboriculture.tiles.TileTreeContainer;
 import forestry.core.tiles.TileUtil;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockState;
 
-//TODO inline?
-
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import java.util.Random;
 
 public abstract class BlockTreeContainer extends BaseEntityBlock {
 

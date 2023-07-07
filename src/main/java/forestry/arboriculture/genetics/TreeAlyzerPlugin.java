@@ -10,24 +10,7 @@
  ******************************************************************************/
 package forestry.arboriculture.genetics;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.ChatFormatting;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.arboriculture.EnumFruitFamily;
 import forestry.api.arboriculture.TreeManager;
 import forestry.api.arboriculture.genetics.IAlleleFruit;
@@ -45,11 +28,20 @@ import forestry.core.gui.widgets.ItemStackWidget;
 import forestry.core.gui.widgets.WidgetManager;
 import forestry.core.utils.StringUtil;
 import forestry.core.utils.Translator;
-
 import genetics.api.GeneticHelper;
 import genetics.api.individual.IGenome;
 import genetics.api.organism.IOrganism;
 import genetics.api.organism.IOrganismType;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.NonNullList;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.util.*;
 
 public class TreeAlyzerPlugin implements IAlyzerPlugin {
 	public static final TreeAlyzerPlugin INSTANCE = new TreeAlyzerPlugin();

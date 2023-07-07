@@ -13,32 +13,6 @@ package forestry.apiculture.flowers;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.HashMultimap;
-
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Random;
-import java.util.Set;
-
-import forestry.core.utils.TagUtil;
-import net.minecraft.core.Holder;
-import net.minecraft.core.HolderSet;
-import net.minecraft.core.Registry;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.tags.Tag;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Vec3i;
-import net.minecraft.world.level.Level;
-import net.minecraft.server.level.ServerLevel;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.FlowerManager;
 import forestry.api.apiculture.IBeeHousing;
@@ -50,12 +24,25 @@ import forestry.api.genetics.flowers.IFlowerAcceptableRule;
 import forestry.api.genetics.flowers.IFlowerGrowthHelper;
 import forestry.api.genetics.flowers.IFlowerGrowthRule;
 import forestry.api.genetics.flowers.IFlowerRegistry;
+import forestry.core.utils.TagUtil;
 import forestry.core.utils.VectUtil;
 import forestry.core.utils.datastructures.BlockStateSet;
 import forestry.core.utils.datastructures.WeightedCollection;
-
 import genetics.api.individual.IGenome;
 import genetics.api.individual.IIndividual;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderSet;
+import net.minecraft.core.Registry;
+import net.minecraft.core.Vec3i;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+
+import javax.annotation.Nullable;
+import java.util.*;
 
 public final class FlowerRegistry implements IFlowerRegistry, IFlowerGrowthHelper {
 	private final HashMultimap<String, IFlowerAcceptableRule> registeredRules;

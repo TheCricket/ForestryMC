@@ -2,23 +2,20 @@ package forestry.core.loot;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-
-import javax.annotation.Nonnull;
-import java.util.Arrays;
-import java.util.List;
-
+import forestry.core.config.Constants;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraft.util.GsonHelper;
-import net.minecraft.resources.ResourceLocation;
-
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.common.loot.LootModifier;
 import net.minecraftforge.common.loot.LootTableIdCondition;
 
-import forestry.core.config.Constants;
+import javax.annotation.Nonnull;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * A global loot modifier used by forestry to inject the additional chest loot to the vanilla loot tables.

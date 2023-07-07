@@ -10,58 +10,45 @@
  ******************************************************************************/
 package forestry.arboriculture.genetics;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Random;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.WorldGenLevel;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-
 import com.mojang.authlib.GameProfile;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.IPlantable;
-import net.minecraftforge.common.PlantType;
-
 import forestry.api.arboriculture.IArboristTracker;
 import forestry.api.arboriculture.IFruitProvider;
 import forestry.api.arboriculture.TreeManager;
-import forestry.api.arboriculture.genetics.IAlleleLeafEffect;
-import forestry.api.arboriculture.genetics.IAlleleTreeSpecies;
-import forestry.api.arboriculture.genetics.ITree;
-import forestry.api.arboriculture.genetics.ITreeMutation;
-import forestry.api.arboriculture.genetics.ITreeRoot;
-import forestry.api.arboriculture.genetics.TreeChromosomes;
+import forestry.api.arboriculture.genetics.*;
 import forestry.api.genetics.IEffectData;
 import forestry.api.genetics.IFruitFamily;
 import forestry.api.genetics.products.IProductList;
 import forestry.core.config.Config;
 import forestry.core.genetics.TemplateMatcher;
-
-import genetics.api.individual.IChromosome;
-import genetics.api.individual.IChromosomeType;
-import genetics.api.individual.IGenome;
-import genetics.api.individual.IGenomeMatcher;
-import genetics.api.individual.Individual;
+import genetics.api.individual.*;
 import genetics.api.mutation.IMutation;
 import genetics.api.mutation.IMutationContainer;
 import genetics.api.root.components.ComponentKeys;
 import genetics.individual.Genome;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.common.PlantType;
+
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Random;
 
 public class Tree extends Individual implements ITree, IPlantable {
 

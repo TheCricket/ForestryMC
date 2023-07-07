@@ -10,16 +10,14 @@
  ******************************************************************************/
 package forestry.factory.recipes;
 
-import javax.annotation.Nullable;
-
+import forestry.api.recipes.IForestryRecipe;
+import forestry.api.recipes.IMoistenerManager;
+import forestry.api.recipes.IMoistenerRecipe;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeManager;
 
-import forestry.api.recipes.IForestryRecipe;
-import forestry.api.recipes.IMoistenerManager;
-import forestry.api.recipes.IMoistenerRecipe;
-
+import javax.annotation.Nullable;
 import java.util.Optional;
 
 public class MoistenerRecipeManager extends AbstractCraftingProvider<IMoistenerRecipe> implements IMoistenerManager {

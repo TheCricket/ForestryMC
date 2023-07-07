@@ -1,12 +1,11 @@
 package forestry.sorting.gui;
 
+import forestry.core.config.Constants;
+import forestry.core.gui.slots.ISlotTextured;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-
-import forestry.core.config.Constants;
-import forestry.core.gui.slots.ISlotTextured;
 
 public class SlotFilterFacing extends Slot implements ISlotTextured {
 

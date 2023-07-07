@@ -1,13 +1,11 @@
 package forestry.api.genetics;
 
-import net.minecraft.world.item.ItemStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import genetics.api.alleles.IAlleleSpecies;
 import genetics.api.individual.IIndividual;
 import genetics.api.organism.IOrganismType;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public interface ISpeciesDisplayHelper<I extends IIndividual, S extends IAlleleSpecies> {

@@ -2,13 +2,6 @@ package forestry.core.data;
 
 import com.google.common.collect.Table;
 import com.google.gson.JsonPrimitive;
-
-import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.BucketItem;
-import net.minecraft.world.level.block.Block;
-
 import forestry.arboriculture.features.ArboricultureItems;
 import forestry.core.config.Constants;
 import forestry.core.features.CoreBlocks;
@@ -24,6 +17,11 @@ import forestry.modules.features.FeatureItem;
 import forestry.storage.features.CrateItems;
 import forestry.storage.items.ItemCrated;
 import forestry.storage.models.CrateModel;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.level.block.Block;
 
 public class ForestryItemModelProvider extends ModelProvider {
 	public ForestryItemModelProvider(DataGenerator generator) {

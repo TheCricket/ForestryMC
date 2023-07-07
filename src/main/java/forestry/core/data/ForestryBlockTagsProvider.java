@@ -1,22 +1,5 @@
 package forestry.core.data;
 
-import javax.annotation.Nullable;
-import java.nio.file.Path;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
-import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.block.Block;
-
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.data.ExistingFileHelper;
-
 import forestry.api.arboriculture.EnumForestryWoodType;
 import forestry.apiculture.features.ApicultureBlocks;
 import forestry.arboriculture.features.ArboricultureBlocks;
@@ -34,6 +17,21 @@ import forestry.lepidopterology.features.LepidopterologyBlocks;
 import forestry.mail.features.MailBlocks;
 import forestry.modules.features.FeatureBlockGroup;
 import forestry.worktable.features.WorktableBlocks;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.ExistingFileHelper;
+
+import javax.annotation.Nullable;
+import java.nio.file.Path;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 //TODO: Split up ?
 public final class ForestryBlockTagsProvider extends BlockTagsProvider {

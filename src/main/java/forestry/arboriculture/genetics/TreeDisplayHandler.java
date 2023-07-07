@@ -1,11 +1,5 @@
 package forestry.arboriculture.genetics;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import forestry.api.arboriculture.genetics.ITree;
 import forestry.api.arboriculture.genetics.TreeChromosomes;
 import forestry.api.core.tooltips.ITextInstance;
@@ -14,13 +8,17 @@ import forestry.api.genetics.alyzer.IAlleleDisplayHandler;
 import forestry.api.genetics.alyzer.IAlleleDisplayHelper;
 import forestry.apiculture.genetics.IGeneticTooltipProvider;
 import forestry.arboriculture.genetics.alleles.AlleleFruits;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.alleles.IAlleleValue;
 import genetics.api.individual.IChromosomeAllele;
 import genetics.api.individual.IChromosomeType;
 import genetics.api.individual.IChromosomeValue;
 import genetics.api.individual.IGenome;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+
+import javax.annotation.Nullable;
 
 public enum TreeDisplayHandler implements IAlleleDisplayHandler<ITree> {
 	SAPPINESS(TreeChromosomes.SAPPINESS, ChatFormatting.GOLD, "S: %1$s"),

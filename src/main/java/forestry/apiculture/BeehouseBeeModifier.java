@@ -10,11 +10,10 @@
  ******************************************************************************/
 package forestry.apiculture;
 
-import javax.annotation.Nullable;
-
+import forestry.api.apiculture.DefaultBeeModifier;
 import genetics.api.individual.IGenome;
 
-import forestry.api.apiculture.DefaultBeeModifier;
+import javax.annotation.Nullable;
 
 public class BeehouseBeeModifier extends DefaultBeeModifier {
 	@Override

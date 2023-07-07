@@ -10,18 +10,6 @@
  ******************************************************************************/
 package forestry.arboriculture;
 
-import java.util.function.Consumer;
-
-import net.minecraft.world.level.levelgen.feature.Feature;
-
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.IEventBus;
-
-import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.InterModComms;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
 import forestry.api.arboriculture.TreeManager;
 import forestry.api.core.IArmorNaturalist;
 import forestry.api.modules.ForestryModule;
@@ -42,6 +30,15 @@ import forestry.core.utils.ForgeUtils;
 import forestry.modules.BlankForestryModule;
 import forestry.modules.ForestryModuleUids;
 import forestry.modules.ISidedModuleHandler;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+import java.util.function.Consumer;
 
 @ForestryModule(containerID = Constants.MOD_ID, moduleID = ForestryModuleUids.ARBORICULTURE, name = "Arboriculture", author = "Binnie & SirSengir", url = Constants.URL, unlocalizedDescription = "for.module.arboriculture.description", lootTable = "arboriculture")
 public class ModuleArboriculture extends BlankForestryModule {

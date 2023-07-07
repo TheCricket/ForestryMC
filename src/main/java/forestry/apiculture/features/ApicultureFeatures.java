@@ -1,5 +1,6 @@
 package forestry.apiculture.features;
 
+import forestry.apiculture.worldgen.HiveDecorator;
 import forestry.core.config.Constants;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -13,8 +14,6 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.registries.IForgeRegistry;
-
-import forestry.apiculture.worldgen.HiveDecorator;
 
 public class ApicultureFeatures {
 	public static final ResourceLocation ID = new ResourceLocation(Constants.MOD_ID, "hive_decorator");

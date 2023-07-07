@@ -1,8 +1,13 @@
 package forestry.cultivation.gui.widgets;
 
-import javax.annotation.Nullable;
-import java.util.Locale;
-
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.PoseStack;
+import forestry.api.core.tooltips.ToolTip;
+import forestry.api.farming.FarmDirection;
+import forestry.core.gui.widgets.ItemStackWidget;
+import forestry.core.gui.widgets.WidgetManager;
+import forestry.core.render.ColourProperties;
+import forestry.cultivation.inventory.InventoryPlanter;
 import net.minecraft.client.gui.Font;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
@@ -10,15 +15,8 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
-
-import forestry.api.core.tooltips.ToolTip;
-import forestry.api.farming.FarmDirection;
-import forestry.core.gui.widgets.ItemStackWidget;
-import forestry.core.gui.widgets.WidgetManager;
-import forestry.core.render.ColourProperties;
-import forestry.cultivation.inventory.InventoryPlanter;
+import javax.annotation.Nullable;
+import java.util.Locale;
 
 public class GhostItemStackWidget extends ItemStackWidget {
 	private final Slot slot;

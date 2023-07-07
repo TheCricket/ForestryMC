@@ -10,16 +10,15 @@
  ******************************************************************************/
 package forestry.core.proxy;
 
-import java.io.File;
-
-import net.minecraft.world.level.block.Block;
+import forestry.core.models.ClientManager;
+import forestry.core.render.TextureManagerForestry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import forestry.core.models.ClientManager;
-import forestry.core.render.TextureManagerForestry;
+import java.io.File;
 
 @SuppressWarnings("unused")
 @OnlyIn(Dist.CLIENT)

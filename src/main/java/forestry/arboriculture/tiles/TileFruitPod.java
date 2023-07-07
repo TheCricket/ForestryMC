@@ -10,24 +10,6 @@
  ******************************************************************************/
 package forestry.arboriculture.tiles;
 
-import javax.annotation.Nullable;
-import java.util.Optional;
-import java.util.Random;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.NonNullList;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.Connection;
-import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.CocoaBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.api.arboriculture.TreeManager;
 import forestry.api.arboriculture.genetics.IAlleleFruit;
 import forestry.api.genetics.IFruitBearer;
@@ -41,10 +23,25 @@ import forestry.core.network.PacketBufferForestry;
 import forestry.core.utils.BlockUtil;
 import forestry.core.utils.NBTUtilForestry;
 import forestry.core.utils.RenderUtil;
-
 import genetics.api.alleles.IAllele;
 import genetics.api.individual.IGenome;
 import genetics.utils.AlleleUtils;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.CocoaBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+import javax.annotation.Nullable;
+import java.util.Optional;
+import java.util.Random;
 
 public class TileFruitPod extends BlockEntity implements IFruitBearer, IStreamable {
 

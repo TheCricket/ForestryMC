@@ -1,13 +1,12 @@
 package forestry.core.data;
 
+import forestry.core.config.Constants;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-
-import forestry.core.config.Constants;
 
 public class ForestryTags {
 	public static class Blocks {

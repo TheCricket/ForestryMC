@@ -1,15 +1,13 @@
 package forestry.core.data;
 
-import javax.annotation.Nullable;
-
+import forestry.core.config.Constants;
+import forestry.core.fluids.ForestryFluids;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.FluidTagsProvider;
 import net.minecraft.tags.FluidTags;
-
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import forestry.core.config.Constants;
-import forestry.core.fluids.ForestryFluids;
+import javax.annotation.Nullable;
 
 public class ForestryFluidTagsProvider extends FluidTagsProvider {
 	public ForestryFluidTagsProvider(DataGenerator generator, @Nullable ExistingFileHelper fileHelper) {

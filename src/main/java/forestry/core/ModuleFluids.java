@@ -10,24 +10,22 @@
  ******************************************************************************/
 package forestry.core;
 
-import net.minecraft.world.inventory.InventoryMenu;
-import net.minecraft.resources.ResourceLocation;
-
+import forestry.api.fuels.FuelManager;
+import forestry.api.fuels.GeneratorFuel;
+import forestry.api.modules.ForestryModule;
+import forestry.core.config.Constants;
 import forestry.core.config.Preference;
+import forestry.core.fluids.ForestryFluids;
+import forestry.core.utils.ForgeUtils;
+import forestry.modules.BlankForestryModule;
+import forestry.modules.ForestryModuleUids;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fluids.FluidStack;
-
-import forestry.api.fuels.FuelManager;
-import forestry.api.fuels.GeneratorFuel;
-import forestry.api.modules.ForestryModule;
-import forestry.core.config.Constants;
-import forestry.core.fluids.ForestryFluids;
-import forestry.core.utils.ForgeUtils;
-import forestry.modules.BlankForestryModule;
-import forestry.modules.ForestryModuleUids;
 
 //TODO: Move the fluid and block creation to the new feature system if the fluid system is more final (Do we really need a source and a flowing fluid ?)
 @ForestryModule(containerID = Constants.MOD_ID, moduleID = ForestryModuleUids.FLUIDS, name = "Fluids", author = "mezz", url = Constants.URL, unlocalizedDescription = "for.module.fluids.description")

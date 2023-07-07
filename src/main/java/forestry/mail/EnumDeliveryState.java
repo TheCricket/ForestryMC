@@ -10,10 +10,9 @@
  ******************************************************************************/
 package forestry.mail;
 
+import forestry.api.mail.IPostalState;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-
-import forestry.api.mail.IPostalState;
 
 public enum EnumDeliveryState implements IPostalState {
 	OK("for.chat.mail.ok"),

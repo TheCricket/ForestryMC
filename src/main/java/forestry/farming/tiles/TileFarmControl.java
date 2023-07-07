@@ -10,11 +10,6 @@
  ******************************************************************************/
 package forestry.farming.tiles;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.Level;
-
 import forestry.api.farming.DefaultFarmListener;
 import forestry.api.farming.FarmDirection;
 import forestry.api.farming.IFarmListener;
@@ -22,6 +17,10 @@ import forestry.api.farming.IFarmLogic;
 import forestry.api.multiblock.IFarmComponent;
 import forestry.farming.blocks.BlockFarm;
 import forestry.farming.features.FarmingTiles;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class TileFarmControl extends TileFarm implements IFarmComponent.Listener {
 

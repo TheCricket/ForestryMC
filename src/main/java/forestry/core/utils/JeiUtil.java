@@ -1,16 +1,14 @@
 package forestry.core.utils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
+import forestry.modules.features.FeatureItem;
+import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.builder.IRecipeSlotBuilder;
 import mezz.jei.api.gui.ingredient.ICraftingGridHelper;
 import mezz.jei.api.gui.ingredient.IRecipeSlotView;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.recipe.RecipeIngredientRole;
+import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -20,12 +18,12 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
-
-import forestry.modules.features.FeatureItem;
-
-import mezz.jei.api.constants.VanillaTypes;
-import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraftforge.common.crafting.IShapedRecipe;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class JeiUtil {
 	public static final String DESCRIPTION_KEY = "for.jei.description.";

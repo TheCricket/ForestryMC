@@ -5,19 +5,18 @@
  ******************************************************************************/
 package forestry.api.lepidopterology.genetics;
 
-import javax.annotation.Nullable;
-import java.util.Set;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.NonNullList;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.level.Level;
-
 import forestry.api.core.IErrorState;
 import forestry.api.genetics.IIndividualLiving;
 import forestry.api.lepidopterology.IButterflyCocoon;
 import forestry.api.lepidopterology.IButterflyNursery;
 import forestry.api.lepidopterology.IEntityButterfly;
+import net.minecraft.core.NonNullList;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+
+import javax.annotation.Nullable;
+import java.util.Set;
 
 public interface IButterfly extends IIndividualLiving {
 

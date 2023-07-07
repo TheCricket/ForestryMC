@@ -1,15 +1,14 @@
 package forestry.cultivation.inventory;
 
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.BlockPos;
-
 import forestry.api.farming.FarmDirection;
 import forestry.api.farming.IFarmable;
 import forestry.cultivation.tiles.TilePlanter;
 import forestry.farming.FarmHelper;
 import forestry.farming.multiblock.IFarmInventoryInternal;
 import forestry.farming.multiblock.InventoryPlantation;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 
 public class InventoryPlanter extends InventoryPlantation<TilePlanter> implements IFarmInventoryInternal {
 	public static InventoryPlantation.InventoryConfig CONFIG = new InventoryPlantation.InventoryConfig(

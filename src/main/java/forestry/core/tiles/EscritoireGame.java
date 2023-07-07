@@ -10,15 +10,6 @@
  ******************************************************************************/
 package forestry.core.tiles;
 
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.util.Optional;
-import java.util.Random;
-
-import net.minecraft.world.Container;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-
 import forestry.api.core.INbtReadable;
 import forestry.api.core.INbtWritable;
 import forestry.api.genetics.ForestryComponentKeys;
@@ -26,9 +17,16 @@ import forestry.api.genetics.IResearchHandler;
 import forestry.api.genetics.alleles.IAlleleForestrySpecies;
 import forestry.core.network.IStreamable;
 import forestry.core.network.PacketBufferForestry;
-
 import genetics.api.individual.IIndividual;
 import genetics.utils.RootUtils;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.Container;
+import net.minecraft.world.item.ItemStack;
+
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.Optional;
+import java.util.Random;
 
 public class EscritoireGame implements INbtWritable, INbtReadable, IStreamable {
 	private static final Random rand = new Random();

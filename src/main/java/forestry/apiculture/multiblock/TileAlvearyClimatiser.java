@@ -10,17 +10,6 @@
  ******************************************************************************/
 package forestry.apiculture.multiblock;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.client.Minecraft;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-
 import forestry.api.climate.IClimateControlled;
 import forestry.api.multiblock.IAlvearyComponent;
 import forestry.apiculture.blocks.BlockAlvearyType;
@@ -30,6 +19,15 @@ import forestry.core.utils.NetworkUtil;
 import forestry.energy.EnergyHelper;
 import forestry.energy.EnergyManager;
 import forestry.energy.EnergyTransferMode;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.util.LazyOptional;
+
+import javax.annotation.Nullable;
 
 public abstract class TileAlvearyClimatiser extends TileAlveary implements IActivatable, IAlvearyComponent.Climatiser {
 

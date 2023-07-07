@@ -5,10 +5,10 @@
  ******************************************************************************/
 package forestry.api.fuels;
 
-import java.util.Map;
-
-import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.material.Fluid;
+
+import java.util.Map;
 
 public class FuelManager {
 	/**

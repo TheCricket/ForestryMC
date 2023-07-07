@@ -10,22 +10,19 @@
  ******************************************************************************/
 package forestry.farming.gui;
 
-import net.minecraft.client.renderer.texture.TextureAtlas;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
-
 import com.mojang.blaze3d.vertex.PoseStack;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
 import forestry.core.gui.ledgers.Ledger;
 import forestry.core.gui.ledgers.LedgerManager;
 import forestry.core.utils.ResourceUtil;
 import forestry.core.utils.StringUtil;
 import forestry.core.utils.Translator;
+import net.minecraft.client.renderer.texture.TextureAtlas;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class FarmLedger extends Ledger {
 	private final IFarmLedgerDelegate delegate;

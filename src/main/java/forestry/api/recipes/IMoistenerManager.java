@@ -5,11 +5,10 @@
  ******************************************************************************/
 package forestry.api.recipes;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeManager;
 
+import javax.annotation.Nullable;
 import java.util.Optional;
 
 /**

@@ -10,11 +10,6 @@
  ******************************************************************************/
 package forestry.storage.gui;
 
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.network.FriendlyByteBuf;
-
 import forestry.core.config.Constants;
 import forestry.core.gui.ContainerItemInventory;
 import forestry.core.gui.ContainerNaturalistInventory;
@@ -22,6 +17,10 @@ import forestry.core.gui.IGuiSelectable;
 import forestry.storage.features.BackpackContainers;
 import forestry.storage.inventory.ItemInventoryBackpackPaged;
 import forestry.storage.items.ItemBackpackNaturalist;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.ItemStack;
 
 public class ContainerNaturalistBackpack extends ContainerItemInventory<ItemInventoryBackpackPaged> implements IGuiSelectable {
 

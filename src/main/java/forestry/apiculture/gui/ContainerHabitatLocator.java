@@ -10,16 +10,15 @@
  ******************************************************************************/
 package forestry.apiculture.gui;
 
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.world.InteractionHand;
-
 import forestry.apiculture.features.ApicultureContainers;
 import forestry.apiculture.inventory.ItemInventoryHabitatLocator;
 import forestry.core.gui.ContainerItemInventory;
 import forestry.core.gui.slots.SlotFiltered;
 import forestry.core.gui.slots.SlotOutput;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
 
 public class ContainerHabitatLocator extends ContainerItemInventory<ItemInventoryHabitatLocator> {
 

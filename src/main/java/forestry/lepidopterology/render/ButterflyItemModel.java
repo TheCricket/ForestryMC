@@ -16,37 +16,33 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
-
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import net.minecraft.client.renderer.block.model.BlockModel;
-import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.client.resources.model.ModelState;
-import net.minecraft.client.resources.model.UnbakedModel;
-import net.minecraft.client.renderer.block.model.ItemTransforms;
-import net.minecraft.client.renderer.block.model.ItemOverrides;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.Material;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.inventory.InventoryMenu;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.resources.ResourceLocation;
+import com.mojang.datafixers.util.Either;
+import com.mojang.datafixers.util.Pair;
 import com.mojang.math.Quaternion;
 import com.mojang.math.Transformation;
 import com.mojang.math.Vector3f;
-
-import com.mojang.datafixers.util.Either;
-import com.mojang.datafixers.util.Pair;
-
+import forestry.api.lepidopterology.genetics.ButterflyChromosomes;
+import forestry.api.lepidopterology.genetics.IAlleleButterflySpecies;
+import forestry.api.lepidopterology.genetics.IButterfly;
+import forestry.core.config.Constants;
+import forestry.core.models.AbstractBakedModel;
+import forestry.core.models.TRSRBakedModel;
+import forestry.core.utils.ResourceUtil;
+import genetics.api.GeneticHelper;
+import genetics.api.alleles.IAlleleValue;
+import genetics.api.organism.IOrganism;
+import genetics.utils.AlleleUtils;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.renderer.block.model.BlockModel;
+import net.minecraft.client.renderer.block.model.ItemOverrides;
+import net.minecraft.client.renderer.block.model.ItemTransforms;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.resources.model.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.inventory.InventoryMenu;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.model.IModelConfiguration;
@@ -55,18 +51,13 @@ import net.minecraftforge.client.model.PerspectiveMapWrapper;
 import net.minecraftforge.client.model.SimpleModelState;
 import net.minecraftforge.client.model.geometry.IModelGeometry;
 
-import forestry.api.lepidopterology.genetics.ButterflyChromosomes;
-import forestry.api.lepidopterology.genetics.IAlleleButterflySpecies;
-import forestry.api.lepidopterology.genetics.IButterfly;
-import forestry.core.config.Constants;
-import forestry.core.models.AbstractBakedModel;
-import forestry.core.models.TRSRBakedModel;
-import forestry.core.utils.ResourceUtil;
-
-import genetics.api.GeneticHelper;
-import genetics.api.alleles.IAlleleValue;
-import genetics.api.organism.IOrganism;
-import genetics.utils.AlleleUtils;
+import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @OnlyIn(Dist.CLIENT)
 public class ButterflyItemModel extends AbstractBakedModel {

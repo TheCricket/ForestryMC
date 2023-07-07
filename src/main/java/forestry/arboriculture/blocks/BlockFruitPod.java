@@ -10,11 +10,12 @@
  ******************************************************************************/
 package forestry.arboriculture.blocks;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
+import forestry.api.arboriculture.genetics.IAlleleFruit;
+import forestry.arboriculture.genetics.alleles.AlleleFruits;
+import forestry.arboriculture.tiles.TileFruitPod;
+import forestry.core.tiles.TileUtil;
+import forestry.core.utils.BlockUtil;
+import forestry.core.utils.ItemStackUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -32,12 +33,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.HitResult;
 
-import forestry.api.arboriculture.genetics.IAlleleFruit;
-import forestry.arboriculture.genetics.alleles.AlleleFruits;
-import forestry.arboriculture.tiles.TileFruitPod;
-import forestry.core.tiles.TileUtil;
-import forestry.core.utils.BlockUtil;
-import forestry.core.utils.ItemStackUtil;
+import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 //eg    public static final Block COCOA = register("cocoa", new CocoaBlock(Block.Properties.create(Material.PLANTS).tickRandomly().hardnessAndResistance(0.2F, 3.0F).sound(SoundType.WOOD)));
 public class BlockFruitPod extends CocoaBlock implements EntityBlock {

@@ -1,13 +1,11 @@
 package forestry.modules.features;
 
-import javax.annotation.Nullable;
-
+import forestry.core.config.Constants;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
-
 import net.minecraftforge.network.IContainerFactory;
 
-import forestry.core.config.Constants;
+import javax.annotation.Nullable;
 
 public class FeatureContainerType<C extends AbstractContainerMenu> implements IContainerTypeFeature<C> {
 	protected final String moduleID;

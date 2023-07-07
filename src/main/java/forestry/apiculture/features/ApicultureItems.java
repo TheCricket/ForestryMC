@@ -1,33 +1,13 @@
 package forestry.apiculture.features;
 
-import net.minecraft.world.entity.EquipmentSlot;
-
 import forestry.api.apiculture.genetics.EnumBeeType;
 import forestry.api.core.ItemGroups;
 import forestry.apiculture.ModuleApiculture;
-import forestry.apiculture.items.EnumHoneyComb;
-import forestry.apiculture.items.EnumHoneyDrop;
-import forestry.apiculture.items.EnumPollenCluster;
-import forestry.apiculture.items.EnumPropolis;
-import forestry.apiculture.items.ItemArmorApiarist;
-import forestry.apiculture.items.ItemBeeGE;
-import forestry.apiculture.items.ItemHabitatLocator;
-import forestry.apiculture.items.ItemHiveFrame;
-import forestry.apiculture.items.ItemHoneyComb;
-import forestry.apiculture.items.ItemImprinter;
-import forestry.apiculture.items.ItemMinecartBeehousing;
-import forestry.apiculture.items.ItemPollenCluster;
-import forestry.apiculture.items.ItemPropolis;
-import forestry.apiculture.items.ItemScoop;
-import forestry.apiculture.items.ItemSmoker;
-import forestry.apiculture.items.ItemWaxCast;
+import forestry.apiculture.items.*;
 import forestry.core.items.ItemForestry;
 import forestry.core.items.ItemOverlay;
-import forestry.modules.features.FeatureItem;
-import forestry.modules.features.FeatureItemGroup;
-import forestry.modules.features.FeatureProvider;
-import forestry.modules.features.IFeatureRegistry;
-import forestry.modules.features.ModFeatureRegistry;
+import forestry.modules.features.*;
+import net.minecraft.world.entity.EquipmentSlot;
 
 @FeatureProvider
 public class ApicultureItems {

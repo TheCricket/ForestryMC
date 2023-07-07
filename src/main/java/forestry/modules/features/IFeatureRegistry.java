@@ -1,32 +1,26 @@
 package forestry.modules.features;
 
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.function.BiFunction;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
-import java.util.function.UnaryOperator;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-
-import forestry.api.storage.IBackpackDefinition;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.network.IContainerFactory;
-
 import forestry.api.core.IBlockSubtype;
 import forestry.api.core.IItemSubtype;
 import forestry.api.storage.EnumBackpackType;
+import forestry.api.storage.IBackpackDefinition;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.network.IContainerFactory;
+
+import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.function.*;
 
 public interface IFeatureRegistry {
 
