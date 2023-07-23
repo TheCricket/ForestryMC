@@ -49,7 +49,7 @@ public enum BeeDisplayHandler implements IAlleleDisplayHandler<IBee> {
 		@Override
 		public void addTooltip(ToolTip toolTip, IGenome genome, IBee individual) {
 			IAlleleValue<Integer> speedAllele = getActive(genome);
-			TranslatableComponent customSpeed = new TranslatableComponent("for.tooltip.worker." +
+			TranslatableComponent customSpeed = Component.translatable("for.tooltip.worker." +
 					speedAllele.getLocalisationKey().replaceAll("(.*)\\.", ""));
 			if (Translator.canTranslate(customSpeed)) {
 				toolTip.singleLine()

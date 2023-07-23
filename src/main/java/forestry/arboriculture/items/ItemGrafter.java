@@ -17,7 +17,6 @@ import forestry.core.items.ItemForestry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -49,7 +48,7 @@ public class ItemGrafter extends ItemForestry implements IToolGrafter {
 	public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag advanced) {
 		super.appendHoverText(stack, world, tooltip, advanced);
 		if (!stack.isDamaged()) {
-			tooltip.add(new TranslatableComponent("item.forestry.uses", stack.getMaxDamage() + 1).withStyle(ChatFormatting.GRAY));
+			tooltip.add(Component.translatable("item.forestry.uses", stack.getMaxDamage() + 1).withStyle(ChatFormatting.GRAY));
 		}
 	}
 

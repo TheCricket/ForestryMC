@@ -10,9 +10,6 @@
  ******************************************************************************/
 package forestry.core.models.baker;
 
-import com.google.common.collect.ImmutableMap;
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Transformation;
 import forestry.core.utils.ResourceUtil;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemOverrides;

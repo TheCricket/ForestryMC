@@ -35,7 +35,6 @@ import forestry.core.utils.Translator;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Inventory;
@@ -77,8 +76,8 @@ public class GuiHabitatFormer extends GuiForestryTitled<ContainerHabitatFormer> 
 				.setParameters(this, 1, 16, 1);
 		rangeBar.setPreferredBounds(10, 17, 12, 58);
 		rangeBar.addTooltip((tooltip, element, mouseX, mouseY) -> {
-			tooltip.add(new TranslatableComponent("for.gui.habitat_former.climate.range"));
-			tooltip.add(new TranslatableComponent("for.gui.habitat_former.climate.range.blocks", rangeBar.getValue()).withStyle(ChatFormatting.GRAY));
+			tooltip.add(Component.translatable("for.gui.habitat_former.climate.range"));
+			tooltip.add(Component.translatable("for.gui.habitat_former.climate.range.blocks", rangeBar.getValue()).withStyle(ChatFormatting.GRAY));
 		});
 		window.add(new CircleButton(30, 37));
 
@@ -185,7 +184,7 @@ public class GuiHabitatFormer extends GuiForestryTitled<ContainerHabitatFormer> 
 					.action(button -> ((CircleButton) button).onButtonPressed())
 					.pos(xPos, yPos)
 			);
-			addTooltip((tooltip, element, mouseX, mouseY) -> tooltip.add(new TranslatableComponent("for.gui.habitat_former.climate.circle." + (transformer.isCircular() ? "enabled" : "disabled"))));
+			addTooltip((tooltip, element, mouseX, mouseY) -> tooltip.add(Component.translatable("for.gui.habitat_former.climate.circle." + (transformer.isCircular() ? "enabled" : "disabled"))));
 		}
 
 		private void onButtonPressed() {

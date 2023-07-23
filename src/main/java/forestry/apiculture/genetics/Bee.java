@@ -48,8 +48,8 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.Level;
@@ -297,7 +297,7 @@ public class Bee extends IndividualLiving implements IBee {
 
 	private boolean isSuitableBiome(Biome biome) {
 		EnumTemperature temperature = EnumTemperature.getFromBiome(biome);
-		EnumHumidity humidity = EnumHumidity.getFromValue(biome.getDownfall());
+		EnumHumidity humidity = EnumHumidity.getFromValue(biome.getModifiedClimateSettings().downfall());
 		return isSuitableClimate(temperature, humidity);
 	}
 
@@ -359,20 +359,11 @@ public class Bee extends IndividualLiving implements IBee {
 
 		IAllele speedAllele = genome.getActiveAllele(BeeChromosomes.SPEED);
 
-		TranslatableComponent customSpeed = new TranslatableComponent("for.tooltip.worker." + speedAllele.getLocalisationKey().replaceAll("(.*)\\.", ""));
-		if (Translator.canTranslate(customSpeed)) {
-			toolTip.singleLine()
+		Component customSpeed = Component.translatable("for.tooltip.worker." + speedAllele.getLocalisationKey().replaceAll("(.*)\\.", ""));
+		toolTip.singleLine()
 				.add(customSpeed)
 				.style(ChatFormatting.GRAY)
 				.create();
-		} else {
-			toolTip.singleLine()
-				.add(speedAllele.getDisplayName())
-				.text(" ")
-				.translated("for.gui.worker")
-				.style(ChatFormatting.GRAY)
-				.create();
-		}
 
 		IAlleleValue<EnumTolerance> tempToleranceAllele = getGenome().getActiveAllele(BeeChromosomes.TEMPERATURE_TOLERANCE);
 		IAlleleValue<EnumTolerance> humidToleranceAllele = getGenome().getActiveAllele(BeeChromosomes.HUMIDITY_TOLERANCE);
@@ -610,7 +601,7 @@ public class Bee extends IndividualLiving implements IBee {
 		int chance = Math.round(genome.getActiveValue(BeeChromosomes.FLOWERING) * beeModifier.getFloweringModifier(getGenome(), 1f));
 
 		Level world = housing.getWorldObj();
-		Random random = world.random;
+		RandomSource random = world.random;
 
 		// Correct speed
 		if (random.nextInt(100) >= chance) {
@@ -651,7 +642,7 @@ public class Bee extends IndividualLiving implements IBee {
 		int chance = (int) (genome.getActiveValue(BeeChromosomes.FLOWERING) * beeModifier.getFloweringModifier(getGenome(), 1f));
 
 		Level world = housing.getWorldObj();
-		Random random = world.random;
+		RandomSource random = world.random;
 
 		// Correct speed
 		if (random.nextInt(100) >= chance) {
@@ -697,7 +688,7 @@ public class Bee extends IndividualLiving implements IBee {
 		int chance = Math.round(genome.getActiveValue(BeeChromosomes.FLOWERING) * beeModifier.getFloweringModifier(getGenome(), 1f));
 
 		Level world = housing.getWorldObj();
-		Random random = world.random;
+		RandomSource random = world.random;
 
 		// Correct speed
 		if (random.nextInt(100) >= chance) {

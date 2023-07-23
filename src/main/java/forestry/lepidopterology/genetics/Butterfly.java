@@ -40,7 +40,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.item.ItemStack;
@@ -54,7 +53,6 @@ import java.util.Random;
 import java.util.Set;
 
 public class Butterfly extends IndividualLiving implements IButterfly {
-	private static final Random rand = new Random();
 
 	/* CONSTRUCTOR */
 	public Butterfly(CompoundTag nbt) {

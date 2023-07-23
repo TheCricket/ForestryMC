@@ -16,7 +16,6 @@ import forestry.core.inventory.ItemInventoryAlyzer;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.Item;
@@ -43,7 +42,7 @@ public class ItemAlyzer extends ItemWithGui {
 		if (compound != null) {
 			charges = compound.getInt("Charges");
 		}
-		tooltip.add(new TranslatableComponent(stack.getDescriptionId() + ".charges", charges).withStyle(ChatFormatting.GOLD));
+		tooltip.add(Component.translatable(stack.getDescriptionId() + ".charges", charges).withStyle(ChatFormatting.GOLD));
 	}
 
 	@Override

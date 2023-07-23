@@ -18,7 +18,6 @@ import forestry.core.render.TextureManagerForestry;
 import forestry.core.utils.Translator;
 import forestry.energy.tiles.TileEngine;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 
@@ -64,7 +63,7 @@ public abstract class GuiEngine<C extends AbstractContainerMenu, I extends TileE
 
 		@Override
 		public Component getTooltip() {
-			return new TextComponent(Config.energyDisplayMode.formatRate(tile.getCurrentOutput()));
+			return Component.literal(Config.energyDisplayMode.formatRate(tile.getCurrentOutput()));
 		}
 	}
 

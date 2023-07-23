@@ -5,7 +5,6 @@ import com.google.common.collect.ImmutableSet;
 import forestry.api.farming.*;
 import forestry.farming.FarmRegistry;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 import org.apache.commons.lang3.text.WordUtils;
@@ -104,7 +103,7 @@ public final class FarmProperties implements IFarmProperties {
 	@Override
 	public Component getDisplayName(boolean manual) {
 		String unformatted = manual ? "for.farm.grammar.manual" : "for.farm.grammar.managed";
-		return new TranslatableComponent(unformatted, new TranslatableComponent(translationKey));
+		return Component.translatable(unformatted, Component.translatable(translationKey));
 	}
 
 	@Override

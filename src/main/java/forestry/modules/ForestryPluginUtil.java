@@ -4,7 +4,6 @@ import forestry.api.modules.ForestryModule;
 import forestry.api.modules.IForestryModule;
 import forestry.core.utils.Log;
 import forestry.modules.features.FeatureProvider;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.forgespi.language.ModFileScanData;
@@ -54,7 +53,7 @@ public class ForestryPluginUtil {
 		ForestryModule info = module.getClass().getAnnotation(ForestryModule.class);
 
 		//TODO - check this is only called on the client. I don't think it is at the moment
-		String comment = new TranslatableComponent(info.unlocalizedDescription()).getContents();
+		String comment = Component.translatable(info.unlocalizedDescription()).getContents();
 		Set<ResourceLocation> dependencies = module.getDependencyUids();
 		if (!dependencies.isEmpty()) {
 			Iterator<ResourceLocation> iDependencies = dependencies.iterator();

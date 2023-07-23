@@ -20,7 +20,6 @@ import forestry.worktable.features.WorktableBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -35,14 +34,15 @@ import java.nio.file.Path;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
 
 //TODO: Split up ?
 public final class ForestryBlockTagsProvider extends BlockTagsProvider {
 	@Nullable
 	private Set<ResourceLocation> filter = null;
 
-	public ForestryBlockTagsProvider(PackOutput output, DataGenerator generator, @Nullable ExistingFileHelper existingFileHelper) {
-		super(output, generator, Constants.MOD_ID, existingFileHelper);
+	public ForestryBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+		super(output, lookupProvider, Constants.MOD_ID, existingFileHelper);
 	}
 
 	@Override

@@ -16,7 +16,6 @@ import forestry.core.render.TextureManagerForestry;
 import forestry.core.utils.Translator;
 import forestry.energy.EnergyManager;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 
 public class PowerLedger extends Ledger {
 	private final EnergyManager energyManager;
@@ -56,7 +55,7 @@ public class PowerLedger extends Ledger {
 
 	@Override
 	public Component getTooltip() {
-		return new TextComponent(Config.energyDisplayMode.formatEnergyValue(energyManager.getEnergyStored()));
+		return Component.literal(Config.energyDisplayMode.formatEnergyValue(energyManager.getEnergyStored()));
 	}
 
 }

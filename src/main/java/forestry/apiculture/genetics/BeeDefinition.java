@@ -34,7 +34,6 @@ import genetics.api.root.components.IRootComponent;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.biome.Biome;
 
 import javax.annotation.Nullable;
 import java.awt.*;

@@ -11,7 +11,6 @@
 package forestry.core.utils;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 
@@ -29,9 +28,9 @@ public class DamageSourceForestry extends DamageSource {
 		String smp = ssp + ".player";
 
 		if (other != null) {
-			return new TranslatableComponent(smp, living.getDisplayName(), other.getDisplayName());
+			return Component.translatable(smp, living.getDisplayName(), other.getDisplayName());
 		} else {
-			return new TranslatableComponent(ssp, living.getDisplayName());
+			return Component.translatable(ssp, living.getDisplayName());
 		}
 	}
 

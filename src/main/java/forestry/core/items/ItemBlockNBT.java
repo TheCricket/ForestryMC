@@ -14,7 +14,6 @@ import forestry.core.tiles.TileForestry;
 import forestry.core.tiles.TileUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -58,7 +57,7 @@ public class ItemBlockNBT extends ItemBlockForestry<Block> {
 		super.appendHoverText(itemstack, world, info, advanced);
 
 		if (itemstack.getTag() != null) {
-			info.add(new TextComponent("There are still some scribbles on this."));
+			info.add(Component.literal("There are still some scribbles on this."));
 		}
 	}
 }

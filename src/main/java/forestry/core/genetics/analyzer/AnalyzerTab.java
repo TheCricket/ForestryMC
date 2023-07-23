@@ -5,7 +5,6 @@ import forestry.core.features.CoreItems;
 import forestry.core.gui.elements.DatabaseElement;
 import genetics.api.individual.IIndividual;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.Locale;
@@ -25,6 +24,6 @@ public enum AnalyzerTab implements IDatabaseTab<IIndividual> {
 
 	@Override
 	public Component getTooltip(IIndividual individual) {
-		return new TranslatableComponent("for.gui.database.tab." + name().toLowerCase(Locale.ENGLISH) + ".name");
+		return Component.translatable("for.gui.database.tab." + name().toLowerCase(Locale.ENGLISH) + ".name");
 	}
 }

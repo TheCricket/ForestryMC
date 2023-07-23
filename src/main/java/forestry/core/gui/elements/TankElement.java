@@ -12,7 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.FluidStack;
 
 import javax.annotation.Nullable;
@@ -44,7 +44,7 @@ public class TankElement extends GuiElement {
 			ToolTip toolTip = new ToolTip();
 			int amount = contents.getAmount();
 			Fluid fluidType = contents.getFluid();
-			FluidAttributes attributes = fluidType.getAttributes();
+			FluidType attributes = fluidType.getAttributes();
 			Rarity rarity = attributes.getRarity(contents);
 			if (rarity == null) {
 				rarity = Rarity.COMMON;
@@ -69,7 +69,7 @@ public class TankElement extends GuiElement {
 
 		if (contents.getAmount() > 0 && contents.getFluid() != null) {
 			Fluid fluid = contents.getFluid();
-			FluidAttributes attributes = fluid.getAttributes();
+			FluidType attributes = fluid.getAttributes();
 			ResourceLocation fluidStill = fluid.getAttributes().getStillTexture(contents);
 			TextureAtlasSprite fluidStillSprite = null;
 			if (fluidStill != null) {

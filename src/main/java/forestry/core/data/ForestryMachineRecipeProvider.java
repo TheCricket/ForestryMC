@@ -53,7 +53,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.Tags;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.FluidStack;
 
 import java.util.function.Consumer;
@@ -792,8 +792,8 @@ public class ForestryMachineRecipeProvider extends RecipeProvider {
 	}
 
 	private void registerFabricatorSmelting(Consumer<FinishedRecipe> consumer) {
-		FluidStack liquidGlassBucket = ForestryFluids.GLASS.getFluid(FluidAttributes.BUCKET_VOLUME);
-		FluidStack liquidGlassX4 = ForestryFluids.GLASS.getFluid(FluidAttributes.BUCKET_VOLUME * 4);
+		FluidStack liquidGlassBucket = ForestryFluids.GLASS.getFluid(FluidType.BUCKET_VOLUME);
+		FluidStack liquidGlassX4 = ForestryFluids.GLASS.getFluid(FluidType.BUCKET_VOLUME * 4);
 		FluidStack liquidGlass375 = ForestryFluids.GLASS.getFluid(375);
 
 		new FabricatorSmeltingRecipeBuilder()

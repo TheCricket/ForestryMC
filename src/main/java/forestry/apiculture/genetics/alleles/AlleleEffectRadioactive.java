@@ -22,6 +22,7 @@ import forestry.core.utils.VectUtil;
 import genetics.api.individual.IGenome;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
@@ -65,7 +66,7 @@ public class AlleleEffectRadioactive extends AlleleEffectThrottled {
 
 	private static IEffectData destroyEnvironment(IGenome genome, IEffectData storedData, IBeeHousing housing) {
 		Level world = housing.getWorldObj();
-		Random rand = world.random;
+		RandomSource rand = world.random;
 
 		Vec3i area = VectUtil.scale(genome.getActiveValue(BeeChromosomes.TERRITORY), 2);
 		Vec3i offset = VectUtil.scale(area, -1 / 2.0f);

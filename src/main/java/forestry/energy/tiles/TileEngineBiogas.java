@@ -38,7 +38,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandler;
@@ -61,7 +61,7 @@ public class TileEngineBiogas extends TileEngine implements WorldlyContainer, IL
 
 		fuelTank = new FilteredTank(Constants.ENGINE_TANK_CAPACITY).setFilters(FuelManager.bronzeEngineFuel.keySet());
 		heatingTank = new FilteredTank(Constants.ENGINE_TANK_CAPACITY, true, false).setFilters(Fluids.LAVA);
-		burnTank = new StandardTank(FluidAttributes.BUCKET_VOLUME, false, false);
+		burnTank = new StandardTank(FluidType.BUCKET_VOLUME, false, false);
 
 		this.tankManager = new TankManager(this, fuelTank, heatingTank, burnTank);
 	}
@@ -103,7 +103,7 @@ public class TileEngineBiogas extends TileEngine implements WorldlyContainer, IL
 
 		currentOutput = 0;
 
-		if (isRedstoneActivated() && (fuelTank.getFluidAmount() >= FluidAttributes.BUCKET_VOLUME || burnTank.getFluidAmount() > 0)) {
+		if (isRedstoneActivated() && (fuelTank.getFluidAmount() >= FluidType.BUCKET_VOLUME || burnTank.getFluidAmount() > 0)) {
 
 			double heatStage = getHeatLevel();
 
@@ -125,7 +125,7 @@ public class TileEngineBiogas extends TileEngine implements WorldlyContainer, IL
 					energyManager.generateEnergy(currentOutput);
 					level.updateNeighbourForOutputSignal(worldPosition, getBlockState().getBlock());
 				} else {
-					FluidStack fuel = fuelTank.drainInternal(FluidAttributes.BUCKET_VOLUME, IFluidHandler.FluidAction.EXECUTE);
+					FluidStack fuel = fuelTank.drainInternal(FluidType.BUCKET_VOLUME, IFluidHandler.FluidAction.EXECUTE);
 					int burnTime = determineBurnTime(fuel);
 					if (!fuel.isEmpty()) {
 						fuel.setAmount(burnTime);

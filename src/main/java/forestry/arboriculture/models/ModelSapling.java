@@ -22,7 +22,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.IModelConfiguration;
 import net.minecraftforge.client.model.data.EmptyModelData;
-import net.minecraftforge.client.model.data.IModelData;
+import net.minecraftforge.client.model.data.ModelData;
 import net.minecraftforge.client.model.geometry.IModelGeometry;
 
 import javax.annotation.Nullable;
@@ -85,7 +85,7 @@ public class ModelSapling implements IModelGeometry<ModelSapling> {
 		}
 
 		@Override
-		public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, Random rand, IModelData extraData) {
+		public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, Random rand, ModelData extraData) {
 			IAlleleTreeSpecies species = extraData.getData(TileSapling.TREE_SPECIES);
 			if (species == null) {
 				species = TreeDefinition.Oak.getSpecies();

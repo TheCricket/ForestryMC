@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 public interface IBlockFeature<B extends Block, I extends BlockItem> extends IItemFeature<I>, IBlockProvider<B, I> {
 
 	@Override
-	default B block() {
+	default Block block() {
 		B block = getBlock();
 		if (block == null) {
 			throw new IllegalStateException("Called feature getter method before content creation.");

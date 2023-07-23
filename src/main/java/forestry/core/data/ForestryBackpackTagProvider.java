@@ -3,7 +3,6 @@ package forestry.core.data;
 import forestry.core.config.Constants;
 import forestry.core.features.CoreItems;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;

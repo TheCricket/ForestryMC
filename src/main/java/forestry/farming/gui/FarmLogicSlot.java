@@ -23,7 +23,6 @@ import forestry.farming.multiblock.IFarmControllerInternal;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.TextureAtlas;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 
 public class FarmLogicSlot extends Widget {
@@ -73,8 +72,8 @@ public class FarmLogicSlot extends Widget {
 		public void refresh() {
 			toolTip.clear();
 			toolTip.add(getProperties().getDisplayName(getLogic().isManual()));
-			toolTip.add(new TranslatableComponent("for.gui.farm.fertilizer", Math.round(getProperties().getFertilizerConsumption(farmController) * Config.fertilizerModifier)));
-			toolTip.add(new TranslatableComponent("for.gui.farm.water", getProperties().getWaterConsumption(farmController, farmController.getFarmLedgerDelegate().getHydrationModifier())));
+			toolTip.add(Component.translatable("for.gui.farm.fertilizer", Math.round(getProperties().getFertilizerConsumption(farmController) * Config.fertilizerModifier)));
+			toolTip.add(Component.translatable("for.gui.farm.water", getProperties().getWaterConsumption(farmController, farmController.getFarmLedgerDelegate().getHydrationModifier())));
 		}
 	};
 }

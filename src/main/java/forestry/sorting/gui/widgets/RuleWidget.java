@@ -17,7 +17,6 @@ import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 
 import java.util.Collection;
 
@@ -62,7 +61,7 @@ public class RuleWidget extends Widget implements ISelectableProvider<IFilterRul
 
 	@Override
 	public Component getName(IFilterRuleType selectable) {
-		return new TranslatableComponent("for.gui.filter." + selectable.getUID());
+		return Component.translatable("for.gui.filter." + selectable.getUID());
 	}
 
 	@Override

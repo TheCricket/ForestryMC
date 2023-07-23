@@ -19,8 +19,6 @@ import genetics.api.alleles.IAllele;
 import genetics.api.individual.IGenome;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.Level;
 
 public class MutationConditionTemperature implements IMutationCondition {
@@ -50,9 +48,9 @@ public class MutationConditionTemperature implements IMutationCondition {
 
 		if (minTemperature != maxTemperature) {
 			String maxString = AlleleManager.climateHelper.toDisplay(maxTemperature).getString();
-			return new TextComponent(Translator.translateToLocal("for.mutation.condition.temperature.range").replace("%LOW", minString).replace("%HIGH", maxString));
+			return Component.literal(Translator.translateToLocal("for.mutation.condition.temperature.range").replace("%LOW", minString).replace("%HIGH", maxString));
 		} else {
-			return new TranslatableComponent("for.mutation.condition.temperature.single", minString);
+			return Component.translatable("for.mutation.condition.temperature.single", minString);
 		}
 	}
 }

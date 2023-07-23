@@ -17,7 +17,6 @@ import forestry.core.utils.ItemStackUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -61,10 +60,10 @@ public class ItemCrated extends ItemForestry implements IColoredItem {
 	@Override
 	public Component getName(ItemStack itemstack) {
 		if (contained.isEmpty()) {
-			return new TranslatableComponent("item.forestry.crate");
+			return Component.translatable("item.forestry.crate");
 		} else {
 			Component containedName = contained.getHoverName();
-			return new TranslatableComponent("for.item.crated.grammar", containedName);
+			return Component.translatable("for.item.crated.grammar", containedName);
 		}
 	}
 

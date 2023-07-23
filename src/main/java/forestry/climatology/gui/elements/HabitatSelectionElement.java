@@ -23,7 +23,6 @@ import forestry.core.gui.elements.layouts.ContainerElement;
 import forestry.core.render.TextureManagerForestry;
 import forestry.core.utils.StringUtil;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.api.distmarker.Dist;
@@ -107,8 +106,8 @@ public class HabitatSelectionElement extends ContainerElement {
 				former.sendClimateUpdate();
 			});*/
 			addTooltip((tooltip, element, mouseX, mouseY) -> {
-				tooltip.add(new TextComponent("T: " + StringUtil.floatAsPercent(climate.climateState.getTemperature())));
-				tooltip.add(new TextComponent("H: " + StringUtil.floatAsPercent(climate.climateState.getHumidity())));
+				tooltip.add(Component.literal("T: " + StringUtil.floatAsPercent(climate.climateState.getTemperature())));
+				tooltip.add(Component.literal("H: " + StringUtil.floatAsPercent(climate.climateState.getHumidity())));
 			});
 		}
 

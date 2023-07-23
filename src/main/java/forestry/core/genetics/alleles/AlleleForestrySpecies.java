@@ -20,7 +20,6 @@ import genetics.api.alleles.Allele;
 import genetics.api.classification.IClassification;
 import genetics.api.organism.IOrganismType;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 
 import javax.annotation.Nullable;
@@ -71,7 +70,7 @@ public abstract class AlleleForestrySpecies extends Allele implements IAlleleFor
 
 	@Override
 	public Component getDescription() {
-		return new TranslatableComponent(description);
+		return Component.translatable(description);
 	}
 
 	@Override

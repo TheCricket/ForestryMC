@@ -3,7 +3,6 @@ package forestry.core.genetics.analyzer;
 import forestry.api.genetics.gatgets.IDatabaseTab;
 import genetics.api.individual.IIndividual;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.function.Supplier;
@@ -25,6 +24,6 @@ public abstract class DatabaseTab<I extends IIndividual> implements IDatabaseTab
 
 	@Override
 	public Component getTooltip(IIndividual individual) {
-		return new TranslatableComponent("for.gui.database.tab." + name + ".name");
+		return Component.translatable("for.gui.database.tab." + name + ".name");
 	}
 }

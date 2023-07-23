@@ -15,8 +15,6 @@ import forestry.api.core.IErrorState;
 import forestry.core.utils.StringUtil;
 import forestry.core.utils.Translator;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 
 import javax.annotation.Nullable;
 
@@ -37,7 +35,7 @@ public class ErrorLedger extends Ledger {
 		this.state = state;
 		if (state != null) {
 			//TODO - textcomponent
-			int lineHeight = StringUtil.getLineHeight(maxTextWidth, getTooltip(), new TranslatableComponent(state.getUnlocalizedHelp()));
+			int lineHeight = StringUtil.getLineHeight(maxTextWidth, getTooltip(), Component.translatable(state.getUnlocalizedHelp()));
 			maxHeight = lineHeight + 20;
 		}
 	}
@@ -79,9 +77,9 @@ public class ErrorLedger extends Ledger {
 	@Override
 	public Component getTooltip() {
 		if (state == null) {
-			return new TextComponent("");
+			return Component.literal("");
 		}
-		return new TranslatableComponent(state.getUnlocalizedDescription());
+		return Component.translatable(state.getUnlocalizedDescription());
 	}
 
 }

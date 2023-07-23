@@ -13,14 +13,15 @@ package forestry.core.fluids;
 import forestry.api.core.tooltips.ToolTip;
 import forestry.core.network.IStreamable;
 import forestry.core.network.PacketBufferForestry;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.capability.templates.FluidTank;
 
 import javax.annotation.Nonnull;
@@ -72,7 +73,7 @@ public class StandardTank extends FluidTank implements IStreamable {
 		if (f == null) {
 			return DEFAULT_COLOR;
 		}
-		return f.getAttributes().getColor(getFluid());
+		return IClientFluidTypeExtensions.of(f).getTintColor();
 	}
 
 	public boolean isEmpty() {
@@ -161,7 +162,7 @@ public class StandardTank extends FluidTank implements IStreamable {
 
 	@Override
 	public String toString() {
-		return String.format("Tank: %s, %d/%d", !fluid.isEmpty() ? fluid.getFluid().getRegistryName() : "Empty", getFluidAmount(), getCapacity());
+		return String.format("Tank: %s, %d/%d", !fluid.isEmpty() ? fluid.getFluid().getFluidType().getDescription() : "Empty", getFluidAmount(), getCapacity());
 	}
 
 	protected boolean hasFluid() {
@@ -195,15 +196,15 @@ public class StandardTank extends FluidTank implements IStreamable {
 		FluidStack fluidStack = getFluid();
 		if (!fluidStack.isEmpty()) {
 			Fluid fluidType = fluidStack.getFluid();
-			FluidAttributes attributes = fluidType.getAttributes();
+			FluidType attributes = fluidType.getFluidType();
 			Rarity rarity = attributes.getRarity();
 			if (rarity == null) {
 				rarity = Rarity.COMMON;
 			}
-			toolTip.add(new TranslatableComponent(attributes.getTranslationKey(fluidStack)), rarity.color);
+			toolTip.add(Component.translatable(attributes.getDescriptionId(fluidStack)), rarity.color);
 			amount = getFluid().getAmount();
 		}
-		TranslatableComponent liquidAmount = new TranslatableComponent("for.gui.tooltip.liquid.amount", amount, getCapacity());
+		Component liquidAmount = Component.translatable("for.gui.tooltip.liquid.amount", amount, getCapacity());
 		toolTip.add(liquidAmount);
 	}
 

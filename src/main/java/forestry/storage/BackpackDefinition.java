@@ -13,7 +13,6 @@ package forestry.storage;
 import forestry.api.storage.IBackpackDefinition;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -39,14 +38,14 @@ public class BackpackDefinition implements IBackpackDefinition {
 	@Override
 	public Component getName(ItemStack backpack) {
 		Item item = backpack.getItem();
-		Component display = new TranslatableComponent((item.getDescriptionId(backpack)).trim());
+		Component display = Component.translatable((item.getDescriptionId(backpack)).trim());
 
 		CompoundTag tagCompound = backpack.getTag();
 		if (tagCompound != null && tagCompound.contains("display", 10)) {
 			CompoundTag nbt = tagCompound.getCompound("display");
 
 			if (nbt.contains("Name", 8)) {
-				display = new TextComponent(nbt.getString("Name"));
+				display = Component.literal(nbt.getString("Name"));
 			}
 		}
 

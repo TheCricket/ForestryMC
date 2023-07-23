@@ -1,8 +1,6 @@
 package forestry.database;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.*;
@@ -29,15 +27,15 @@ public class DatabaseHelper {
 		try {
 			Component name = itemStack.getHoverName();
 			if (name.getString().isEmpty()) {
-				name = new TranslatableComponent(itemStack.getItem().getDescriptionId(itemStack));
+				name = Component.translatable(itemStack.getItem().getDescriptionId(itemStack));
 			}
 			return name;
 		} catch (final Exception errA) {
 			try {
 				String name = itemStack.getDescriptionId();
-				return new TranslatableComponent(name);
+				return Component.translatable(name);
 			} catch (final Exception errB) {
-				return new TextComponent("Exception");
+				return Component.literal("Exception");
 			}
 		}
 	}

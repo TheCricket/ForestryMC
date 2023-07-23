@@ -21,7 +21,6 @@ import forestry.core.utils.Translator;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
@@ -36,7 +35,7 @@ public class ItemBlockLeaves extends ItemBlockForestry<BlockAbstractLeaves> impl
 	@Override
 	public Component getName(ItemStack itemstack) {
 		if (!itemstack.hasTag()) {
-			return new TranslatableComponent("trees.grammar.leaves.type");
+			return Component.translatable("trees.grammar.leaves.type");
 		}
 
 		TileLeaves tileLeaves = new TileLeaves(BlockPos.ZERO, getBlock().defaultBlockState());
@@ -44,7 +43,7 @@ public class ItemBlockLeaves extends ItemBlockForestry<BlockAbstractLeaves> impl
 
 		ITree tree = tileLeaves.getTree();
 		if (tree == null) {
-			return new TranslatableComponent("for.leaves.corrupted");
+			return Component.translatable("for.leaves.corrupted");
 		}
 		return getDisplayName(tree);
 	}
@@ -53,8 +52,8 @@ public class ItemBlockLeaves extends ItemBlockForestry<BlockAbstractLeaves> impl
 		IAlleleTreeSpecies primary = (IAlleleTreeSpecies) tree.getGenome().getPrimary();
 		String customTreeKey = "for.trees.custom.leaves." + primary.getSpeciesIdentifier();
 		return Translator.tryTranslate(customTreeKey, () -> {
-			Component leaves = new TranslatableComponent("for.trees.grammar.leaves.type");
-			return new TranslatableComponent("for.trees.grammar.leaves", primary.getDisplayName(), leaves);
+			Component leaves = Component.translatable("for.trees.grammar.leaves.type");
+			return Component.translatable("for.trees.grammar.leaves", primary.getDisplayName(), leaves);
 		});
 	}
 

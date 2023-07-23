@@ -28,8 +28,6 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
@@ -51,8 +49,8 @@ public class GuiCatalogue extends GuiForestry<ContainerCatalogue> {
 		this.imageWidth = 192;
 		this.imageHeight = 192;
 
-		buttonFilter = new Button(width / 2 - 44, topPos + 150, 42, 20, new TranslatableComponent("for.gui.mail.filter.all"), b -> actionPerformed(4));
-		buttonUse = new Button(width / 2, topPos + 150, 42, 20, new TranslatableComponent("for.gui.mail.address.copy"), b -> actionPerformed(5));
+		buttonFilter = new Button(width / 2 - 44, topPos + 150, 42, 20, Component.translatable("for.gui.mail.filter.all"), b -> actionPerformed(4));
+		buttonUse = new Button(width / 2, topPos + 150, 42, 20, Component.translatable("for.gui.mail.address.copy"), b -> actionPerformed(5));
 	}
 
 	@Override
@@ -63,14 +61,14 @@ public class GuiCatalogue extends GuiForestry<ContainerCatalogue> {
 
 		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(true);
 
-		addRenderableWidget(new Button(width / 2 + 44, topPos + 150, 12, 20, new TextComponent(">"), b -> actionPerformed(2)));
-		addRenderableWidget(new Button(width / 2 - 58, topPos + 150, 12, 20, new TextComponent("<"), b -> actionPerformed(3)));
+		addRenderableWidget(new Button(width / 2 + 44, topPos + 150, 12, 20, Component.literal(">"), b -> actionPerformed(2)));
+		addRenderableWidget(new Button(width / 2 - 58, topPos + 150, 12, 20, Component.literal("<"), b -> actionPerformed(3)));
 
 		//TODO but these are set in the constructor??
-		buttonFilter = new Button(width / 2 - 44, topPos + 150, 42, 20, new TranslatableComponent("for.gui.mail.filter.all"), b -> actionPerformed(4));
+		buttonFilter = new Button(width / 2 - 44, topPos + 150, 42, 20, Component.translatable("for.gui.mail.filter.all"), b -> actionPerformed(4));
 		addRenderableWidget(buttonFilter);
 
-		buttonUse = new Button(width / 2, topPos + 150, 42, 20, new TranslatableComponent("for.gui.mail.address.copy"), b -> actionPerformed(5));
+		buttonUse = new Button(width / 2, topPos + 150, 42, 20, Component.translatable("for.gui.mail.address.copy"), b -> actionPerformed(5));
 		addRenderableWidget(buttonUse);
 	}
 
@@ -98,11 +96,11 @@ public class GuiCatalogue extends GuiForestry<ContainerCatalogue> {
 			buttonUse.visible = false;
 		}
 
-		buttonFilter.setMessage(new TranslatableComponent("for.gui.mail.filter." + container.getFilterIdent()));
+		buttonFilter.setMessage(Component.translatable("for.gui.mail.filter." + container.getFilterIdent()));
 	}
 
 	private void drawNoTrade(int x, int y) {
-		Minecraft.getInstance().font.drawWordWrap(new TranslatableComponent("for.gui.mail.notrades"), x, y + 18, 119, ColourProperties.INSTANCE.get("gui.book"));
+		Minecraft.getInstance().font.drawWordWrap(Component.translatable("for.gui.mail.notrades"), x, y + 18, 119, ColourProperties.INSTANCE.get("gui.book"));
 	}
 
 	private void drawTradePreview(PoseStack transform, ITradeStationInfo tradeInfo, int x, int y) {

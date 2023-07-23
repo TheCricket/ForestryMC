@@ -17,7 +17,6 @@ import genetics.api.individual.IIndividual;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.PlantType;
@@ -51,7 +50,7 @@ public class FlowerProvider implements IFlowerProvider {
 
 	@Override
 	public Component getDescription() {
-		return new TranslatableComponent(this.unlocalizedDescription);
+		return Component.translatable(this.unlocalizedDescription);
 	}
 
 	@Override

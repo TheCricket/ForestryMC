@@ -2,6 +2,7 @@ package forestry.api.genetics.products;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 
@@ -27,10 +28,10 @@ public interface IDynamicProductList extends IProductList {
 	 * @param pos      The position of the provider
 	 * @param stacks   All products of the provider that are produced in this cycle.
 	 * @param modifier A function that is used by the provider to modify the chance of the product.
-	 * @param rand     The instance of {@link Random} that should be used. In the most cases this is
+	 * @param rand     The instance of {@link RandomSource} that should be used. In the most cases this is
 	 *                 {@link net.minecraft.world.level.Level#random}.
 	 */
-	default void addProducts(BlockGetter reader, BlockPos pos, NonNullList<ItemStack> stacks, Function<Product, Float> modifier, Random rand) {
+	default void addProducts(BlockGetter reader, BlockPos pos, NonNullList<ItemStack> stacks, Function<Product, Float> modifier, RandomSource rand) {
 		addProducts(stacks, modifier, rand);
 	}
 }

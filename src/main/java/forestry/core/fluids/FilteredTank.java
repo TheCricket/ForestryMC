@@ -15,15 +15,13 @@ import forestry.api.core.tooltips.ToolTip;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -86,7 +84,7 @@ public class FilteredTank extends StandardTank {
 		if (Screen.hasShiftDown() || filters.size() < 5) {
 			for (ResourceLocation filterName : filters) {
 				Fluid fluidFilter = ForgeRegistries.FLUIDS.getValue(filterName);
-				FluidAttributes attributes = fluidFilter.getAttributes();
+				FluidType attributes = fluidFilter.getAttributes();
 				Rarity rarity = attributes.getRarity();
 				if (rarity == null) {
 					rarity = Rarity.COMMON;
@@ -96,12 +94,12 @@ public class FilteredTank extends StandardTank {
 			}
 		} else {
 			//TODO can this be simplified
-			Component tmiComponent = new TextComponent("<")
-					.append(new TranslatableComponent("for.gui.tooltip.tmi"))
-					.append(new TextComponent(">"));
+			Component tmiComponent = Component.literal("<")
+					.append(Component.translatable("for.gui.tooltip.tmi"))
+					.append(Component.literal(">"));
 			toolTip.add(tmiComponent, ChatFormatting.ITALIC);
 		}
-		toolTip.add(new TranslatableComponent("for.gui.tooltip.liquid.amount", getFluidAmount(), getCapacity()));
+		toolTip.add(Component.translatable("for.gui.tooltip.liquid.amount", getFluidAmount(), getCapacity()));
 	}
 
 }

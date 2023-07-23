@@ -65,7 +65,7 @@ public class GuiBetterButton extends Button implements IToolTipProvider {
 	}
 
 	public GuiBetterButton setLabel(String label) {
-		this.setMessage(new TextComponent(label));
+		this.setMessage(Component.literal(label));
 		return this;
 	}
 

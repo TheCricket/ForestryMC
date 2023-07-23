@@ -41,8 +41,6 @@ import genetics.utils.AlleleUtils;
 import genetics.utils.RootUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -61,7 +59,7 @@ public class GuiAlyzer extends GuiForestry<ContainerAlyzer> {
 	private final ItemInventoryAlyzer itemInventory;
 
 	public GuiAlyzer(ContainerAlyzer container, Inventory playerInv, Component name) {
-		super(Constants.TEXTURE_PATH_GUI + "/portablealyzer.png", container, playerInv, new TextComponent("GUI_ALYZER_TEST_TITLE"));
+		super(Constants.TEXTURE_PATH_GUI + "/portablealyzer.png", container, playerInv, Component.literal("GUI_ALYZER_TEST_TITLE"));
 
 		this.itemInventory = container.inventory;
 		this.imageWidth = 246;
@@ -218,7 +216,7 @@ public class GuiAlyzer extends GuiForestry<ContainerAlyzer> {
 		textLayout.drawCenteredLine(transform, title, 8, 208, ColourProperties.INSTANCE.get("gui.screen"));
 		textLayout.newLine();
 
-		getFontRenderer().drawWordWrap(new TranslatableComponent("for.gui.portablealyzer.help"), leftPos + COLUMN_0 + 4, topPos + 42, 200, ColourProperties.INSTANCE.get("gui.screen"));
+		getFontRenderer().drawWordWrap(Component.translatable("for.gui.portablealyzer.help"), leftPos + COLUMN_0 + 4, topPos + 42, 200, ColourProperties.INSTANCE.get("gui.screen"));
 		textLayout.newLine();
 		textLayout.newLine();
 		textLayout.newLine();

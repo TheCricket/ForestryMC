@@ -36,7 +36,6 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -86,7 +85,7 @@ public abstract class TilePlanter extends TilePowered implements IFarmHousingInt
 	@Override
 	public Component getDisplayName() {
 		String name = getBlockType(BlockTypePlanter.ARBORETUM).getSerializedName();
-		return new TranslatableComponent("block.forestry.planter." + (mode.getSerializedName()), new TranslatableComponent("block.forestry." + name));
+		return Component.translatable("block.forestry.planter." + (mode.getSerializedName()), Component.translatable("block.forestry." + name));
 	}
 
 	@Override

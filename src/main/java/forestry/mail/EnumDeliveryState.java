@@ -12,7 +12,6 @@ package forestry.mail;
 
 import forestry.api.mail.IPostalState;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 
 public enum EnumDeliveryState implements IPostalState {
 	OK("for.chat.mail.ok"),
@@ -35,6 +34,6 @@ public enum EnumDeliveryState implements IPostalState {
 
 	@Override
 	public Component getDescription() {
-		return new TranslatableComponent(unlocalizedDescription);
+		return Component.translatable(unlocalizedDescription);
 	}
 }

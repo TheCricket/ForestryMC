@@ -27,8 +27,6 @@ import forestry.mail.network.packets.PacketLetterInfoRequest;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -156,7 +154,7 @@ public class GuiLetter extends GuiForestry<ContainerLetter> {
 
 		if (this.isProcessedLetter) {
 			minecraft.font.draw(transform, address.getValue(), leftPos + 49, topPos + 16, ColourProperties.INSTANCE.get("gui.mail.lettertext"));
-			minecraft.font.drawWordWrap(new TextComponent(text.getValue()), leftPos + 20, topPos + 34, 119, ColourProperties.INSTANCE.get("gui.mail.lettertext"));
+			minecraft.font.drawWordWrap(Component.literal(text.getValue()), leftPos + 20, topPos + 34, 119, ColourProperties.INSTANCE.get("gui.mail.lettertext"));
 		} else {
 			clearTradeInfoWidgets();
 			address.render(transform, mouseX, mouseY, partialTicks);    //TODO correct?
@@ -172,9 +170,9 @@ public class GuiLetter extends GuiForestry<ContainerLetter> {
 
 		Component infoString = null;
 		if (container.getTradeInfo() == null) {
-			infoString = new TranslatableComponent("for.gui.mail.no.trader");
+			infoString = Component.translatable("for.gui.mail.no.trader");
 		} else if (container.getTradeInfo().getTradegood().isEmpty()) {
-			infoString = new TranslatableComponent("for.gui.mail.nothing.to.trade");
+			infoString = Component.translatable("for.gui.mail.nothing.to.trade");
 		} else if (!container.getTradeInfo().getState().isOk()) {
 			infoString = container.getTradeInfo().getState().getDescription();
 		}

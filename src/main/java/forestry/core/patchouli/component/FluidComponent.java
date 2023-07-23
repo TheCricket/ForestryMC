@@ -10,7 +10,7 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.ForgeRegistries;
 import vazkii.patchouli.api.IComponentRenderContext;
@@ -41,20 +41,20 @@ public class FluidComponent implements ICustomComponent {
 	public void render(PoseStack ms, IComponentRenderContext context, float pticks, int mouseX, int mouseY) {
 		ms.pushPose();
 		Fluid _fluid = fluidStack.getFluid();
-		FluidAttributes fluidAttributes = _fluid.getAttributes();
-		ResourceLocation fluidStill = fluidAttributes.getStillTexture(fluidStack);
+		FluidType FluidType = _fluid.getAttributes();
+		ResourceLocation fluidStill = FluidType.getStillTexture(fluidStack);
 		TextureAtlasSprite sprite = Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(fluidStill);
 		ResourceLocation spriteLocation = sprite.getName();
 		RenderSystem.setShaderTexture(0, new ResourceLocation(spriteLocation.getNamespace(), "textures/" + spriteLocation.getPath() + ".png"));
-		setGLColorFromInt(fluidAttributes.getColor(fluidStack));
+		setGLColorFromInt(FluidType.getColor(fluidStack));
 
 		// MatrixStack transform, int x, int y, float u, float v, int width, int height, int ?, int ?
 		GuiComponent.blit(ms, x, (int) (y + h - Math.floor(h * ((float) level / maxLevel))), sprite.getU0(), sprite.getV0(), w, h * level / maxLevel, 8, 8);
 
 		if (context.isAreaHovered(mouseX, mouseY, x, y, w, h)) {
 			List<Component> toolTips = new ArrayList<>();
-			toolTips.add(new TranslatableComponent(fluidAttributes.getTranslationKey(fluidStack)));
-			TranslatableComponent liquidAmount = new TranslatableComponent("for.gui.tooltip.liquid.amount", level, maxLevel);
+			toolTips.add(Component.translatable(FluidType.getTranslationKey(fluidStack)));
+			TranslatableComponent liquidAmount = Component.translatable("for.gui.tooltip.liquid.amount", level, maxLevel);
 			toolTips.add(liquidAmount);
 
 			context.setHoverTooltipComponents(toolTips);

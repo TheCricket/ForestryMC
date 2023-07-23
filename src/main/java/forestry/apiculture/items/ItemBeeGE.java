@@ -21,7 +21,6 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -70,9 +69,9 @@ public class ItemBeeGE extends ItemGE implements IColoredItem {
 
 			IBee individual = optionalIndividual.get();
 			if (individual.isNatural()) {
-				list.add(new TranslatableComponent("for.bees.stock.pristine").withStyle(ChatFormatting.YELLOW, ChatFormatting.ITALIC));
+				list.add(Component.translatable("for.bees.stock.pristine").withStyle(ChatFormatting.YELLOW, ChatFormatting.ITALIC));
 			} else {
-				list.add(new TranslatableComponent("for.bees.stock.ignoble").withStyle(ChatFormatting.YELLOW));
+				list.add(Component.translatable("for.bees.stock.ignoble").withStyle(ChatFormatting.YELLOW));
 			}
 		}
 

@@ -16,7 +16,6 @@ import genetics.api.alleles.IAllele;
 import genetics.api.individual.IGenome;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.Level;
 
 public class MutationConditionDaytime implements IMutationCondition {
@@ -38,9 +37,9 @@ public class MutationConditionDaytime implements IMutationCondition {
 	@Override
 	public Component getDescription() {
 		if (daytime) {
-			return new TranslatableComponent("for.mutation.condition.daytime.day");
+			return Component.translatable("for.mutation.condition.daytime.day");
 		} else {
-			return new TranslatableComponent("for.mutation.condition.daytime.night");
+			return Component.translatable("for.mutation.condition.daytime.night");
 		}
 	}
 }

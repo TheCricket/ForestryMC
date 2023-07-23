@@ -22,7 +22,6 @@ import genetics.api.root.IIndividualRoot;
 import genetics.utils.AlleleUtils;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nullable;
@@ -139,7 +138,7 @@ public class EscritoireGameToken implements INbtWritable, IStreamable {
 
 
 	public Component getTooltip() {
-		return !tokenStack.isEmpty() ? tokenStack.getHoverName() : new TranslatableComponent("for.gui.unknown");
+		return !tokenStack.isEmpty() ? tokenStack.getHoverName() : Component.translatable("for.gui.unknown");
 	}
 
 	public String[] getOverlayIcons() {

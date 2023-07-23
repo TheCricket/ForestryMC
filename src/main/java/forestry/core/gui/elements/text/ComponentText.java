@@ -3,7 +3,6 @@ package forestry.core.gui.elements.text;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.Font;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 
 class ComponentText extends AbstractTextElement<Component, ComponentText> {
 
@@ -16,7 +15,7 @@ class ComponentText extends AbstractTextElement<Component, ComponentText> {
 		if (text instanceof Component) {
 			this.text = (Component) text;
 		} else if (text instanceof String) {
-			this.text = new TextComponent((String) text);
+			this.text = Component.literal((String) text);
 		}
 		requestLayout();
 		return this;

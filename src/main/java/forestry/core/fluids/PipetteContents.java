@@ -12,9 +12,8 @@ package forestry.core.fluids;
 
 import net.minecraft.network.chat.BaseComponent;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidUtil;
 
@@ -43,11 +42,11 @@ public class PipetteContents {
 	}
 
 	public boolean isFull() {
-		return contents.getAmount() >= FluidAttributes.BUCKET_VOLUME;
+		return contents.getAmount() >= FluidType.BUCKET_VOLUME;
 	}
 
 	public void addTooltip(List<Component> list) {
-		BaseComponent descr = new TranslatableComponent(contents.getFluid().getAttributes().getTranslationKey(contents));
+		BaseComponent descr = Component.translatable(contents.getFluid().getAttributes().getTranslationKey(contents));
 		descr.append(" (" + contents.getAmount() + " mb)");
 
 		list.add(descr);

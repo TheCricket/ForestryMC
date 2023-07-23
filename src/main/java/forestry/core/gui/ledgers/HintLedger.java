@@ -16,7 +16,6 @@ import forestry.core.utils.Translator;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 
 import java.util.List;
 import java.util.Random;
@@ -31,8 +30,8 @@ public class HintLedger extends Ledger {
 		int position = new Random().nextInt(hints.size());
 		String hint = hints.get(position);
 
-		hintString = new TranslatableComponent("for.hints." + hint + ".desc");
-		hintTooltip = new TranslatableComponent("for.hints." + hint + ".tag");
+		hintString = Component.translatable("for.hints." + hint + ".desc");
+		hintTooltip = Component.translatable("for.hints." + hint + ".tag");
 
 		Minecraft minecraft = Minecraft.getInstance();
 		Font fontRenderer = minecraft.font;

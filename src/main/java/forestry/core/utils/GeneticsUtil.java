@@ -42,7 +42,6 @@ import genetics.utils.AlleleUtils;
 import genetics.utils.RootUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -88,8 +87,8 @@ public class GeneticsUtil {
 				allele.getSpeciesIdentifier();
 		return Translator.tryTranslate(customKey, () -> {
 			Component speciesName = allele.getDisplayName();
-			Component typeName = new TranslatableComponent(prefix + ".grammar." + type.getName() + ".type");
-			return new TranslatableComponent(prefix + ".grammar." + type.getName(), speciesName, typeName);
+			Component typeName = Component.translatable(prefix + ".grammar." + type.getName() + ".type");
+			return Component.translatable(prefix + ".grammar." + type.getName(), speciesName, typeName);
 		});
 	}
 

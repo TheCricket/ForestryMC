@@ -4,6 +4,7 @@ import genetics.api.IGeneticFactory;
 import genetics.api.IGeneticSaveHandler;
 import genetics.api.alleles.IAllele;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.util.RandomSource;
 
 import java.util.Random;
 
@@ -45,13 +46,13 @@ public interface IChromosome {
 	 * Creates a new chromosome out of the alleles of this chromosome and the other chromosome.
 	 * <p>
 	 * It always uses one allele from this and one from the other chromosome to create the new chromosome.
-	 * It uses {@link Random#nextBoolean()} to decide which of the two alleles of one chromosome it should use.
+	 * It uses {@link RandomSource#nextBoolean()} to decide which of the two alleles of one chromosome it should use.
 	 *
 	 * @param rand            The instance of random it should uses to figure out which of the two alleles if should
 	 *                        use.
 	 * @param otherChromosome The other chromosome that this chromosome uses to create the new one.
 	 */
-	IChromosome inheritChromosome(Random rand, IChromosome otherChromosome);
+	IChromosome inheritChromosome(RandomSource rand, IChromosome otherChromosome);
 
 	/**
 	 * @return true if this chromosome has the same active and inactive allele.

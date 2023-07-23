@@ -11,11 +11,11 @@ import java.util.function.Consumer;
 
 public interface ITextInstance<I extends ITextInstance<?, ?, ?>, S, R> {
 	default I text(String text) {
-		return add(new TextComponent(text));
+		return add(Component.literal(text));
 	}
 
 	default I translated(String text, Object... args) {
-		return add(new TranslatableComponent(text, args));
+		return add(Component.translatable(text, args));
 	}
 
 	default I style(ChatFormatting... formatting) {

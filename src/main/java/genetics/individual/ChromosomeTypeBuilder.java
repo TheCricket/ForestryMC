@@ -7,7 +7,6 @@ import genetics.api.individual.*;
 import genetics.api.root.IIndividualRoot;
 import genetics.api.root.IRootDefinition;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 
 import javax.annotation.Nullable;
 
@@ -63,7 +62,7 @@ public class ChromosomeTypeBuilder implements IChromosomeTypeBuilder {
 
 		@Override
 		public Component getDisplayName() {
-			return new TranslatableComponent("for.gui." + name);
+			return Component.translatable("for.gui." + name);
 		}
 
 		@Override

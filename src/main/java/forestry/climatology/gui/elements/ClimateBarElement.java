@@ -19,7 +19,6 @@ import forestry.climatology.gui.GuiHabitatFormer;
 import forestry.core.gui.elements.GuiElement;
 import forestry.core.utils.StringUtil;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.util.Mth;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -61,9 +60,9 @@ public class ClimateBarElement extends GuiElement {
 			IClimateState targetedState = transformer.getTarget();
 			IClimateState state = transformer.getCurrent();
 			IClimateState defaultState = transformer.getDefault();
-			tooltip.add(new TranslatableComponent("for.gui.habitat_former.climate.target", StringUtil.floatAsPercent(targetedState.getClimate(type))));
-			tooltip.add(new TranslatableComponent("for.gui.habitat_former.climate.value", StringUtil.floatAsPercent(state.getClimate(type))));
-			tooltip.add(new TranslatableComponent("for.gui.habitat_former.climate.default", StringUtil.floatAsPercent(defaultState.getClimate(type))));
+			tooltip.add(Component.translatable("for.gui.habitat_former.climate.target", StringUtil.floatAsPercent(targetedState.getClimate(type))));
+			tooltip.add(Component.translatable("for.gui.habitat_former.climate.value", StringUtil.floatAsPercent(state.getClimate(type))));
+			tooltip.add(Component.translatable("for.gui.habitat_former.climate.default", StringUtil.floatAsPercent(defaultState.getClimate(type))));
 		});
 	}
 

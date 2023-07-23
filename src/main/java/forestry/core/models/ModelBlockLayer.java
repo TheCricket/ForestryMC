@@ -7,7 +7,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.data.IModelData;
+import net.minecraftforge.client.model.data.ModelData;
 
 import javax.annotation.Nullable;
 
@@ -26,12 +26,12 @@ public class ModelBlockLayer<K> extends ModelBlockCached<Block, K> {
 	}
 
 	@Override
-	protected K getWorldKey(BlockState state, IModelData extraData) {
+	protected K getWorldKey(BlockState state, ModelData extraData) {
 		return provider.getWorldKey(state, extraData);
 	}
 
 	@Override
-	protected void bakeBlock(Block block, IModelData extraData, K key, ModelBaker baker, boolean inventory) {
+	protected void bakeBlock(Block block, ModelData extraData, K key, ModelBaker baker, boolean inventory) {
 		for (int layer = 0; layer < provider.getLayerCount(); layer++) {
 			TextureAtlasSprite[] textures = new TextureAtlasSprite[6];
 			for (Direction direction : Direction.VALUES) {
@@ -49,7 +49,7 @@ public class ModelBlockLayer<K> extends ModelBlockCached<Block, K> {
 
 		K getInventoryKey(ItemStack stack);
 
-		K getWorldKey(BlockState state, IModelData extraData);
+		K getWorldKey(BlockState state, ModelData extraData);
 
 		default int getLayerCount() {
 			return 2;

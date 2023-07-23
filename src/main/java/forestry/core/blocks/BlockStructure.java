@@ -18,7 +18,6 @@ import forestry.core.multiblock.MultiblockTileEntityForestry;
 import forestry.core.multiblock.MultiblockUtil;
 import forestry.core.tiles.TileUtil;
 import forestry.core.utils.InventoryUtil;
-import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;

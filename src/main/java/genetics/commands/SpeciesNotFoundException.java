@@ -11,7 +11,7 @@
 package genetics.commands;
 
 import net.minecraft.commands.CommandRuntimeException;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 
 public class SpeciesNotFoundException extends CommandRuntimeException {
@@ -19,7 +19,7 @@ public class SpeciesNotFoundException extends CommandRuntimeException {
 	private static final long serialVersionUID = 1L;
 
 	public SpeciesNotFoundException(ResourceLocation title) {
-		super(new TranslatableComponent("Could not find species with Name or UID %s", title));
+		super(Component.translatable("Could not find species with Name or UID " + title));
 	}
 
 }

@@ -17,7 +17,6 @@ import forestry.core.config.Constants;
 import forestry.storage.gui.ContainerNaturalistBackpack;
 import forestry.storage.inventory.ItemInventoryBackpackPaged;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -70,7 +69,7 @@ public class ItemBackpackNaturalist extends ItemBackpack {
 
 		@Override
 		public Component getDisplayName() {
-			return new TextComponent("ITEM_GUI_TITLE");    //TODO needs to be overriden individually
+			return Component.literal("ITEM_GUI_TITLE");    //TODO needs to be overriden individually
 		}
 
 		@Nullable

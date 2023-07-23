@@ -19,8 +19,6 @@ import genetics.api.alleles.IAllele;
 import genetics.api.individual.IGenome;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.Level;
 
 public class MutationConditionHumidity implements IMutationCondition {
@@ -50,9 +48,9 @@ public class MutationConditionHumidity implements IMutationCondition {
 		if (minHumidity != maxHumidity) {
 			String maxHumidityString = AlleleManager.climateHelper.toDisplay(maxHumidity).getString();
 			//TODO: REPLACE
-			return new TextComponent(Translator.translateToLocal("for.mutation.condition.humidity.range").replace("%LOW", minHumidityString).replace("%HIGH", maxHumidityString));
+			return Component.literal(Translator.translateToLocal("for.mutation.condition.humidity.range").replace("%LOW", minHumidityString).replace("%HIGH", maxHumidityString));
 		} else {
-			return new TranslatableComponent("for.mutation.condition.humidity.single", minHumidityString);
+			return Component.translatable("for.mutation.condition.humidity.single", minHumidityString);
 		}
 	}
 }

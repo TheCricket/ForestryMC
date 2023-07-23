@@ -23,7 +23,6 @@ import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraftforge.api.distmarker.Dist;
@@ -226,7 +225,7 @@ public abstract class Ledger {
 	protected void drawSprite(PoseStack transform, TextureAtlasSprite sprite, int x, int y, ResourceLocation textureMap) {
 		RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0F);
 		RenderSystem.setShaderTexture(0, textureMap);
-		GuiComponent.blit(transform, x, y, manager.gui.getBlitOffset(), 16, 16, sprite);
+		GuiComponent.blit(transform, x, y, 0, 16, 16, sprite);
 	}
 
 	protected int drawHeader(PoseStack transform, String string, int x, int y) {
@@ -248,7 +247,7 @@ public abstract class Ledger {
 	protected int drawSplitText(PoseStack transform, String string, int x, int y, int width, int color, boolean shadow) {
 		int originalY = y;
 		Minecraft minecraft = Minecraft.getInstance();
-		List<FormattedCharSequence> strings = minecraft.font.split(new TextComponent(string), width);
+		List<FormattedCharSequence> strings = minecraft.font.split(Component.literal(string), width);
 		for (FormattedCharSequence obj : strings) {
 			if (shadow) {
 				minecraft.font.drawShadow(transform, obj, x, y, color);

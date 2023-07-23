@@ -14,6 +14,7 @@ import com.google.common.collect.AbstractIterator;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 
@@ -28,7 +29,7 @@ public final class VectUtil {
 	private VectUtil() {
 	}
 
-	public static BlockPos getRandomPositionInArea(Random random, Vec3i area) {
+	public static BlockPos getRandomPositionInArea(RandomSource random, Vec3i area) {
 		int x = random.nextInt(area.getX());
 		int y = random.nextInt(area.getY());
 		int z = random.nextInt(area.getZ());
@@ -48,7 +49,7 @@ public final class VectUtil {
 	}
 
 	public static BlockPos scale(Vec3i vect, float factor) {
-		return new BlockPos(vect.getX() * factor, vect.getY() * factor, vect.getZ() * factor);
+		return new BlockPos((int) (vect.getX() * factor), (int) (vect.getY() * factor), (int) (vect.getZ() * factor));
 	}
 
 	public static Direction direction(Vec3i a, Vec3i b) {

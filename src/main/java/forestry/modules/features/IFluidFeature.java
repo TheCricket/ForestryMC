@@ -5,7 +5,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
@@ -63,7 +63,7 @@ public interface IFluidFeature extends IModFeature {
 	}
 
 	default FluidStack fluidStack() {
-		return fluidStack(FluidAttributes.BUCKET_VOLUME);
+		return fluidStack(FluidType.BUCKET_VOLUME);
 	}
 
 	@Override

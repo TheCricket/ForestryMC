@@ -8,7 +8,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.material.FlowingFluid;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 
 import javax.annotation.Nullable;
@@ -32,12 +32,13 @@ public class FeatureFluid implements IFluidFeature {
 		this.block = builder.registry.block(() -> new BlockForestryFluid(this), "fluid_" + builder.identifier);
 		this.properties = new FluidProperties(builder);
 		ResourceLocation[] resources = properties().resources;
-		FluidAttributes.Builder attributes = FluidAttributes.builder(resources[0], resources[1])
+		FluidType attributes = new FluidType(resources[0], resources[1])
 				.density(properties().density)
 				.viscosity(properties().viscosity)
 				.temperature(properties().temperature);
 		this.internal = new ForgeFlowingFluid.Properties(this::getFluid, this::getFlowing, attributes).block(block::getBlock).bucket(properties().bucket);
 	}
+
 
 	@Override
 	public FeatureBlock<BlockForestryFluid, BlockItem> fluidBlock() {

@@ -18,7 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.FluidStack;
 
 import javax.annotation.Nullable;
@@ -39,7 +39,7 @@ public class FermenterRecipeManager extends AbstractCraftingProvider<IFermenterR
 
 	@Override
 	public void addRecipe(ItemStack resource, int fermentationValue, float modifier, FluidStack output) {
-		addRecipe(resource, fermentationValue, modifier, output, new FluidStack(Fluids.WATER, FluidAttributes.BUCKET_VOLUME));
+		addRecipe(resource, fermentationValue, modifier, output, new FluidStack(Fluids.WATER, FluidType.BUCKET_VOLUME));
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class FermenterRecipeManager extends AbstractCraftingProvider<IFermenterR
 
 	@Override
 	public void addRecipe(int fermentationValue, float modifier, FluidStack output) {
-		addRecipe(fermentationValue, modifier, output, new FluidStack(Fluids.WATER, FluidAttributes.BUCKET_VOLUME));
+		addRecipe(fermentationValue, modifier, output, new FluidStack(Fluids.WATER, FluidType.BUCKET_VOLUME));
 	}
 
 	@Override
