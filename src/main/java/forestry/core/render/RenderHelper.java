@@ -2,8 +2,6 @@ package forestry.core.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Quaternion;
-import com.mojang.math.Vector3f;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -14,6 +12,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.joml.Quaternionf;
+import org.joml.Vector3f;
 
 import javax.annotation.Nullable;
 
@@ -74,7 +74,7 @@ public class RenderHelper {
 		this.baseRotation = baseRotation;
 	}
 
-	public void rotate(Quaternion rotation) {
+	public void rotate(Quaternionf rotation) {
 		transformation.mulPose(rotation);
 	}
 

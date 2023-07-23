@@ -13,8 +13,8 @@ package forestry.core.entities;
 import forestry.core.tiles.ITitled;
 import forestry.core.utils.PlayerUtil;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -43,7 +43,7 @@ public abstract class MinecartEntityForestry extends AbstractMinecart implements
 
 	// Needed to spawn the entity on the client
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
@@ -87,15 +87,9 @@ public abstract class MinecartEntityForestry extends AbstractMinecart implements
 		}
 	}
 
-	// fix cart contents rendering as black in the End dimension
-	@Override
-	public float getBrightness() {
-		return 1.0f;
-	}
-
 	@Override
 	public Component getName() {
-		return new TranslatableComponent(getUnlocalizedTitle());
+		return Component.translatable(getUnlocalizedTitle());
 	}
 
 	/* ITitled */

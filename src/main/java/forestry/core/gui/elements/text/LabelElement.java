@@ -6,7 +6,6 @@ import forestry.core.gui.elements.GuiElement;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.util.FormattedCharSequence;
 
 import javax.annotation.Nullable;
@@ -45,7 +44,7 @@ public abstract class LabelElement extends GuiElement {
 			this.parentAdder = parentAdder;
 			this.finisher = finisher;
 			if (root instanceof String) {
-				root = new TextComponent((String) root);
+				root = Component.literal((String) root);
 			}
 			this.root = root;
 		}

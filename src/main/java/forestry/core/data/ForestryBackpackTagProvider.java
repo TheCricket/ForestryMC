@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 public class ForestryBackpackTagProvider extends ItemTagsProvider {
 
-	public ForestryBackpackTagProvider(DataGenerator generator, BlockTagsProvider blockTagsProvider, @Nullable ExistingFileHelper existingFileHelper) {
+	public ForestryBackpackTagProvider(DataGenerator generator, ForestryBlockTagsProvider blockTagsProvider, @Nullable ExistingFileHelper existingFileHelper) {
 		super(generator, blockTagsProvider, Constants.MOD_ID, existingFileHelper);
 	}
 

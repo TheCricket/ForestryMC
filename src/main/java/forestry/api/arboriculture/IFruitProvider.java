@@ -13,7 +13,7 @@ import forestry.api.genetics.products.IProductList;
 import genetics.api.individual.IGenome;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
-import net.minecraft.network.chat.BaseComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
@@ -107,7 +107,7 @@ public interface IFruitProvider extends ISetupListener {
 	/**
 	 * @return Short, human-readable identifier used in the treealyzer.
 	 */
-	BaseComponent getDescription();
+	Component getDescription();
 
 	/**
 	 * @return The location of the pod model in the "modid:pods/" folder.
@@ -149,13 +149,14 @@ public interface IFruitProvider extends ISetupListener {
 	boolean trySpawnFruitBlock(IGenome genome, LevelAccessor world, Random rand, BlockPos pos);
 
 	/**
+	 * TODO: DEPRECATED
 	 * Can be used to register the sprite/s that can be returned with
 	 * {@link #getSprite(IGenome, IBlockReader, BlockPos, int)}.
 	 *
 	 * @param event
 	 */
 	@OnlyIn(Dist.CLIENT)
-	void registerSprites(TextureStitchEvent.Pre event);
+	void registerSprites(TextureStitchEvent event);
 
 	/**
 	 * Tag for the log that the is placed on

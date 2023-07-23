@@ -23,6 +23,7 @@ import forestry.core.config.Constants;
 import forestry.core.genetics.ProductListWrapper;
 import forestry.core.genetics.alleles.AlleleForestrySpecies;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -39,7 +40,7 @@ public class AlleleButterflySpecies extends AlleleForestrySpecies implements IAl
 	private final float flightDistance;
 	private final boolean nocturnal;
 
-	private final Set<Biome.BiomeCategory> spawnBiomes;
+	private final Set<TagKey<Biome>> spawnBiomes;
 
 	private ProductListWrapper butterflyLoot;
 	private ProductListWrapper caterpillarLoot;
@@ -80,7 +81,7 @@ public class AlleleButterflySpecies extends AlleleForestrySpecies implements IAl
 	}
 
 	@Override
-	public Set<Biome.BiomeCategory> getSpawnBiomes() {
+	public Set<TagKey<Biome>> getSpawnBiomes() {
 		return spawnBiomes;
 	}
 
@@ -143,7 +144,7 @@ public class AlleleButterflySpecies extends AlleleForestrySpecies implements IAl
 	public static class Builder extends AbstractBuilder<IAlleleButterflySpeciesBuilder>
 			implements IAlleleButterflySpeciesBuilder {
 
-		private final ImmutableSet.Builder<Biome.BiomeCategory> spawnBiomes = new ImmutableSet.Builder<>();
+		private final ImmutableSet.Builder<TagKey<Biome>> spawnBiomes = new ImmutableSet.Builder<>();
 		private final ProductListWrapper butterflyLoot = ProductListWrapper.create();
 		private final ProductListWrapper caterpillarLoot = ProductListWrapper.create();
 
@@ -204,12 +205,12 @@ public class AlleleButterflySpecies extends AlleleForestrySpecies implements IAl
 			return this;
 		}
 
-		public IAlleleButterflySpeciesBuilder addSpawnBiomes(Collection<Biome.BiomeCategory> biomeTags) {
+		public IAlleleButterflySpeciesBuilder addSpawnBiomes(Collection<TagKey<Biome>> biomeTags) {
 			spawnBiomes.addAll(biomeTags);
 			return this;
 		}
 
-		public IAlleleButterflySpeciesBuilder addSpawnBiome(Biome.BiomeCategory biomeTag) {
+		public IAlleleButterflySpeciesBuilder addSpawnBiome(TagKey<Biome> biomeTag) {
 			spawnBiomes.add(biomeTag);
 			return this;
 		}

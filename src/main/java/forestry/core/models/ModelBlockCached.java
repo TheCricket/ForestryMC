@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.model.data.IModelData;
+import net.minecraftforge.client.model.data.ModelData;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -39,7 +39,7 @@ public abstract class ModelBlockCached<B extends Block, K> extends ModelBlockDef
 	}
 
 	@Override
-	protected BakedModel getModel(BlockState state, IModelData extraData) {
+	protected BakedModel getModel(BlockState state, ModelData extraData) {
 		K key = getWorldKey(state, extraData);
 
 		BakedModel model = worldCache.getIfPresent(key);

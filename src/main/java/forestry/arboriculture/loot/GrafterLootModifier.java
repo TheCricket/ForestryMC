@@ -1,6 +1,7 @@
 package forestry.arboriculture.loot;
 
 import com.google.gson.JsonObject;
+import com.mojang.serialization.Codec;
 import forestry.api.arboriculture.IFruitProvider;
 import forestry.api.arboriculture.IToolGrafter;
 import forestry.api.arboriculture.TreeManager;
@@ -13,7 +14,9 @@ import forestry.arboriculture.blocks.BlockDefaultLeavesFruit;
 import forestry.arboriculture.genetics.TreeHelper;
 import forestry.core.config.Constants;
 import genetics.api.individual.IGenome;
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Vec3i;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BlockTags;
@@ -29,10 +32,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
+import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.common.loot.LootModifier;
 import net.minecraftforge.event.ForgeEventFactory;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -48,7 +51,7 @@ public class GrafterLootModifier extends LootModifier {
 	//TODO: Clean this up and move into interface?
 	@Nonnull
 	@Override
-	protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
+	protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
 		BlockState state = context.getParamOrNull(LootContextParams.BLOCK_STATE);
 		if (state == null || !state.is(BlockTags.LEAVES)) {
 			return generatedLoot;
@@ -78,11 +81,8 @@ public class GrafterLootModifier extends LootModifier {
 		if (tree == null) {
 			return;
 		}
-		Vec3 origin = context.getParamOrNull(LootContextParams.ORIGIN);
-		if (origin == null) {
-			return;
-		}
-		BlockPos pos = new BlockPos(origin);
+
+		BlockPos pos = tileEntity.getBlockPos();
 		Item item = harvestingTool.getItem();
 		float saplingModifier = 1.0f;
 		if (item instanceof IToolGrafter) {
@@ -114,6 +114,11 @@ public class GrafterLootModifier extends LootModifier {
 			return tree;
 		}
 		return TreeHelper.getRoot().getTree(entity);
+	}
+
+	@Override
+	public Codec<? extends IGlobalLootModifier> codec() {
+		return null;
 	}
 
 	private static class Serializer extends GlobalLootModifierSerializer<GrafterLootModifier> {

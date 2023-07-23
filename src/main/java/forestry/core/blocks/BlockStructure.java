@@ -20,8 +20,7 @@ import forestry.core.tiles.TileUtil;
 import forestry.core.utils.InventoryUtil;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
@@ -68,14 +67,14 @@ public abstract class BlockStructure extends BlockForestry {
 					if (validationError != null) {
 						long tick = worldIn.getGameTime();
 						if (tick > previousMessageTick + 20) {
-							playerIn.sendMessage(new TextComponent(validationError), Util.NIL_UUID);
+							playerIn.sendSystemMessage(Component.literal(validationError));
 							previousMessageTick = tick;
 						}
 						return InteractionResult.SUCCESS;
 					}
 				}
 			} else {
-				playerIn.sendMessage(new TranslatableComponent("for.multiblock.error.notConnected"), Util.NIL_UUID);
+				playerIn.sendSystemMessage(Component.translatable("for.multiblock.error.notConnected"));
 				return InteractionResult.SUCCESS;
 			}
 		}
@@ -86,7 +85,7 @@ public abstract class BlockStructure extends BlockForestry {
 		}
 
 		if (!worldIn.isClientSide) {
-			part.openGui((ServerPlayer) playerIn, pos);    //TODO cast is safe because on server?
+			part.openGui((ServerPlayer) playerIn, pos);
 		}
 		return InteractionResult.SUCCESS;
 	}

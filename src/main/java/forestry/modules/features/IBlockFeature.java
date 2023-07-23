@@ -6,9 +6,8 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.IForgeRegistryEntry;
+import net.minecraftforge.registries.RegisterEvent;
 
 import javax.annotation.Nullable;
 import java.util.Collection;
@@ -74,7 +73,7 @@ public interface IBlockFeature<B extends Block, I extends BlockItem> extends IIt
 
 	@Override
 	@SuppressWarnings("unchecked")
-	default <T extends IForgeRegistryEntry<T>> void register(RegistryEvent.Register<T> event) {
+	default void register(RegisterEvent event) {
 		IItemFeature.super.register(event);
 		IForgeRegistry<T> registry = event.getRegistry();
 		Class<T> superType = registry.getRegistrySuperType();

@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
+import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
  
 public class RenderForestryItem extends BlockEntityWithoutLevelRenderer {
@@ -21,7 +22,7 @@ public class RenderForestryItem extends BlockEntityWithoutLevelRenderer {
 	}
 
 	@Override
-	public void renderByItem(ItemStack itemStack, ItemTransforms.TransformType transformType, PoseStack transform, MultiBufferSource buffer, int combinedLight, int packetLight) {
+	public void renderByItem(ItemStack itemStack, ItemDisplayContext displayContext, PoseStack transform, MultiBufferSource buffer, int combinedLight, int packetLight) {
 		helper.update(0, transform, buffer, combinedLight, packetLight);
 		renderer.renderItem(itemStack, helper);
 		

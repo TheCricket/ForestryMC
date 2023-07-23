@@ -36,7 +36,7 @@ public enum EnumHumidity {
 
 	/**
 	 * Determines the EnumHumidity given a floating point representation of Minecraft Rainfall.
-	 * To check if rainfall is possible in a biome, use {@link Biome#canRain()}.
+	 * To check if rainfall is possible in a biome, use {@link Biome#hasPrecipitation()} ()}.
 	 *
 	 * @param rawHumidity raw rainfall value
 	 * @return EnumHumidity corresponding to rainfall value

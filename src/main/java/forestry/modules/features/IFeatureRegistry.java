@@ -15,8 +15,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.network.IContainerFactory;
+import net.minecraftforge.registries.RegisterEvent;
 
 import javax.annotation.Nullable;
 import java.util.Collection;
@@ -62,7 +62,7 @@ public interface IFeatureRegistry {
 
 	FeatureFluid.Builder fluid(String identifier);
 
-	void addRegistryListener(FeatureType type, Consumer<RegistryEvent> listener);
+	void addRegistryListener(FeatureType type, Consumer<RegisterEvent> listener);
 
 	<F extends IModFeature> F register(F feature);
 

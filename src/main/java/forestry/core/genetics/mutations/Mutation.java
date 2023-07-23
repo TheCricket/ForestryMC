@@ -23,6 +23,7 @@ import genetics.api.individual.IGenome;
 import genetics.api.mutation.IMutation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.state.BlockState;
@@ -85,7 +86,7 @@ public abstract class Mutation implements IMutation, IMutationBuilder {
 	}
 
 	@Override
-	public Mutation restrictBiomeType(Biome.BiomeCategory... types) {
+	public Mutation restrictBiomeType(TagKey<Biome>... types) {
 		IMutationCondition mutationCondition = new MutationConditionBiome(types);
 		return addMutationCondition(mutationCondition);
 	}

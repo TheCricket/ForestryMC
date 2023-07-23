@@ -17,15 +17,14 @@ import forestry.core.utils.ResourceUtil;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
-import net.minecraft.client.renderer.block.model.ItemTransforms.TransformType;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.ModelState;
 import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.model.PerspectiveMapWrapper;
 import org.apache.commons.lang3.tuple.Pair;
 
 import javax.annotation.Nullable;
@@ -39,7 +38,6 @@ public class ModelBakerModel implements BakedModel {
 	private TextureAtlasSprite particleSprite;
 	@Nullable
 	private ModelState modelState;
-	private ImmutableMap<TransformType, Transformation> transforms = ImmutableMap.of();
 
 	private final Map<Direction, List<BakedQuad>> faceQuads;
 	private final List<BakedQuad> generalQuads;
@@ -160,7 +158,6 @@ public class ModelBakerModel implements BakedModel {
 
 	public void setModelState(ModelState modelState) {
 		this.modelState = modelState;
-		this.transforms = PerspectiveMapWrapper.getTransforms(modelState);
 	}
 
 	public void addQuad(@Nullable Direction facing, BakedQuad quad) {
@@ -172,7 +169,7 @@ public class ModelBakerModel implements BakedModel {
 	}
 
 	@Override
-	public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, Random rand) {
+	public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, RandomSource rand) {
 		List<BakedQuad> quads = new ArrayList<>();
 		for (Pair<BlockState, BakedModel> model : this.models) {
 			List<BakedQuad> modelQuads = model.getRight().getQuads(model.getLeft(), side, rand);
@@ -195,15 +192,5 @@ public class ModelBakerModel implements BakedModel {
 
 	public ModelBakerModel copy() {
 		return new ModelBakerModel(this);
-	}
-
-	@Override
-	public BakedModel handlePerspective(TransformType cameraTransformType, PoseStack mat) {
-		return PerspectiveMapWrapper.handlePerspective(this, transforms, cameraTransformType, mat);
-	}
-
-	@Override
-	public boolean doesHandlePerspectives() {
-		return true; //TODO: test if this is needed
 	}
 }

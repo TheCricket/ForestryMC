@@ -22,6 +22,7 @@ import forestry.lepidopterology.ModuleLepidopterology;
 import forestry.lepidopterology.features.LepidopterologyBlocks;
 import forestry.lepidopterology.tiles.TileCocoon;
 import net.minecraft.core.BlockPos;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
@@ -48,14 +49,12 @@ public class CocoonDecorator extends Feature<NoneFeatureConfiguration> {
 			return false;
 		}
 
-		Biome biome = world.getBiome(new BlockPos(pos.getX(), 0, pos.getZ())).value();
-
-		Set<Biome.BiomeCategory> speciesCategories = butterfly.getGenome().getActiveAllele(ButterflyChromosomes.SPECIES)
+		Set<TagKey<Biome>> speciesCategories = butterfly.getGenome().getActiveAllele(ButterflyChromosomes.SPECIES)
 				.getSpawnBiomes();
 
 		boolean biomeTypesGood = false;
-		for (Biome.BiomeCategory category : speciesCategories) {
-			if (category == biome.getBiomeCategory()) {
+		for (TagKey<Biome> tag : speciesCategories) {
+			if(world.getBiome(pos).is(tag)) {
 				biomeTypesGood = true;
 				break;
 			}

@@ -4,24 +4,25 @@ import forestry.api.core.ITileTypeProvider;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.RegisterEvent;
 
 public interface ITileTypeFeature<T extends BlockEntity> extends IModFeature, ITileTypeProvider<T> {
 
 	@Override
 	default void create() {
 		BlockEntityType<T> tileEntityType = getTileTypeConstructor().build(null);
-		tileEntityType.setRegistryName(getModId(), getIdentifier());
+		//tileEntityType.setRegistryName(getModId(), getIdentifier());
 		setTileType(tileEntityType);
 	}
 
 	@Override
 	@SuppressWarnings("unchecked")
-	default <R extends IForgeRegistryEntry<R>> void register(RegistryEvent.Register<R> event) {
-		IForgeRegistry<R> registry = event.getRegistry();
+	default void register(RegisterEvent event) {
+		/*IForgeRegistry<R> registry = event.getRegistry();
 		Class<R> superType = registry.getRegistrySuperType();
 		if (BlockEntityType.class.isAssignableFrom(superType) && hasTileType()) {
 			registry.register((R) tileType());
-		}
+		}*/
 	}
 
 	@Override

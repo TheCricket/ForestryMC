@@ -17,6 +17,7 @@ import genetics.api.individual.IGenome;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 
@@ -28,7 +29,7 @@ public class MutationConditionBiome implements IMutationCondition {
 
 	private final Set<Biome.BiomeCategory> validBiomeTypes;
 
-	public MutationConditionBiome(Biome.BiomeCategory... types) {
+	public MutationConditionBiome(TagKey<Biome>[] types) {
 		this.validBiomeTypes = Set.of(types);
 	}
 
